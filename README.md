@@ -1,4 +1,7 @@
-
+- 🔭 Atualmente estou Buscando um estágio
+- 👯 Estou procurando mostrar meus projetos e tambem vê projetos aqui para ter ideias ou aprender com todos os progamadores desse site
+- 💬 Pergunte-me sobre HTML, CSS, C, JAVA, Python, Automações... 
+- ⚡ Curiosidade: Atualmente estou cursando Engenharia de Software na Universidade Catolica de Brasilia ( 3 Semestre )
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=00bfbf&height=120&section=header"/>
   
 [![Typing SVG](https://readme-typing-svg.herokuapp.com/?color=00bfbf&size=35&center=true&vCenter=true&width=1000&lines=Olá,+Meu+Nome+é+João+Victor+Albernaz;Tenho+19+anos;Sou+de+Brasília+DF;Cursando+Engenharia+de+Software;Bem+Vindo!+:%29)](https://git.io/typing-svg)
