@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 738" width="1200" height="738" role="img" aria-labelledby="title desc">
+<title id="title">O que eu construo — João Albernaz</title>
+<desc id="desc">Grade de seis cards cromados com efeitos de luz discretos: agentes de IA, automações, APIs e backend, SaaS e mobile, dados e acesso, qualidade e testes.</desc>
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#080a0e"/><stop offset=".5" stop-color="#10151c"/><stop offset="1" stop-color="#080a0e"/></linearGradient>
+ <linearGradient id="card" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#141a23"/><stop offset=".55" stop-color="#0e131a"/><stop offset="1" stop-color="#0d1017"/></linearGradient>
+ <linearGradient id="metal" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#a2b0c0"/><stop offset=".24" stop-color="#f7faff"/><stop offset=".54" stop-color="#8997a9"/><stop offset=".8" stop-color="#fafcff"/><stop offset="1" stop-color="#8693a2"/></linearGradient>
+ <linearGradient id="rule" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#313b49"/><stop offset=".45" stop-color="#d9e2eb"/><stop offset="1" stop-color="#394554"/></linearGradient>
+ <radialGradient id="ambient"><stop stop-color="#7895b7" stop-opacity=".19"/><stop offset="1" stop-color="#7895b7" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="1200" height="738" rx="12" fill="url(#bg)"/>
+<rect x="8" y="8" width="1184" height="722" rx="11" fill="none" stroke="#455366"/>
+<circle cx="900" cy="80" r="380" fill="url(#ambient)" opacity=".37"/>
+<g fill="none" stroke="#a1adba" stroke-opacity=".13" stroke-width="1.5">
+ <path d="M-20 38Q84 -6 266 63Q184 60 95 116Q163 85 230 110"/>
+ <path d="M-15 75Q67 51 177 98M-2 104Q80 80 133 121M-6 131Q66 96 111 125"/>
+ <path d="M1217 38Q1114 -6 932 63Q1014 60 1103 116Q1035 85 968 110"/>
+ <path d="M1214 75Q1132 51 1022 98M1202 104Q1120 80 1067 121"/>
+</g>
+<rect x="289" y="36" width="218" height="29" rx="14" fill="#161d27" stroke="#6d7c8d"/>
+<text x="307" y="55" font-size="13" font-family="Arial,Helvetica,sans-serif" fill="#c7d2df" letter-spacing=".7">PROFILE  /  EXPERTISE</text>
+<text x="289" y="127" font-size="58" font-family="Georgia,'Times New Roman',serif" fill="url(#metal)">O QUE EU CONSTRUO</text>
+<text x="291" y="166" font-size="18" font-family="Arial,Helvetica,sans-serif" fill="#b7c4d3">IA aplicada · Sistemas reais · Engenharia de ponta a ponta</text>
+<path d="M36 183H1165" stroke="url(#rule)" stroke-opacity=".74"/>
+
+ <g>
+  <rect x="32" y="206" width="356" height="211" rx="13" fill="url(#card)" stroke="#47515f" stroke-width="1.5"/>
+  <path d="M48 209H372" stroke="#6b7889" stroke-opacity=".35"/>
+  <path d="M33 248V375" stroke="#8d9bab" stroke-opacity=".15"/>
+  <path d="M23 206H41 M32 197V215 M379 417H397 M388 408V426" stroke="#9aa8b8" stroke-opacity=".65"/>
+  <rect x="56" y="231" width="67" height="65" rx="9" fill="#1c232e" stroke="#7d8a98" stroke-width="1.2"/>
+  <g transform="translate(62 235)"><g stroke="#d1dce7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M27 2l5 16 16 5-16 5-5 16-5-16-16-5 16-5z"/><path d="M50 0l2 7 7 2-7 2-2 7-2-7-7-2 7-2z"/></g></g>
+  <text x="145" y="262" font-family="Arial,Helvetica,sans-serif" font-size="13.5" fill="#9eadbd" letter-spacing=".7">01 / GENERATIVE AI</text>
+  <text x="56" y="343" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="700" fill="#edf1f5">AGENTES DE IA</text>
+  <text x="56" y="379" font-family="Arial,Helvetica,sans-serif" font-size="17.8" fill="#b5c1ce">LLMs, ferramentas e fluxos</text>
+  <text x="56" y="404" font-family="Arial,Helvetica,sans-serif" font-size="17.8" fill="#b5c1ce">inteligentes.</text>
+  <circle cx="364" cy="241" r="3.3" fill="#d6e2ef"><animate attributeName="opacity" values=".18;1;.18" begin="0.0s" dur="4.8s" repeatCount="indefinite"/></circle>
+  <rect x="48" y="208" width="40" height="2" rx="1" fill="#ecf3ff" opacity=".6">
+   <animate attributeName="x" values="48;327;48" begin="0.0s" dur="8s" repeatCount="indefinite"/>
+   <animate attributeName="opacity" values="0;.8;0" begin="0.0s" dur="8s" repeatCount="indefinite"/>
+  </rect>
+ </g>
+
+ <g>
+  <rect x="422" y="206" width="356" height="211" rx="13" fill="url(#card)" stroke="#47515f" stroke-width="1.5"/>
+  <path d="M438 209H762" stroke="#6b7889" stroke-opacity=".35"/>
+  <path d="M423 248V375" stroke="#8d9bab" stroke-opacity=".15"/>
+  <path d="M413 206H431 M422 197V215 M769 417H787 M778 408V426" stroke="#9aa8b8" stroke-opacity=".65"/>
+  <rect x="446" y="231" width="67" height="65" rx="9" fill="#1c232e" stroke="#7d8a98" stroke-width="1.2"/>
+  <g transform="translate(452 235)"><g stroke="#d1dce7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" fill="none"><rect x="3" y="21" width="12" height="12" rx="2"/><rect x="44" y="7" width="12" height="12" rx="2"/><rect x="44" y="37" width="12" height="12" rx="2"/><path d="M15 27h17V13h12M32 27v16h12"/></g></g>
+  <text x="535" y="262" font-family="Arial,Helvetica,sans-serif" font-size="13.5" fill="#9eadbd" letter-spacing=".7">02 / AUTOMATION</text>
+  <text x="446" y="343" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="700" fill="#edf1f5">AUTOMAÇÕES</text>
+  <text x="446" y="379" font-family="Arial,Helvetica,sans-serif" font-size="17.8" fill="#b5c1ce">n8n, Make, webhooks e</text>
+  <text x="446" y="404" font-family="Arial,Helvetica,sans-serif" font-size="17.8" fill="#b5c1ce">integrações entre sistemas.</text>
+  <circle cx="754" cy="241" r="3.3" fill="#d6e2ef"><animate attributeName="opacity" values=".18;1;.18" begin="0.2s" dur="4.8s" repeatCount="indefinite"/></circle>
+  <rect x="438" y="208" width="40" height="2" rx="1" fill="#ecf3ff" opacity=".6">
+   <animate attributeName="x" values="438;717;438" begin="0.2s" dur="8s" repeatCount="indefinite"/>
+   <animate attributeName="opacity" values="0;.8;0" begin="0.2s" dur="8s" repeatCount="indefinite"/>
+  </rect>
+ </g>
+
+ <g>
+  <rect x="812" y="206" width="356" height="211" rx="13" fill="url(#card)" stroke="#47515f" stroke-width="1.5"/>
+  <path d="M828 209H1152" stroke="#6b7889" stroke-opacity=".35"/>
+  <path d="M813 248V375" stroke="#8d9bab" stroke-opacity=".15"/>
+  <path d="M803 206H821 M812 197V215 M1159 417H1177 M1168 408V426" stroke="#9aa8b8" stroke-opacity=".65"/>
+  <rect x="836" y="231" width="67" height="65" rx="9" fill="#1c232e" stroke="#7d8a98" stroke-width="1.2"/>
+  <g transform="translate(842 235)"><g stroke="#d1dce7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" fill="none"><rect x="3" y="7" width="52" height="41" rx="5"/><path d="M14 21l8 8-8 8M30 37h13"/></g></g>
+  <text x="925" y="262" font-family="Arial,Helvetica,sans-serif" font-size="13.5" fill="#9eadbd" letter-spacing=".7">03 / BACKEND</text>
+  <text x="836" y="343" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="700" fill="#edf1f5">APIs &amp; BACKEND</text>
+  <text x="836" y="379" font-family="Arial,Helvetica,sans-serif" font-size="17.8" fill="#b5c1ce">NestJS, Node.js e serviços</text>
+  <text x="836" y="404" font-family="Arial,Helvetica,sans-serif" font-size="17.8" fill="#b5c1ce">REST bem estruturados.</text>
+  <circle cx="1144" cy="241" r="3.3" fill="#d6e2ef"><animate attributeName="opacity" values=".18;1;.18" begin="0.4s" dur="4.8s" repeatCount="indefinite"/></circle>
+  <rect x="828" y="208" width="40" height="2" rx="1" fill="#ecf3ff" opacity=".6">
+   <animate attributeName="x" values="828;1107;828" begin="0.4s" dur="8s" repeatCount="indefinite"/>
+   <animate attributeName="opacity" values="0;.8;0" begin="0.4s" dur="8s" repeatCount="indefinite"/>
+  </rect>
+ </g>
+
+ <g>
+  <rect x="32" y="442" width="356" height="211" rx="13" fill="url(#card)" stroke="#47515f" stroke-width="1.5"/>
+  <path d="M48 445H372" stroke="#6b7889" stroke-opacity=".35"/>
+  <path d="M33 484V611" stroke="#8d9bab" stroke-opacity=".15"/>
+  <path d="M23 442H41 M32 433V451 M379 653H397 M388 644V662" stroke="#9aa8b8" stroke-opacity=".65"/>
+  <rect x="56" y="467" width="67" height="65" rx="9" fill="#1c232e" stroke="#7d8a98" stroke-width="1.2"/>
+  <g transform="translate(62 471)"><g stroke="#d1dce7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M29 2L55 16 29 30 3 16zM3 27l26 14 26-14M3 37l26 14 26-14"/></g></g>
+  <text x="145" y="498" font-family="Arial,Helvetica,sans-serif" font-size="13.5" fill="#9eadbd" letter-spacing=".7">04 / PRODUCT</text>
+  <text x="56" y="579" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="700" fill="#edf1f5">SAAS &amp; MOBILE</text>
+  <text x="56" y="615" font-family="Arial,Helvetica,sans-serif" font-size="17.8" fill="#b5c1ce">Next.js, React Native e Expo</text>
+  <text x="56" y="640" font-family="Arial,Helvetica,sans-serif" font-size="17.8" fill="#b5c1ce">para produtos digitais.</text>
+  <circle cx="364" cy="477" r="3.3" fill="#d6e2ef"><animate attributeName="opacity" values=".18;1;.18" begin="0.6s" dur="4.8s" repeatCount="indefinite"/></circle>
+  <rect x="48" y="444" width="40" height="2" rx="1" fill="#ecf3ff" opacity=".6">
+   <animate attributeName="x" values="48;327;48" begin="0.6s" dur="8s" repeatCount="indefinite"/>
+   <animate attributeName="opacity" values="0;.8;0" begin="0.6s" dur="8s" repeatCount="indefinite"/>
+  </rect>
+ </g>
+
+ <g>
+  <rect x="422" y="442" width="356" height="211" rx="13" fill="url(#card)" stroke="#47515f" stroke-width="1.5"/>
+  <path d="M438 445H762" stroke="#6b7889" stroke-opacity=".35"/>
+  <path d="M423 484V611" stroke="#8d9bab" stroke-opacity=".15"/>
+  <path d="M413 442H431 M422 433V451 M769 653H787 M778 644V662" stroke="#9aa8b8" stroke-opacity=".65"/>
+  <rect x="446" y="467" width="67" height="65" rx="9" fill="#1c232e" stroke="#7d8a98" stroke-width="1.2"/>
+  <g transform="translate(452 471)"><g stroke="#d1dce7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" fill="none"><ellipse cx="29" cy="12" rx="23" ry="9"/><path d="M6 12v34c0 12 46 12 46 0V12M6 29c0 12 46 12 46 0"/></g></g>
+  <text x="535" y="498" font-family="Arial,Helvetica,sans-serif" font-size="13.5" fill="#9eadbd" letter-spacing=".7">05 / DATA</text>
+  <text x="446" y="579" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="700" fill="#edf1f5">DADOS &amp; ACESSO</text>
+  <text x="446" y="615" font-family="Arial,Helvetica,sans-serif" font-size="17.8" fill="#b5c1ce">PostgreSQL, Supabase,</text>
+  <text x="446" y="640" font-family="Arial,Helvetica,sans-serif" font-size="17.8" fill="#b5c1ce">autenticação e persistência.</text>
+  <circle cx="754" cy="477" r="3.3" fill="#d6e2ef"><animate attributeName="opacity" values=".18;1;.18" begin="0.8s" dur="4.8s" repeatCount="indefinite"/></circle>
+  <rect x="438" y="444" width="40" height="2" rx="1" fill="#ecf3ff" opacity=".6">
+   <animate attributeName="x" values="438;717;438" begin="0.8s" dur="8s" repeatCount="indefinite"/>
+   <animate attributeName="opacity" values="0;.8;0" begin="0.8s" dur="8s" repeatCount="indefinite"/>
+  </rect>
+ </g>
+
+ <g>
+  <rect x="812" y="442" width="356" height="211" rx="13" fill="url(#card)" stroke="#47515f" stroke-width="1.5"/>
+  <path d="M828 445H1152" stroke="#6b7889" stroke-opacity=".35"/>
+  <path d="M813 484V611" stroke="#8d9bab" stroke-opacity=".15"/>
+  <path d="M803 442H821 M812 433V451 M1159 653H1177 M1168 644V662" stroke="#9aa8b8" stroke-opacity=".65"/>
+  <rect x="836" y="467" width="67" height="65" rx="9" fill="#1c232e" stroke="#7d8a98" stroke-width="1.2"/>
+  <g transform="translate(842 471)"><g stroke="#d1dce7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M29 3l24 10-3 26-9 13-12 7-12-7-9-13-3-26zM18 30l9 9 16-19"/></g></g>
+  <text x="925" y="498" font-family="Arial,Helvetica,sans-serif" font-size="13.5" fill="#9eadbd" letter-spacing=".7">06 / QUALITY</text>
+  <text x="836" y="579" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="700" fill="#edf1f5">QUALIDADE</text>
+  <text x="836" y="615" font-family="Arial,Helvetica,sans-serif" font-size="17.8" fill="#b5c1ce">Testes, validação e evolução</text>
+  <text x="836" y="640" font-family="Arial,Helvetica,sans-serif" font-size="17.8" fill="#b5c1ce">contínua das aplicações.</text>
+  <circle cx="1144" cy="477" r="3.3" fill="#d6e2ef"><animate attributeName="opacity" values=".18;1;.18" begin="1.0s" dur="4.8s" repeatCount="indefinite"/></circle>
+  <rect x="828" y="444" width="40" height="2" rx="1" fill="#ecf3ff" opacity=".6">
+   <animate attributeName="x" values="828;1107;828" begin="1.0s" dur="8s" repeatCount="indefinite"/>
+   <animate attributeName="opacity" values="0;.8;0" begin="1.0s" dur="8s" repeatCount="indefinite"/>
+  </rect>
+ </g>
+<path d="M36 701H1165" stroke="url(#rule)" opacity=".6"/>
+<circle cx="530" cy="701" r="3" fill="#e7f0fb">
+ <animate attributeName="cx" values="36;1165;36" dur="11s" repeatCount="indefinite"/>
+ <animate attributeName="opacity" values=".1;.95;.1" dur="11s" repeatCount="indefinite"/>
+</circle>
+<text x="36" y="721" font-size="12.5" font-family="Arial,Helvetica,sans-serif" fill="#8f9dab" letter-spacing=".45">JOÃO ALBERNAZ  /  SOFTWARE ENGINEERING &amp; GENAI</text>
+<text x="1163" y="721" text-anchor="end" font-size="12.5" font-family="Arial,Helvetica,sans-serif" fill="#b4c0cc">06 / CAPABILITIES</text>
+</svg>
