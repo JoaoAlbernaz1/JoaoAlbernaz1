@@ -1,94 +1,111 @@
 <div align="center">
-  <img src="./assets/profile-hero.svg" alt="João Victor Albernaz | Software · Systems · Intelligence" width="100%" />
-  <br />
-  <br />
-  <strong>AI & Automation Developer · Software Engineering Undergraduate</strong>
-  <br />
-  <sub>TypeScript-first engineering. LLM integrations. End-to-end digital products.</sub>
-  <br />
-  <sub>Brasília, Brazil · Universidade Católica de Brasília (UCB)</sub>
-  <br />
-  <br />
-  <a href="https://www.linkedin.com/in/joaooalbernaz/">LINKEDIN</a> &nbsp;·&nbsp; <a href="mailto:joaovictoralbernaz@gmail.com">EMAIL</a> &nbsp;·&nbsp; <a href="https://github.com/JoaoAlbernaz1?tab=repositories">PUBLIC CODE</a>
+
+<img src="./assets/profile-hero.svg" alt="João Victor Albernaz — Engenharia de Software, IA e Automações" width="100%" />
+
+<br/>
+
+**Engenharia de Software · IA aplicada · Automações**
+
+<sub>TypeScript · Sistemas completos · Integrações inteligentes</sub>
+
+<sub>Brasília, Brasil · Universidade Católica de Brasília</sub>
+
+<br/><br/>
+
+[LinkedIn](https://www.linkedin.com/in/joaooalbernaz/) &nbsp; / &nbsp; [E-mail](mailto:joaovictoralbernaz@gmail.com) &nbsp; / &nbsp; [Projetos](https://github.com/JoaoAlbernaz1?tab=repositories)
+
 </div>
 
 ---
 
-### 01 / PROFILE
+### 01 / SOBRE MIM
 
-I’m **João Victor Albernaz**, a Software Engineering undergraduate focused on **generative AI, intelligent automations, APIs and full-stack development**.
+Sou **João Victor Albernaz**, estudante de Engenharia de Software na Universidade Católica de Brasília (UCB). Desenvolvo aplicações, APIs e automações com foco em **IA generativa aplicada a problemas reais**.
 
-My primary stack is **TypeScript / JavaScript**. I work with **React, Next.js, Node.js, NestJS, PostgreSQL and Supabase**, connecting products to LLMs, webhooks and real-world workflows. I also use Python and FastAPI when they fit a project's needs.
+Trabalho principalmente com **TypeScript e JavaScript**, utilizando React, Next.js, Node.js, NestJS, PostgreSQL e Supabase. Também desenvolvo fluxos com **n8n, Make, webhooks e integrações com modelos de linguagem**.
 
-I’m especially interested in **AI Builder / applied GenAI** roles: transforming natural-language interactions into useful, testable software.
-
-**What I value:** working systems, clear architecture, secure integrations and tests over flashy claims.
+Meu interesse está na conexão entre engenharia de software, produtos digitais e **GenAI**: transformar ideias e processos em sistemas úteis, seguros e testáveis.
 
 ---
 
-### 02 / FOCUS & TOOLKIT
+### 02 / TECNOLOGIAS
 
 <div align="center">
-  <img src="./assets/tech-stack.svg" alt="Core stack: TypeScript, Next.js, React, Node.js, NestJS, PostgreSQL, Prisma, Supabase, React Native, Expo, Claude, OpenAI, n8n, Make, webhooks, Docker and testing." width="100%" />
+  <img src="./assets/tech-stack.svg" alt="TypeScript, React, Next.js, NestJS, Claude, OpenAI, n8n, Make, PostgreSQL, Supabase, Docker, React Native e testes." width="100%" />
 </div>
 
-- **Generative AI:** Claude / Anthropic API, OpenAI API, prompt design, JSON/structured outputs, schema validation and LLM-assisted workflows.
-- **Automation:** n8n, Make, WhatsApp Cloud API, webhooks, integrations between business systems.
-- **Engineering:** TypeScript, JavaScript, React, Next.js, Node.js, NestJS, PostgreSQL, Prisma, Supabase, Docker, Git and automated testing.
-- **Also working with:** React Native / Expo, Python / FastAPI, Redis and background jobs.
+**Desenvolvimento:** TypeScript, JavaScript, React, Next.js, Node.js, NestJS, React Native e Expo.
+
+**IA e automações:** n8n, Make, Claude / Anthropic API, OpenAI API, engenharia de prompts, saídas estruturadas e webhooks.
+
+**Dados e infraestrutura:** PostgreSQL, SQL, Prisma, Supabase, Docker, Redis e Git.
+
+**Complementar:** Python, FastAPI e testes automatizados com Vitest/Jest/Pytest.
 
 ---
 
-### 03 / SELECTED WORK
+### 03 / PROJETOS SELECIONADOS
 
-> **The best examples of what I build.** Public repositories link directly to code. Private projects are described as technical case studies; no private code or client data is exposed here.
+#### Selena — Assistente legislativa
 
-#### Finanças Bot — Natural language to structured data
-**TypeScript · Claude / Anthropic API · Zod · PostgreSQL · WhatsApp Cloud API** `PRIVATE REPOSITORY`
+**n8n · IA generativa · WhatsApp · Automações · APIs** — *projeto privado*
 
-A personal finance assistant that interprets messages such as *"gastei 50 no mercado"*, validates the LLM output against structured schemas and stores categorized transactions. The system uses a WhatsApp webhook with signature checks, duplicate-message handling, deterministic tests and separate real-model acceptance cases.
+Assistente legislativa de uso interno, construída com **n8n** para organizar fluxos de atendimento e integrar recursos de inteligência artificial a serviços e processos. Minha atuação envolve desenvolvimento e evolução das automações, webhooks e integrações com sistemas.
 
-**Focus:** applied GenAI, reliable LLM outputs, API integration, data integrity and testability.
+**Em destaque:** automação de processos, orquestração de fluxos, integração de LLMs e aplicação prática de IA.
 
-#### [UniMove — Mobile application & API](https://github.com/JoaoAlbernaz1/UniMove)
-**React Native · Expo · TypeScript · NestJS · PostgreSQL · Prisma** `PUBLIC REPOSITORY`
+*O projeto não possui repositório público e seus fluxos internos permanecem confidenciais.*
 
-Collaborative academic ridesharing platform with authentication, user and driver profiles, ride offers and requests, messaging and a REST API. My related administrative-panel work includes access control, security-focused UI and automated tests.
+#### Finanças Bot — Linguagem natural para dados estruturados
 
-**Focus:** end-to-end architecture, backend systems, secure applications and teamwork.
+**TypeScript · Claude API · Zod · PostgreSQL · WhatsApp Cloud API** — *repositório privado*
 
-#### SeuConvite IA — Multi-tenant SaaS
-**Next.js · React · TypeScript · Prisma · OpenAI integration** `PRIVATE REPOSITORY`
+Assistente que interpreta mensagens em português, transforma texto em lançamentos financeiros categorizados e registra os resultados em banco de dados. Possui validação das saídas do modelo, tratamento de mensagens duplicadas, verificação de assinaturas de webhook e testes automatizados.
 
-An evolving SaaS for event websites, with tenant-aware routing, account and event workflows, and server-side image generation that can use OpenAI models or a local fallback. Features are at different stages of development.
+**Em destaque:** integração com LLMs, saídas estruturadas, confiabilidade e testes.
 
-**Focus:** product engineering, multi-tenancy, AI-assisted features, validation and testing.
+#### [SeuConvite IA — Plataforma SaaS](https://github.com/JoaoAlbernaz1/seuconviteia)
 
-#### Curva S — Project progress analytics
-**React · TypeScript · Vitest · scheduling data** `PRIVATE CLIENT PROJECT`
+**Next.js · TypeScript · Prisma · React · OpenAI API** — *código público*
 
-A browser-based dashboard that imports project schedules, separates calculation logic from the interface and presents planned-versus-actual progress. The implementation includes tests and anonymized fixtures. Client information and source code remain private.
+Plataforma SaaS para criação e gerenciamento de sites de eventos, com arquitetura multi-tenant, organização por subdomínios, painel administrativo e fluxos de autenticação. Inclui integração opcional para geração de imagens com IA e alternativas sem uso do modelo. Produto em evolução.
 
-**Focus:** domain modeling, data validation, testable calculations and usable interfaces.
+**Em destaque:** arquitetura SaaS, desenvolvimento full-stack, integrações de IA e experiência de produto.
 
-**Additional public work:** [PartWatch](https://github.com/JoaoAlbernaz1/ddr5-radar) · [DF Transit Dashboard](https://github.com/JoaoAlbernaz1/dashboard-onibus-df) · [Pokédex](https://github.com/JoaoAlbernaz1/pokedex-rn)
+#### [UniMove — Aplicativo e API](https://github.com/JoaoAlbernaz1/UniMove)
+
+**React Native · Expo · TypeScript · NestJS · PostgreSQL · Prisma** — *código público*
+
+Plataforma acadêmica de caronas com aplicativo mobile, API REST, autenticação, gerenciamento de usuários e veículos, solicitações de caronas e mensagens. O trabalho associado no painel administrativo contempla controle de acesso, interfaces de segurança e testes.
+
+**Em destaque:** arquitetura ponta a ponta, backend, mobile e trabalho colaborativo.
+
+#### Curva S — Acompanhamento de projetos
+
+**React · TypeScript · Vitest · Análise de cronogramas** — *projeto privado*
+
+Painel de acompanhamento de avanço físico de projetos, com importação de cronogramas, cálculos de planejado versus realizado, visualizações e testes automatizados. Os dados e o código associados à empresa são mantidos privados.
+
+**Em destaque:** modelagem de regras de negócio, qualidade de dados e interfaces gerenciais.
+
+<sub>Outros projetos públicos: [PartWatch](https://github.com/JoaoAlbernaz1/ddr5-radar) · [Dashboard de Transporte DF](https://github.com/JoaoAlbernaz1/dashboard-onibus-df) · [Pokédex RN](https://github.com/JoaoAlbernaz1/pokedex-rn)</sub>
 
 ---
 
-### 04 / EXPERIENCE
+### 04 / EXPERIÊNCIA
 
-**AI & Automation Development — Selena project (SLCN / Senado Federal)** · *2025–present*
+**Desenvolvimento de IA e Automações — Projeto Selena** · *2025–atual*  
+Desenvolvimento e manutenção de fluxos de automação e integrações com IA para assistente legislativa privada, utilizando n8n e serviços conectados.
 
-Work involving AI-assisted WhatsApp workflows, OpenAI integrations, n8n, Supabase, APIs and webhooks. I focus on connecting systems and improving practical automation flows.
-
-**Web Development — Blue Ocean** · *2025*
-
-Built responsive web interfaces and worked on business automations with Make / n8n, integrations and REST APIs.
+**Desenvolvimento Web — Blue Ocean** · *2025*  
+Criação de interfaces web e automações com Make/n8n, integração de plataformas e APIs.
 
 ---
 
 <div align="center">
-  <sub>BUILD WHAT MATTERS. KEEP IT CLEAR.</sub>
-  <br />
-  <sub>Open to software engineering and applied GenAI opportunities.</sub>
+
+<sub>MENOS RUÍDO. MAIS ENGENHARIA.</sub>
+
+<sub>Interesse em oportunidades de desenvolvimento de software e GenAI.</sub>
+
 </div>
