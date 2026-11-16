@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="300" viewBox="0 0 600 300">
+  <defs>
+    <linearGradient id="a" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F59E0B"/><stop offset="1" stop-color="#EF4444"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="1" cy="0" r="1"><stop offset="0" stop-color="#F59E0B" stop-opacity=".16"/><stop offset=".6" stop-color="#F59E0B" stop-opacity="0"/></radialGradient>
+    <clipPath id="c"><rect width="600" height="300" rx="18"/></clipPath>
+  </defs>
+  <g clip-path="url(#c)">
+    <rect width="600" height="300" fill="#0D1117"/>
+    <rect width="600" height="300" fill="url(#glow)"/>
+    <rect width="600" height="4" fill="url(#a)"/>
+  </g>
+  <rect x=".5" y=".5" width="599" height="299" rx="18" fill="none" stroke="#30363D"/>
+  <rect x="32" y="34" width="52" height="52" rx="14" fill="url(#a)"/>
+  <text x="58" y="70" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" font-weight="800" fill="#0D1117">S</text>
+  <text x="100" y="60" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#F0F6FC">ScaleUp.gg</text>
+  <text x="100" y="84" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="15" fill="#F59E0B">Landing page de agência de e-commerce</text>
+  <rect x="461" y="24" width="107" height="24" rx="12" fill="#161B22" stroke="#30363D"/>
+  <text x="514.5" y="40" text-anchor="middle" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11" font-weight="700" fill="#8B949E" letter-spacing=".5">WEB · NO AR</text>
+  <text y="134" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="16.5" fill="#C9D1D9"><tspan x="32" dy="0">Landing para criação e escala de lojas Shopify e Nuvemshop,</tspan><tspan x="32" dy="25">com hero animado, formulário de diagnóstico, SEO e Meta Pixel.</tspan></text>
+  <rect x="32" y="236" width="77" height="30" rx="15" fill="#F59E0B" fill-opacity=".10" stroke="#F59E0B" stroke-opacity=".35"/><text x="70.5" y="256" text-anchor="middle" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" fill="#F59E0B">Next.js</text><rect x="117" y="236" width="100" height="30" rx="15" fill="#F59E0B" fill-opacity=".10" stroke="#F59E0B" stroke-opacity=".35"/><text x="167.0" y="256" text-anchor="middle" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" fill="#F59E0B">TypeScript</text><rect x="225" y="236" width="84" height="30" rx="15" fill="#F59E0B" fill-opacity=".10" stroke="#F59E0B" stroke-opacity=".35"/><text x="267.0" y="256" text-anchor="middle" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" fill="#F59E0B">Tailwind</text><rect x="317" y="236" width="122" height="30" rx="15" fill="#F59E0B" fill-opacity=".10" stroke="#F59E0B" stroke-opacity=".35"/><text x="378.0" y="256" text-anchor="middle" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" fill="#F59E0B">Framer Motion</text><rect x="447" y="236" width="69" height="30" rx="15" fill="#F59E0B" fill-opacity=".10" stroke="#F59E0B" stroke-opacity=".35"/><text x="481.5" y="256" text-anchor="middle" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" fill="#F59E0B">Vercel</text>
+</svg>
