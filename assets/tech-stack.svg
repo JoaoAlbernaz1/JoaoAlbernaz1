@@ -1,43 +1,43 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 250" width="1060" height="250" role="img" aria-labelledby="title description">
-  <title id="title">Technology stack</title>
-  <desc id="description">Four monochrome panels highlighting frontend, backend, mobile, and infrastructure tools.</desc>
-  <rect width="1060" height="250" rx="8" fill="#0b0d10"/>
-  <g font-family="Arial, Helvetica, sans-serif">
-    <g>
-      <rect x="16" y="16" width="249" height="218" rx="5" fill="#101318" stroke="#383d44"/>
-      <path d="M34 64H247" stroke="#343940"/>
-      <text x="34" y="45" fill="#8e98a3" font-size="13" letter-spacing="2.1">01 / FRONTEND</text>
-      <text x="34" y="105" fill="#f2f4f6" font-size="23" font-weight="700">React</text>
-      <text x="34" y="136" fill="#ced3d9" font-size="20">Next.js</text>
-      <text x="34" y="167" fill="#ced3d9" font-size="20">TypeScript</text>
-      <text x="34" y="202" fill="#8d959f" font-size="15">Tailwind CSS</text>
-    </g>
-    <g>
-      <rect x="275" y="16" width="249" height="218" rx="5" fill="#101318" stroke="#383d44"/>
-      <path d="M293 64H506" stroke="#343940"/>
-      <text x="293" y="45" fill="#8e98a3" font-size="13" letter-spacing="2.1">02 / BACKEND</text>
-      <text x="293" y="105" fill="#f2f4f6" font-size="23" font-weight="700">Python</text>
-      <text x="293" y="136" fill="#ced3d9" font-size="20">FastAPI · Django</text>
-      <text x="293" y="167" fill="#ced3d9" font-size="20">Node.js · NestJS</text>
-      <text x="293" y="202" fill="#8d959f" font-size="15">REST APIs</text>
-    </g>
-    <g>
-      <rect x="534" y="16" width="249" height="218" rx="5" fill="#101318" stroke="#383d44"/>
-      <path d="M552 64H765" stroke="#343940"/>
-      <text x="552" y="45" fill="#8e98a3" font-size="13" letter-spacing="2.1">03 / MOBILE</text>
-      <text x="552" y="105" fill="#f2f4f6" font-size="23" font-weight="700">React Native</text>
-      <text x="552" y="136" fill="#ced3d9" font-size="20">Expo</text>
-      <text x="552" y="167" fill="#ced3d9" font-size="20">TypeScript</text>
-      <text x="552" y="202" fill="#8d959f" font-size="15">iOS · Android</text>
-    </g>
-    <g>
-      <rect x="793" y="16" width="251" height="218" rx="5" fill="#101318" stroke="#383d44"/>
-      <path d="M811 64H1026" stroke="#343940"/>
-      <text x="811" y="45" fill="#8e98a3" font-size="13" letter-spacing="2.1">04 / DATA + INFRA</text>
-      <text x="811" y="105" fill="#f2f4f6" font-size="23" font-weight="700">PostgreSQL</text>
-      <text x="811" y="136" fill="#ced3d9" font-size="20">Supabase · Redis</text>
-      <text x="811" y="167" fill="#ced3d9" font-size="20">Docker</text>
-      <text x="811" y="202" fill="#8d959f" font-size="15">Prisma · Git</text>
-    </g>
-  </g>
+<title id="title">Technology stack</title>
+<desc id="description">Monochrome panels showing TypeScript-centric engineering, generative AI, backend and data, mobile development and testing.</desc>
+<rect width="1060" height="250" rx="8" fill="#0b0d10"/>
+<g font-family="Arial, Helvetica, sans-serif">
+<g>
+<rect x="16" y="16" width="249" height="218" rx="5" fill="#101318" stroke="#383d44"/>
+<path d="M34 64H247" stroke="#343940"/>
+<text x="34" y="45" fill="#8e98a3" font-size="13" letter-spacing="1.7">01 / CORE STACK</text>
+<text x="34" y="107" fill="#f2f4f6" font-size="24" font-weight="700">TypeScript</text>
+<text x="34" y="139" fill="#ced3d9" font-size="20">React · Next.js</text>
+<text x="34" y="171" fill="#ced3d9" font-size="20">Node.js · NestJS</text>
+<text x="34" y="205" fill="#8d959f" font-size="15">JavaScript · APIs</text>
+</g>
+<g>
+<rect x="275" y="16" width="249" height="218" rx="5" fill="#101318" stroke="#383d44"/>
+<path d="M293 64H506" stroke="#343940"/>
+<text x="293" y="45" fill="#8e98a3" font-size="13" letter-spacing="1.7">02 / AI + AUTOMATION</text>
+<text x="293" y="107" fill="#f2f4f6" font-size="24" font-weight="700">Claude · OpenAI</text>
+<text x="293" y="139" fill="#ced3d9" font-size="20">Structured output</text>
+<text x="293" y="171" fill="#ced3d9" font-size="20">n8n · Make</text>
+<text x="293" y="205" fill="#8d959f" font-size="15">Webhooks · WhatsApp</text>
+</g>
+<g>
+<rect x="534" y="16" width="249" height="218" rx="5" fill="#101318" stroke="#383d44"/>
+<path d="M552 64H765" stroke="#343940"/>
+<text x="552" y="45" fill="#8e98a3" font-size="13" letter-spacing="1.7">03 / DATA + BACKEND</text>
+<text x="552" y="107" fill="#f2f4f6" font-size="24" font-weight="700">PostgreSQL</text>
+<text x="552" y="139" fill="#ced3d9" font-size="20">Prisma · Supabase</text>
+<text x="552" y="171" fill="#ced3d9" font-size="20">Docker · Redis</text>
+<text x="552" y="205" fill="#8d959f" font-size="15">Python · FastAPI</text>
+</g>
+<g>
+<rect x="793" y="16" width="251" height="218" rx="5" fill="#101318" stroke="#383d44"/>
+<path d="M811 64H1026" stroke="#343940"/>
+<text x="811" y="45" fill="#8e98a3" font-size="13" letter-spacing="1.7">04 / MOBILE + QUALITY</text>
+<text x="811" y="107" fill="#f2f4f6" font-size="24" font-weight="700">React Native</text>
+<text x="811" y="139" fill="#ced3d9" font-size="20">Expo</text>
+<text x="811" y="171" fill="#ced3d9" font-size="20">Vitest · Git</text>
+<text x="811" y="205" fill="#8d959f" font-size="15">Test-driven delivery</text>
+</g>
+</g>
 </svg>
