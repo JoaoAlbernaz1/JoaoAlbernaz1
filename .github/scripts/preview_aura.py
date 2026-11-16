@@ -16,7 +16,7 @@ DEST = ROOT / "assets" / "portfolio-preview.png"
 blocks = []
 readme_text = (ROOT / "README.md").read_text(encoding="utf-8")
 for idx in range(11):
-    match = re.search(rf"readme-aura-component-{idx}-[a-f0-9]+\\.svg", readme_text)
+    match = re.search(rf"readme-aura-component-{idx}-[a-f0-9]+\.svg", readme_text)
     if match is None:
         raise RuntimeError(f"README is missing generated SVG for block {idx}")
     raw = (ASSETS / match.group(0)).read_bytes()
