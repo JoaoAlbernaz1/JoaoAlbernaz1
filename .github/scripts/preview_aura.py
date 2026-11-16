@@ -14,11 +14,12 @@ ASSETS = ROOT / ".github" / "assets"
 DEST = ROOT / "assets" / "portfolio-preview.png"
 
 blocks = []
+readme_text = (ROOT / "README.md").read_text(encoding="utf-8")
 for idx in range(11):
-    candidates = sorted(glob.glob(str(ASSETS / f"readme-aura-component-{idx}-*.svg")))
-    if len(candidates) != 1:
-        raise RuntimeError(f"Expected one generated SVG for block {idx}; found {len(candidates)}")
-    raw = Path(candidates[0]).read_bytes()
+    match = re.search(rf"readme-aura-component-{idx}-[a-f0-9]+\\.svg", readme_text)
+    if match is None:
+        raise RuntimeError(f"README is missing generated SVG for block {idx}")
+    raw = (ASSETS / match.group(0)).read_bytes()
     png = cairosvg.svg2png(bytestring=raw)
     blocks.append(Image.open(BytesIO(png)).convert("RGBA"))
 
