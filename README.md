@@ -38,7 +38,9 @@ Atualmente concentro meus estudos e projetos na interseção entre **GenAI, agen
 
 <div align="center">
 
-<img src="./assets/feature-grid-chrome.svg" alt="Seis cards cromados animados: Agentes de IA, Automações, APIs e Backend, SaaS e Mobile, Dados e Acesso, Qualidade e Testes" width="100%" />
+<img src="./assets/feature-grid-chrome.gif" alt="Seis cards cromados com movimento suave: Agentes de IA, Automações, APIs e Backend, SaaS e Mobile, Dados e Acesso, Qualidade e Testes" width="100%" />
+
+<sub>[Versão estática do painel](./assets/feature-grid-chrome.png)</sub>
 
 <sub>Seis áreas que conectam meus estudos e projetos a problemas reais — com foco em engenharia aplicada.</sub>
 
