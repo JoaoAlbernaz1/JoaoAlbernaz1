@@ -103,6 +103,8 @@
 </div>
 ```
 
+<!-- separate project rows intentionally -->
+
 ```aura width=486 height=211 link="https://github.com/JoaoAlbernaz1/UniMove" inline align=center
 <div style={{display:'flex',position:'relative',width:'100%',height:'100%',background:'#050505',flexDirection:'column',padding:'21px 25px',fontFamily:'Inter, sans-serif'}}>
  <svg width="486" height="211" style={{position:'absolute',top:0,left:0}}><defs><linearGradient id="metal" x1="0%" y1="0%" x2="100%" y2="75%"><stop offset="0%" stopColor="#494949"/><stop offset="23%" stopColor="#fdfdfd"/><stop offset="38%" stopColor="#484848"/><stop offset="58%" stopColor="#ffffff"/><stop offset="77%" stopColor="#777"/><stop offset="92%" stopColor="#eee"/><stop offset="100%" stopColor="#151515"/></linearGradient></defs><path d="M1 1H485V210H1Z" stroke="#333" fill="none"/><path d="M22 190H462" stroke="#9a9a9a" opacity=".7"/><path d="M454 15L457 27L469 30L457 33L454 45L451 33L439 30L451 27Z" fill="url(#metal)"/></svg>
