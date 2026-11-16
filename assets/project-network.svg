@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1060" height="255" viewBox="0 0 1060 255" role="img" aria-labelledby="title desc">
+<title id="title">Mapa de atuação</title><desc id="desc">Fluxo ilustrativo das três áreas: agentes de IA, produtos digitais e engenharia de software. Não representa dados numéricos.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#090b0f"/><stop offset=".47" stop-color="#15191f"/><stop offset="1" stop-color="#08090d"/></linearGradient>
+  <linearGradient id="silver" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#636c77"/><stop offset=".26" stop-color="#e1e7ee"/><stop offset=".53" stop-color="#929aa4"/><stop offset=".74" stop-color="#fbfdff"/><stop offset="1" stop-color="#59616b"/></linearGradient>
+  <linearGradient id="stroke" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#343b45"/><stop offset=".50" stop-color="#c4ccd6"/><stop offset="1" stop-color="#353c46"/></linearGradient>
+  <linearGradient id="metal" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#242a32"/><stop offset=".45" stop-color="#10141a"/><stop offset="1" stop-color="#0a0c10"/></linearGradient>
+</defs>
+<rect width="1060" height="255" fill="url(#bg)" rx="11"/><rect x="8" y="8" width="1044" height="239" rx="8" fill="none" stroke="#3d4651" stroke-width="1"/><path d="M24 11H1036" stroke="url(#stroke)" opacity=".55"/><path d="M24 244H1036" stroke="url(#stroke)" opacity=".35"/><g transform="translate(0 110) scale(1 1)" fill="none" stroke="#8090a1" stroke-width="1.2" opacity=".19">
+<path d="M0 0C49-28 99-24 172-48C116-12 73 6 4 24"/>
+<path d="M9 7C44-12 93-15 150-38"/>
+<path d="M7 15C43-1 87-1 132-22"/>
+<path d="M4 21C41 10 77 14 110-3"/>
+</g><g transform="translate(1060 110) scale(-1 1)" fill="none" stroke="#8090a1" stroke-width="1.2" opacity=".19">
+<path d="M0 0C49-28 99-24 172-48C116-12 73 6 4 24"/>
+<path d="M9 7C44-12 93-15 150-38"/>
+<path d="M7 15C43-1 87-1 132-22"/>
+<path d="M4 21C41 10 77 14 110-3"/>
+</g><text x="24" y="42" font-family="Georgia,'Times New Roman',serif" fill="url(#silver)" font-size="29" font-weight="700" letter-spacing="2">THE SYSTEMS I BUILD</text><text x="1036" y="38" font-family="Arial,sans-serif" font-size="11" text-anchor="end" fill="#8896a5" letter-spacing="1.7">IDEA → ENGINEERING → IMPACT</text><rect x="22" y="64" width="1016" height="1" fill="#8c97a5" opacity=".55"/><rect x="70" y="63" width="150" height="3" rx="2" fill="#f2f6fa" opacity="0"><animate attributeName="x" values="22;842;22" dur="9s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.65;0" dur="9s" repeatCount="indefinite"/></rect><path d="M24 90H1036" stroke="#4c5764" stroke-dasharray="3 8" opacity=".65"/><g>
+<rect x="24" y="111" width="312" height="111" rx="11" fill="url(#metal)" stroke="#52606d"/>
+<rect x="37" y="124" width="34" height="28" rx="6" fill="#1b212a" stroke="#737e8b"/>
+<text x="54" y="142" text-anchor="middle" fill="#c8d3df" font-size="13" font-weight="bold" font-family="Arial,sans-serif">01</text>
+<text x="82" y="146" fill="url(#silver)" font-size="22" letter-spacing="1" font-weight="bold" font-family="Georgia,serif">GENAI</text>
+<text x="41" y="182" fill="#dae0e8" font-family="Arial,sans-serif" font-size="17">Agentes · LLMs</text>
+<text x="41" y="208" fill="#98a6b5" font-family="Arial,sans-serif" font-size="14">n8n · APIs</text>
+</g>
+<g>
+<rect x="377" y="111" width="312" height="111" rx="11" fill="url(#metal)" stroke="#52606d"/>
+<rect x="390" y="124" width="34" height="28" rx="6" fill="#1b212a" stroke="#737e8b"/>
+<text x="407" y="142" text-anchor="middle" fill="#c8d3df" font-size="13" font-weight="bold" font-family="Arial,sans-serif">02</text>
+<text x="435" y="146" fill="url(#silver)" font-size="22" letter-spacing="1" font-weight="bold" font-family="Georgia,serif">PRODUCT</text>
+<text x="394" y="182" fill="#dae0e8" font-family="Arial,sans-serif" font-size="17">SaaS · Mobile</text>
+<text x="394" y="208" fill="#98a6b5" font-family="Arial,sans-serif" font-size="14">UX · Integração</text>
+</g>
+<g>
+<rect x="730" y="111" width="312" height="111" rx="11" fill="url(#metal)" stroke="#52606d"/>
+<rect x="743" y="124" width="34" height="28" rx="6" fill="#1b212a" stroke="#737e8b"/>
+<text x="760" y="142" text-anchor="middle" fill="#c8d3df" font-size="13" font-weight="bold" font-family="Arial,sans-serif">03</text>
+<text x="788" y="146" fill="url(#silver)" font-size="22" letter-spacing="1" font-weight="bold" font-family="Georgia,serif">ENGINEERING</text>
+<text x="747" y="182" fill="#dae0e8" font-family="Arial,sans-serif" font-size="17">Banco · Serviços</text>
+<text x="747" y="208" fill="#98a6b5" font-family="Arial,sans-serif" font-size="14">Testes · Segurança</text>
+</g>
+<path d="M338 168H375M691 168H728" stroke="#d4dee9" stroke-width="1.5" stroke-dasharray="5 5" opacity=".65"/>
+<circle cx="356" cy="168" r="3" fill="#e7edf5"><animate attributeName="opacity" values=".2;1;.2" dur="2.8s" repeatCount="indefinite"/></circle>
+<circle cx="709" cy="168" r="3" fill="#e7edf5"><animate attributeName="opacity" values="1;.2;1" dur="2.8s" repeatCount="indefinite"/></circle>
+<text x="24" y="246" font-size="10" letter-spacing="1.2" fill="#8794a2" font-family="Arial,sans-serif">ENGENHARIA DE SOFTWARE • AUTOMAÇÃO • INTELIGÊNCIA ARTIFICIAL</text></svg>
