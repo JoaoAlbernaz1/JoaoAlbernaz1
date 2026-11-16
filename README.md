@@ -32,7 +32,23 @@ Atualmente concentro meus estudos e projetos na interseção entre **GenAI, agen
   <img src="./assets/project-network.svg" alt="Mapa visual animado: agentes de IA, desenvolvimento de produtos e engenharia de software" width="100%" />
 </div>
 
-### 02 / LANGUAGES & STACK
+### 02 / WHAT I BUILD
+
+<sub>CORE CAPABILITIES  /  INTELIGÊNCIA ARTIFICIAL · AUTOMAÇÃO · ENGENHARIA</sub>
+
+<div align="center">
+
+<img src="./assets/feature-grid-chrome.svg" alt="Seis cards cromados animados: Agentes de IA, Automações, APIs e Backend, SaaS e Mobile, Dados e Acesso, Qualidade e Testes" width="100%" />
+
+<sub>Seis áreas que conectam meus estudos e projetos a problemas reais — com foco em engenharia aplicada.</sub>
+
+</div>
+
+**Projetos que colocam essas habilidades em prática:** Selena (assistente privada com IA e n8n) · [SeuConvite IA](https://github.com/JoaoAlbernaz1/seuconviteia) (SaaS) · [UniMove](https://github.com/JoaoAlbernaz1/UniMove) (mobile e API) · Curva S (painel privado).
+
+<!-- Layout visual inspirado no Feature 08 do Hirael (MIT) por Mohammad Shehadeh: https://hirael.com/blocks/features/feature-08 -->
+
+### 03 / LANGUAGES & STACK
 
 <div align="center">
   <img src="./assets/language-stack-chrome.svg" alt="Painel cromado com TypeScript, JavaScript, Python, Java, C, Go e Kotlin" width="100%" />
@@ -49,7 +65,7 @@ Atualmente concentro meus estudos e projetos na interseção entre **GenAI, agen
 **IA & automação** — n8n, Make, OpenAI API, Claude / Anthropic API, engenharia de prompts, saídas estruturadas, webhooks e integrações.  
 **DevOps & qualidade** — Docker, Git, testes automatizados com Vitest, Jest e Pytest.
 
-### 03 / SELECTED PROJECTS
+### 04 / SELECTED PROJECTS
 
 <sub>PROJETOS REAIS · DESENVOLVIMENTO APLICADO · GENAI</sub>
 
@@ -104,7 +120,7 @@ Painel gerencial para acompanhar o avanço físico de projetos, com importação
 
 </details>
 
-### 04 / ACTIVITY & CONTRIBUTIONS
+### 05 / ACTIVITY & CONTRIBUTIONS
 
 <sub>ATIVIDADE PÚBLICA NO GITHUB · GRÁFICO DINÂMICO</sub>
 
@@ -116,7 +132,7 @@ Painel gerencial para acompanhar o avanço físico de projetos, com importação
 
 </div>
 
-### 05 / EXPERIENCE
+### 06 / EXPERIENCE
 
 **Desenvolvimento de IA e Automações** — *Projeto Selena · 2025–atual*  
 Orquestração de fluxos no n8n, integração de APIs e aplicação de inteligência artificial à automação de processos.
@@ -124,7 +140,7 @@ Orquestração de fluxos no n8n, integração de APIs e aplicação de inteligê
 **Desenvolvimento Web** — *Blue Ocean · 2025*  
 Desenvolvimento de interfaces, sites e automações com Make/n8n, integrações de plataformas e APIs.
 
-### 06 / NEXT CHAPTER
+### 07 / NEXT CHAPTER
 
 Quero continuar evoluindo em **GenAI, agentes de IA, sistemas escaláveis e engenharia de software**, transformando ideias em produtos consistentes e úteis.
 
