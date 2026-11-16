@@ -155,6 +155,29 @@
 </div>
 ```
 
+```aura width=800 height=64
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%', height: '100%', padding: '0 26px', position: 'relative', overflow: 'hidden', borderRadius: 16, border: '1px solid #2c333c', backgroundImage: 'linear-gradient(170deg, #151920 0%, #0b0d12 60%, #08090d 100%)' }}>
+  <svg width="800" height="64" style={{ position: 'absolute', top: 0, left: 0 }}>
+    <defs><linearGradient id="ln4" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stopColor="rgba(196,204,214,0)" /><stop offset="50%" stopColor="rgba(196,204,214,0.5)" /><stop offset="100%" stopColor="rgba(196,204,214,0)" /></linearGradient></defs>
+    <rect x="0" y="0" width="800" height="1" fill="url(#ln4)" />
+  </svg>
+  <div style={{ display: 'flex', fontFamily: 'Cinzel', fontSize: 26, letterSpacing: 2, backgroundImage: 'linear-gradient(180deg, #636c77 0%, #e1e7ee 28%, #929aa4 52%, #fbfdff 74%, #59616b 100%)', backgroundClip: 'text', color: 'transparent' }}>WHAT I BUILD</div>
+  <div style={{ display: 'flex', fontFamily: 'JetBrainsMono', fontSize: 11, letterSpacing: 3, color: '#7d8793' }}>02 / CORE CAPABILITIES</div>
+</div>
+```
+
+<div align="center">
+
+<img src="./assets/feature-grid-chrome.gif" alt="Seis cards cromados com movimento suave: Agentes de IA, Automações, APIs e Backend, SaaS e Mobile, Dados e Acesso, Qualidade e Testes" width="100%" />
+
+<sub>[Versão estática do painel](./assets/feature-grid-chrome.png)</sub>
+
+<sub>Seis áreas que conectam meus estudos e projetos a problemas reais — com foco em engenharia aplicada.</sub>
+
+</div>
+
+<!-- Layout visual inspirado no Feature 08 do Hirael (MIT) por Mohammad Shehadeh: https://hirael.com/blocks/features/feature-08 -->
+
 ```aura width=800 height=356
 <div style={{ display: 'flex', flexDirection: 'column', position: 'relative', overflow: 'hidden', width: '100%', height: '100%', borderRadius: 18, border: '1px solid #2c333c', backgroundImage: 'linear-gradient(170deg, #151920 0%, #0b0d12 60%, #08090d 100%)', padding: 28 }}>
   <style>{`
@@ -176,7 +199,7 @@
 
   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', height: 44 }}>
     <div style={{ display: 'flex', fontFamily: 'Cinzel', fontSize: 26, letterSpacing: 2, backgroundImage: 'linear-gradient(180deg, #636c77 0%, #e1e7ee 28%, #929aa4 52%, #fbfdff 74%, #59616b 100%)', backgroundClip: 'text', color: 'transparent' }}>LANGUAGES &amp; STACK</div>
-    <div style={{ display: 'flex', fontFamily: 'JetBrainsMono', fontSize: 11, letterSpacing: 3, color: '#7d8793', marginBottom: 6 }}>02 / DESIGN · BUILD · SHIP</div>
+    <div style={{ display: 'flex', fontFamily: 'JetBrainsMono', fontSize: 11, letterSpacing: 3, color: '#7d8793', marginBottom: 6 }}>03 / DESIGN · BUILD · SHIP</div>
   </div>
 
   <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginTop: 30 }}>
@@ -224,7 +247,7 @@
     <rect x="0" y="0" width="800" height="1" fill="url(#ln3)" />
   </svg>
   <div style={{ display: 'flex', fontFamily: 'Cinzel', fontSize: 26, letterSpacing: 2, backgroundImage: 'linear-gradient(180deg, #636c77 0%, #e1e7ee 28%, #929aa4 52%, #fbfdff 74%, #59616b 100%)', backgroundClip: 'text', color: 'transparent' }}>SELECTED PROJECTS</div>
-  <div style={{ display: 'flex', fontFamily: 'JetBrainsMono', fontSize: 11, letterSpacing: 3, color: '#7d8793' }}>03 / PROJETOS REAIS · GENAI</div>
+  <div style={{ display: 'flex', fontFamily: 'JetBrainsMono', fontSize: 11, letterSpacing: 3, color: '#7d8793' }}>04 / PROJETOS REAIS · GENAI</div>
 </div>
 ```
 
@@ -378,7 +401,7 @@
     </svg>
     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end' }}>
       <div style={{ display: 'flex', fontFamily: 'Cinzel', fontSize: 22, letterSpacing: 2, backgroundImage: 'linear-gradient(180deg, #636c77 0%, #e1e7ee 28%, #929aa4 52%, #fbfdff 74%, #59616b 100%)', backgroundClip: 'text', color: 'transparent' }}>EXPERIENCE</div>
-      <div style={{ display: 'flex', fontFamily: 'JetBrainsMono', fontSize: 10.5, letterSpacing: 3, color: '#7d8793', marginBottom: 4 }}>04 / TRAJETÓRIA</div>
+      <div style={{ display: 'flex', fontFamily: 'JetBrainsMono', fontSize: 10.5, letterSpacing: 3, color: '#7d8793', marginBottom: 4 }}>05 / TRAJETÓRIA</div>
     </div>
     <div style={{ display: 'flex', flexDirection: 'column', marginTop: 26, paddingLeft: 26 }}>
       <div style={{ display: 'flex', justifyContent: 'space-between' }}>
@@ -402,7 +425,7 @@
       <ellipse id="a5" cx="270" cy="230" rx="190" ry="120" fill="url(#s7)" />
     </svg>
     <div style={{ display: 'flex', flexDirection: 'column' }}>
-      <div style={{ display: 'flex', fontFamily: 'JetBrainsMono', fontSize: 10.5, letterSpacing: 3, color: '#7d8793' }}>05 / NEXT CHAPTER</div>
+      <div style={{ display: 'flex', fontFamily: 'JetBrainsMono', fontSize: 10.5, letterSpacing: 3, color: '#7d8793' }}>06 / NEXT CHAPTER</div>
       <div style={{ display: 'flex', marginTop: 14, fontFamily: 'Cinzel', fontSize: 21, lineHeight: 1.25, backgroundImage: 'linear-gradient(180deg, #636c77 0%, #e1e7ee 28%, #929aa4 52%, #fbfdff 74%, #59616b 100%)', backgroundClip: 'text', color: 'transparent' }}>Ideias em produtos consistentes.</div>
       <div style={{ display: 'flex', marginTop: 10, fontFamily: 'Inter', fontSize: 12.5, lineHeight: 1.55, color: '#9aa4af' }}>Evoluindo em GenAI, agentes de IA, sistemas escaláveis e engenharia de software.</div>
     </div>
