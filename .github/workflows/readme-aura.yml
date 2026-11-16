@@ -7,6 +7,7 @@ on:
       - 'readme.source.md'
       - '.github/workflows/readme-aura.yml'
       - '.github/scripts/preview_aura.py'
+      - '.github/scripts/generate_aura_backgrounds.py'
   workflow_dispatch:
   schedule:
     - cron: '20 6 * * 1'
@@ -24,6 +25,14 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+      - name: Prepare Python environment
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Generate gradient backgrounds for Aura
+        run: |
+          python -m pip install --disable-pip-version-check "Pillow>=11,<13"
+          python .github/scripts/generate_aura_backgrounds.py
       - name: Render README and SVG components
         uses: collectioneur/readme-aura@main
         with:
