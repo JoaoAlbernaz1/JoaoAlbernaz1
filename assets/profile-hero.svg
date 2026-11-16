@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="1200" height="360" role="img" aria-labelledby="title description">
+  <title id="title">João Victor Albernaz — Software Developer</title>
+  <desc id="description">Minimalist monochrome profile cover with fine contour lines and a geometric black-and-white visual.</desc>
+  <defs>
+    <linearGradient id="canvas" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d0f12"/>
+      <stop offset="62%" stop-color="#07090b"/>
+      <stop offset="100%" stop-color="#13161a"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="78%" cy="52%" r="53%">
+      <stop offset="0%" stop-color="#d9dfe5" stop-opacity=".16"/>
+      <stop offset="55%" stop-color="#717982" stop-opacity=".035"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity=".032" stroke-width="1"/>
+    </pattern>
+    <clipPath id="art"><rect x="650" y="20" width="526" height="317"/></clipPath>
+  </defs>
+  <rect width="1200" height="360" fill="url(#canvas)"/>
+  <rect width="1200" height="360" fill="url(#glow)"/>
+  <rect width="1200" height="360" fill="url(#grid)"/>
+  <rect x="24.5" y="24.5" width="1151" height="311" rx="2" fill="none" stroke="#d6dbe0" stroke-opacity=".22"/>
+  <path d="M48 91H1152" stroke="#fff" stroke-opacity=".09"/>
+  <path d="M48 299H1152" stroke="#fff" stroke-opacity=".09"/>
+  <text x="63" y="67" fill="#bbc1c9" font-size="14" letter-spacing="3.2" font-family="Arial, Helvetica, sans-serif">JVA / DIGITAL PORTFOLIO</text>
+  <text x="1129" y="67" text-anchor="end" fill="#737b84" font-size="12" letter-spacing="2.2" font-family="Arial, Helvetica, sans-serif">BRAZIL · 2026</text>
+  <text x="60" y="177" fill="#f6f7f8" font-size="67" font-weight="700" letter-spacing="-3.2" font-family="Arial, Helvetica, sans-serif">JOÃO VICTOR.</text>
+  <text x="63" y="227" fill="#858d98" font-size="49" font-weight="300" letter-spacing="7.4" font-family="Arial, Helvetica, sans-serif">ALBERNAZ</text>
+  <rect x="63" y="266" width="34" height="2" fill="#d5dbe0"/>
+  <text x="113" y="273" fill="#b2b8c0" font-size="14" letter-spacing="2.1" font-family="Arial, Helvetica, sans-serif">SOFTWARE · SYSTEMS · INTELLIGENCE</text>
+  <g clip-path="url(#art)" fill="none" stroke-linecap="round">
+    <circle cx="936" cy="197" r="114" stroke="#e3e9ef" stroke-opacity=".17" stroke-width="1"/>
+    <circle cx="936" cy="197" r="151" stroke="#e3e9ef" stroke-opacity=".11" stroke-width="1"/>
+    <circle cx="936" cy="197" r="188" stroke="#e3e9ef" stroke-opacity=".075" stroke-width="1"/>
+    <circle cx="936" cy="197" r="226" stroke="#e3e9ef" stroke-opacity=".045" stroke-width="1"/>
+    <path d="M642 251C724 226 764 160 835 180C898 197 928 255 1003 240C1063 228 1094 167 1188 185" stroke="#c9d1d9" stroke-opacity=".13" stroke-width="1.3"/>
+    <path d="M642 265C724 240 764 174 835 194C898 211 928 269 1003 254C1063 242 1094 181 1188 199" stroke="#c9d1d9" stroke-opacity=".19" stroke-width="1.3"/>
+    <path d="M642 279C724 254 764 188 835 208C898 225 928 283 1003 268C1063 256 1094 195 1188 213" stroke="#c9d1d9" stroke-opacity=".3" stroke-width="1.3"/>
+    <path d="M642 293C724 268 764 202 835 222C898 239 928 297 1003 282C1063 270 1094 209 1188 227" stroke="#e6eaee" stroke-opacity=".43" stroke-width="1.3"/>
+    <path d="M642 307C724 282 764 216 835 236C898 253 928 311 1003 296C1063 284 1094 223 1188 241" stroke="#e6eaee" stroke-opacity=".26" stroke-width="1.3"/>
+    <path d="M642 321C724 296 764 230 835 250C898 267 928 325 1003 310C1063 298 1094 237 1188 255" stroke="#e6eaee" stroke-opacity=".13" stroke-width="1.3"/>
+    <path d="M642 335C724 310 764 244 835 264C898 281 928 339 1003 324C1063 312 1094 251 1188 269" stroke="#e6eaee" stroke-opacity=".08" stroke-width="1.3"/>
+    <path d="M936 65V328M713 197H1170" stroke="#fff" stroke-opacity=".065" stroke-dasharray="3 10"/>
+    <circle cx="936" cy="197" r="4" fill="#e5e7eb" stroke="none"/>
+    <circle cx="1084" cy="130" r="2.5" fill="#a9b0b8" stroke="none"/>
+  </g>
+  <text x="63" y="324" fill="#68727d" font-size="11" letter-spacing="2.1" font-family="Arial, Helvetica, sans-serif">DESIGN WITH INTENTION. BUILD WITH PRECISION.</text>
+  <text x="1130" y="324" text-anchor="end" fill="#69737d" font-size="11" letter-spacing="2.1" font-family="Arial, Helvetica, sans-serif">01 / 01</text>
+</svg>
