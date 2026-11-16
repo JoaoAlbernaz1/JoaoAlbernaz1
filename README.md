@@ -28,9 +28,13 @@ Meu interesse está na conexão entre engenharia de software, produtos digitais 
 
 ---
 
-### 02 / TECNOLOGIAS
+### 02 / LINGUAGENS + TECNOLOGIAS
 
 <div align="center">
+  <img src="./assets/language-stack.svg" alt="Ícones SVG das linguagens de programação: TypeScript, JavaScript, Python, Java e C." width="100%" />
+
+  <br/><br/>
+
   <img src="./assets/tech-stack.svg" alt="TypeScript, React, Next.js, NestJS, Claude, OpenAI, n8n, Make, PostgreSQL, Supabase, Docker, React Native e testes." width="100%" />
 </div>
 
@@ -40,7 +44,7 @@ Meu interesse está na conexão entre engenharia de software, produtos digitais 
 
 **Dados e infraestrutura:** PostgreSQL, SQL, Prisma, Supabase, Docker, Redis e Git.
 
-**Complementar:** Python, FastAPI e testes automatizados com Vitest/Jest/Pytest.
+**Outras linguagens e ferramentas:** Python, Java, C, FastAPI e testes automatizados com Vitest/Jest/Pytest.
 
 ---
 
