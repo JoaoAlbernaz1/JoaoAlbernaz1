@@ -1,190 +1,270 @@
-<!-- Fonte do README gerado por readme-aura. Não edite README.md diretamente. -->
-<!-- Arte original: estética black/chrome inspirada nas quatro referências fornecidas. -->
-```aura width=1000 height=411
-<div style={{display:'flex',position:'relative',width:'100%',height:'100%',background:'#010101',overflow:'hidden',fontFamily:'Inter, sans-serif'}}>
- 
- <svg width="1000" height="411" style={{position:'absolute',top:0,left:0}}>
-  <defs><linearGradient id="metal" x1="0%" y1="0%" x2="100%" y2="75%"><stop offset="0%" stopColor="#494949"/><stop offset="23%" stopColor="#fdfdfd"/><stop offset="38%" stopColor="#484848"/><stop offset="58%" stopColor="#ffffff"/><stop offset="77%" stopColor="#777"/><stop offset="92%" stopColor="#eee"/><stop offset="100%" stopColor="#151515"/></linearGradient></defs>
-  <g><path d="M18 297 C76 300 126 321 164 285 C136 250 95 225 72 177 C124 209 155 249 198 235 C225 207 242 170 250 139 C263 193 273 212 298 216 C329 193 350 135 356 71 C368 155 365 177 392 194 C414 184 436 147 458 104 C449 159 427 203 407 228 C424 257 460 290 484 326 C430 298 401 284 367 258 C338 299 309 337 282 366 C301 312 304 273 287 258 C240 248 219 287 194 331 C212 284 206 261 190 252 C171 255 139 271 124 292 C129 330 150 359 172 384 C113 348 101 322 75 302Z" fill="url(#metal)" stroke="#ececec" strokeWidth="1.2"/><path d="M52 278C130 303 159 287 199 250C259 218 291 247 334 247C385 239 425 199 446 134M98 205C159 253 195 266 248 230M142 312C191 269 219 248 293 262" fill="none" stroke="#ffffff" strokeWidth="2.3" opacity=".75"/><path d="M51 287C117 319 162 305 185 271M264 157C260 217 280 245 313 243M351 101C358 181 370 208 380 237" fill="none" stroke="#070707" strokeWidth="7" opacity=".55"/></g>
-  <g><path d="M912 42L918.6 68.4L945 75L918.6 81.6L912 108L905.4 81.6L879 75L905.4 68.4Z" fill="url(#metal)"/></g>
-  <path d="M485 316H952" stroke="#a0a0a0" strokeWidth="1" opacity=".5"/>
- </svg>
- <div style={{display:'flex',position:'absolute',left:489,top:105,width:460,flexDirection:'column'}}>
-  <span style={{fontSize:12,color:'#bababa',letterSpacing:4}}>J O Ã O &nbsp; / &nbsp; V I C T O R</span>
-  <span style={{fontSize:79,fontWeight:700,color:'#fafafa',letterSpacing:-5,marginTop:14,lineHeight:1.07}}>ALBERNAZ</span>
-  <span style={{fontSize:18,color:'#eee',marginTop:17,letterSpacing:1}}>SOFTWARE ENGINEERING</span>
-  <span style={{fontSize:16,color:'#9e9e9e',marginTop:9}}>Generative AI / Automation / SaaS</span>
-  <span style={{fontSize:11,color:'#8a8a8a',marginTop:48,letterSpacing:2}}>BRASÍLIA — BRASIL &nbsp; / &nbsp; 2026</span>
- </div>
+<!-- Gerado automaticamente com collectioneur/readme-aura. Edite este arquivo, não README.md. -->
+<!-- Design: inspiração no layout DarkOrbs do readme-aura, adaptado para João Albernaz. -->
+
+```aura width=860 height=329
+<div style={{display:'flex',flexDirection:'column',position:'relative',width:'100%',height:'100%',background:'#0b0e15',borderRadius:19,overflow:'hidden',alignItems:'center',justifyContent:'center',fontFamily:'Inter, sans-serif'}}>
+  <style>{`@keyframes hero-drift {0%,100%{opacity:.55;transform:translate(0,0)} 50%{opacity:.95;transform:translate(14px,-10px)}} @keyframes hero-drift2 {0%,100%{opacity:.6;transform:translate(0,0)} 50%{opacity:.95;transform:translate(-15px,8px)}} @keyframes hero-pulse {0%,100%{opacity:.10} 50%{opacity:.23}} #hero-a {animation:hero-drift 9s ease-in-out infinite} #hero-b {animation:hero-drift2 12s ease-in-out infinite} #hero-c {animation:hero-drift 11s ease-in-out infinite 1.2s} #hero-d {animation:hero-drift2 13s ease-in-out infinite 1.7s} @keyframes orbit {from{transform:rotate(0deg)}to{transform:rotate(360deg)}} #hero-r1 {animation:hero-pulse 7s ease-in-out infinite} #hero-r2 {animation:hero-pulse 8s ease-in-out infinite 1s} #hero-r3 {animation:hero-pulse 10s ease-in-out infinite 1.5s} #hero-orbit {animation:orbit 22s linear infinite}`}</style>
+  <svg width="860" height="329" style={{position:'absolute',top:0,left:0}}>
+<defs>
+<radialGradient id="hero-mint"><stop offset="0%" stopColor="#3fa989" stopOpacity=".36"/><stop offset="100%" stopColor="#3fa989" stopOpacity="0"/></radialGradient>
+<radialGradient id="hero-rose"><stop offset="0%" stopColor="#d65b71" stopOpacity=".34"/><stop offset="100%" stopColor="#d65b71" stopOpacity="0"/></radialGradient>
+<radialGradient id="hero-violet"><stop offset="0%" stopColor="#9b78e2" stopOpacity=".34"/><stop offset="100%" stopColor="#9b78e2" stopOpacity="0"/></radialGradient>
+<radialGradient id="hero-blue"><stop offset="0%" stopColor="#517ac1" stopOpacity=".25"/><stop offset="100%" stopColor="#517ac1" stopOpacity="0"/></radialGradient>
+</defs>
+<ellipse id="hero-a" cx="155" cy="263" rx="292" ry="227" fill="url(#hero-mint)"/>
+<ellipse id="hero-b" cx="740" cy="59" rx="301" ry="234" fill="url(#hero-rose)"/>
+<ellipse id="hero-c" cx="645" cy="309" rx="241" ry="184" fill="url(#hero-violet)"/>
+<ellipse id="hero-d" cx="112" cy="59" rx="258" ry="181" fill="url(#hero-blue)"/>
+</svg>
+  <svg width="860" height="329" style={{position:'absolute',left:0,top:0}}>
+    <circle id="hero-r1" cx="430" cy="157" r="63" stroke="#e9eaf4" strokeWidth=".8" fill="none"/>
+    <circle id="hero-r2" cx="430" cy="157" r="112" stroke="#e9eaf4" strokeWidth=".8" fill="none"/>
+    <circle id="hero-r3" cx="430" cy="157" r="169" stroke="#e9eaf4" strokeWidth=".8" fill="none"/>
+    <circle cx="430" cy="157" r="230" stroke="#dde2ec" strokeOpacity=".05" strokeWidth=".8" fill="none"/>
+    <g id="hero-orbit"><circle cx="430" cy="44" r="3" fill="#fff" opacity=".6"/></g>
+  </svg>
+  <div style={{position:'relative',display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center',width:'100%'}}>
+    <span style={{fontSize:59,fontWeight:700,letterSpacing:-2.4,color:'#ffffff',lineHeight:1.08}}>João Albernaz</span>
+    <span style={{fontSize:11,letterSpacing:4,color:'#bbc1d0',marginTop:12}}>SOFTWARE ENGINEERING  ·  GENAI  ·  AUTOMATION</span>
+    <div style={{display:'flex',flexDirection:'row',gap:8,marginTop:30}}>
+      {['Full-stack','AI Agents','SaaS'].map((v,i)=>(<span key={i} style={{fontSize:11,letterSpacing:.2,color:'#c8ccd8',border:'1px solid #343b49',background:'#151b2699',borderRadius:20,padding:'6px 15px'}}>{v}</span>))}
+    </div>
+  </div>
 </div>
 ```
 
-<div align="center"><b>Engenharia de Software · IA Aplicada · Automações</b><br/><sub>Universidade Católica de Brasília / Brasília, Brasil</sub><br/><br/><a href="https://www.linkedin.com/in/joaooalbernaz/">LINKEDIN</a> &nbsp; / &nbsp; <a href="mailto:joaovictoralbernaz@gmail.com">E-MAIL</a> &nbsp; / &nbsp; <a href="https://github.com/JoaoAlbernaz1?tab=repositories">REPOSITÓRIOS</a></div>
-
-```aura width=1000 height=225
-<div style={{display:'flex',position:'relative',width:'100%',height:'100%',background:'#020202',flexDirection:'column',padding:'31px 44px',fontFamily:'Inter, sans-serif'}}>
- <svg width="1000" height="225" style={{position:'absolute',top:0,left:0}}><defs><linearGradient id="metal" x1="0%" y1="0%" x2="100%" y2="75%"><stop offset="0%" stopColor="#494949"/><stop offset="23%" stopColor="#fdfdfd"/><stop offset="38%" stopColor="#484848"/><stop offset="58%" stopColor="#ffffff"/><stop offset="77%" stopColor="#777"/><stop offset="92%" stopColor="#eee"/><stop offset="100%" stopColor="#151515"/></linearGradient></defs><path d="M45 18H955" stroke="#333"/><path d="M917 52L922.4 73.6L944 79L922.4 84.4L917 106L911.6 84.4L890 79L911.6 73.6Z" fill="url(#metal)"/><path d="M728 199C775 180 808 162 835 109C840 141 864 158 908 161C873 173 850 199 834 226C830 193 784 192 728 199Z" fill="url(#metal)" opacity=".65"/></svg>
- <span style={{fontSize:11,color:'#888',letterSpacing:4}}>01 / MANIFESTO</span>
- <span style={{fontSize:36,fontWeight:700,color:'#f9f9f9',marginTop:19,letterSpacing:-1}}>IDEIAS. SISTEMAS. IMPACTO.</span>
- <span style={{fontSize:16,color:'#bdbdbd',marginTop:22,lineHeight:1.3,width:710}}>Desenvolvo aplicações, APIs e automações com IA. Do problema real à arquitetura, do primeiro protótipo à entrega.</span>
+```aura width=860 height=250
+<div style={{display:'flex',width:'100%',height:'100%',flexDirection:'row',gap:13,fontFamily:'Inter, sans-serif'}}>
+<style>{`@keyframes ab-drift {0%,100%{opacity:.55;transform:translate(0,0)} 50%{opacity:.95;transform:translate(14px,-10px)}} @keyframes ab-drift2 {0%,100%{opacity:.6;transform:translate(0,0)} 50%{opacity:.95;transform:translate(-15px,8px)}} @keyframes ab-pulse {0%,100%{opacity:.10} 50%{opacity:.23}} #ab-a {animation:ab-drift 9s ease-in-out infinite} #ab-b {animation:ab-drift2 12s ease-in-out infinite} #ab-c {animation:ab-drift 11s ease-in-out infinite 1.2s} #ab-d {animation:ab-drift2 13s ease-in-out infinite 1.7s} @keyframes caret {0%,49%{opacity:1}50%,100%{opacity:0}} #ab-caret {animation:caret 1.1s step-end infinite}`}</style>
+<div style={{display:'flex',position:'relative',flexDirection:'column',justifyContent:'center',width:574,height:250,borderRadius:17,background:'#0b0e15',overflow:'hidden',padding:'0 34px'}}>
+  <svg width="574" height="250" style={{position:'absolute',top:0,left:0}}>
+<defs>
+<radialGradient id="ab-mint"><stop offset="0%" stopColor="#3fa989" stopOpacity=".36"/><stop offset="100%" stopColor="#3fa989" stopOpacity="0"/></radialGradient>
+<radialGradient id="ab-rose"><stop offset="0%" stopColor="#d65b71" stopOpacity=".34"/><stop offset="100%" stopColor="#d65b71" stopOpacity="0"/></radialGradient>
+<radialGradient id="ab-violet"><stop offset="0%" stopColor="#9b78e2" stopOpacity=".34"/><stop offset="100%" stopColor="#9b78e2" stopOpacity="0"/></radialGradient>
+<radialGradient id="ab-blue"><stop offset="0%" stopColor="#517ac1" stopOpacity=".25"/><stop offset="100%" stopColor="#517ac1" stopOpacity="0"/></radialGradient>
+</defs>
+<ellipse id="ab-a" cx="103" cy="200" rx="195" ry="173" fill="url(#ab-mint)"/>
+<ellipse id="ab-b" cx="494" cy="45" rx="201" ry="178" fill="url(#ab-rose)"/>
+<ellipse id="ab-c" cx="431" cy="235" rx="161" ry="140" fill="url(#ab-violet)"/>
+<ellipse id="ab-d" cx="75" cy="45" rx="172" ry="138" fill="url(#ab-blue)"/>
+</svg>
+  <div style={{position:'relative',display:'flex',flexDirection:'column'}}>
+    <span style={{fontSize:10,color:'#bcc0d0',letterSpacing:3}}>SOBRE MIM / 01</span>
+    <span style={{fontSize:28,fontWeight:700,color:'#ffffff',lineHeight:1.25,marginTop:13}}>Construindo software</span>
+    <span style={{fontSize:28,fontWeight:700,color:'#ffffff',lineHeight:1.25}}>que resolve problemas.</span>
+    <span style={{fontSize:14,color:'#b5becc',lineHeight:1.5,marginTop:13}}>Engenharia de Software na UCB. Desenvolvo APIs, aplicações e automações com inteligência artificial.</span>
+    <div style={{display:'flex',flexDirection:'row',marginTop:15}}>
+      <span style={{fontSize:12,color:'#92cab8',fontFamily:'monospace'}}>{'> open to GenAI opportunities'}</span>
+      <span id="ab-caret" style={{fontSize:12,color:'#9fd3c6',marginLeft:3}}>{'_'}</span>
+    </div>
+  </div>
+</div>
+<div style={{display:'flex',flexDirection:'column',gap:13,width:273,height:250}}>
+  <div style={{display:'flex',width:'100%',height:119,borderRadius:16,background:'linear-gradient(150deg,#10212c 0%,#101324 52%,#26213a 100%)',flexDirection:'column',alignItems:'center',justifyContent:'center'}}>
+    <span style={{fontSize:24,fontWeight:700,color:'#e4e9f0'}}>AI / ML</span>
+    <span style={{fontSize:10,color:'#bcc5d3',letterSpacing:2,marginTop:7}}>AGENTES &amp; LLMs</span>
+  </div>
+  <div style={{display:'flex',width:'100%',height:118,borderRadius:16,background:'linear-gradient(140deg,#1b1625,#151722 52%,#1b2c2e)',flexDirection:'column',alignItems:'center',justifyContent:'center'}}>
+    <span style={{fontSize:24,fontWeight:700,color:'#e4e9f0'}}>BUILD</span>
+    <span style={{fontSize:10,color:'#bcc5d3',letterSpacing:2,marginTop:7}}>LEARN · SHIP · ITERATE</span>
+  </div>
+</div>
 </div>
 ```
 
-
-```aura width=1000 height=249
-<div style={{display:'flex',width:'100%',height:'100%',background:'#030303',padding:'25px 42px',flexDirection:'column',fontFamily:'Inter, sans-serif'}}>
- <span style={{fontSize:12,color:'#bcbcbc',letterSpacing:3}}>02 / O QUE EU CONSTRUO</span>
- <div style={{display:'flex',flexDirection:'row',marginTop:32}}>
- {[
- ['01','GENAI','Agentes · LLMs','Selena · integrações'],
- ['02','BACKEND','APIs · banco · testes','NestJS · PostgreSQL'],
- ['03','PRODUCT','SaaS · aplicativos','Next.js · React Native']
- ].map((x,i)=>(
- <div key={i} style={{display:'flex',flexDirection:'column',width:305,height:145,borderLeft:'1px solid #565656',paddingLeft:19,marginRight:5}}>
-   <span style={{fontSize:11,color:'#858585',letterSpacing:2}}>FIG. {x[0]}</span>
-   <span style={{fontSize:31,fontWeight:700,color:'#f7f7f7',marginTop:12}}>{x[1]}</span>
-   <span style={{fontSize:15,color:'#cfcfcf',marginTop:8}}>{x[2]}</span>
-   <span style={{fontSize:13,color:'#868686',marginTop:7}}>{x[3]}</span>
- </div>
- ))}
- </div>
- <svg width="1000" height="249" style={{position:'absolute',top:0,left:0}}><defs><linearGradient id="metal" x1="0%" y1="0%" x2="100%" y2="75%"><stop offset="0%" stopColor="#494949"/><stop offset="23%" stopColor="#fdfdfd"/><stop offset="38%" stopColor="#484848"/><stop offset="58%" stopColor="#ffffff"/><stop offset="77%" stopColor="#777"/><stop offset="92%" stopColor="#eee"/><stop offset="100%" stopColor="#151515"/></linearGradient></defs><path d="M40 228H950" stroke="#555"/><path d="M926 208L929.4 221.6L943 225L929.4 228.4L926 242L922.6 228.4L909 225L922.6 221.6Z" fill="url(#metal)"/></svg>
+```aura width=860 height=216
+<div style={{display:'flex',position:'relative',width:'100%',height:'100%',background:'#0b0e15',borderRadius:17,overflow:'hidden',fontFamily:'Inter, sans-serif',alignItems:'center',justifyContent:'center',flexDirection:'column',padding:'18px 38px'}}>
+  <style>{`@keyframes stack-drift {0%,100%{opacity:.55;transform:translate(0,0)} 50%{opacity:.95;transform:translate(14px,-10px)}} @keyframes stack-drift2 {0%,100%{opacity:.6;transform:translate(0,0)} 50%{opacity:.95;transform:translate(-15px,8px)}} @keyframes stack-pulse {0%,100%{opacity:.10} 50%{opacity:.23}} #stack-a {animation:stack-drift 9s ease-in-out infinite} #stack-b {animation:stack-drift2 12s ease-in-out infinite} #stack-c {animation:stack-drift 11s ease-in-out infinite 1.2s} #stack-d {animation:stack-drift2 13s ease-in-out infinite 1.7s}`}</style>
+  <svg width="860" height="216" style={{position:'absolute',top:0,left:0}}>
+<defs>
+<radialGradient id="stack-mint"><stop offset="0%" stopColor="#3fa989" stopOpacity=".36"/><stop offset="100%" stopColor="#3fa989" stopOpacity="0"/></radialGradient>
+<radialGradient id="stack-rose"><stop offset="0%" stopColor="#d65b71" stopOpacity=".34"/><stop offset="100%" stopColor="#d65b71" stopOpacity="0"/></radialGradient>
+<radialGradient id="stack-violet"><stop offset="0%" stopColor="#9b78e2" stopOpacity=".34"/><stop offset="100%" stopColor="#9b78e2" stopOpacity="0"/></radialGradient>
+<radialGradient id="stack-blue"><stop offset="0%" stopColor="#517ac1" stopOpacity=".25"/><stop offset="100%" stopColor="#517ac1" stopOpacity="0"/></radialGradient>
+</defs>
+<ellipse id="stack-a" cx="155" cy="173" rx="292" ry="149" fill="url(#stack-mint)"/>
+<ellipse id="stack-b" cx="740" cy="39" rx="301" ry="153" fill="url(#stack-rose)"/>
+<ellipse id="stack-c" cx="645" cy="203" rx="241" ry="121" fill="url(#stack-violet)"/>
+<ellipse id="stack-d" cx="112" cy="39" rx="258" ry="119" fill="url(#stack-blue)"/>
+</svg>
+  <span style={{position:'relative',fontSize:11,letterSpacing:3,color:'#a3abba'}}>TECH STACK / 02</span>
+  <div style={{position:'relative',display:'flex',flexWrap:'wrap',width:740,gap:8,justifyContent:'center',marginTop:20}}>
+   {['Python','TypeScript','JavaScript','Java','C','React','Next.js','NestJS','PostgreSQL','Supabase','Docker','Redis','n8n','Make','Expo'].map((v,i)=>(
+    <span key={i} style={{fontSize:12,letterSpacing:.2,color:'#d7dce8',border:'1px solid #434a5866',background:'#101822bc',borderRadius:18,padding:'7px 14px'}}>{v}</span>
+   ))}
+  </div>
+  <span style={{position:'relative',fontSize:11,color:'#b5bdca',marginTop:14}}>Explorando Go e Kotlin · Foco em IA generativa e APIs</span>
 </div>
 ```
 
+<p align="center"><sub>Em uso: Python, TypeScript, JavaScript, Java e C. Go e Kotlin são interesses para exploração.</sub></p>
 
-```aura width=1000 height=245
-<div style={{display:'flex',flexDirection:'column',width:'100%',height:'100%',background:'#020202',padding:'27px 42px',fontFamily:'Inter, sans-serif'}}>
- <span style={{fontSize:11,color:'#aaaaaa',letterSpacing:3}}>03 / LANGUAGES &amp; TOOLCHAIN</span>
- <span style={{fontSize:35,color:'#f4f4f4',fontWeight:700,marginTop:13,letterSpacing:-1}}>THE STACK</span>
- <div style={{display:'flex',flexDirection:'row',gap:11,marginTop:27}}>
- {[
- ['TS','TYPESCRIPT',true],['JS','JAVASCRIPT',true],['PY','PYTHON',true],
- ['JV','JAVA',true],['C','C',true],['GO','GO',false],['KT','KOTLIN',false]
- ].map((x,i)=>(<div key={i} style={{display:'flex',flexDirection:'column',width:120,borderTop:'2px solid '+(x[2]?'#fff':'#777'),paddingTop:10}}>
- <span style={{fontSize:25,fontWeight:700,color:x[2]?'#fff':'#b4b4b4'}}>{x[0]}</span>
- <span style={{fontSize:11,color:'#c8c8c8',marginTop:4}}>{x[1]}</span>
- <span style={{fontSize:9,color:'#8a8a8a',marginTop:6}}>{x[2]?'EM USO':'EXPLORANDO'}</span>
- </div>))}
- </div>
- <span style={{fontSize:13,color:'#a8a8a8',marginTop:18}}>React / Next.js / NestJS / n8n / Make / Docker / Redis / Supabase</span>
+```aura width=175 height=48 link="https://github.com/JoaoAlbernaz1" inline align=center
+<div style={{display:'flex',position:'relative',width:'100%',height:'100%',borderRadius:25,overflow:'hidden',background:'#0f131b',alignItems:'center',justifyContent:'center',border:'1px solid #475363'}}>
+  <style>{'@keyframes edge-git {0%,100%{opacity:.22}50%{opacity:.85}} #edge-git {animation:edge-git 4.5s ease-in-out infinite}'}</style>
+  <svg width="175" height="48" style={{position:'absolute',top:0,left:0}}>
+    <defs><linearGradient id="button-git" x1="0%" y1="0%" x2="100%" y2="0%"><stop stopColor="#93a7c3"/><stop offset="45%" stopColor="#b1c9e6"/><stop offset="100%" stopColor="#363f55"/></linearGradient></defs>
+    <rect id="edge-git" x="2" y="2" width="171" height="44" rx="22" stroke="url(#button-git)" strokeWidth="1.4" fill="none"/>
+  </svg>
+  <span style={{position:'relative',fontSize:13,fontWeight:600,letterSpacing:.2,color:'#f6f7fa'}}>GitHub</span>
+</div>
+```
+```aura width=175 height=48 link="https://www.linkedin.com/in/joaooalbernaz/" inline align=center
+<div style={{display:'flex',position:'relative',width:'100%',height:'100%',borderRadius:25,overflow:'hidden',background:'#0f131b',alignItems:'center',justifyContent:'center',border:'1px solid #475363'}}>
+  <style>{'@keyframes edge-linkedin {0%,100%{opacity:.22}50%{opacity:.85}} #edge-linkedin {animation:edge-linkedin 4.5s ease-in-out infinite}'}</style>
+  <svg width="175" height="48" style={{position:'absolute',top:0,left:0}}>
+    <defs><linearGradient id="button-linkedin" x1="0%" y1="0%" x2="100%" y2="0%"><stop stopColor="#93a7c3"/><stop offset="45%" stopColor="#82aaff"/><stop offset="100%" stopColor="#363f55"/></linearGradient></defs>
+    <rect id="edge-linkedin" x="2" y="2" width="171" height="44" rx="22" stroke="url(#button-linkedin)" strokeWidth="1.4" fill="none"/>
+  </svg>
+  <span style={{position:'relative',fontSize:13,fontWeight:600,letterSpacing:.2,color:'#f6f7fa'}}>LinkedIn</span>
+</div>
+```
+```aura width=175 height=48 link="mailto:joaovictoralbernaz@gmail.com" inline align=center
+<div style={{display:'flex',position:'relative',width:'100%',height:'100%',borderRadius:25,overflow:'hidden',background:'#0f131b',alignItems:'center',justifyContent:'center',border:'1px solid #475363'}}>
+  <style>{'@keyframes edge-email {0%,100%{opacity:.22}50%{opacity:.85}} #edge-email {animation:edge-email 4.5s ease-in-out infinite}'}</style>
+  <svg width="175" height="48" style={{position:'absolute',top:0,left:0}}>
+    <defs><linearGradient id="button-email" x1="0%" y1="0%" x2="100%" y2="0%"><stop stopColor="#93a7c3"/><stop offset="45%" stopColor="#d49ca7"/><stop offset="100%" stopColor="#363f55"/></linearGradient></defs>
+    <rect id="edge-email" x="2" y="2" width="171" height="44" rx="22" stroke="url(#button-email)" strokeWidth="1.4" fill="none"/>
+  </svg>
+  <span style={{position:'relative',fontSize:13,fontWeight:600,letterSpacing:.2,color:'#f6f7fa'}}>E-mail</span>
 </div>
 ```
 
+### Projetos em destaque
 
-```aura width=1000 height=120
-<div style={{display:'flex',position:'relative',background:'#010101',width:'100%',height:'100%',alignItems:'center',padding:'0 44px',fontFamily:'Inter, sans-serif'}}>
- <svg width="1000" height="120" style={{position:'absolute',top:0,left:0}}><defs><linearGradient id="metal" x1="0%" y1="0%" x2="100%" y2="75%"><stop offset="0%" stopColor="#494949"/><stop offset="23%" stopColor="#fdfdfd"/><stop offset="38%" stopColor="#484848"/><stop offset="58%" stopColor="#ffffff"/><stop offset="77%" stopColor="#777"/><stop offset="92%" stopColor="#eee"/><stop offset="100%" stopColor="#151515"/></linearGradient></defs>
- <path d="M807 102C844 82 857 68 872 23C878 58 890 73 906 75C935 61 942 41 953 9C957 51 961 70 995 84C961 80 940 90 931 116C910 87 890 87 878 92C849 104 832 105 807 102Z" fill="url(#metal)"/>
- <path d="M43 113H959" stroke="#444"/></svg>
- <span style={{fontSize:11,color:'#adadad',letterSpacing:2,marginRight:25}}>04 / ARCHIVE</span>
- <span style={{fontSize:38,color:'#f4f4f4',fontWeight:700,letterSpacing:-1}}>SELECTED WORK</span>
+```aura width=407 height=195 inline align=center
+<div style={{display:'flex',position:'relative',flexDirection:'column',background:'#0c1119',border:'1px solid #323b4a',width:'100%',height:'100%',borderRadius:16,padding:'23px 25px',fontFamily:'Inter, sans-serif',overflow:'hidden'}}>
+  <svg width="407" height="195" style={{position:'absolute',left:0,top:0}}>
+  <defs><radialGradient id="proj-glow"><stop stopColor="#7388ae" stopOpacity=".14"/><stop offset="100%" stopColor="#7388ae" stopOpacity="0"/></radialGradient></defs>
+  <ellipse cx="349" cy="17" rx="128" ry="121" fill="url(#proj-glow)"/><circle cx="368" cy="32" r="3" fill="#b5c5ed" opacity=".8"/>
+  </svg>
+  <div style={{display:'flex',position:'relative',flexDirection:'row',justifyContent:'space-between',alignItems:'center'}}>
+    <span style={{fontSize:10,letterSpacing:1.7,color:'#929caf'}}>PROJECT 01</span>
+    <span style={{fontSize:10,letterSpacing:1,color:'#a6b2c5'}}>PRIVADO</span>
+  </div>
+  <span style={{position:'relative',fontSize:23,fontWeight:700,color:'#fff',marginTop:21,letterSpacing:-.5}}>Selena</span>
+  <span style={{position:'relative',fontSize:13,color:'#bec6d4',lineHeight:1.4,marginTop:12}}>Assistente legislativa privada com agentes, integrações e automações.</span>
+  <span style={{position:'relative',fontSize:10,letterSpacing:.4,color:'#9aa4b8',marginTop:15}}>n8n  /  LLMs  /  APIs</span>
 </div>
 ```
 
-
-```aura width=486 height=211 inline align=center
-<div style={{display:'flex',position:'relative',width:'100%',height:'100%',background:'#050505',flexDirection:'column',padding:'21px 25px',fontFamily:'Inter, sans-serif'}}>
- <svg width="486" height="211" style={{position:'absolute',top:0,left:0}}><defs><linearGradient id="metal" x1="0%" y1="0%" x2="100%" y2="75%"><stop offset="0%" stopColor="#494949"/><stop offset="23%" stopColor="#fdfdfd"/><stop offset="38%" stopColor="#484848"/><stop offset="58%" stopColor="#ffffff"/><stop offset="77%" stopColor="#777"/><stop offset="92%" stopColor="#eee"/><stop offset="100%" stopColor="#151515"/></linearGradient></defs><path d="M1 1H485V210H1Z" stroke="#333" fill="none"/><path d="M22 190H462" stroke="#9a9a9a" opacity=".7"/><path d="M454 15L457 27L469 30L457 33L454 45L451 33L439 30L451 27Z" fill="url(#metal)"/></svg>
- <span style={{fontSize:11,color:'#a9a9a9',letterSpacing:1.5}}>PROJECT 01 &nbsp; / &nbsp; PRIVATE</span>
- <span style={{fontSize:27,fontWeight:700,color:'#fafafa',marginTop:22,letterSpacing:-1}}>SELENA</span>
- <span style={{fontSize:14,color:'#c1c1c1',marginTop:14,lineHeight:1.3}}>Assistente legislativa privada, fluxos e automações com IA.</span>
- <span style={{fontSize:10,color:'#8b8b8b',marginTop:21,letterSpacing:1}}>N8N / LLM / WEBHOOKS</span>
+```aura width=407 height=195 link="https://github.com/JoaoAlbernaz1/seuconviteia" inline align=center
+<div style={{display:'flex',position:'relative',flexDirection:'column',background:'#0c1119',border:'1px solid #323b4a',width:'100%',height:'100%',borderRadius:16,padding:'23px 25px',fontFamily:'Inter, sans-serif',overflow:'hidden'}}>
+  <svg width="407" height="195" style={{position:'absolute',left:0,top:0}}>
+  <defs><radialGradient id="proj-glow"><stop stopColor="#7388ae" stopOpacity=".14"/><stop offset="100%" stopColor="#7388ae" stopOpacity="0"/></radialGradient></defs>
+  <ellipse cx="349" cy="17" rx="128" ry="121" fill="url(#proj-glow)"/><circle cx="368" cy="32" r="3" fill="#b5c5ed" opacity=".8"/>
+  </svg>
+  <div style={{display:'flex',position:'relative',flexDirection:'row',justifyContent:'space-between',alignItems:'center'}}>
+    <span style={{fontSize:10,letterSpacing:1.7,color:'#929caf'}}>PROJECT 02</span>
+    <span style={{fontSize:10,letterSpacing:1,color:'#a6b2c5'}}>PÚBLICO</span>
+  </div>
+  <span style={{position:'relative',fontSize:23,fontWeight:700,color:'#fff',marginTop:21,letterSpacing:-.5}}>SeuConvite IA</span>
+  <span style={{position:'relative',fontSize:13,color:'#bec6d4',lineHeight:1.4,marginTop:12}}>Plataforma SaaS multi-tenant para sites de eventos com recursos de IA.</span>
+  <span style={{position:'relative',fontSize:10,letterSpacing:.4,color:'#9aa4b8',marginTop:15}}>Next.js  /  TypeScript  /  Prisma</span>
 </div>
 ```
 
-```aura width=486 height=211 link="https://github.com/JoaoAlbernaz1/seuconviteia" inline align=center
-<div style={{display:'flex',position:'relative',width:'100%',height:'100%',background:'#050505',flexDirection:'column',padding:'21px 25px',fontFamily:'Inter, sans-serif'}}>
- <svg width="486" height="211" style={{position:'absolute',top:0,left:0}}><defs><linearGradient id="metal" x1="0%" y1="0%" x2="100%" y2="75%"><stop offset="0%" stopColor="#494949"/><stop offset="23%" stopColor="#fdfdfd"/><stop offset="38%" stopColor="#484848"/><stop offset="58%" stopColor="#ffffff"/><stop offset="77%" stopColor="#777"/><stop offset="92%" stopColor="#eee"/><stop offset="100%" stopColor="#151515"/></linearGradient></defs><path d="M1 1H485V210H1Z" stroke="#333" fill="none"/><path d="M22 190H462" stroke="#9a9a9a" opacity=".7"/><path d="M454 15L457 27L469 30L457 33L454 45L451 33L439 30L451 27Z" fill="url(#metal)"/></svg>
- <span style={{fontSize:11,color:'#a9a9a9',letterSpacing:1.5}}>PROJECT 02 &nbsp; / &nbsp; PUBLIC</span>
- <span style={{fontSize:27,fontWeight:700,color:'#fafafa',marginTop:22,letterSpacing:-1}}>SEUCONVITE IA</span>
- <span style={{fontSize:14,color:'#c1c1c1',marginTop:14,lineHeight:1.3}}>Plataforma SaaS multi-tenant para sites de eventos e IA.</span>
- <span style={{fontSize:10,color:'#8b8b8b',marginTop:21,letterSpacing:1}}>NEXT.JS / TS / PRISMA</span>
+```aura width=407 height=195 link="https://github.com/JoaoAlbernaz1/UniMove" inline align=center
+<div style={{display:'flex',position:'relative',flexDirection:'column',background:'#0c1119',border:'1px solid #323b4a',width:'100%',height:'100%',borderRadius:16,padding:'23px 25px',fontFamily:'Inter, sans-serif',overflow:'hidden'}}>
+  <svg width="407" height="195" style={{position:'absolute',left:0,top:0}}>
+  <defs><radialGradient id="proj-glow"><stop stopColor="#7388ae" stopOpacity=".14"/><stop offset="100%" stopColor="#7388ae" stopOpacity="0"/></radialGradient></defs>
+  <ellipse cx="349" cy="17" rx="128" ry="121" fill="url(#proj-glow)"/><circle cx="368" cy="32" r="3" fill="#b5c5ed" opacity=".8"/>
+  </svg>
+  <div style={{display:'flex',position:'relative',flexDirection:'row',justifyContent:'space-between',alignItems:'center'}}>
+    <span style={{fontSize:10,letterSpacing:1.7,color:'#929caf'}}>PROJECT 03</span>
+    <span style={{fontSize:10,letterSpacing:1,color:'#a6b2c5'}}>PÚBLICO</span>
+  </div>
+  <span style={{position:'relative',fontSize:23,fontWeight:700,color:'#fff',marginTop:21,letterSpacing:-.5}}>UniMove</span>
+  <span style={{position:'relative',fontSize:13,color:'#bec6d4',lineHeight:1.4,marginTop:12}}>Aplicativo acadêmico de caronas com API, autenticação e banco de dados.</span>
+  <span style={{position:'relative',fontSize:10,letterSpacing:.4,color:'#9aa4b8',marginTop:15}}>React Native  /  Expo  /  NestJS</span>
 </div>
 ```
 
-<!-- separate project rows intentionally -->
-
-```aura width=486 height=211 link="https://github.com/JoaoAlbernaz1/UniMove" inline align=center
-<div style={{display:'flex',position:'relative',width:'100%',height:'100%',background:'#050505',flexDirection:'column',padding:'21px 25px',fontFamily:'Inter, sans-serif'}}>
- <svg width="486" height="211" style={{position:'absolute',top:0,left:0}}><defs><linearGradient id="metal" x1="0%" y1="0%" x2="100%" y2="75%"><stop offset="0%" stopColor="#494949"/><stop offset="23%" stopColor="#fdfdfd"/><stop offset="38%" stopColor="#484848"/><stop offset="58%" stopColor="#ffffff"/><stop offset="77%" stopColor="#777"/><stop offset="92%" stopColor="#eee"/><stop offset="100%" stopColor="#151515"/></linearGradient></defs><path d="M1 1H485V210H1Z" stroke="#333" fill="none"/><path d="M22 190H462" stroke="#9a9a9a" opacity=".7"/><path d="M454 15L457 27L469 30L457 33L454 45L451 33L439 30L451 27Z" fill="url(#metal)"/></svg>
- <span style={{fontSize:11,color:'#a9a9a9',letterSpacing:1.5}}>PROJECT 03 &nbsp; / &nbsp; PUBLIC</span>
- <span style={{fontSize:27,fontWeight:700,color:'#fafafa',marginTop:22,letterSpacing:-1}}>UNIMOVE</span>
- <span style={{fontSize:14,color:'#c1c1c1',marginTop:14,lineHeight:1.3}}>Aplicativo de caronas com autenticação e API REST.</span>
- <span style={{fontSize:10,color:'#8b8b8b',marginTop:21,letterSpacing:1}}>REACT NATIVE / EXPO / NESTJS</span>
+```aura width=407 height=195 inline align=center
+<div style={{display:'flex',position:'relative',flexDirection:'column',background:'#0c1119',border:'1px solid #323b4a',width:'100%',height:'100%',borderRadius:16,padding:'23px 25px',fontFamily:'Inter, sans-serif',overflow:'hidden'}}>
+  <svg width="407" height="195" style={{position:'absolute',left:0,top:0}}>
+  <defs><radialGradient id="proj-glow"><stop stopColor="#7388ae" stopOpacity=".14"/><stop offset="100%" stopColor="#7388ae" stopOpacity="0"/></radialGradient></defs>
+  <ellipse cx="349" cy="17" rx="128" ry="121" fill="url(#proj-glow)"/><circle cx="368" cy="32" r="3" fill="#b5c5ed" opacity=".8"/>
+  </svg>
+  <div style={{display:'flex',position:'relative',flexDirection:'row',justifyContent:'space-between',alignItems:'center'}}>
+    <span style={{fontSize:10,letterSpacing:1.7,color:'#929caf'}}>PROJECT 04</span>
+    <span style={{fontSize:10,letterSpacing:1,color:'#a6b2c5'}}>PRIVADO</span>
+  </div>
+  <span style={{position:'relative',fontSize:23,fontWeight:700,color:'#fff',marginTop:21,letterSpacing:-.5}}>Curva S</span>
+  <span style={{position:'relative',fontSize:13,color:'#bec6d4',lineHeight:1.4,marginTop:12}}>Painel gerencial de avanço físico, cronogramas e progresso dos projetos.</span>
+  <span style={{position:'relative',fontSize:10,letterSpacing:.4,color:'#9aa4b8',marginTop:15}}>React  /  TypeScript  /  Testes</span>
 </div>
 ```
-
-```aura width=486 height=211 inline align=center
-<div style={{display:'flex',position:'relative',width:'100%',height:'100%',background:'#050505',flexDirection:'column',padding:'21px 25px',fontFamily:'Inter, sans-serif'}}>
- <svg width="486" height="211" style={{position:'absolute',top:0,left:0}}><defs><linearGradient id="metal" x1="0%" y1="0%" x2="100%" y2="75%"><stop offset="0%" stopColor="#494949"/><stop offset="23%" stopColor="#fdfdfd"/><stop offset="38%" stopColor="#484848"/><stop offset="58%" stopColor="#ffffff"/><stop offset="77%" stopColor="#777"/><stop offset="92%" stopColor="#eee"/><stop offset="100%" stopColor="#151515"/></linearGradient></defs><path d="M1 1H485V210H1Z" stroke="#333" fill="none"/><path d="M22 190H462" stroke="#9a9a9a" opacity=".7"/><path d="M454 15L457 27L469 30L457 33L454 45L451 33L439 30L451 27Z" fill="url(#metal)"/></svg>
- <span style={{fontSize:11,color:'#a9a9a9',letterSpacing:1.5}}>PROJECT 04 &nbsp; / &nbsp; PRIVATE</span>
- <span style={{fontSize:27,fontWeight:700,color:'#fafafa',marginTop:22,letterSpacing:-1}}>CURVA S</span>
- <span style={{fontSize:14,color:'#c1c1c1',marginTop:14,lineHeight:1.3}}>Painel de avanço físico de projetos e cronogramas.</span>
- <span style={{fontSize:10,color:'#8b8b8b',marginTop:21,letterSpacing:1}}>REACT / TYPESCRIPT / TESTES</span>
-</div>
-```
-
 
 <details>
-<summary><b>+ PROJETOS / DETALHES TÉCNICOS</b></summary>
+<summary><b>Ver detalhes e outros projetos</b></summary>
 
-**Selena** — Assistente legislativa privada construída com n8n, integração de LLMs e processos internos. Seus fluxos e repositórios não são públicos.
+**Selena:** Assistente legislativa privada com IA, n8n e integrações, incluindo fluxos internos não publicados.
 
-**[SeuConvite IA](https://github.com/JoaoAlbernaz1/seuconviteia)** — SaaS para gerenciamento de sites de eventos, multi-tenancy, subdomínios e integração opcional de recursos de IA.
+**[SeuConvite IA](https://github.com/JoaoAlbernaz1/seuconviteia):** SaaS multi-tenant para eventos, autenticação e recursos opcionais de IA.
 
-**[UniMove](https://github.com/JoaoAlbernaz1/UniMove)** — Plataforma acadêmica mobile de caronas com API, autenticação, usuários e veículos.
+**[UniMove](https://github.com/JoaoAlbernaz1/UniMove):** Aplicativo mobile e API para caronas acadêmicas.
 
-**Curva S** — Sistema privado para acompanhamento físico de projetos, cronogramas e realizado versus planejado.
+**Curva S:** Sistema privado de acompanhamento de projetos e comparação entre avanço planejado e realizado.
 
-**Finanças Bot** — Assistente financeiro privado com TypeScript, Claude API, Zod, PostgreSQL e WhatsApp Cloud API.
+**Finanças Bot:** Assistente financeiro privado desenvolvido com TypeScript, Claude API e integração com WhatsApp.
 
-Outros projetos: [PartWatch](https://github.com/JoaoAlbernaz1/ddr5-radar) · [Dashboard de Transporte DF](https://github.com/JoaoAlbernaz1/dashboard-onibus-df) · [Pokédex RN](https://github.com/JoaoAlbernaz1/pokedex-rn).
+[PartWatch](https://github.com/JoaoAlbernaz1/ddr5-radar) · [Dashboard Transporte DF](https://github.com/JoaoAlbernaz1/dashboard-onibus-df) · [Pokédex RN](https://github.com/JoaoAlbernaz1/pokedex-rn)
 
 </details>
 
-```aura width=1000 height=250
-<div style={{display:'flex',flexDirection:'column',width:'100%',height:'100%',background:'#020202',padding:'26px 43px',fontFamily:'Inter, sans-serif'}}>
- <span style={{fontSize:11,color:'#b6b6b6',letterSpacing:3}}>05 / GITHUB SIGNAL — DADOS PÚBLICOS</span>
- <div style={{display:'flex',marginTop:21,flexDirection:'row'}}>
- {[
- ['REPOS',github && github.stats ? github.stats.totalRepos : '—'],
- ['STARS',github && github.stats ? github.stats.totalStars : '—'],
- ['FORKS',github && github.stats ? github.stats.totalForks : '—']
- ].map((v,i)=>(<div key={i} style={{display:'flex',width:300,flexDirection:'column',borderLeft:'1px solid #666',paddingLeft:17}}>
-   <span style={{fontSize:40,color:'#fff',fontWeight:700}}>{String(v[1])}</span>
-   <span style={{fontSize:12,color:'#aaa',letterSpacing:2,marginTop:4}}>{v[0]}</span>
- </div>))}
- </div>
- <span style={{fontSize:11,color:'#999',marginTop:23}}>LINGUAGENS PRINCIPAIS DOS REPOSITÓRIOS PÚBLICOS</span>
- <div style={{display:'flex',flexDirection:'row',height:12,width:912,background:'#333',marginTop:9}}>
- {(github && github.languages ? github.languages : []).slice(0,6).map((v,i)=>(<div key={i} style={{display:'flex',height:12,width:v.percentage+'%',background:i%3===0?'#eee':i%3===1?'#888':'#444'}}/>))}
- </div>
- <div style={{display:'flex',gap:17,marginTop:9}}>
- {(github && github.languages ? github.languages : []).slice(0,5).map((v,i)=>(<span key={i} style={{fontSize:11,color:'#aaa'}}>{v.name+' '+v.percentage+'%'}</span>))}
- </div>
+### Atividade no GitHub
+
+```aura width=860 height=217
+<div style={{display:'flex',position:'relative',width:'100%',height:'100%',background:'#0b0e15',borderRadius:17,overflow:'hidden',padding:'23px 35px',flexDirection:'column',fontFamily:'Inter, sans-serif'}}>
+  <style>{`@keyframes metrics-drift {0%,100%{opacity:.55;transform:translate(0,0)} 50%{opacity:.95;transform:translate(14px,-10px)}} @keyframes metrics-drift2 {0%,100%{opacity:.6;transform:translate(0,0)} 50%{opacity:.95;transform:translate(-15px,8px)}} @keyframes metrics-pulse {0%,100%{opacity:.10} 50%{opacity:.23}} #metrics-a {animation:metrics-drift 9s ease-in-out infinite} #metrics-b {animation:metrics-drift2 12s ease-in-out infinite} #metrics-c {animation:metrics-drift 11s ease-in-out infinite 1.2s} #metrics-d {animation:metrics-drift2 13s ease-in-out infinite 1.7s}`}</style>
+  <svg width="860" height="217" style={{position:'absolute',top:0,left:0}}>
+<defs>
+<radialGradient id="metrics-mint"><stop offset="0%" stopColor="#3fa989" stopOpacity=".36"/><stop offset="100%" stopColor="#3fa989" stopOpacity="0"/></radialGradient>
+<radialGradient id="metrics-rose"><stop offset="0%" stopColor="#d65b71" stopOpacity=".34"/><stop offset="100%" stopColor="#d65b71" stopOpacity="0"/></radialGradient>
+<radialGradient id="metrics-violet"><stop offset="0%" stopColor="#9b78e2" stopOpacity=".34"/><stop offset="100%" stopColor="#9b78e2" stopOpacity="0"/></radialGradient>
+<radialGradient id="metrics-blue"><stop offset="0%" stopColor="#517ac1" stopOpacity=".25"/><stop offset="100%" stopColor="#517ac1" stopOpacity="0"/></radialGradient>
+</defs>
+<ellipse id="metrics-a" cx="155" cy="174" rx="292" ry="150" fill="url(#metrics-mint)"/>
+<ellipse id="metrics-b" cx="740" cy="39" rx="301" ry="154" fill="url(#metrics-rose)"/>
+<ellipse id="metrics-c" cx="645" cy="204" rx="241" ry="122" fill="url(#metrics-violet)"/>
+<ellipse id="metrics-d" cx="112" cy="39" rx="258" ry="119" fill="url(#metrics-blue)"/>
+</svg>
+  <div style={{display:'flex',position:'relative',flexDirection:'row',justifyContent:'space-between'}}>
+    <span style={{fontSize:11,letterSpacing:2.6,color:'#aab4c8'}}>GITHUB / PUBLIC ACTIVITY</span>
+    <span style={{fontSize:10,letterSpacing:1.6,color:'#aab4c8'}}>{github && github.user ? github.user.login : 'JoaoAlbernaz1'}</span>
+  </div>
+  <div style={{display:'flex',position:'relative',flexDirection:'row',marginTop:26}}>
+    {[
+    ['REPOSITÓRIOS',github && github.stats ? github.stats.totalRepos : '—'],
+    ['ESTRELAS',github && github.stats ? github.stats.totalStars : '—'],
+    ['FORKS',github && github.stats ? github.stats.totalForks : '—']
+    ].map((x,i)=>(<div key={i} style={{display:'flex',flexDirection:'column',width:250,paddingLeft:22,borderLeft:'1px solid #4a576b'}}>
+      <span style={{fontSize:36,fontWeight:700,color:'#fff'}}>{String(x[1])}</span>
+      <span style={{fontSize:11,color:'#c5cddd',letterSpacing:1.1,marginTop:6}}>{x[0]}</span>
+    </div>))}
+  </div>
+  <span style={{position:'relative',fontSize:11,color:'#aab6c8',marginTop:21}}>Números dos repositórios públicos; projetos privados não incluídos.</span>
 </div>
 ```
-
-
-```aura width=1000 height=170
-<div style={{display:'flex',width:'100%',height:'100%',background:'#000',position:'relative',fontFamily:'Inter, sans-serif',alignItems:'center'}}>
- <svg width="1000" height="170" style={{position:'absolute',top:0,left:0}}><defs><linearGradient id="metal" x1="0%" y1="0%" x2="100%" y2="75%"><stop offset="0%" stopColor="#494949"/><stop offset="23%" stopColor="#fdfdfd"/><stop offset="38%" stopColor="#484848"/><stop offset="58%" stopColor="#ffffff"/><stop offset="77%" stopColor="#777"/><stop offset="92%" stopColor="#eee"/><stop offset="100%" stopColor="#151515"/></linearGradient></defs>
- <path d="M30 149H969" stroke="#555"/>
- <path d="M68 127L91 29L129 100L160 17L181 146M55 100C112 61 142 81 206 49M55 140C114 103 168 114 202 121" stroke="url(#metal)" strokeWidth="10" fill="none" strokeLinecap="round"/>
- <path d="M71 132L84 74L97 102L116 88L136 115L168 53L154 127L193 146L128 135Z" fill="url(#metal)"/>
- <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -4;0 0" dur="6s" repeatCount="indefinite"/><path d="M929 22L934.6 44.4L957 50L934.6 55.6L929 78L923.4 55.6L901 50L923.4 44.4Z" fill="url(#metal)"/></g>
- </svg>
- <div style={{display:'flex',position:'relative',flexDirection:'column',marginLeft:231}}>
- <span style={{fontSize:30,fontWeight:700,color:'#fff',letterSpacing:-1}}>MENOS RUÍDO. MAIS ENGENHARIA.</span>
- <span style={{fontSize:12,color:'#aaa',marginTop:14,letterSpacing:1}}>GENAI / SOFTWARE ENGINEERING / OPEN TO OPPORTUNITIES</span>
- </div>
-</div>
-```
-
 
 <div align="center">
-<b>Desenvolvimento de IA e Automações</b> — Selena (2025–atual) &nbsp; / &nbsp; <b>Desenvolvimento Web</b> — Blue Ocean (2025)<br/>
-<sub>Transformando ideias em sistemas úteis, testáveis e escaláveis.</sub><br/>
-<sub>Design original renderizado com <a href="https://github.com/collectioneur/readme-aura">readme-aura</a>.</sub>
+
+[![Gráfico de atividade pública](https://github-readme-activity-graph.vercel.app/graph?username=JoaoAlbernaz1&bg_color=0b0e15&color=bac3d2&line=9582c8&point=b5a6ed&area=true&area_color=32314f&hide_border=true&custom_title=Atividade%20no%20GitHub)](https://github.com/JoaoAlbernaz1?tab=overview)
+
+<sub>Gráfico externo de contribuições · [Ver atividade diretamente no GitHub](https://github.com/JoaoAlbernaz1?tab=overview)</sub>
+
+</div>
+
+---
+
+<div align="center">
+
+**João Victor Albernaz** · Engenharia de Software — UCB, Brasília
+
+<sub>GenAI · Full-stack · Automação · Software Engineering</sub>
+
+<sub>Design desenvolvido com [readme-aura](https://github.com/collectioneur/readme-aura), inspirado no visual de [collectioneur](https://github.com/collectioneur).</sub>
+
 </div>
