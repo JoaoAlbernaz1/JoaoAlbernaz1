@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/banner.gif" alt="Banner animado do perfil de João Victor Albernaz — arte espacial em tons preto, cinza e prata" width="100%" />
+<img src="./assets/banner-github-anjo-flow.gif" alt="Banner animado preto e branco com estátua cromada, asas de anjo e movimento fluido" width="100%" />
 
 <br/>
 
