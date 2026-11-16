@@ -2,7 +2,7 @@
 <!-- Design: inspiração no layout DarkOrbs do readme-aura, adaptado para João Albernaz. -->
 
 ```aura width=860 height=329
-<div style={{display:'flex',flexDirection:'column',position:'relative',width:'100%',height:'100%',background:'#0b0e15',borderRadius:19,overflow:'hidden',alignItems:'center',justifyContent:'center',fontFamily:'Inter, sans-serif'}}>
+<div style={{display:'flex',flexDirection:'column',position:'relative',width:'100%',height:'100%',background:'linear-gradient(125deg,#163d30 0%,#151e23 29%,#221a2c 62%,#361b2c 100%)',borderRadius:19,overflow:'hidden',alignItems:'center',justifyContent:'center',fontFamily:'Inter, sans-serif'}}>
   <style>{`@keyframes hero-drift {0%,100%{opacity:.55;transform:translate(0,0)} 50%{opacity:.95;transform:translate(14px,-10px)}} @keyframes hero-drift2 {0%,100%{opacity:.6;transform:translate(0,0)} 50%{opacity:.95;transform:translate(-15px,8px)}} @keyframes hero-pulse {0%,100%{opacity:.10} 50%{opacity:.23}} #hero-a {animation:hero-drift 9s ease-in-out infinite} #hero-b {animation:hero-drift2 12s ease-in-out infinite} #hero-c {animation:hero-drift 11s ease-in-out infinite 1.2s} #hero-d {animation:hero-drift2 13s ease-in-out infinite 1.7s} @keyframes orbit {from{transform:rotate(0deg)}to{transform:rotate(360deg)}} #hero-r1 {animation:hero-pulse 7s ease-in-out infinite} #hero-r2 {animation:hero-pulse 8s ease-in-out infinite 1s} #hero-r3 {animation:hero-pulse 10s ease-in-out infinite 1.5s} #hero-orbit {animation:orbit 22s linear infinite}`}</style>
   <svg width="860" height="329" style={{position:'absolute',top:0,left:0}}>
 <defs>
@@ -16,6 +16,9 @@
 <ellipse id="hero-c" cx="645" cy="309" rx="241" ry="184" fill="url(#hero-violet)"/>
 <ellipse id="hero-d" cx="112" cy="59" rx="258" ry="181" fill="url(#hero-blue)"/>
 </svg>
+  <div style={{display:'flex',position:'absolute',left:329,top:45,width:202,height:202,borderRadius:101,border:'1px solid #ffffff22'}}/>
+  <div style={{display:'flex',position:'absolute',left:288,top:4,width:284,height:284,borderRadius:142,border:'1px solid #ffffff15'}}/>
+  <div style={{display:'flex',position:'absolute',left:236,top:-48,width:388,height:388,borderRadius:194,border:'1px solid #ffffff0d'}}/>
   <svg width="860" height="329" style={{position:'absolute',left:0,top:0}}>
     <circle id="hero-r1" cx="430" cy="157" r="63" stroke="#e9eaf4" strokeWidth=".8" fill="none"/>
     <circle id="hero-r2" cx="430" cy="157" r="112" stroke="#e9eaf4" strokeWidth=".8" fill="none"/>
@@ -36,7 +39,7 @@
 ```aura width=860 height=250
 <div style={{display:'flex',width:'100%',height:'100%',flexDirection:'row',gap:13,fontFamily:'Inter, sans-serif'}}>
 <style>{`@keyframes ab-drift {0%,100%{opacity:.55;transform:translate(0,0)} 50%{opacity:.95;transform:translate(14px,-10px)}} @keyframes ab-drift2 {0%,100%{opacity:.6;transform:translate(0,0)} 50%{opacity:.95;transform:translate(-15px,8px)}} @keyframes ab-pulse {0%,100%{opacity:.10} 50%{opacity:.23}} #ab-a {animation:ab-drift 9s ease-in-out infinite} #ab-b {animation:ab-drift2 12s ease-in-out infinite} #ab-c {animation:ab-drift 11s ease-in-out infinite 1.2s} #ab-d {animation:ab-drift2 13s ease-in-out infinite 1.7s} @keyframes caret {0%,49%{opacity:1}50%,100%{opacity:0}} #ab-caret {animation:caret 1.1s step-end infinite}`}</style>
-<div style={{display:'flex',position:'relative',flexDirection:'column',justifyContent:'center',width:574,height:250,borderRadius:17,background:'#0b0e15',overflow:'hidden',padding:'0 34px'}}>
+<div style={{display:'flex',position:'relative',flexDirection:'column',justifyContent:'center',width:574,height:250,borderRadius:17,background:'linear-gradient(130deg,#102b27 0%,#171923 46%,#41212d 100%)',overflow:'hidden',padding:'0 34px'}}>
   <svg width="574" height="250" style={{position:'absolute',top:0,left:0}}>
 <defs>
 <radialGradient id="ab-mint"><stop offset="0%" stopColor="#3fa989" stopOpacity=".36"/><stop offset="100%" stopColor="#3fa989" stopOpacity="0"/></radialGradient>
@@ -74,7 +77,7 @@
 ```
 
 ```aura width=860 height=216
-<div style={{display:'flex',position:'relative',width:'100%',height:'100%',background:'#0b0e15',borderRadius:17,overflow:'hidden',fontFamily:'Inter, sans-serif',alignItems:'center',justifyContent:'center',flexDirection:'column',padding:'18px 38px'}}>
+<div style={{display:'flex',position:'relative',width:'100%',height:'100%',background:'linear-gradient(115deg,#12352b 0%,#141924 38%,#2d2039 70%,#311c2b 100%)',borderRadius:17,overflow:'hidden',fontFamily:'Inter, sans-serif',alignItems:'center',justifyContent:'center',flexDirection:'column',padding:'18px 38px'}}>
   <style>{`@keyframes stack-drift {0%,100%{opacity:.55;transform:translate(0,0)} 50%{opacity:.95;transform:translate(14px,-10px)}} @keyframes stack-drift2 {0%,100%{opacity:.6;transform:translate(0,0)} 50%{opacity:.95;transform:translate(-15px,8px)}} @keyframes stack-pulse {0%,100%{opacity:.10} 50%{opacity:.23}} #stack-a {animation:stack-drift 9s ease-in-out infinite} #stack-b {animation:stack-drift2 12s ease-in-out infinite} #stack-c {animation:stack-drift 11s ease-in-out infinite 1.2s} #stack-d {animation:stack-drift2 13s ease-in-out infinite 1.7s}`}</style>
   <svg width="860" height="216" style={{position:'absolute',top:0,left:0}}>
 <defs>
@@ -219,7 +222,7 @@
 ### Atividade no GitHub
 
 ```aura width=860 height=217
-<div style={{display:'flex',position:'relative',width:'100%',height:'100%',background:'#0b0e15',borderRadius:17,overflow:'hidden',padding:'23px 35px',flexDirection:'column',fontFamily:'Inter, sans-serif'}}>
+<div style={{display:'flex',position:'relative',width:'100%',height:'100%',background:'linear-gradient(120deg,#142631 0%,#141720 48%,#332642 100%)',borderRadius:17,overflow:'hidden',padding:'23px 35px',flexDirection:'column',fontFamily:'Inter, sans-serif'}}>
   <style>{`@keyframes metrics-drift {0%,100%{opacity:.55;transform:translate(0,0)} 50%{opacity:.95;transform:translate(14px,-10px)}} @keyframes metrics-drift2 {0%,100%{opacity:.6;transform:translate(0,0)} 50%{opacity:.95;transform:translate(-15px,8px)}} @keyframes metrics-pulse {0%,100%{opacity:.10} 50%{opacity:.23}} #metrics-a {animation:metrics-drift 9s ease-in-out infinite} #metrics-b {animation:metrics-drift2 12s ease-in-out infinite} #metrics-c {animation:metrics-drift 11s ease-in-out infinite 1.2s} #metrics-d {animation:metrics-drift2 13s ease-in-out infinite 1.7s}`}</style>
   <svg width="860" height="217" style={{position:'absolute',top:0,left:0}}>
 <defs>
