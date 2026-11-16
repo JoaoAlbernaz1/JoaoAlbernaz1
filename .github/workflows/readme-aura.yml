@@ -6,6 +6,7 @@ on:
     paths:
       - 'readme.source.md'
       - '.github/workflows/readme-aura.yml'
+      - '.github/scripts/preview_aura.py'
   schedule:
     - cron: '15 6 * * 1'
   workflow_dispatch:
@@ -34,3 +35,21 @@ jobs:
           github_user: JoaoAlbernaz1
           github_token: ${{ secrets.GITHUB_TOKEN }}
           commit_message: 'build(profile): render monochrome chrome portfolio'
+
+      - name: Prepare visual QA renderer
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Create static preview from generated assets
+        run: |
+          python -m pip install --disable-pip-version-check "cairosvg>=2.7,<3" "Pillow>=11,<13"
+          python .github/scripts/preview_aura.py
+      - name: Publish visual QA preview
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/portfolio-preview.png
+          if ! git diff --cached --quiet; then
+            git commit -m "build(profile): atualiza prévia estática do portfólio"
+            git push
+          fi
