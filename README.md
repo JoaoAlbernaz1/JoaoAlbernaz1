@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/profile-hero.svg" alt="João Victor Albernaz — Engenharia de Software, IA e Automações" width="100%" />
+<img src="./assets/banner.gif" alt="Banner animado do perfil de João Victor Albernaz — arte espacial em tons preto, cinza e prata" width="100%" />
 
 <br/>
 
