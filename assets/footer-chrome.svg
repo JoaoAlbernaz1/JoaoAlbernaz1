@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1060" height="155" viewBox="0 0 1060 155" role="img" aria-labelledby="title desc">
+<title id="title">Assinatura</title><desc id="desc">Menos ruído. Mais engenharia.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#090b0f"/><stop offset=".47" stop-color="#15191f"/><stop offset="1" stop-color="#08090d"/></linearGradient>
+  <linearGradient id="silver" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#636c77"/><stop offset=".26" stop-color="#e1e7ee"/><stop offset=".53" stop-color="#929aa4"/><stop offset=".74" stop-color="#fbfdff"/><stop offset="1" stop-color="#59616b"/></linearGradient>
+  <linearGradient id="stroke" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#343b45"/><stop offset=".50" stop-color="#c4ccd6"/><stop offset="1" stop-color="#353c46"/></linearGradient>
+  <linearGradient id="metal" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#242a32"/><stop offset=".45" stop-color="#10141a"/><stop offset="1" stop-color="#0a0c10"/></linearGradient>
+</defs>
+<rect width="1060" height="155" fill="url(#bg)" rx="11"/><rect x="8" y="8" width="1044" height="139" rx="8" fill="none" stroke="#3d4651" stroke-width="1"/><path d="M24 11H1036" stroke="url(#stroke)" opacity=".55"/><path d="M24 144H1036" stroke="url(#stroke)" opacity=".35"/><g transform="translate(15 70) scale(1 1)" fill="none" stroke="#8090a1" stroke-width="1.2" opacity=".19">
+<path d="M0 0C49-28 99-24 172-48C116-12 73 6 4 24"/>
+<path d="M9 7C44-12 93-15 150-38"/>
+<path d="M7 15C43-1 87-1 132-22"/>
+<path d="M4 21C41 10 77 14 110-3"/>
+</g><g transform="translate(1045 70) scale(-1 1)" fill="none" stroke="#8090a1" stroke-width="1.2" opacity=".19">
+<path d="M0 0C49-28 99-24 172-48C116-12 73 6 4 24"/>
+<path d="M9 7C44-12 93-15 150-38"/>
+<path d="M7 15C43-1 87-1 132-22"/>
+<path d="M4 21C41 10 77 14 110-3"/>
+</g><path d="M200 37H445M615 37H860" stroke="url(#stroke)" stroke-width="1.2" opacity=".72"/><path d="M530 19L538 37L556 45L538 53L530 71L522 53L504 45L522 37Z" fill="#e4eaf2" opacity=".85"><animate attributeName="opacity" values=".35;1;.35" dur="4.5s" repeatCount="indefinite"/></path><text x="530" y="108" font-family="Georgia,'Times New Roman',serif" font-size="34" font-weight="700" letter-spacing="2.5" fill="url(#silver)" text-anchor="middle">MENOS RUÍDO. MAIS ENGENHARIA.</text><text x="530" y="132" font-family="Arial,sans-serif" font-size="12" letter-spacing="3" fill="#919eae" text-anchor="middle">JOÃO ALBERNAZ  /  SOFTWARE ENGINEERING</text></svg>
