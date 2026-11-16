@@ -46,6 +46,16 @@ Meu interesse está na conexão entre engenharia de software, produtos digitais 
 
 **Outras linguagens e ferramentas:** Python, Java, C, FastAPI e testes automatizados com Vitest/Jest/Pytest.
 
+#### BEYOND THE STACK / FORA DO ÓBVIO
+
+<div align="center">
+
+<img src="./assets/beyond-the-stack.svg" alt="Linguagens que tenho curiosidade de explorar: Rust, Go, Zig, Elixir, Haskell, OCaml, Gleam, Nim, Crystal, Clojure, Julia e Lua." width="100%" />
+
+<sub>Uma coleção visual de linguagens que me despertam curiosidade — não uma declaração de experiência profissional.</sub>
+
+</div>
+
 ---
 
 ### 03 / PROJETOS SELECIONADOS
