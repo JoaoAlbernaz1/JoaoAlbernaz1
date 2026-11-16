@@ -1,0 +1,36 @@
+name: Publish chrome profile (readme-aura)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'readme.source.md'
+      - '.github/workflows/readme-aura.yml'
+  schedule:
+    - cron: '15 6 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-readme-aura
+  cancel-in-progress: true
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Build SVGs and README
+        uses: collectioneur/readme-aura@main
+        with:
+          source: readme.source.md
+          output: README.md
+          assets_dir: .github/assets
+          github_user: JoaoAlbernaz1
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          commit_message: 'build(profile): render monochrome chrome portfolio'
