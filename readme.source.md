@@ -130,65 +130,41 @@
 
 ```aura width=860 height=140
 (function() {
- const areas = [
-   {title:'Agentes de IA',detail:'LLMs  /  contextos  /  agentes',color:'#a78bfa',id:'ai'},
-   {title:'Automação',detail:'n8n  /  integrações  /  APIs',color:'#60a5fa',id:'auto'},
-   {title:'Produtos SaaS',detail:'Full-stack  /  experiências',color:'#67e8f9',id:'saas'}
- ];
- return (
- <div style={{
-   display:'flex',position:'relative',width:'100%',height:'100%',
-   fontFamily:'Inter',background:'#08080c',border:'1px solid rgba(110,80,220,0.24)',
-   borderRadius:16,overflow:'hidden',flexDirection:'column'
- }}>
-   <style>{String.raw`
-      @keyframes aura-flow {0%{transform:translateX(-23px);opacity:0}20%{opacity:1}80%{opacity:1}100%{transform:translateX(22px);opacity:0}}
-      @keyframes aura-orbit {0%,100%{transform:scale(1);opacity:.36}50%{transform:scale(1.65);opacity:.95}}
-      @keyframes aura-breathe {0%,100%{opacity:.42;transform:translateX(-15px)}50%{opacity:.85;transform:translateX(28px)}}
-      #focus-flow-one,#focus-flow-two{animation:aura-flow 2.8s ease-in-out infinite}
-      #focus-flow-two{animation-delay:1.4s}
-      #focus-orbit-ai{animation:aura-orbit 3.4s ease-in-out infinite}
-      #focus-orbit-auto{animation:aura-orbit 3.4s ease-in-out infinite 1.1s}
-      #focus-orbit-saas{animation:aura-orbit 3.4s ease-in-out infinite 2.2s}
-      #focus-aura-glow{animation:aura-breathe 11s ease-in-out infinite}
-   `}</style>
-   <svg width="860" height="140" style={{position:'absolute',left:0,top:0}}>
-      <defs>
-        <radialGradient id="focus-violet"><stop offset="0%" stopColor="#7c3aed" stopOpacity=".32"/><stop offset="100%" stopColor="#7c3aed" stopOpacity="0"/></radialGradient>
-        <radialGradient id="focus-blue"><stop offset="0%" stopColor="#2563eb" stopOpacity=".25"/><stop offset="100%" stopColor="#2563eb" stopOpacity="0"/></radialGradient>
-      </defs>
-      <ellipse id="focus-aura-glow" cx="330" cy="130" rx="390" ry="125" fill="url(#focus-violet)"/>
-      <ellipse cx="745" cy="100" rx="260" ry="160" fill="url(#focus-blue)"/>
-   </svg>
-   <div style={{display:'flex',position:'relative',alignItems:'center',justifyContent:'space-between',width:'100%',padding:'14px 28px 0 28px'}}>
-      <span style={{display:'flex',fontSize:10,color:'#c4b5fd',fontWeight:700,letterSpacing:'2.4px'}}>O QUE EU CONSTRUO</span>
-      <span style={{display:'flex',fontSize:10,color:'rgba(195,198,222,.56)',letterSpacing:'1.4px'}}>IDEIA  →  TECNOLOGIA  →  PRODUTO</span>
-   </div>
-   <div style={{display:'flex',position:'relative',width:'100%',alignItems:'center',justifyContent:'center',padding:'16px 27px 0 27px'}}>
-     {areas.map(function(a,i){return (
-       <div key={a.id} style={{display:'flex',alignItems:'center'}}>
-         <div style={{display:'flex',flexDirection:'column',width:232,height:83,borderRadius:12,background:'rgba(12,14,25,.88)',border:'1px solid rgba(125,105,220,.33)',padding:'13px 14px',gap:9}}>
-           <div style={{display:'flex',alignItems:'center',gap:10}}>
-             <svg width="22" height="22" viewBox="0 0 22 22">
-               <circle cx="11" cy="11" r="9" fill="none" stroke={a.color} strokeOpacity=".35" strokeWidth="1.4"/>
-               <circle id={'focus-orbit-'+a.id} cx="11" cy="11" r="4.1" fill={a.color} fillOpacity=".48"/>
-               <circle cx="11" cy="11" r="2.1" fill={a.color}/>
-             </svg>
-             <span style={{display:'flex',fontSize:19,fontWeight:750,letterSpacing:'-.4px',color:'#f8f7ff'}}>{a.title}</span>
-           </div>
-           <span style={{display:'flex',fontSize:11,letterSpacing:'.15px',color:'#abb4cd'}}>{a.detail}</span>
-         </div>
-         {i<2 ? (
-           <svg width="37" height="26" viewBox="0 0 37 26">
-             <path d="M2 13H35" stroke="#554b83" strokeWidth="1.4" strokeDasharray="3 4"/>
-             <circle id={i===0?'focus-flow-one':'focus-flow-two'} cx="18" cy="13" r="3" fill={a.color}/>
-           </svg>
-         ):null}
-       </div>
-     );})}
-   </div>
- </div>
- );
+  return (
+    <div style={{
+      width:'100%',height:'100%',display:'flex',position:'relative',
+      overflow:'hidden',background:'#08080c',borderRadius:16,
+      border:'1px solid rgba(110,80,220,0.18)',fontFamily:'Inter'
+    }}>
+      <style>{`
+        @keyframes editorial-drift {0%,100%{transform:translateX(0px);opacity:.78}50%{transform:translateX(170px);opacity:1}}
+        @keyframes editorial-breathe {0%,100%{transform:translateX(0px);opacity:.75}50%{transform:translateX(-140px);opacity:.92}}
+        @keyframes editorial-line {0%{stroke-dashoffset:520;opacity:0}22%{opacity:.48}75%{opacity:.48}100%{stroke-dashoffset:0;opacity:0}}
+        #editorial-glow-1 {animation:editorial-drift 12s ease-in-out infinite}
+        #editorial-glow-2 {animation:editorial-breathe 15s ease-in-out infinite}
+        #editorial-trace {animation:editorial-line 8s linear infinite}
+      `}</style>
+      <svg width="860" height="140" style={{position:'absolute',left:0,top:0}}>
+        <defs>
+          <radialGradient id="editorial-purple"><stop offset="0%" stopColor="#6f36c7" stopOpacity=".37"/><stop offset="100%" stopColor="#6f36c7" stopOpacity="0"/></radialGradient>
+          <radialGradient id="editorial-blue"><stop offset="0%" stopColor="#1865b9" stopOpacity=".26"/><stop offset="100%" stopColor="#1865b9" stopOpacity="0"/></radialGradient>
+          <linearGradient id="editorial-gradient" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stopColor="#ffffff" stopOpacity="0"/><stop offset="50%" stopColor="#cdc8ff"/><stop offset="100%" stopColor="#ffffff" stopOpacity="0"/></linearGradient>
+        </defs>
+        <ellipse id="editorial-glow-1" cx="240" cy="160" rx="340" ry="150" fill="url(#editorial-purple)"/>
+        <ellipse id="editorial-glow-2" cx="710" cy="155" rx="250" ry="135" fill="url(#editorial-blue)"/>
+        <path d="M535 124 L850 124" fill="none" stroke="#ffffff" strokeOpacity=".10" strokeWidth="1"/>
+        <path id="editorial-trace" d="M535 124 L850 124" fill="none" stroke="url(#editorial-gradient)" strokeWidth="2" strokeDasharray="72 450"/>
+        <path d="M756 24 L836 24" stroke="#ffffff" strokeOpacity=".17" strokeWidth="1"/>
+        <path d="M836 24 L836 104" stroke="#ffffff" strokeOpacity=".17" strokeWidth="1"/>
+        <path d="M766 24 L766 30 M766 24 L772 24" stroke="#ffffff" strokeOpacity=".55" strokeWidth="1"/>
+      </svg>
+      <div style={{display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'flex-start',position:'relative',padding:'22px 42px',gap:9,width:'100%'}}>
+        <span style={{display:'flex',fontSize:10,fontWeight:700,letterSpacing:'3px',color:'#b6b1cd'}}>SOFTWARE / INTELLIGENCE / AUTOMATION</span>
+        <span style={{display:'flex',fontSize:40,fontWeight:800,letterSpacing:'-1.7px',lineHeight:1.05,color:'#f6f6f8'}}>Ideias ganham forma.</span>
+        <span style={{display:'flex',fontSize:12,fontWeight:400,letterSpacing:'.2px',color:'#b4b3c3'}}>Engenharia de software, agentes de IA e produtos digitais.</span>
+      </div>
+    </div>
+  );
 })()
 ```
 
