@@ -141,7 +141,7 @@
    fontFamily:'Inter',background:'#08080c',border:'1px solid rgba(110,80,220,0.24)',
    borderRadius:16,overflow:'hidden',flexDirection:'column'
  }}>
-   <style>{String.raw\`
+   <style>{String.raw`
       @keyframes aura-flow {0%{transform:translateX(-23px);opacity:0}20%{opacity:1}80%{opacity:1}100%{transform:translateX(22px);opacity:0}}
       @keyframes aura-orbit {0%,100%{transform:scale(1);opacity:.36}50%{transform:scale(1.65);opacity:.95}}
       @keyframes aura-breathe {0%,100%{opacity:.42;transform:translateX(-15px)}50%{opacity:.85;transform:translateX(28px)}}
@@ -151,7 +151,7 @@
       #focus-orbit-auto{animation:aura-orbit 3.4s ease-in-out infinite 1.1s}
       #focus-orbit-saas{animation:aura-orbit 3.4s ease-in-out infinite 2.2s}
       #focus-aura-glow{animation:aura-breathe 11s ease-in-out infinite}
-   \`}</style>
+   `}</style>
    <svg width="860" height="140" style={{position:'absolute',left:0,top:0}}>
       <defs>
         <radialGradient id="focus-violet"><stop offset="0%" stopColor="#7c3aed" stopOpacity=".32"/><stop offset="100%" stopColor="#7c3aed" stopOpacity="0"/></radialGradient>
