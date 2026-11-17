@@ -1,348 +1,132 @@
-<!-- Visual inspirado no perfil collectioneur, produzido com readme-aura. Componentes e animacoes adaptados para Joao Albernaz. -->
+<!-- README de portfólio; gerado por readme-aura. Edite readme.source.md. Inspiração visual: collectioneur/readme-aura. -->
 
-```aura width=860 height=200
- <div style={{
- width: '100%', height: '100%', background: '#08080c',
- display: 'flex', alignItems: 'center', fontFamily: 'Inter',
- position: 'relative', overflow: 'hidden', borderRadius: 16,
- border: '1px solid rgba(110,80,220,0.18)'
-}}>
-
- <style>
-   {`
-     @keyframes float-slow {
-       0%, 100% { transform: translateX(0px); opacity: 0.8; }
-       50% { transform: translateX(350px); opacity: 1.2; }
-     }
-     @keyframes float-medium {
-       0%, 100% { transform: translateX(0px); opacity: 0.7; }
-       50% { transform: translateX(-250px); opacity: 1.1; }
-     }
-     @keyframes float-fast {
-       0%, 100% { transform: translateX(0px); opacity: 0.9; }
-       50% { transform: translateX(200px); opacity: 0.6; }
-     }
-     @keyframes float-diagonal {
-       0%, 100% { transform: translateX(0px); opacity: 0.75; }
-       50% { transform: translateX(300px); opacity: 1.0; }
-     }
-     @keyframes float-wave {
-       0%, 100% { transform: translateX(0px); opacity: 0.65; }
-       33% { transform: translateX(-160px); opacity: 0.9; }
-       66% { transform: translateX(80px); opacity: 1.0; }
-     }
-     @keyframes float-pulse {
-       0%, 100% { transform: scale(1); opacity: 0.8; }
-       50% { transform: scale(1.3); opacity: 0.4; }
-     }
-     #glow-1 { animation: float-slow 8s ease-in-out infinite; }
-     #glow-2 { animation: float-medium 12s ease-in-out infinite; }
-     #glow-3 { animation: float-fast 9s ease-in-out infinite; }
-     #glow-4 { animation: float-slow 11s ease-in-out infinite reverse; }
-     #glow-5 { animation: float-medium 14s ease-in-out infinite reverse; }
-     #glow-6 { animation: float-diagonal 10s ease-in-out infinite; }
-     #glow-7 { animation: float-wave 13s ease-in-out infinite; }
-     #glow-8 { animation: float-pulse 7s ease-in-out infinite; }
-   `}
- </style>
-
- <svg width="860" height="200" style={{ position: 'absolute', top: 0, left: 0 }}>
-   <defs>
-     <radialGradient id="g1" cx="50%" cy="50%" r="50%">
-       <stop offset="0%" stopColor="rgba(110,20,210,0.72)" />
-       <stop offset="40%" stopColor="rgba(90,15,180,0.35)" />
-       <stop offset="70%" stopColor="rgba(90,15,180,0)" />
-     </radialGradient>
-     <radialGradient id="g2" cx="50%" cy="50%" r="50%">
-       <stop offset="0%" stopColor="rgba(40,60,255,0.6)" />
-       <stop offset="45%" stopColor="rgba(30,50,200,0.25)" />
-       <stop offset="70%" stopColor="rgba(30,50,200,0)" />
-     </radialGradient>
-     <radialGradient id="g3" cx="50%" cy="50%" r="50%">
-       <stop offset="0%" stopColor="rgba(0,130,255,0.45)" />
-       <stop offset="50%" stopColor="rgba(0,100,220,0.18)" />
-       <stop offset="70%" stopColor="rgba(0,100,220,0)" />
-     </radialGradient>
-     <radialGradient id="g4" cx="50%" cy="50%" r="50%">
-       <stop offset="0%" stopColor="rgba(0,190,230,0.32)" />
-       <stop offset="70%" stopColor="rgba(0,190,230,0)" />
-     </radialGradient>
-     <radialGradient id="g5" cx="50%" cy="50%" r="50%">
-       <stop offset="0%" stopColor="rgba(90,30,200,0.38)" />
-       <stop offset="70%" stopColor="rgba(90,30,200,0)" />
-     </radialGradient>
-     <radialGradient id="g6" cx="50%" cy="50%" r="50%">
-       <stop offset="0%" stopColor="rgba(160,30,255,0.55)" />
-       <stop offset="45%" stopColor="rgba(130,20,220,0.22)" />
-       <stop offset="70%" stopColor="rgba(130,20,220,0)" />
-     </radialGradient>
-     <radialGradient id="g7" cx="50%" cy="50%" r="50%">
-       <stop offset="0%" stopColor="rgba(20,60,255,0.42)" />
-       <stop offset="50%" stopColor="rgba(10,40,200,0.16)" />
-       <stop offset="70%" stopColor="rgba(10,40,200,0)" />
-     </radialGradient>
-     <radialGradient id="g8" cx="50%" cy="50%" r="50%">
-       <stop offset="0%" stopColor="rgba(0,170,255,0.40)" />
-       <stop offset="50%" stopColor="rgba(0,130,220,0.15)" />
-       <stop offset="70%" stopColor="rgba(0,130,220,0)" />
-     </radialGradient>
-   </defs>
-
-   <ellipse id="glow-1" cx="180" cy="230" rx="260" ry="190" fill="url(#g1)" />
-   <ellipse id="glow-2" cx="300" cy="240" rx="220" ry="160" fill="url(#g2)" />
-   <ellipse id="glow-3" cx="420" cy="240" rx="180" ry="140" fill="url(#g3)" />
-   <ellipse id="glow-4" cx="550" cy="250" rx="150" ry="120" fill="url(#g4)" />
-   <ellipse id="glow-5" cx="750" cy="250" rx="130" ry="110" fill="url(#g5)" />
-   <ellipse id="glow-6" cx="300" cy="240" rx="180" ry="140" fill="url(#g6)" />
-   <ellipse id="glow-7" cx="490" cy="230" rx="220" ry="170" fill="url(#g7)" />
-   <ellipse id="glow-8" cx="590" cy="250" rx="150" ry="130" fill="url(#g8)" />
- </svg>
-
- <div style={{
-   position: 'absolute', left: 48, top: 52, width: 96, height: 96,
-   borderRadius: 48, background: 'linear-gradient(135deg, #6622ee, #0088ff)',
-   display: 'flex', alignItems: 'center', justifyContent: 'center',
- }}>
-   <img src={github.user.avatarUrl} width={88} height={88} style={{ borderRadius: 44 }} />
- </div>
-
- <div style={{ display:'flex', flexDirection:'column', marginLeft:168, gap:8, zIndex: 10 }}>
-   <div style={{ display:'flex', fontSize:38, fontWeight:800, color:'#ffffff', letterSpacing:'-1px', lineHeight:1 }}>
-     {'João Victor Albernaz'}
-   </div>
-   <div style={{ display:'flex', fontSize:15, color:'rgba(180,165,255,0.8)', fontWeight:400, letterSpacing:'0.3px' }}>
-     {'Engenharia de Software · GenAI · Full-stack · Automação'}
-   </div>
-   <div style={{ display:'flex', gap:8, marginTop:6 }}>
-     {['Python', 'TypeScript', 'React', 'n8n'].map(function(tag) {
-       return (
-         <div key={tag} style={{
-           display:'flex', padding:'4px 12px', borderRadius:20,
-           background:'rgba(80,40,220,0.18)', border:'1px solid rgba(100,70,240,0.32)',
-           color:'rgba(205,195,255,0.85)', fontSize:12, fontWeight:600,
-         }}>{tag}</div>
-       );
-     })}
-   </div>
- </div>
-</div>
-```
-
-```aura width=860 height=140
+```aura width=860 height=264
 (function() {
-  return (
-    <div style={{
-      width:'100%',height:'100%',display:'flex',position:'relative',
-      overflow:'hidden',background:'#08080c',borderRadius:16,
-      border:'1px solid rgba(110,80,220,0.18)',fontFamily:'Inter'
-    }}>
-      <style>{`
-        @keyframes editorial-drift {0%,100%{transform:translateX(0px);opacity:.78}50%{transform:translateX(170px);opacity:1}}
-        @keyframes editorial-breathe {0%,100%{transform:translateX(0px);opacity:.75}50%{transform:translateX(-140px);opacity:.92}}
-        @keyframes editorial-line {0%{stroke-dashoffset:520;opacity:0}22%{opacity:.48}75%{opacity:.48}100%{stroke-dashoffset:0;opacity:0}}
-        #editorial-glow-1 {animation:editorial-drift 12s ease-in-out infinite}
-        #editorial-glow-2 {animation:editorial-breathe 15s ease-in-out infinite}
-        #editorial-trace {animation:editorial-line 8s linear infinite}
-      `}</style>
-      <svg width="860" height="140" style={{position:'absolute',left:0,top:0}}>
-        <defs>
-          <radialGradient id="editorial-purple"><stop offset="0%" stopColor="#6f36c7" stopOpacity=".37"/><stop offset="100%" stopColor="#6f36c7" stopOpacity="0"/></radialGradient>
-          <radialGradient id="editorial-blue"><stop offset="0%" stopColor="#1865b9" stopOpacity=".26"/><stop offset="100%" stopColor="#1865b9" stopOpacity="0"/></radialGradient>
-          <linearGradient id="editorial-gradient" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stopColor="#ffffff" stopOpacity="0"/><stop offset="50%" stopColor="#cdc8ff"/><stop offset="100%" stopColor="#ffffff" stopOpacity="0"/></linearGradient>
-        </defs>
-        <ellipse id="editorial-glow-1" cx="240" cy="160" rx="340" ry="150" fill="url(#editorial-purple)"/>
-        <ellipse id="editorial-glow-2" cx="710" cy="155" rx="250" ry="135" fill="url(#editorial-blue)"/>
-        <path d="M535 124 L850 124" fill="none" stroke="#ffffff" strokeOpacity=".10" strokeWidth="1"/>
-        <path id="editorial-trace" d="M535 124 L850 124" fill="none" stroke="url(#editorial-gradient)" strokeWidth="2" strokeDasharray="72 450"/>
-        <path d="M756 24 L836 24" stroke="#ffffff" strokeOpacity=".17" strokeWidth="1"/>
-        <path d="M836 24 L836 104" stroke="#ffffff" strokeOpacity=".17" strokeWidth="1"/>
-        <path d="M766 24 L766 30 M766 24 L772 24" stroke="#ffffff" strokeOpacity=".55" strokeWidth="1"/>
-      </svg>
-      <div style={{display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'flex-start',position:'relative',padding:'22px 42px',gap:9,width:'100%'}}>
-        <span style={{display:'flex',fontSize:10,fontWeight:700,letterSpacing:'3px',color:'#b6b1cd'}}>SOFTWARE / INTELLIGENCE / AUTOMATION</span>
-        <span style={{display:'flex',fontSize:40,fontWeight:800,letterSpacing:'-1.7px',lineHeight:1.05,color:'#f6f6f8'}}>Ideias ganham forma.</span>
-        <span style={{display:'flex',fontSize:12,fontWeight:400,letterSpacing:'.2px',color:'#b4b3c3'}}>Engenharia de software, agentes de IA e produtos digitais.</span>
-      </div>
-    </div>
-  );
-})()
-```
-
-```aura width=860 height=168
-(function() {
- var topLangs = github.languages.slice(0, 6).map(function(l) { return l.name; });
- var categories = [
-   { title: 'Languages', color: '#a78bfa', items: topLangs },
-   { title: 'Frameworks', color: '#60a5fa', items: ['React', 'Next.js', 'React Native', 'Django'] },
- ];
-
  return (
-   <div style={{
-     width: '100%', height: '100%',
-     background: '#08080c',
-     display: 'flex', flexDirection: 'column',
-     fontFamily: 'Inter', padding: '18px 32px', gap: 14,
-     borderRadius: 16, border: '1px solid rgba(110,80,220,0.18)',
-     position: 'relative', overflow: 'hidden',
-   }}>
-
-     <style>
-       {`
-         @keyframes float-slow {
-           0%, 100% { transform: translateX(0px); opacity: 0.8; }
-           50% { transform: translateX(350px); opacity: 1.2; }
-         }
-         @keyframes float-medium {
-           0%, 100% { transform: translateX(0px); opacity: 0.7; }
-           50% { transform: translateX(-250px); opacity: 1.1; }
-         }
-         @keyframes float-fast {
-           0%, 100% { transform: translateX(0px); opacity: 0.9; }
-           50% { transform: translateX(200px); opacity: 0.6; }
-         }
-         @keyframes float-diagonal {
-           0%, 100% { transform: translate(0px, 0px); opacity: 0.75; }
-           50% { transform: translate(120px, 30px); opacity: 1.0; }
-         }
-         @keyframes float-wave {
-           0%, 100% { transform: translateX(0px); opacity: 0.65; }
-           33% { transform: translateX(-160px); opacity: 0.9; }
-           66% { transform: translateX(80px); opacity: 1.0; }
-         }
-         @keyframes float-pulse {
-           0%, 100% { transform: scale(1); opacity: 0.8; }
-           50% { transform: scale(1.3); opacity: 0.4; }
-         }
-         #glow-1 { animation: float-slow 9s ease-in-out infinite; }
-         #glow-2 { animation: float-medium 12s ease-in-out infinite; }
-         #glow-3 { animation: float-fast 8s ease-in-out infinite; }
-         #glow-4 { animation: float-diagonal 11s ease-in-out infinite reverse; }
-         #glow-5 { animation: float-wave 14s ease-in-out infinite reverse; }
-         #glow-6 { animation: float-pulse 6s ease-in-out infinite; }
-       `}
-     </style>
-
-     <svg width="860" height="168" style={{ position: 'absolute', top: 0, left: 0 }}>
-       <defs>
-         <radialGradient id="g1" cx="50%" cy="50%" r="50%">
-           <stop offset="0%" stopColor="rgba(115,20,215,0.68)" />
-           <stop offset="42%" stopColor="rgba(85,15,175,0.30)" />
-           <stop offset="70%" stopColor="rgba(85,15,175,0)" />
-         </radialGradient>
-         <radialGradient id="g2" cx="50%" cy="50%" r="50%">
-           <stop offset="0%" stopColor="rgba(55,55,255,0.55)" />
-           <stop offset="45%" stopColor="rgba(35,45,210,0.22)" />
-           <stop offset="70%" stopColor="rgba(35,45,210,0)" />
-         </radialGradient>
-         <radialGradient id="g3" cx="50%" cy="50%" r="50%">
-           <stop offset="0%" stopColor="rgba(0,130,255,0.42)" />
-           <stop offset="50%" stopColor="rgba(0,100,220,0.16)" />
-           <stop offset="70%" stopColor="rgba(0,100,220,0)" />
-         </radialGradient>
-         <radialGradient id="g4" cx="50%" cy="50%" r="50%">
-           <stop offset="0%" stopColor="rgba(0,185,240,0.32)" />
-           <stop offset="70%" stopColor="rgba(0,185,240,0)" />
-         </radialGradient>
-         <radialGradient id="g5" cx="50%" cy="50%" r="50%">
-           <stop offset="0%" stopColor="rgba(100,25,205,0.42)" />
-           <stop offset="70%" stopColor="rgba(100,25,205,0)" />
-         </radialGradient>
-         <radialGradient id="g6" cx="50%" cy="50%" r="50%">
-           <stop offset="0%" stopColor="rgba(60,80,255,0.35)" />
-           <stop offset="70%" stopColor="rgba(60,80,255,0)" />
-         </radialGradient>
-       </defs>
-       <ellipse id="glow-1" cx="170" cy="168" rx="260" ry="170" fill="url(#g1)" />
-       <ellipse id="glow-2" cx="320" cy="178" rx="220" ry="140" fill="url(#g2)" />
-       <ellipse id="glow-3" cx="460" cy="178" rx="190" ry="130" fill="url(#g3)" />
-       <ellipse id="glow-4" cx="590" cy="188" rx="160" ry="110" fill="url(#g4)" />
-       <ellipse id="glow-5" cx="750" cy="188" rx="140" ry="100" fill="url(#g5)" />
-       <ellipse id="glow-6" cx="420" cy="138" rx="100" ry="80" fill="url(#g6)" />
-     </svg>
-
-     <div style={{ display:'flex', fontSize:10, fontWeight:700, color:'rgba(155,140,210,0.5)', letterSpacing:'3px' }}>
-       TECH STACK
-     </div>
-     <div style={{ display:'flex', flexDirection:'column', gap:14 }}>
-       {categories.map(function(cat) {
-         return (
-           <div key={cat.title} style={{ display:'flex', alignItems:'center', gap:16 }}>
-             <div style={{ display:'flex', fontSize:10, fontWeight:700, color:cat.color, letterSpacing:'1px', width:80 }}>
-               {cat.title.toUpperCase()}
-             </div>
-             <div style={{ display:'flex', flexWrap:'wrap', gap:7 }}>
-               {cat.items.map(function(item) {
-                 return (
-                   <div key={item} style={{
-                     display:'flex', padding:'4px 13px', borderRadius:6,
-                     background:cat.color + '15', border:'1px solid ' + cat.color + '35',
-                     color:'rgba(225,220,255,0.85)', fontSize:12, fontWeight:600,
-                   }}>{item}</div>
-                 );
-               })}
-             </div>
-           </div>
-         );
-       })}
-     </div>
+  <div style={{display:'flex',position:'relative',width:'100%',height:'100%',background:'#090a0d',borderRadius:18,overflow:'hidden',border:'1px solid rgba(255,255,255,.13)',fontFamily:'Inter'}}>
+   <style>{'@keyframes hero-glow {0%,100%{transform:translateX(-34px);opacity:.46}50%{transform:translateX(32px);opacity:.92}} @keyframes hero-pulse {0%,100%{opacity:.16;transform:scale(1)}50%{opacity:.64;transform:scale(1.16)}} @keyframes hero-dash {0%{stroke-dashoffset:420;opacity:.05}35%{opacity:.64}100%{stroke-dashoffset:0;opacity:.05}} #genai-glow{animation:hero-glow 11s ease-in-out infinite} #genai-halo{animation:hero-pulse 6s ease-in-out infinite} #genai-dash{animation:hero-dash 10s linear infinite}'}</style>
+   <svg width="860" height="264" style={{position:'absolute',left:0,top:0}}>
+    <defs>
+     <radialGradient id="hero-deep-red"><stop offset="0%" stopColor="#a5283e" stopOpacity=".48"/><stop offset="100%" stopColor="#a5283e" stopOpacity="0"/></radialGradient>
+     <radialGradient id="hero-grey"><stop offset="0%" stopColor="#d9dbe5" stopOpacity=".11"/><stop offset="100%" stopColor="#d9dbe5" stopOpacity="0"/></radialGradient>
+     <linearGradient id="hero-line" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stopColor="#f65a68" stopOpacity="0"/><stop offset="50%" stopColor="#f65a68" stopOpacity=".9"/><stop offset="100%" stopColor="#f65a68" stopOpacity="0"/></linearGradient>
+    </defs>
+    <ellipse id="genai-glow" cx="675" cy="128" rx="275" ry="235" fill="url(#hero-deep-red)"/>
+    <ellipse cx="140" cy="252" rx="390" ry="120" fill="url(#hero-grey)"/>
+    <circle cx="731" cy="133" r="101" fill="none" stroke="#ffffff" strokeOpacity=".11" strokeWidth="1"/>
+    <circle id="genai-halo" cx="731" cy="133" r="77" fill="none" stroke="#f75b67" strokeOpacity=".32" strokeWidth="1.5"/>
+    <circle cx="731" cy="133" r="50" fill="none" stroke="#ffffff" strokeOpacity=".16" strokeWidth="1"/>
+    <path d="M634 133H827 M731 36V230" fill="none" stroke="#ffffff" strokeOpacity=".065" strokeWidth="1"/>
+    <path id="genai-dash" d="M634 133H827" stroke="url(#hero-line)" strokeWidth="2" strokeDasharray="35 420"/>
+    <circle cx="731" cy="133" r="4" fill="#f46974"/>
+    <rect x="40" y="31" width="26" height="3" rx="1" fill="#f0646f"/>
+    <rect x="40" y="224" width="781" height="1" fill="#ffffff" fillOpacity=".10"/>
+   </svg>
+   <div style={{display:'flex',position:'relative',flexDirection:'column',padding:'42px 40px 0 40px',width:680}}>
+    <span style={{display:'flex',fontSize:12,fontWeight:700,letterSpacing:'2px',color:'#d5d5dc'}}>JOÃO VICTOR ALBERNAZ</span>
+    <div style={{display:'flex',flexDirection:'column',gap:1,marginTop:20}}>
+     <span style={{display:'flex',fontSize:51,fontWeight:800,letterSpacing:'-2.2px',lineHeight:1.05,color:'#ffffff'}}>Eu construo IA</span>
+     <span style={{display:'flex',fontSize:51,fontWeight:800,letterSpacing:'-2.2px',lineHeight:1.05,color:'#ffffff'}}>para uso real<span style={{color:'#f26774'}}>.</span></span>
+    </div>
+    <span style={{display:'flex',fontSize:15,color:'#b8bac5',marginTop:17,letterSpacing:'.15px'}}>GenAI  /  LLMs  /  Agentes  /  Automações  /  APIs</span>
+    <span style={{display:'flex',fontSize:10,color:'#a3a4ad',marginTop:19,letterSpacing:'1.6px'}}>ENGENHARIA DE SOFTWARE · UCB · BRASÍLIA</span>
    </div>
+  </div>
  );
 })()
 ```
 
-```aura width=120 height=44 link="https://www.linkedin.com/in/joaooalbernaz/" inline align=center
-<SocialMediaButton
-  icon="https://raw.githubusercontent.com/collectioneur/collectioneur/main/icons/linkedin-icon.png"
-  text="Linkedin"
-  backgroundColor="#000000"
-  width={120}
-  height={44}
-  gradientStops={[
-    { offset: '0%', color: '#b57af9' },
-    { offset: '30%', color: '#000000' },
-    { offset: '60%', color: '#9d6bf0' },
-    { offset: '80%', color: '#000000' },
-    { offset: '100%', color: '#c89dfb' },
-  ]}
-/>
+<p align="center"><strong>Desenvolvedor de IA aplicada · Engenharia de Software (UCB) · Conclusão prevista: 2027</strong></p>
+
+<p align="center"><a href="https://www.linkedin.com/in/joaooalbernaz/">LinkedIn</a> &nbsp;·&nbsp; <a href="mailto:joaovictoralbernaz@gmail.com">E-mail</a> &nbsp;·&nbsp; <a href="https://github.com/JoaoAlbernaz1?tab=repositories">Código público</a></p>
+
+Construo soluções de **IA generativa aplicadas a processos reais**: assistentes conversacionais, fluxos com LLMs, automações, APIs e produtos digitais. Trabalho com **Claude, OpenAI, n8n, Make, TypeScript e Python**, conectando a IA a dados, testes e experiência de uso.
+
+### Experiência prática com IA
+
+```aura width=860 height=230
+(function() {
+ const cases=[
+  {index:'01 / ASSISTENTE LEGISLATIVA',name:'Selena',status:'PROJETO PRIVADO',description:'Atendimento por WhatsApp com IA, APIs e webhooks; evolução orientada por métricas e feedback.',stack:'OpenAI   /   n8n   /   Supabase'},
+  {index:'02 / LINGUAGEM NATURAL EM PRODUÇÃO',name:'Finanças Bot',status:'PROJETO PRIVADO',description:'Transforma texto em registros financeiros estruturados, com validações, prevenção de duplicidade e testes.',stack:'Claude   /   TypeScript   /   PostgreSQL'}
+ ];
+ return (
+ <div style={{display:'flex',position:'relative',width:'100%',height:'100%',flexDirection:'column',fontFamily:'Inter',background:'#0b0c0f',border:'1px solid rgba(255,255,255,.13)',borderRadius:18,overflow:'hidden'}}>
+  <style>{'@keyframes work-highlight{0%,100%{opacity:.19;transform:translateX(-20px)}50%{opacity:.54;transform:translateX(22px)}} #work-glow{animation:work-highlight 12s ease-in-out infinite}'}</style>
+  <svg width="860" height="230" style={{position:'absolute',left:0,top:0}}>
+   <defs><radialGradient id="work-radial"><stop offset="0%" stopColor="#b62e45" stopOpacity=".22"/><stop offset="100%" stopColor="#b62e45" stopOpacity="0"/></radialGradient></defs>
+   <ellipse id="work-glow" cx="670" cy="110" rx="310" ry="190" fill="url(#work-radial)"/>
+   <path d="M430 60V205" stroke="#ffffff" strokeOpacity=".16" strokeWidth="1"/>
+   <path d="M38 51H821" stroke="#ffffff" strokeOpacity=".14" strokeWidth="1"/>
+  </svg>
+  <div style={{display:'flex',alignItems:'center',justifyContent:'space-between',position:'relative',padding:'18px 38px 16px 38px'}}>
+   <span style={{display:'flex',fontSize:10,fontWeight:700,letterSpacing:'2.5px',color:'#f47680'}}>SELECTED WORK</span>
+   <span style={{display:'flex',fontSize:10,letterSpacing:'1.5px',color:'#969aa7'}}>IA APLICADA  /  2025—2026</span>
+  </div>
+  <div style={{display:'flex',position:'relative',width:'100%',padding:'14px 38px 22px 38px',gap:39}}>
+   {cases.map(function(c){return (
+    <div key={c.index} style={{display:'flex',width:350,flexDirection:'column',gap:9}}>
+     <span style={{display:'flex',fontSize:10,fontWeight:700,letterSpacing:'1.1px',color:'#d7858e'}}>{c.index}</span>
+     <span style={{display:'flex',fontSize:29,fontWeight:800,letterSpacing:'-.7px',color:'#fafafb'}}>{c.name}</span>
+     <span style={{display:'flex',fontSize:12,letterSpacing:'.12px',color:'#c5c5cd',lineHeight:1.45}}>{c.description}</span>
+     <span style={{display:'flex',fontSize:10,color:'#e0a1a7',marginTop:3}}>{c.stack}</span>
+    </div>
+   );})}
+  </div>
+ </div>
+ );
+})()
 ```
 
-```aura width=138 height=44 link="https://github.com/JoaoAlbernaz1" inline align=center
-<SocialMediaButton
-  icon="https://raw.githubusercontent.com/JoaoAlbernaz1/JoaoAlbernaz1/main/icons/github-mark.svg"
-  text="GitHub"
-  backgroundColor="#000000"
-  width={138}
-  height={44}
-  gradientStops={[
-    { offset: '0%', color: '#818cf8' },
-    { offset: '30%', color: '#000000' },
-    { offset: '60%', color: '#9298f8' },
-    { offset: '80%', color: '#000000' },
-    { offset: '100%', color: '#7479f5' },
-  ]}
-/>
+**Selena · SLCN / Senado Federal · 2025–atual — projeto privado.** Atuação no desenvolvimento e na manutenção de um assistente de atendimento via WhatsApp. Integrações com OpenAI, n8n, Supabase, APIs e webhooks; acompanhamento de métricas e feedback das interações para orientar melhorias. O código e os dados internos não são públicos.
+
+**Finanças Bot · projeto pessoal privado.** Aplicação com Claude/Anthropic API que interpreta mensagens financeiras em português e cria registros estruturados no PostgreSQL. Inclui validação de saída, integração à WhatsApp Cloud API, verificação de assinatura, prevenção de duplicidade e testes determinísticos. Detalhamento técnico disponível em entrevista.
+
+### Código e produtos que você pode explorar
+
+**[UniMove — app e API de caronas universitárias](https://github.com/JoaoAlbernaz1/UniMove)**  
+Aplicação colaborativa ponta a ponta com React Native/Expo, NestJS, PostgreSQL e Prisma. Desenvolvi e evoluí funcionalidades administrativas com **controle de acesso, autenticação multifator, auditoria e testes automatizados**.
+
+**[SeuConvite IA — plataforma SaaS multi-tenant](https://github.com/JoaoAlbernaz1/seuconviteia)**  
+Produto em desenvolvimento para criação de sites de eventos por subdomínio. Arquitetura com Next.js/TypeScript, isolamento multi-tenant planejado e desenvolvimento guiado por documentação e skills do Claude Code. **Ainda em evolução; não apresentado como produto concluído.**
+
+**Curva S — acompanhamento de projetos · sistema privado**  
+Painel em React e TypeScript para importação de cronogramas, comparação de avanço planejado versus realizado e visualização gerencial, com separação entre regras de cálculo e interface.
+
+### Stack que uso na prática
+
+| Área | Ferramentas e competências |
+| :--- | :--- |
+| **IA & agentes** | Claude / Anthropic API, OpenAI, LLMs, prompt engineering, saídas estruturadas, orquestração de fluxos |
+| **Automações** | n8n, Make, webhooks, WhatsApp Cloud API, integrações REST |
+| **Engenharia** | TypeScript, JavaScript, Python, Node.js, NestJS, FastAPI, React, Next.js, React Native / Expo |
+| **Dados & qualidade** | PostgreSQL, Supabase, Prisma, Redis, Docker, GitHub Actions, Vitest, Jest, Pytest |
+
+### Trajetória
+
+**2025–atual · Selena / SLCN (Senado Federal)** — soluções de IA, atendimento e automações.  
+**2025 · Blue Ocean (4 meses)** — desenvolvimento web, integrações REST e automações com Make/n8n.  
+**2023–2027 (prev.) · Universidade Católica de Brasília** — Bacharelado em Engenharia de Software, cursando.
+
+```aura width=860 height=95
+(function(){
+ return (
+  <div style={{display:'flex',position:'relative',width:'100%',height:'100%',background:'#0b0c0f',borderRadius:17,overflow:'hidden',border:'1px solid rgba(255,255,255,.12)',fontFamily:'Inter',alignItems:'center',justifyContent:'space-between',padding:'0 36px'}}>
+   <style>{'@keyframes contact-glow {0%,100%{transform:translateX(-90px);opacity:.2}50%{transform:translateX(90px);opacity:.65}} #contact-red{animation:contact-glow 9s ease-in-out infinite}'}</style>
+   <svg width="860" height="95" style={{position:'absolute',left:0,top:0}}>
+    <defs><radialGradient id="contact-halo"><stop offset="0%" stopColor="#f03c52" stopOpacity=".36"/><stop offset="100%" stopColor="#f03c52" stopOpacity="0"/></radialGradient></defs>
+    <ellipse id="contact-red" cx="700" cy="80" rx="240" ry="110" fill="url(#contact-halo)"/>
+   </svg>
+   <div style={{display:'flex',position:'relative',flexDirection:'column',gap:7}}>
+    <span style={{display:'flex',fontSize:10,letterSpacing:'2.2px',color:'#ec7884',fontWeight:700}}>BUILD / LEARN / SHIP</span>
+    <span style={{display:'flex',fontSize:23,color:'#ffffff',fontWeight:800,letterSpacing:'-.6px'}}>Da ideia ao produto. Com engenharia.</span>
+   </div>
+   <span style={{display:'flex',position:'relative',fontSize:12,color:'#bcbcc5',letterSpacing:'.2px'}}>GENAI / AI BUILDER</span>
+  </div>
+ );
+})()
 ```
 
-```aura width=110 height=44 link="mailto:joaovictoralbernaz@gmail.com" inline align=center
-<SocialMediaButton
-  icon="https://raw.githubusercontent.com/collectioneur/collectioneur/main/icons/gmail-icon.svg"
-  text="Email"
-  backgroundColor="#000000"
-  width={110}
-  height={44}
-  gradientStops={[
-    { offset: '0%', color: '#d855f7' },
-    { offset: '30%', color: '#000000' },
-    { offset: '60%', color: '#b557e8' },
-    { offset: '80%', color: '#000000' },
-    { offset: '100%', color: '#cc6ef9' },
-  ]}
-/>
-```
- 
-<p align="center"><sub>Engenharia de Software · GenAI · Full-stack · Automação</sub></p>
+<p align="center"><strong>Em busca de oportunidades de estágio em GenAI / AI Builder.</strong><br/><sub>Brasília, DF · <a href="mailto:joaovictoralbernaz@gmail.com">joaovictoralbernaz@gmail.com</a> · <a href="https://www.linkedin.com/in/joaooalbernaz/">LinkedIn</a></sub></p>
 
-<p align="center"><sub><a href="https://github.com/JoaoAlbernaz1/UniMove">UniMove</a> · <a href="https://github.com/JoaoAlbernaz1/seuconviteia">SeuConvite IA</a> · Selena (projeto privado) · Curva S (projeto privado)</sub></p>
-
-<p align="center"><sub>Design baseado em <a href="https://github.com/collectioneur">collectioneur</a> · Powered by <a href="https://github.com/collectioneur/readme-aura">readme-aura</a></sub></p>
+<p align="center"><sub>Componentes SVG renderizados com <a href="https://github.com/collectioneur/readme-aura">readme-aura</a> · inspiração visual em <a href="https://github.com/collectioneur">collectioneur</a></sub></p>
