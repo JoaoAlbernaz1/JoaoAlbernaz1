@@ -1,35 +1,35 @@
-<!-- README de portfólio; gerado por readme-aura. Edite readme.source.md. Inspiração visual: collectioneur/readme-aura. -->
+<!-- README de portfólio; gerado por readme-aura. Edite readme.source.md. Estilo monocromático e animações SVG com readme-aura. -->
 
 ```aura width=860 height=264
 (function() {
  return (
-  <div style={{display:'flex',position:'relative',width:'100%',height:'100%',background:'#090a0d',borderRadius:18,overflow:'hidden',border:'1px solid rgba(255,255,255,.13)',fontFamily:'Inter'}}>
+  <div style={{display:'flex',position:'relative',width:'100%',height:'100%',background:'#090909',borderRadius:18,overflow:'hidden',border:'1px solid rgba(255,255,255,.13)',fontFamily:'Inter'}}>
    <style>{'@keyframes hero-glow {0%,100%{transform:translateX(-34px);opacity:.46}50%{transform:translateX(32px);opacity:.92}} @keyframes hero-pulse {0%,100%{opacity:.16;transform:scale(1)}50%{opacity:.64;transform:scale(1.16)}} @keyframes hero-dash {0%{stroke-dashoffset:420;opacity:.05}35%{opacity:.64}100%{stroke-dashoffset:0;opacity:.05}} #genai-glow{animation:hero-glow 11s ease-in-out infinite} #genai-halo{animation:hero-pulse 6s ease-in-out infinite} #genai-dash{animation:hero-dash 10s linear infinite}'}</style>
    <svg width="860" height="264" style={{position:'absolute',left:0,top:0}}>
     <defs>
-     <radialGradient id="hero-deep-red"><stop offset="0%" stopColor="#a5283e" stopOpacity=".48"/><stop offset="100%" stopColor="#a5283e" stopOpacity="0"/></radialGradient>
-     <radialGradient id="hero-grey"><stop offset="0%" stopColor="#d9dbe5" stopOpacity=".11"/><stop offset="100%" stopColor="#d9dbe5" stopOpacity="0"/></radialGradient>
-     <linearGradient id="hero-line" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stopColor="#f65a68" stopOpacity="0"/><stop offset="50%" stopColor="#f65a68" stopOpacity=".9"/><stop offset="100%" stopColor="#f65a68" stopOpacity="0"/></linearGradient>
+     <radialGradient id="hero-mono-halo"><stop offset="0%" stopColor="#bbbbbb" stopOpacity=".48"/><stop offset="100%" stopColor="#bbbbbb" stopOpacity="0"/></radialGradient>
+     <radialGradient id="hero-grey"><stop offset="0%" stopColor="#dddddd" stopOpacity=".11"/><stop offset="100%" stopColor="#dddddd" stopOpacity="0"/></radialGradient>
+     <linearGradient id="hero-line" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stopColor="#ffffff" stopOpacity="0"/><stop offset="50%" stopColor="#ffffff" stopOpacity=".9"/><stop offset="100%" stopColor="#ffffff" stopOpacity="0"/></linearGradient>
     </defs>
-    <ellipse id="genai-glow" cx="675" cy="128" rx="275" ry="235" fill="url(#hero-deep-red)"/>
+    <ellipse id="genai-glow" cx="675" cy="128" rx="275" ry="235" fill="url(#hero-mono-halo)"/>
     <ellipse cx="140" cy="252" rx="390" ry="120" fill="url(#hero-grey)"/>
     <circle cx="731" cy="133" r="101" fill="none" stroke="#ffffff" strokeOpacity=".11" strokeWidth="1"/>
-    <circle id="genai-halo" cx="731" cy="133" r="77" fill="none" stroke="#f75b67" strokeOpacity=".32" strokeWidth="1.5"/>
+    <circle id="genai-halo" cx="731" cy="133" r="77" fill="none" stroke="#eeeeee" strokeOpacity=".32" strokeWidth="1.5"/>
     <circle cx="731" cy="133" r="50" fill="none" stroke="#ffffff" strokeOpacity=".16" strokeWidth="1"/>
     <path d="M634 133H827 M731 36V230" fill="none" stroke="#ffffff" strokeOpacity=".065" strokeWidth="1"/>
     <path id="genai-dash" d="M634 133H827" stroke="url(#hero-line)" strokeWidth="2" strokeDasharray="35 420"/>
-    <circle cx="731" cy="133" r="4" fill="#f46974"/>
-    <rect x="40" y="31" width="26" height="3" rx="1" fill="#f0646f"/>
+    <circle cx="731" cy="133" r="4" fill="#ffffff"/>
+    <rect x="40" y="31" width="26" height="3" rx="1" fill="#f4f4f4"/>
     <rect x="40" y="224" width="781" height="1" fill="#ffffff" fillOpacity=".10"/>
    </svg>
    <div style={{display:'flex',position:'relative',flexDirection:'column',padding:'42px 40px 0 40px',width:680}}>
-    <span style={{display:'flex',fontSize:12,fontWeight:700,letterSpacing:'2px',color:'#d5d5dc'}}>JOÃO VICTOR ALBERNAZ</span>
+    <span style={{display:'flex',fontSize:12,fontWeight:700,letterSpacing:'2px',color:'#dddddd'}}>JOÃO VICTOR ALBERNAZ</span>
     <div style={{display:'flex',flexDirection:'column',gap:1,marginTop:20}}>
      <span style={{display:'flex',fontSize:51,fontWeight:800,letterSpacing:'-2.2px',lineHeight:1.05,color:'#ffffff'}}>Eu construo IA</span>
-     <span style={{display:'flex',fontSize:51,fontWeight:800,letterSpacing:'-2.2px',lineHeight:1.05,color:'#ffffff'}}>para uso real<span style={{color:'#f26774'}}>.</span></span>
+     <span style={{display:'flex',fontSize:51,fontWeight:800,letterSpacing:'-2.2px',lineHeight:1.05,color:'#ffffff'}}>para uso real<span style={{color:'#ffffff'}}>.</span></span>
     </div>
-    <span style={{display:'flex',fontSize:15,color:'#b8bac5',marginTop:17,letterSpacing:'.15px'}}>GenAI  /  LLMs  /  Agentes  /  Automações  /  APIs</span>
-    <span style={{display:'flex',fontSize:10,color:'#a3a4ad',marginTop:19,letterSpacing:'1.6px'}}>ENGENHARIA DE SOFTWARE · UCB · BRASÍLIA</span>
+    <span style={{display:'flex',fontSize:15,color:'#bbbbbb',marginTop:17,letterSpacing:'.15px'}}>GenAI  /  LLMs  /  Agentes  /  Automações  /  APIs</span>
+    <span style={{display:'flex',fontSize:10,color:'#aaaaaa',marginTop:19,letterSpacing:'1.6px'}}>ENGENHARIA DE SOFTWARE · UCB · BRASÍLIA</span>
    </div>
   </div>
  );
@@ -51,25 +51,25 @@ Construo soluções de **IA generativa aplicadas a processos reais**: assistente
   {index:'02 / LINGUAGEM NATURAL EM PRODUÇÃO',name:'Finanças Bot',status:'PROJETO PRIVADO',description:'Transforma texto em registros financeiros estruturados, com validações, prevenção de duplicidade e testes.',stack:'Claude   /   TypeScript   /   PostgreSQL'}
  ];
  return (
- <div style={{display:'flex',position:'relative',width:'100%',height:'100%',flexDirection:'column',fontFamily:'Inter',background:'#0b0c0f',border:'1px solid rgba(255,255,255,.13)',borderRadius:18,overflow:'hidden'}}>
+ <div style={{display:'flex',position:'relative',width:'100%',height:'100%',flexDirection:'column',fontFamily:'Inter',background:'#0b0b0b',border:'1px solid rgba(255,255,255,.13)',borderRadius:18,overflow:'hidden'}}>
   <style>{'@keyframes work-highlight{0%,100%{opacity:.19;transform:translateX(-20px)}50%{opacity:.54;transform:translateX(22px)}} #work-glow{animation:work-highlight 12s ease-in-out infinite}'}</style>
   <svg width="860" height="230" style={{position:'absolute',left:0,top:0}}>
-   <defs><radialGradient id="work-radial"><stop offset="0%" stopColor="#b62e45" stopOpacity=".22"/><stop offset="100%" stopColor="#b62e45" stopOpacity="0"/></radialGradient></defs>
+   <defs><radialGradient id="work-radial"><stop offset="0%" stopColor="#c8c8c8" stopOpacity=".22"/><stop offset="100%" stopColor="#c8c8c8" stopOpacity="0"/></radialGradient></defs>
    <ellipse id="work-glow" cx="670" cy="110" rx="310" ry="190" fill="url(#work-radial)"/>
    <path d="M430 60V205" stroke="#ffffff" strokeOpacity=".16" strokeWidth="1"/>
    <path d="M38 51H821" stroke="#ffffff" strokeOpacity=".14" strokeWidth="1"/>
   </svg>
   <div style={{display:'flex',alignItems:'center',justifyContent:'space-between',position:'relative',padding:'18px 38px 16px 38px'}}>
-   <span style={{display:'flex',fontSize:10,fontWeight:700,letterSpacing:'2.5px',color:'#f47680'}}>SELECTED WORK</span>
-   <span style={{display:'flex',fontSize:10,letterSpacing:'1.5px',color:'#969aa7'}}>IA APLICADA  /  2025—2026</span>
+   <span style={{display:'flex',fontSize:10,fontWeight:700,letterSpacing:'2.5px',color:'#f3f3f3'}}>SELECTED WORK</span>
+   <span style={{display:'flex',fontSize:10,letterSpacing:'1.5px',color:'#999999'}}>IA APLICADA  /  2025—2026</span>
   </div>
   <div style={{display:'flex',position:'relative',width:'100%',padding:'14px 38px 22px 38px',gap:39}}>
    {cases.map(function(c){return (
     <div key={c.index} style={{display:'flex',width:350,flexDirection:'column',gap:9}}>
-     <span style={{display:'flex',fontSize:10,fontWeight:700,letterSpacing:'1.1px',color:'#d7858e'}}>{c.index}</span>
-     <span style={{display:'flex',fontSize:29,fontWeight:800,letterSpacing:'-.7px',color:'#fafafb'}}>{c.name}</span>
-     <span style={{display:'flex',fontSize:12,letterSpacing:'.12px',color:'#c5c5cd',lineHeight:1.45}}>{c.description}</span>
-     <span style={{display:'flex',fontSize:10,color:'#e0a1a7',marginTop:3}}>{c.stack}</span>
+     <span style={{display:'flex',fontSize:10,fontWeight:700,letterSpacing:'1.1px',color:'#d0d0d0'}}>{c.index}</span>
+     <span style={{display:'flex',fontSize:29,fontWeight:800,letterSpacing:'-.7px',color:'#fafafa'}}>{c.name}</span>
+     <span style={{display:'flex',fontSize:12,letterSpacing:'.12px',color:'#cccccc',lineHeight:1.45}}>{c.description}</span>
+     <span style={{display:'flex',fontSize:10,color:'#c4c4c4',marginTop:3}}>{c.stack}</span>
     </div>
    );})}
   </div>
@@ -105,17 +105,17 @@ Painel em React e TypeScript para importação de cronogramas, comparação de a
 ```aura width=860 height=95
 (function(){
  return (
-  <div style={{display:'flex',position:'relative',width:'100%',height:'100%',background:'#0b0c0f',borderRadius:17,overflow:'hidden',border:'1px solid rgba(255,255,255,.12)',fontFamily:'Inter',alignItems:'center',justifyContent:'space-between',padding:'0 36px'}}>
-   <style>{'@keyframes contact-glow {0%,100%{transform:translateX(-90px);opacity:.2}50%{transform:translateX(90px);opacity:.65}} #contact-red{animation:contact-glow 9s ease-in-out infinite}'}</style>
+  <div style={{display:'flex',position:'relative',width:'100%',height:'100%',background:'#0b0b0b',borderRadius:17,overflow:'hidden',border:'1px solid rgba(255,255,255,.12)',fontFamily:'Inter',alignItems:'center',justifyContent:'space-between',padding:'0 36px'}}>
+   <style>{'@keyframes contact-glow {0%,100%{transform:translateX(-90px);opacity:.2}50%{transform:translateX(90px);opacity:.65}} #contact-light{animation:contact-glow 9s ease-in-out infinite}'}</style>
    <svg width="860" height="95" style={{position:'absolute',left:0,top:0}}>
-    <defs><radialGradient id="contact-halo"><stop offset="0%" stopColor="#f03c52" stopOpacity=".36"/><stop offset="100%" stopColor="#f03c52" stopOpacity="0"/></radialGradient></defs>
-    <ellipse id="contact-red" cx="700" cy="80" rx="240" ry="110" fill="url(#contact-halo)"/>
+    <defs><radialGradient id="contact-halo"><stop offset="0%" stopColor="#ffffff" stopOpacity=".36"/><stop offset="100%" stopColor="#ffffff" stopOpacity="0"/></radialGradient></defs>
+    <ellipse id="contact-light" cx="700" cy="80" rx="240" ry="110" fill="url(#contact-halo)"/>
    </svg>
    <div style={{display:'flex',position:'relative',flexDirection:'column',gap:7}}>
-    <span style={{display:'flex',fontSize:10,letterSpacing:'2.2px',color:'#ec7884',fontWeight:700}}>BUILD / LEARN / SHIP</span>
+    <span style={{display:'flex',fontSize:10,letterSpacing:'2.2px',color:'#dddddd',fontWeight:700}}>BUILD / LEARN / SHIP</span>
     <span style={{display:'flex',fontSize:23,color:'#ffffff',fontWeight:800,letterSpacing:'-.6px'}}>Da ideia ao produto. Com engenharia.</span>
    </div>
-   <span style={{display:'flex',position:'relative',fontSize:12,color:'#bcbcc5',letterSpacing:'.2px'}}>GENAI / AUTOMAÇÕES</span>
+   <span style={{display:'flex',position:'relative',fontSize:12,color:'#bcbcbc',letterSpacing:'.2px'}}>GENAI / AUTOMAÇÕES</span>
   </div>
  );
 })()
