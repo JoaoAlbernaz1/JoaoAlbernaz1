@@ -130,108 +130,64 @@
 
 ```aura width=860 height=140
 (function() {
- var stats = [
-   { label: 'Repos', value: String(github.stats.totalRepos), color: '#a78bfa' },
-   { label: 'Stars', value: String(github.stats.totalStars), color: '#60a5fa' },
-   { label: 'Commits', value: String(github.stats.totalCommits), color: '#f59e0b' },
+ const areas = [
+   {title:'Agentes de IA',detail:'LLMs  /  contextos  /  agentes',color:'#a78bfa',id:'ai'},
+   {title:'Automação',detail:'n8n  /  integrações  /  APIs',color:'#60a5fa',id:'auto'},
+   {title:'Produtos SaaS',detail:'Full-stack  /  experiências',color:'#67e8f9',id:'saas'}
  ];
-
  return (
-   <div style={{
-     width: '100%', height: '100%',
-     background: '#08080c',
-     display: 'flex', alignItems: 'center', justifyContent: 'center',
-     fontFamily: 'Inter', borderRadius: 16,
-     border: '1px solid rgba(110,80,220,0.18)',
-     position: 'relative', overflow: 'hidden',
-   }}>
-
-     <style>
-       {`
-         @keyframes float-slow {
-           0%, 100% { transform: translateX(0px); opacity: 0.8; }
-           50% { transform: translateX(350px); opacity: 1.2; }
-         }
-         @keyframes float-medium {
-           0%, 100% { transform: translateX(0px); opacity: 0.7; }
-           50% { transform: translateX(-250px); opacity: 1.1; }
-         }
-         @keyframes float-fast {
-           0%, 100% { transform: translateX(0px); opacity: 0.9; }
-           50% { transform: translateX(200px); opacity: 0.6; }
-         }
-         @keyframes float-diagonal {
-           0%, 100% { transform: translate(0px, 0px); opacity: 0.75; }
-           50% { transform: translate(120px, 30px); opacity: 1.0; }
-         }
-         @keyframes float-wave {
-           0%, 100% { transform: translateX(0px); opacity: 0.65; }
-           33% { transform: translateX(-160px); opacity: 0.9; }
-           66% { transform: translateX(80px); opacity: 1.0; }
-         }
-         @keyframes float-pulse {
-           0%, 100% { transform: scale(1); opacity: 0.8; }
-           50% { transform: scale(1.3); opacity: 0.4; }
-         }
-         #glow-1 { animation: float-slow 8s ease-in-out infinite; }
-         #glow-2 { animation: float-medium 12s ease-in-out infinite; }
-         #glow-3 { animation: float-fast 9s ease-in-out infinite; }
-         #glow-4 { animation: float-diagonal 10s ease-in-out infinite; }
-         #glow-5 { animation: float-wave 14s ease-in-out infinite; }
-       `}
-     </style>
-
-     <svg width="860" height="140" style={{ position: 'absolute', top: 0, left: 0 }}>
-       <defs>
-         <radialGradient id="g1" cx="50%" cy="50%" r="50%">
-           <stop offset="0%" stopColor="rgba(110,20,210,0.65)" />
-           <stop offset="45%" stopColor="rgba(80,15,170,0.28)" />
-           <stop offset="70%" stopColor="rgba(80,15,170,0)" />
-         </radialGradient>
-         <radialGradient id="g2" cx="50%" cy="50%" r="50%">
-           <stop offset="0%" stopColor="rgba(40,70,255,0.55)" />
-           <stop offset="45%" stopColor="rgba(20,50,200,0.22)" />
-           <stop offset="70%" stopColor="rgba(20,50,200,0)" />
-         </radialGradient>
-         <radialGradient id="g3" cx="50%" cy="50%" r="50%">
-           <stop offset="0%" stopColor="rgba(0,140,255,0.42)" />
-           <stop offset="70%" stopColor="rgba(0,140,255,0)" />
-         </radialGradient>
-         <radialGradient id="g4" cx="50%" cy="50%" r="50%">
-           <stop offset="0%" stopColor="rgba(0,195,235,0.30)" />
-           <stop offset="70%" stopColor="rgba(0,195,235,0)" />
-         </radialGradient>
-         <radialGradient id="g5" cx="50%" cy="50%" r="50%">
-           <stop offset="0%" stopColor="rgba(100,30,210,0.40)" />
-           <stop offset="70%" stopColor="rgba(100,30,210,0)" />
-         </radialGradient>
-       </defs>
-       <ellipse id="glow-1" cx="710" cy="150" rx="210" ry="150" fill="url(#g1)" />
-       <ellipse id="glow-2" cx="550" cy="140" rx="190" ry="140" fill="url(#g2)" />
-       <ellipse id="glow-3" cx="400" cy="130" rx="170" ry="130" fill="url(#g3)" />
-       <ellipse id="glow-4" cx="250" cy="140" rx="150" ry="120" fill="url(#g4)" />
-       <ellipse id="glow-5" cx="100" cy="150" rx="130" ry="110" fill="url(#g5)" />
-     </svg>
-
-     {stats.map(function(s, i) {
-       return (
-         <div key={s.label} style={{
-           flexGrow: 1, display: 'flex', flexDirection: 'column',
-           alignItems: 'center', justifyContent: 'center',
-           padding: '16px 8px',
-           borderRight: i < stats.length - 1 ? '1px solid rgba(255,255,255,0.06)' : 'none',
-           gap: 5,
-         }}>
-           <div style={{ display:'flex', fontSize:30, fontWeight:800, color:s.color, lineHeight:1 }}>
-             {s.value}
-           </div>
-           <div style={{ display:'flex', fontSize:11, color:'rgba(200,195,225,0.45)', fontWeight:600, letterSpacing:'1.5px' }}>
-             {s.label.toUpperCase()}
-           </div>
-         </div>
-       );
-     })}
+ <div style={{
+   display:'flex',position:'relative',width:'100%',height:'100%',
+   fontFamily:'Inter',background:'#08080c',border:'1px solid rgba(110,80,220,0.24)',
+   borderRadius:16,overflow:'hidden',flexDirection:'column'
+ }}>
+   <style>{String.raw\`
+      @keyframes aura-flow {0%{transform:translateX(-23px);opacity:0}20%{opacity:1}80%{opacity:1}100%{transform:translateX(22px);opacity:0}}
+      @keyframes aura-orbit {0%,100%{transform:scale(1);opacity:.36}50%{transform:scale(1.65);opacity:.95}}
+      @keyframes aura-breathe {0%,100%{opacity:.42;transform:translateX(-15px)}50%{opacity:.85;transform:translateX(28px)}}
+      #focus-flow-one,#focus-flow-two{animation:aura-flow 2.8s ease-in-out infinite}
+      #focus-flow-two{animation-delay:1.4s}
+      #focus-orbit-ai{animation:aura-orbit 3.4s ease-in-out infinite}
+      #focus-orbit-auto{animation:aura-orbit 3.4s ease-in-out infinite 1.1s}
+      #focus-orbit-saas{animation:aura-orbit 3.4s ease-in-out infinite 2.2s}
+      #focus-aura-glow{animation:aura-breathe 11s ease-in-out infinite}
+   \`}</style>
+   <svg width="860" height="140" style={{position:'absolute',left:0,top:0}}>
+      <defs>
+        <radialGradient id="focus-violet"><stop offset="0%" stopColor="#7c3aed" stopOpacity=".32"/><stop offset="100%" stopColor="#7c3aed" stopOpacity="0"/></radialGradient>
+        <radialGradient id="focus-blue"><stop offset="0%" stopColor="#2563eb" stopOpacity=".25"/><stop offset="100%" stopColor="#2563eb" stopOpacity="0"/></radialGradient>
+      </defs>
+      <ellipse id="focus-aura-glow" cx="330" cy="130" rx="390" ry="125" fill="url(#focus-violet)"/>
+      <ellipse cx="745" cy="100" rx="260" ry="160" fill="url(#focus-blue)"/>
+   </svg>
+   <div style={{display:'flex',position:'relative',alignItems:'center',justifyContent:'space-between',width:'100%',padding:'14px 28px 0 28px'}}>
+      <span style={{display:'flex',fontSize:10,color:'#c4b5fd',fontWeight:700,letterSpacing:'2.4px'}}>O QUE EU CONSTRUO</span>
+      <span style={{display:'flex',fontSize:10,color:'rgba(195,198,222,.56)',letterSpacing:'1.4px'}}>IDEIA  →  TECNOLOGIA  →  PRODUTO</span>
    </div>
+   <div style={{display:'flex',position:'relative',width:'100%',alignItems:'center',justifyContent:'center',padding:'16px 27px 0 27px'}}>
+     {areas.map(function(a,i){return (
+       <div key={a.id} style={{display:'flex',alignItems:'center'}}>
+         <div style={{display:'flex',flexDirection:'column',width:232,height:83,borderRadius:12,background:'rgba(12,14,25,.88)',border:'1px solid rgba(125,105,220,.33)',padding:'13px 14px',gap:9}}>
+           <div style={{display:'flex',alignItems:'center',gap:10}}>
+             <svg width="22" height="22" viewBox="0 0 22 22">
+               <circle cx="11" cy="11" r="9" fill="none" stroke={a.color} strokeOpacity=".35" strokeWidth="1.4"/>
+               <circle id={'focus-orbit-'+a.id} cx="11" cy="11" r="4.1" fill={a.color} fillOpacity=".48"/>
+               <circle cx="11" cy="11" r="2.1" fill={a.color}/>
+             </svg>
+             <span style={{display:'flex',fontSize:19,fontWeight:750,letterSpacing:'-.4px',color:'#f8f7ff'}}>{a.title}</span>
+           </div>
+           <span style={{display:'flex',fontSize:11,letterSpacing:'.15px',color:'#abb4cd'}}>{a.detail}</span>
+         </div>
+         {i<2 ? (
+           <svg width="37" height="26" viewBox="0 0 37 26">
+             <path d="M2 13H35" stroke="#554b83" strokeWidth="1.4" strokeDasharray="3 4"/>
+             <circle id={i===0?'focus-flow-one':'focus-flow-two'} cx="18" cy="13" r="3" fill={a.color}/>
+           </svg>
+         ):null}
+       </div>
+     );})}
+   </div>
+ </div>
  );
 })()
 ```
