@@ -102,12 +102,6 @@ Painel em React e TypeScript para importação de cronogramas, comparação de a
 | **Engenharia** | TypeScript, JavaScript, Python, Node.js, NestJS, FastAPI, React, Next.js, React Native / Expo |
 | **Dados & qualidade** | PostgreSQL, Supabase, Prisma, Redis, Docker, GitHub Actions, Vitest, Jest, Pytest |
 
-### Trajetória
-
-**2025–atual · Selena / SLCN (Senado Federal)** — soluções de IA, atendimento e automações.  
-**2025 · Blue Ocean (4 meses)** — desenvolvimento web, integrações REST e automações com Make/n8n.  
-**2023–2027 (prev.) · Universidade Católica de Brasília** — Bacharelado em Engenharia de Software, cursando.
-
 ```aura width=860 height=95
 (function(){
  return (
@@ -121,12 +115,12 @@ Painel em React e TypeScript para importação de cronogramas, comparação de a
     <span style={{display:'flex',fontSize:10,letterSpacing:'2.2px',color:'#ec7884',fontWeight:700}}>BUILD / LEARN / SHIP</span>
     <span style={{display:'flex',fontSize:23,color:'#ffffff',fontWeight:800,letterSpacing:'-.6px'}}>Da ideia ao produto. Com engenharia.</span>
    </div>
-   <span style={{display:'flex',position:'relative',fontSize:12,color:'#bcbcc5',letterSpacing:'.2px'}}>GENAI / AI BUILDER</span>
+   <span style={{display:'flex',position:'relative',fontSize:12,color:'#bcbcc5',letterSpacing:'.2px'}}>GENAI / AUTOMAÇÕES</span>
   </div>
  );
 })()
 ```
 
-<p align="center"><strong>Em busca de oportunidades de estágio em GenAI / AI Builder.</strong><br/><sub>Brasília, DF · <a href="mailto:joaovictoralbernaz@gmail.com">joaovictoralbernaz@gmail.com</a> · <a href="https://www.linkedin.com/in/joaooalbernaz/">LinkedIn</a></sub></p>
+<p align="center"><sub>Brasília, DF · <a href="mailto:joaovictoralbernaz@gmail.com">joaovictoralbernaz@gmail.com</a> · <a href="https://www.linkedin.com/in/joaooalbernaz/">LinkedIn</a></sub></p>
 
 <p align="center"><sub>Componentes SVG renderizados com <a href="https://github.com/collectioneur/readme-aura">readme-aura</a> · inspiração visual em <a href="https://github.com/collectioneur">collectioneur</a></sub></p>
