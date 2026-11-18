@@ -1,0 +1,54 @@
+name: Submit Titanic baseline to Kaggle
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    env:
+      KAGGLE_API_TOKEN: ${{ secrets.KAGGLE_API_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Check Kaggle authentication
+        run: |
+          if [ -z "$KAGGLE_API_TOKEN" ]; then
+            echo "::error::Set KAGGLE_API_TOKEN as a GitHub Actions secret. Join Titanic on kaggle.com and accept its rules first."
+            exit 1
+          fi
+      - name: Install dependencies
+        run: |
+          python -m pip install -r ml-lab/requirements.txt
+          python -m pip install kaggle
+      - name: Download official Titanic competition data
+        run: |
+          mkdir -p /tmp/kaggle-titanic
+          kaggle competitions download titanic -p /tmp/kaggle-titanic --unzip
+          test -f /tmp/kaggle-titanic/train.csv
+          test -f /tmp/kaggle-titanic/test.csv
+      - name: Train baseline and prepare submission
+        run: |
+          python ml-lab/kaggle-titanic/train.py \
+            --train /tmp/kaggle-titanic/train.csv \
+            --test /tmp/kaggle-titanic/test.csv \
+            --output outputs/titanic/submission.csv
+          python - <<'PY'
+          import pandas as pd
+
+          df = pd.read_csv("outputs/titanic/submission.csv")
+          assert df.columns.tolist() == ["PassengerId", "Survived"]
+          assert len(df) == 418
+          assert set(df.Survived.unique()) <= {0, 1}
+          print("Submission valid:", len(df), "rows")
+          PY
+      - name: Submit to Titanic competition
+        run: |
+          kaggle competitions submit titanic \
+            -f outputs/titanic/submission.csv \
+            -m "Reproducible scikit-learn baseline from github.com/JoaoAlbernaz1/JoaoAlbernaz1"

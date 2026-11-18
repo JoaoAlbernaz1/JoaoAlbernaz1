@@ -1,0 +1,54 @@
+name: Publish model to Hugging Face
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  publish-model:
+    runs-on: ubuntu-latest
+    env:
+      HF_TOKEN: ${{ secrets.HF_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: ml-lab/requirements.txt
+      - name: Check Hugging Face authentication
+        run: |
+          if [ -z "$HF_TOKEN" ]; then
+            echo "::error::Set the HF_TOKEN repository Actions secret first (write permission)."
+            exit 1
+          fi
+      - name: Install dependencies
+        run: python -m pip install -r ml-lab/requirements.txt
+      - name: Train and validate
+        run: |
+          python -m pytest -q ml-lab/nlp-intent-classifier/tests
+          python ml-lab/nlp-intent-classifier/train.py --output-dir outputs/intent
+      - name: Publish under the account authenticated by the token
+        shell: bash
+        run: |
+          python - <<'PY'
+          import os
+          import subprocess
+          import sys
+          from huggingface_hub import HfApi
+
+          username = HfApi(token=os.environ["HF_TOKEN"]).whoami()["name"]
+          repo_id = username + "/intent-classifier-pt"
+          subprocess.run(
+              [
+                  sys.executable,
+                  "ml-lab/nlp-intent-classifier/publish_hf.py",
+                  "--artifact-dir", "outputs/intent",
+                  "--repo-id", repo_id,
+              ],
+              check=True,
+          )
+          print("Public Model: https://huggingface.co/" + repo_id)
+          PY

@@ -1,0 +1,89 @@
+name: Publish reproducible ML artifacts
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/ml-publish-artifacts.yml"
+      - "ml-lab/nlp-intent-classifier/train.py"
+      - "ml-lab/nlp-intent-classifier/data/**"
+      - "ml-lab/retrieval-benchmark/benchmark.py"
+      - "ml-lab/retrieval-benchmark/data/**"
+      - "ml-lab/requirements.txt"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ml-published-artifacts
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: ml-lab/requirements.txt
+      - name: Install dependencies
+        run: python -m pip install -r ml-lab/requirements.txt
+      - name: Validate reproducibility
+        run: python -m pytest -q ml-lab
+      - name: Train model and benchmark retrieval
+        run: |
+          python ml-lab/nlp-intent-classifier/train.py --output-dir ml-lab/published/intent-v1
+          python ml-lab/retrieval-benchmark/benchmark.py --output ml-lab/published/retrieval-v1/metrics.json
+      - name: Document run
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          import sys
+          from pathlib import Path
+
+          root = Path("ml-lab/published")
+          metrics = json.loads((root/"intent-v1/metrics.json").read_text(encoding="utf-8"))
+          (root/"intent-v1/README.md").write_text(
+              "# Intent Classifier PT · v1\n\n"
+              "Treinado automaticamente no GitHub Actions com TF-IDF e regressão logística.\n\n"
+              "**DADOS SINTÉTICOS:** 60 mensagens inventadas para demonstrar o pipeline; "
+              "os resultados não estimam desempenho no mundo real.\n\n"
+              f"- Macro-F1 holdout (sintético): **{metrics['holdout']['macro_f1']:.4f}**\n"
+              f"- Acurácia holdout (sintética): **{metrics['holdout']['accuracy']:.4f}**\n"
+              f"- Macro-F1 CV treino (sintético): **{metrics['cross_validation']['mean']:.4f}**\n"
+              "- Seed: 42\n"
+              "- Modelo: `model.skops`; demais métricas: `metrics.json`\n\n"
+              "[Fonte e limitações](../../nlp-intent-classifier/) · "
+              "[Protocolo de avaliação](../../docs/avaliacao-reprodutivel-de-ml.md).\n",
+              encoding="utf-8",
+          )
+          (root/"retrieval-v1/README.md").write_text(
+              "# Retrieval Benchmark · v1\n\n"
+              "Resultados calculados automaticamente sobre **18 documentos e 12 consultas sintéticas**. "
+              "Não comparar estes números com benchmarks públicos.\n\n"
+              "[Dados e script](../../retrieval-benchmark/) · [Métricas medidas](./metrics.json).\n",
+              encoding="utf-8",
+          )
+          PY
+      - name: Commit public artifacts
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f ml-lab/published/intent-v1/model.skops
+          git add ml-lab/published/intent-v1/metrics.json ml-lab/published/intent-v1/README.md
+          git add ml-lab/published/retrieval-v1/metrics.json ml-lab/published/retrieval-v1/README.md
+          if git diff --cached --quiet; then
+            echo "Artifacts are already current."
+            exit 0
+          fi
+          git commit -m "build(ml): publish measured synthetic-baseline artifacts [skip ci]"
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main
