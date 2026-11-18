@@ -1,0 +1,48 @@
+{
+  "experiment": "titanic_engineered_cv_v1",
+  "dataset": "Kaggle Titanic official competition data",
+  "seed": 42,
+  "folds": 5,
+  "train_rows": 891,
+  "test_rows": 418,
+  "selected": "random_forest",
+  "candidates": [
+    {
+      "model": "random_forest",
+      "accuracy_mean": 0.8417425145941874,
+      "accuracy_std": 0.005718324516421761,
+      "auc_mean": 0.8825122633453425,
+      "auc_std": 0.01960617754723624
+    },
+    {
+      "model": "logistic",
+      "accuracy_mean": 0.8248948590797817,
+      "accuracy_std": 0.01585438493013457,
+      "auc_mean": 0.8711760706385757,
+      "auc_std": 0.022620961246812076
+    }
+  ],
+  "oof_confusion_matrix": [
+    [
+      496,
+      53
+    ],
+    [
+      88,
+      254
+    ]
+  ],
+  "features": [
+    "Title",
+    "Deck",
+    "FamilySize",
+    "IsAlone",
+    "FarePerPerson"
+  ],
+  "limitations": [
+    "CV accuracy and ROC-AUC are NOT Kaggle leaderboard scores.",
+    "Model selection and OOF diagnostics reuse the same CV folds.",
+    "No hidden test labels or repeated leaderboard tuning were used.",
+    "Family relationships may create dependence across folds."
+  ]
+}
