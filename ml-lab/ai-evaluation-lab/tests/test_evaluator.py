@@ -81,3 +81,35 @@ def test_invalid_ground_truth_is_rejected(tmp_path, corpus):
     )
     with pytest.raises(ValueError):
         module.load_corpus(tmp_path / "docs.jsonl", tmp_path / "cases.jsonl")
+
+@pytest.mark.parametrize("empty_answer", ["", "   ", "!!!", "—", "..."])
+def test_empty_or_punctuation_only_responses_are_not_grounded(corpus, empty_answer):
+    docs, cases = corpus
+    answerable = next(c for c in cases if c.answerable)
+
+    class EmptyAssistant:
+        def answer(self, question, retrieved):
+            return empty_answer
+
+    report = module.evaluate(
+        docs, [answerable], module.Retriever(docs), EmptyAssistant()
+    )
+    result = report["results"][0]
+    assert result["lexically_supported"] is False
+    assert result["expected_substring_match"] is False
+    assert report["metrics"]["answer_substring_accuracy"] == 0
+    assert report["metrics"]["answer_lexical_support_rate"] == 0
+
+
+def test_answerable_case_without_lexical_ground_truth_is_rejected(tmp_path):
+    (tmp_path / "docs.jsonl").write_text(
+        '{"id":"doc1","title":"Regras","facts":["Fato verificável."]}\n',
+        encoding="utf-8",
+    )
+    (tmp_path / "cases.jsonl").write_text(
+        '{"id":"case1","question":"Qual fato?","expected_answer":"!!!",'
+        '"relevant_docs":["doc1"],"category":"answerable"}\n',
+        encoding="utf-8",
+    )
+    with pytest.raises(ValueError, match="lacks lexical content"):
+        module.load_corpus(tmp_path / "docs.jsonl", tmp_path / "cases.jsonl")
