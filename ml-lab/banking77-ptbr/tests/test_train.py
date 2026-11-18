@@ -32,7 +32,10 @@ def test_csv_validation(tmp_path):
 
 
 def test_model_choice_and_test_separation():
-    model, result = m.experiment(dataset(), dataset(6))
+    independent = dataset(6)
+    independent["frase"] = independent["frase"] + " avaliação externa"
+    model, result = m.experiment(dataset(), independent)
+    assert result["test_no_exact_overlap"]["rows"] == len(independent)
     assert len(result["validation"]) == 3
     assert result["selected"] == result["validation"][0]["model"]
     assert 0 <= result["test"]["macro_f1"] <= 1
