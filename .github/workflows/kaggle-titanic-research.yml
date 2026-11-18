@@ -7,11 +7,16 @@ on:
       - "ml-lab/kaggle-titanic/advanced.py"
       - "ml-lab/kaggle-titanic/tests/**"
       - "ml-lab/kaggle-titanic/titanic_feature_engineering.ipynb"
+      - "ml-lab/kaggle-titanic/titanic_baseline.ipynb"
+      - "ml-lab/kaggle-titanic/run_notebook.py"
       - ".github/workflows/kaggle-titanic-research.yml"
   push:
     branches: [main]
     paths:
       - "ml-lab/kaggle-titanic/advanced.py"
+      - "ml-lab/kaggle-titanic/run_notebook.py"
+      - "ml-lab/kaggle-titanic/titanic_feature_engineering.ipynb"
+      - "ml-lab/kaggle-titanic/titanic_baseline.ipynb"
       - ".github/workflows/kaggle-titanic-research.yml"
   workflow_dispatch:
 
@@ -69,6 +74,7 @@ jobs:
         run: |
           python -m pip install -r ml-lab/requirements.txt
           python -m pip install kaggle six
+          python -m pip install nbformat nbclient ipykernel matplotlib
       - name: Download official Kaggle data if authorized
         id: source
         shell: bash
@@ -90,6 +96,25 @@ jobs:
             --train /tmp/titanic/train.csv \
             --test /tmp/titanic/test.csv \
             --output-dir outputs/titanic-advanced
+      - name: Execute the complete Kaggle notebook and validate generated CSV
+        if: steps.source.outputs.available == 'true'
+        run: |
+          python ml-lab/kaggle-titanic/run_notebook.py \
+            --notebook ml-lab/kaggle-titanic/titanic_feature_engineering.ipynb \
+            --train /tmp/titanic/train.csv \
+            --test /tmp/titanic/test.csv \
+            --output-dir outputs/titanic-notebook
+          test -s outputs/titanic-notebook/submission.csv
+      - name: Archive CSV for manual Kaggle submission (no automatic submission)
+        if: steps.source.outputs.available == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: titanic-notebook-output
+          path: |
+            outputs/titanic-notebook/submission.csv
+            outputs/titanic-notebook/executed_notebook.ipynb
+          retention-days: 14
+          if-no-files-found: error
       - name: Publish measured local CV without another submission
         if: steps.source.outputs.available == 'true'
         run: |
