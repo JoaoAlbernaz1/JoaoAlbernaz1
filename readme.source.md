@@ -38,9 +38,18 @@
 
 <p align="center"><strong>Desenvolvedor de IA aplicada · Engenharia de Software (UCB) · Conclusão prevista: 2027</strong></p>
 
-<p align="center"><a href="https://www.linkedin.com/in/joaooalbernaz/">LinkedIn</a> &nbsp;·&nbsp; <a href="mailto:joaovictoralbernaz@gmail.com">E-mail</a> &nbsp;·&nbsp; <a href="https://github.com/JoaoAlbernaz1?tab=repositories">Código público</a></p>
+<p align="center"><a href="https://www.linkedin.com/in/joaooalbernaz/">LinkedIn</a> &nbsp;·&nbsp; <a href="mailto:joaovictoralbernaz@gmail.com">E-mail</a> &nbsp;·&nbsp; <a href="https://github.com/JoaoAlbernaz1?tab=repositories">Código público</a> &nbsp;·&nbsp; <a href="https://huggingface.co/JOAOOALBERNAZ">Hugging Face</a> &nbsp;·&nbsp; <a href="https://www.kaggle.com/competitions/titanic">Kaggle · Titanic</a></p>
 
 Construo soluções de **IA generativa aplicadas a processos reais**: assistentes conversacionais, fluxos com LLMs, automações, APIs e produtos digitais. Trabalho com **Claude, OpenAI, n8n, Make, TypeScript e Python**, conectando a IA a dados, testes e experiência de uso.
+
+### Pesquisa aplicada · Hugging Face × Kaggle
+
+| **Hugging Face · modelos e pesquisa** | **Kaggle · competições e experimentos** |
+| :--- | :--- |
+| **[Ver modelos publicados](https://huggingface.co/JOAOOALBERNAZ)** · [BANKING77-PTBR](https://huggingface.co/JOAOOALBERNAZ/banking77-ptbr-intent-v1) · [Confidence Evaluation](https://huggingface.co/JOAOOALBERNAZ/banking77-ptbr-confidence-v1) | **[Titanic · competição oficial](https://www.kaggle.com/competitions/titanic)** · [submissão comprovada #58521092](https://github.com/JoaoAlbernaz1/JoaoAlbernaz1/actions/runs/44368002721) · [código e notebook](./ml-lab/kaggle-titanic/) |
+| **77 intenções**, avaliação em dataset público, análise de calibração, robustez e drift. [Explorar dashboard de pesquisa](https://huggingface.co/spaces/JOAOOALBERNAZ/banking77-ptbr-research). | **Validação cruzada local de 84,06%** no Titanic; *não é a pontuação oficial*. [Disaster Tweets NLP](./ml-lab/kaggle-disaster-tweets/) em preparação, ainda sem submissão confirmada. |
+
+<sub>Os modelos e a submissão acima possuem evidências públicas. O endereço do perfil pessoal Kaggle ainda não foi verificado; não há alegação de ranking ou medalha.</sub>
 
 ### ML & Research Lab · projetos com experimentação
 
