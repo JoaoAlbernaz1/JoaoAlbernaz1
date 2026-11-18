@@ -42,6 +42,6 @@ Para avaliar um modelo externo, escolha `--adapter openai-compatible` e forneça
 - `tests/` verifica coerência das métricas, recuperação, casos adversariais e exclusão de dados não confiáveis.
 - Resultados JSON contêm métricas agregadas e os casos individuais para análise de falhas.
 
-**Limitações importantes:** os casos são autorais e sintéticos, o grounding é um teste lexical, o conjunto é pequeno e o adapter padrão não é um LLM. São testes de infraestrutura para uma futura avaliação em corpus independente, não certificação de segurança ou de qualidade em produção.
+**Limitações importantes:** os casos são autorais e sintéticos, o grounding é um teste lexical, o conjunto é pequeno e o adapter padrão não é um LLM. Respostas vazias ou compostas apenas de pontuação não contam como evidência nem como acerto lexical; respostas esperadas sem conteúdo lexical são rejeitadas durante a carga do benchmark. São testes de infraestrutura para uma futura avaliação em corpus independente, não certificação de segurança ou de qualidade em produção.
 
 **Evolução planejada:** incorporar datasets abertos de QA, usar avaliação humana em amostras estratificadas, executar LLMs em versões fixadas, medir custo por token e regressões entre versões.
