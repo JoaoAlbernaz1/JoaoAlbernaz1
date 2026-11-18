@@ -22,13 +22,14 @@ def load_csv(path):
     df = pd.read_csv(path)
     if not {"frase", "rotulo"} <= set(df):
         raise ValueError("Missing frase/rotulo columns")
-    df = df[["frase", "rotulo"]].copy()
-    if df.isna().any().any():
-        raise ValueError("Missing content")
+    original_rows = len(df)
+    df = df[["frase", "rotulo"]].dropna(subset=["frase", "rotulo"]).copy()
     df["frase"] = df["frase"].astype(str).str.strip()
     df["rotulo"] = df["rotulo"].astype(str).str.strip()
-    if (df["frase"] == "").any() or (df["rotulo"] == "").any():
-        raise ValueError("Blank content")
+    df = df[(df["frase"] != "") & (df["rotulo"] != "")].copy()
+    if df.empty:
+        raise ValueError("Empty split after excluding missing text or labels")
+    df.attrs["excluded_incomplete_rows"] = original_rows - len(df)
     return df
 
 
@@ -80,6 +81,8 @@ def experiment(train, test):
         "source": DATASET, "revision": REVISION, "license": "CC BY 4.0",
         "nature": "researcher-reviewed translations of banking messages, NOT native Portuguese production logs",
         "n_train": len(train), "n_test": len(test), "classes": train["rotulo"].nunique(),
+        "excluded_incomplete_train_rows": train.attrs.get("excluded_incomplete_rows", 0),
+        "excluded_incomplete_test_rows": test.attrs.get("excluded_incomplete_rows", 0),
         "overlap_train_test_text": len(set(train["frase"].str.casefold()) & set(test["frase"].str.casefold())),
         "protocol": "compare models on stratified 20 percent of OFFICIAL train; refit winner on full train; evaluate official test once",
         "seed": SEED, "validation": comparisons, "selected": winner,

@@ -16,7 +16,7 @@ python ml-lab/banking77-ptbr/train.py --output-dir outputs/banking77-ptbr
 python -m pytest -q ml-lab/banking77-ptbr/tests
 ~~~
 
-O download é feito diretamente do dataset público, fixado na revisão 85f51c4. Nenhum serviço de IA pago é necessário para o treino.
+O download é feito diretamente do dataset público, fixado na revisão 85f51c4. Registros com texto ou rótulo ausente são excluídos do treino/teste, com contagens no relatório. Nenhum serviço de IA pago é necessário para o treino.
 
 ## Limitações
 

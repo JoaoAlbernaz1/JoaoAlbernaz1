@@ -26,8 +26,9 @@ def test_csv_validation(tmp_path):
     assert len(m.load_csv(f)) == len(data)
     data.loc[0, "frase"] = None
     data.to_csv(f, index=False)
-    with pytest.raises(ValueError):
-        m.load_csv(f)
+    cleaned = m.load_csv(f)
+    assert len(cleaned) == len(data) - 1
+    assert cleaned.attrs["excluded_incomplete_rows"] == 1
 
 
 def test_model_choice_and_test_separation():
