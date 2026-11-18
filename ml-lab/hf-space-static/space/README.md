@@ -6,7 +6,7 @@ colorTo: gray
 sdk: static
 app_file: index.html
 license: cc-by-4.0
-short_description: Dashboard de pesquisa ML e auditoria de classificação em português.
+short_description: Pesquisa NLP com métricas auditadas.
 ---
 
 # BANKING77-PTBR · relatório visual de pesquisa

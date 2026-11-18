@@ -1,10 +1,6 @@
 name: Publish interactive Hugging Face NLP Space
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - ".github/workflows/hf-space-demo.yml"
   workflow_dispatch:
 
 permissions:

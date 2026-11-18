@@ -13,4 +13,4 @@ O app baixa os pesos do [modelo existente no Hugging Face](https://huggingface.c
 - O corpus foi traduzido e revisado por pesquisadores; não é composto por mensagens privadas em português.
 - O app não mede qualidade em produção; disponibiliza uma interface demonstrativa para o modelo realmente publicado.
 
-A disponibilidade pública depende do status do build do Hugging Face Spaces; apenas o workflow de publicação bem-sucedido comprova upload, não necessariamente que o app já esteja funcional.
+**Status: código pronto, Gradio Space NÃO publicado.** O Hugging Face retornou HTTP 402 na tentativa de criação: novos Spaces com Gradio/Docker usando CPU exigem plano elegível. A alternativa pública gratuita é o [dashboard estático de pesquisa](../hf-space-static/), que não oferece inferência. Esta versão em Gradio permanece como projeto executável localmente ou futuramente em infraestrutura compatível.

@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - ".github/workflows/hf-space-static.yml"
+      - "ml-lab/hf-space-static/space/**"
   workflow_dispatch:
 
 permissions:
