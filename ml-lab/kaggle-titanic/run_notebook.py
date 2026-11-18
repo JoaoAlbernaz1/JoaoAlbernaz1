@@ -38,21 +38,32 @@ def remap_notebook(notebook: dict, train: Path, test: Path, output: Path) -> dic
 
 
 def validate_submission(output: Path, test: Path) -> int:
-    """Match row order/IDs, binary targets and exact official column schema."""
-    predictions = pd.read_csv(output)
-    official_test = pd.read_csv(test)
-    if predictions.columns.tolist() != ["PassengerId", "Survived"]:
-        raise ValueError("Incorrect submission columns")
-    if not predictions.PassengerId.equals(official_test.PassengerId):
-        raise ValueError("Submission IDs/order do not match official test")
-    if predictions.PassengerId.isna().any() or predictions.PassengerId.duplicated().any():
-        raise ValueError("Missing/duplicate PassengerIds")
-    if predictions.Survived.isna().any() or not set(predictions.Survived.unique()).issubset({0, 1}):
-        raise ValueError("Survived column must contain binary integer values")
-    if len(predictions) == 0:
-        raise ValueError("Submission is empty")
-    return len(predictions)
+    """Validate the exact Kaggle Titanic submission schema, IDs and integer labels.
 
+    Read columns as strings: pandas' default numeric inference would otherwise
+    silently accept labels such as 1.0 as if they were integer 1.
+    """
+    predictions = pd.read_csv(output, dtype=str, keep_default_na=False)
+    if predictions.columns.tolist() != ["PassengerId", "Survived"]:
+        raise ValueError("Incorrect submission columns: expected PassengerId,Survived")
+    if predictions.empty:
+        raise ValueError("Submission is empty")
+
+    ids = predictions["PassengerId"]
+    if not ids.str.fullmatch(r"[1-9]\d*").all():
+        raise ValueError("PassengerId must contain positive integer IDs without blanks")
+    if ids.duplicated().any():
+        raise ValueError("Missing/duplicate PassengerIds")
+
+    official_test = pd.read_csv(test, dtype=str, keep_default_na=False)
+    if "PassengerId" not in official_test.columns:
+        raise ValueError("Official test is missing PassengerId")
+    if not ids.equals(official_test["PassengerId"]):
+        raise ValueError("Submission IDs/order do not match official test")
+
+    if not predictions["Survived"].str.fullmatch(r"[01]").all():
+        raise ValueError("Survived column must contain binary integer values 0 or 1")
+    return len(predictions)
 
 def execute(notebook: Path, train: Path, test: Path, output_dir: Path) -> Path:
     try:
