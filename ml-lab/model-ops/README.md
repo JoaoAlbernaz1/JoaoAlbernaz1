@@ -45,6 +45,10 @@ O contêiner usa Python 3.11 e usuário sem privilégios; a aplicação não con
 
 A execução automatizada reproduz a análise com as divisões públicas oficiais do BANKING77-PTBR. O objetivo é mostrar como instrumentar e auditar mudança de distribuição; não é monitoramento de clientes reais.
 
+## Decisões arquiteturais
+
+[ADR e proposta de operação, confiabilidade, segurança e rollback](../docs/modelops-architecture-decisions.md). O documento distingue funcionalidades implementadas de controles ainda necessários para produção.
+
 ## Engenharia de qualidade
 
 Os testes cobrem contrato da API, ordenação de previsões, formato de scores, falhas de modelo, validação das entradas, métricas de drift e relatórios. Existe CI independente do laboratório e uma verificação offline comum em `ml-lab`.

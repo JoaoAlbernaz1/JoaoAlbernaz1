@@ -7,11 +7,16 @@ Implementações práticas, experimentos reproduzíveis e evidências verificáv
 | Projeto | Questão investigada | Evidência disponível | Situação |
 |:--|:--|:--|:--|
 | [BANKING77-PTBR · dados públicos revisados](./banking77-ptbr/) | Qual baseline de NLP funciona melhor para 77 intenções financeiras em português? | 3 baselines, seleção por macro-F1 em treino, teste oficial, auditoria de duplicatas | **Modelo publicado no Hugging Face** · macro-F1 0,8964 no teste |
+| [ModelOps · serving e drift](./model-ops/) | Como servir e monitorar tecnicamente um classificador publicado? | API FastAPI, contêiner, testes de contrato e [arquitetura](./docs/modelops-architecture-decisions.md) | **Código público e testes automatizados** · monitoramento offline de dados de pesquisa |
 | [AI Evaluation Lab](./ai-evaluation-lab/) | Recuperação correta implica resposta correta? | 32 testes, dois retrievers e [métricas reproduzidas](./published/ai-eval/) | **Benchmark e CI concluídos** · 100% Hit@3 com char TF-IDF, mas só 36% acerto lexical na resposta |
 | [NLP · classificação de intenção](./nlp-intent-classifier/) | Um classificador TF-IDF + regressão logística reconhece intenções de mensagens em português? | Código, dados sintéticos declarados, testes, validação estratificada, exportação segura | **Treinado e publicado no Hugging Face** · avaliação sintética |
 | [Retrieval / RAG benchmark](./retrieval-benchmark/) | BM25 ou TF-IDF recupera melhor o contexto relevante? | Corpus sintético, relevância anotada, Recall@k e MRR@k, testes | Implementação disponível · executar benchmark |
 | [Kaggle Titanic](./kaggle-titanic/) | Como criar uma baseline tabular sem vazamento de dados? | Pipeline, cross-validation, notebook e geração de submission.csv | **Submissão enviada** (ref. 58521092) · resultado oficial não verificado |
 | [Artigo técnico](./docs/avaliacao-reprodutivel-de-ml.md) | O que constitui um experimento confiável de ML? | Texto metodológico publicado neste repositório | Disponível |
+
+## Engenharia de inferência e observabilidade
+
+- [ModelOps: FastAPI, Docker e monitoramento de drift](./model-ops/) — implementação de serving do classificador de 77 classes, testes e comparação de distribuições em datasets públicos. [Registro de decisões arquiteturais](./docs/modelops-architecture-decisions.md). Não é um serviço de produção.
 
 ## Pesquisa e experimentos com resultados medidos
 
