@@ -1,11 +1,15 @@
 """Teste de smoke do pipeline sem distribuir dados proprietários do Kaggle."""
 from pathlib import Path
-import sys
+import importlib.util
 
 import pandas as pd
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from train import CATEGORICAL, FEATURES, NUMERIC, make_pipeline, train_and_submit  # noqa: E402
+spec = importlib.util.spec_from_file_location("titanic_train", Path(__file__).resolve().parents[1] / "train.py")
+module = importlib.util.module_from_spec(spec)
+assert spec.loader is not None
+spec.loader.exec_module(module)
+CATEGORICAL, FEATURES, NUMERIC = module.CATEGORICAL, module.FEATURES, module.NUMERIC
+make_pipeline, train_and_submit = module.make_pipeline, module.train_and_submit
 
 
 def test_feature_columns_consistent():

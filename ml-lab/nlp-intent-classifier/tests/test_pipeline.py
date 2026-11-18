@@ -1,12 +1,15 @@
 """Testes de validação de dados e treinamento, sem acesso à rede."""
 from pathlib import Path
-import sys
+import importlib.util
 
 import pandas as pd
 import pytest
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from train import evaluate, load_data, make_pipeline  # noqa: E402
+spec = importlib.util.spec_from_file_location("intent_train", Path(__file__).resolve().parents[1] / "train.py")
+module = importlib.util.module_from_spec(spec)
+assert spec.loader is not None
+spec.loader.exec_module(module)
+evaluate, load_data, make_pipeline = module.evaluate, module.load_data, module.make_pipeline
 
 
 def test_dataset_is_balanced_and_has_no_duplicates():
