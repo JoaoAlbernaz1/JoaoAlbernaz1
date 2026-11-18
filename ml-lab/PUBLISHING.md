@@ -18,7 +18,7 @@ Modelo supervisionado de classificação de intenção em português com TF-IDF 
 
 ## Kaggle Titanic
 
-[Notebook e pipeline](./kaggle-titanic/) com validação cruzada, preprocessing seguro e baseline tabular. Classificação e score competitivo só serão reportados após comprovação de submissão pública.
+[Notebook e pipeline](./kaggle-titanic/) com validação cruzada, preprocessing seguro e baseline tabular. A submissão **foi realizada** em 18/11/2026. [Log de execução bem-sucedida](https://github.com/JoaoAlbernaz1/JoaoAlbernaz1/actions/runs/44368002721) · ID `58521092`. A validação cruzada local obteve 84,06% (± 1,59 p.p.) de acurácia; **essa não é a nota do leaderboard**, ainda não verificada.
 
 ## Pesquisa técnica
 

@@ -16,7 +16,7 @@ python kaggle-titanic/train.py --train /caminho/train.csv --test /caminho/test.c
 
 O script apresenta médias e desvios-padrão do accuracy e produz colunas `PassengerId`, `Survived`. Também existe um [notebook para Kaggle](./titanic_baseline.ipynb) independente do script.
 
-**Status real:** notebook e pipeline criados; nenhuma submissão, leaderboard ou colocação está sendo reivindicada. Só adicionar o link de seu perfil Kaggle após uma submissão de verdade.
+**Status real:** submissão para o Titanic enviada com sucesso em 18/11/2026, referência `58521092`. [Registro de execução](https://github.com/JoaoAlbernaz1/JoaoAlbernaz1/actions/runs/44368002721). Validação local em 5 folds: **accuracy 0,8406 ± 0,0159**. Ainda não foi verificada nota oficial do leaderboard ou qualquer colocação.
 
 ## Próximos experimentos
 
