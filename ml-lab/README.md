@@ -15,7 +15,7 @@ Implementações práticas, experimentos reproduzíveis e evidências verificáv
 
 ## Pesquisa e experimentos com resultados medidos
 
-- [Classificação de intenções com dados públicos: modelo BANKING77-PTBR no Hugging Face](https://huggingface.co/JOAOOALBERNAZ/banking77-ptbr-intent-v1) — avaliação oficial, 77 classes e macro-F1 **0,8964**. O dataset contém traduções revisadas; foram identificados **166 textos distintos repetidos entre treino e teste**, possível fonte de otimismo das métricas.
+- [Classificação de intenções com dados públicos: modelo BANKING77-PTBR no Hugging Face](https://huggingface.co/JOAOOALBERNAZ/banking77-ptbr-intent-v1) — [dashboard visual gratuito de pesquisa](https://huggingface.co/spaces/JOAOOALBERNAZ/banking77-ptbr-research) · avaliação oficial, 77 classes e macro-F1 **0,8964**. O dataset contém traduções revisadas; foram identificados **166 textos distintos repetidos entre treino e teste**, possível fonte de otimismo das métricas.
 - [AI Evaluation Lab](./ai-evaluation-lab/) — [relatório comparativo real](./published/ai-eval/): o retriever por caracteres obteve Hit@3 **1,0** em 25 perguntas respondíveis, enquanto o extrator apresentou acerto lexical de apenas **0,36**. É uma regressão em dados fictícios, não teste de LLM.
 - [Relatório de pesquisa: BANKING77-PTBR e auditoria de sobreposição](./docs/banking77-ptbr-results.md) — no teste sem coincidências textuais: **macro-F1 0,8910 em 2.887 registros** (193 excluídos).
 - [Nota técnica: avaliação de NLP e sistemas com recuperação](./docs/experimental-note-nlp-rag-2026.md).

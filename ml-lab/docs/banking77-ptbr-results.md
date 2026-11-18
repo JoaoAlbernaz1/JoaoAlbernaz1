@@ -4,6 +4,8 @@
 
 **Objetivo:** avaliar como três baselines clássicas de NLP classificam 77 intenções bancárias em português brasileiro. A análise utiliza o dataset público [BANKING77-PTBR](https://huggingface.co/datasets/c2d-usp/banking77-pt-br), traduzido e revisado por pesquisadores, com licença CC BY 4.0.
 
+**Demonstração visual:** [dashboard de pesquisa publicado no Hugging Face](https://huggingface.co/spaces/JOAOOALBERNAZ/banking77-ptbr-research), com comparação interativa de modelos e auditoria. O Space é estático e não executa inferência do modelo.
+
 **Evidências:** [treino e publicação reproduzidos no GitHub Actions](https://github.com/JoaoAlbernaz1/JoaoAlbernaz1/actions/runs/44372375897) · [modelo e métricas publicados no Hugging Face](https://huggingface.co/JOAOOALBERNAZ/banking77-ptbr-intent-v1).
 
 ## Protocolo e seleção

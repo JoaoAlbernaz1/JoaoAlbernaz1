@@ -7,4 +7,4 @@ Website estático, monocromático e responsivo para mostrar um experimento repro
 - O **Space é estático** e **não oferece inferência do modelo**. Seu objetivo é tornar os resultados técnicos navegáveis para recrutadores e pesquisadores.
 - O SDK static não utiliza instância Gradio/Docker paga.
 
-[HTML do dashboard](./space/index.html) · [código de publicação](./publish.py).
+[Dashboard publicado no Hugging Face](https://huggingface.co/spaces/JOAOOALBERNAZ/banking77-ptbr-research) · [HTML do dashboard](./space/index.html) · [código de publicação](./publish.py).
