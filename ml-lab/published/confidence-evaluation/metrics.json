@@ -1,0 +1,80 @@
+{
+  "experiment": "banking77-ptbr-calibration-v1",
+  "data": {
+    "source": "c2d-usp/banking77-pt-br",
+    "revision": "85f51c4",
+    "license": "CC BY 4.0",
+    "train": 10003,
+    "fit": 8002,
+    "calibration": 2001,
+    "test": 3080,
+    "test_rows_matching_any_train_text": 193,
+    "note": "Researcher-reviewed translations, not production-native Portuguese"
+  },
+  "model": "char_wb TF-IDF + LinearSVC, trained on 80% of OFFICIAL train only",
+  "temperature": 0.19447119495761497,
+  "test_accuracy": 0.887012987012987,
+  "test_macro_f1": 0.8869198453050863,
+  "test_uncalibrated_softmax": {
+    "negative_log_likelihood": 2.456135552684279,
+    "expected_calibration_error_10": 0.7843782192729761,
+    "multiclass_brier_sum": 0.8248429356658875
+  },
+  "test_temperature_scaled": {
+    "negative_log_likelihood": 0.4422970634647794,
+    "expected_calibration_error_10": 0.013426500173146921,
+    "multiclass_brier_sum": 0.1654121059257074
+  },
+  "threshold_selected_on_calibration": {
+    "threshold": 0.42404747500552176,
+    "coverage": 0.9455272363818091,
+    "accepted": 1892,
+    "accuracy": 0.9138477801268499,
+    "wilson_lower": 0.9003507443592637,
+    "target": 0.9
+  },
+  "test_selective_classification": {
+    "accepted": 2908,
+    "coverage": 0.9441558441558442,
+    "accuracy_on_accepted": 0.9191884456671252,
+    "risk_on_accepted": 0.08081155433287479
+  },
+  "test_risk_coverage_curve_diagnostic_only": [
+    {
+      "coverage": 0.25,
+      "accepted": 770,
+      "accuracy_on_accepted": 0.9974025974025974
+    },
+    {
+      "coverage": 0.5,
+      "accepted": 1540,
+      "accuracy_on_accepted": 0.9954545454545455
+    },
+    {
+      "coverage": 0.75,
+      "accepted": 2310,
+      "accuracy_on_accepted": 0.9774891774891775
+    },
+    {
+      "coverage": 1.0,
+      "accepted": 3080,
+      "accuracy_on_accepted": 0.887012987012987
+    }
+  ],
+  "test_nonexact_overlap": {
+    "rows": 2887,
+    "accuracy": 0.8818843089712505,
+    "negative_log_likelihood": 0.4621570652979779,
+    "expected_calibration_error_10": 0.012753787729170924,
+    "multiclass_brier_sum": 0.1724875681930051
+  },
+  "limitations": [
+    "This is NOT the previous published model refitted on all training rows.",
+    "Temperature and threshold were both chosen using the same calibration split; lower-bound precision there is not an out-of-sample guarantee.",
+    "Softmax of uncalibrated SVM margins is not a validated probability.",
+    "The published confidence values need external-domain and temporal calibration studies.",
+    "Official train and test have overlapping texts; duplicate-free diagnostic included.",
+    "Risk-coverage points evaluated on test are descriptive; no threshold is selected using test.",
+    "Threshold target 90% is illustrative, not an operational SLA."
+  ]
+}
