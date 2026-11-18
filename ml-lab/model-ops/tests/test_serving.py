@@ -33,7 +33,7 @@ class FakeModel:
 
 @pytest.fixture()
 def client():
-    api.app.dependency_overrides[api.get_model] = lambda: FakeModel()
+    api.app.dependency_overrides[api.require_model] = lambda: FakeModel()
     with TestClient(api.app) as c:
         yield c
     api.app.dependency_overrides.clear()
@@ -64,7 +64,7 @@ def test_invalid_text_is_rejected(client, text):
 
 
 def test_invalid_scores_do_not_return_predictions(client):
-    api.app.dependency_overrides[api.get_model] = lambda: FakeModel(invalid=True)
+    api.app.dependency_overrides[api.require_model] = lambda: FakeModel(invalid=True)
     response = client.post("/predict", json={"text": "transferência"})
     assert response.status_code == 503
     assert "scores" in response.json()["detail"].lower()
@@ -73,3 +73,27 @@ def test_invalid_scores_do_not_return_predictions(client):
 def test_no_model_details_in_liveness(client):
     result = client.get("/health/live").json()
     assert "model" not in result
+
+
+def test_model_loading_failure_is_sanitized():
+    api.app.dependency_overrides.clear()
+    def unavailable():
+        raise RuntimeError("sensitive internal service exception")
+    api.app.dependency_overrides[api.require_model] = unavailable
+    with TestClient(api.app, raise_server_exceptions=False) as client:
+        # Substituted dependency errors are deliberately not caught by FastAPI.
+        # Only require_model catches real get_model() failures.
+        response = client.get("/health/ready")
+        assert response.status_code == 500
+    api.app.dependency_overrides.clear()
+
+
+def test_readiness_reports_503_for_missing_artifact(monkeypatch):
+    api.app.dependency_overrides.clear()
+    def fail():
+        raise FileNotFoundError("private internal filepath")
+    monkeypatch.setattr(api, "get_model", fail)
+    with TestClient(api.app) as client:
+        response = client.get("/health/ready")
+    assert response.status_code == 503
+    assert response.json()["detail"] == "Model temporarily unavailable"

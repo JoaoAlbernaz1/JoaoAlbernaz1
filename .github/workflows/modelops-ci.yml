@@ -1,0 +1,55 @@
+name: ModelOps serving and distribution monitoring
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/modelops-ci.yml"
+      - "ml-lab/model-ops/**"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: modelops-public-metrics
+  cancel-in-progress: false
+
+jobs:
+  modelops:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: |
+            ml-lab/requirements.txt
+            ml-lab/model-ops/requirements-serving.txt
+      - name: Install API and ML dependencies
+        run: python -m pip install -r ml-lab/model-ops/requirements-serving.txt
+      - name: Test API behavior and drift statistics without network
+        run: python -m pytest -q ml-lab/model-ops/tests
+      - name: Build image as deployment smoke test
+        run: docker build -f ml-lab/model-ops/Dockerfile -t banking77-modelops:ci .
+      - name: Run real public-dataset monitoring experiment
+        run: |
+          mkdir -p ml-lab/published/model-ops
+          python ml-lab/model-ops/monitor.py --output ml-lab/published/model-ops/metrics.json
+      - name: Commit measured statistics (no customer messages)
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add ml-lab/published/model-ops/README.md ml-lab/published/model-ops/metrics.json
+          if git diff --cached --quiet; then
+            echo "Results unchanged"
+            exit 0
+          fi
+          git commit -m "research(modelops): publish measured dataset-shift report [skip ci]"
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main

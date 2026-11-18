@@ -77,7 +77,15 @@ def get_model():
     return model
 
 
-ModelDependency = Annotated[object, Depends(get_model)]
+def require_model():
+    try:
+        return get_model()
+    except Exception as exc:
+        # Do not leak internal filesystem paths or network errors to API callers.
+        raise HTTPException(status_code=503, detail="Model temporarily unavailable") from exc
+
+
+ModelDependency = Annotated[object, Depends(require_model)]
 
 
 @app.get("/health/live")
