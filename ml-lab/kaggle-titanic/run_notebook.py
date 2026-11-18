@@ -50,7 +50,7 @@ def validate_submission(output: Path, test: Path) -> int:
         raise ValueError("Submission is empty")
 
     ids = predictions["PassengerId"]
-    if not ids.str.fullmatch(r"[1-9]\\d*").all():
+    if not ids.str.fullmatch(r"[1-9]\d*").all():
         raise ValueError("PassengerId must contain positive integer IDs without blanks")
     if ids.duplicated().any():
         raise ValueError("Missing/duplicate PassengerIds")
