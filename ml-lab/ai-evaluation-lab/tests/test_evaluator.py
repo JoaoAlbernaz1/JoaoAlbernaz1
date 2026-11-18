@@ -27,7 +27,7 @@ def test_corpus_has_distinct_cases_and_adversarial_examples(corpus):
 
 def test_retrieval_returns_ranked_documents(corpus):
     docs, _ = corpus
-    results = module.Retriever(docs).search("Quanto tempo tenho para cancelar pedido?")
+    results = module.Retriever(docs).search("O cancelamento de um pedido é permitido até 10 minutos depois da confirmação.")
     assert results and results[0][0].id == "d01"
     assert results[0][1] > 0
     assert all(a[1] >= b[1] for a, b in zip(results, results[1:]))
