@@ -36,6 +36,12 @@ jobs:
           mkdir -p ml-lab/published/ai-eval
           python ml-lab/ai-evaluation-lab/evaluator.py --method word --output ml-lab/published/ai-eval/word.json
           python ml-lab/ai-evaluation-lab/evaluator.py --method char --output ml-lab/published/ai-eval/char.json
+      - name: Publish paired quality comparison and changed case IDs
+        run: |
+          python ml-lab/ai-evaluation-lab/compare_reports.py \
+            --before ml-lab/published/ai-eval/word.json \
+            --after ml-lab/published/ai-eval/char.json \
+            --output ml-lab/published/ai-eval/comparison.md
       - name: Publish a readable experiment report
         run: |
           python - <<'PY'
