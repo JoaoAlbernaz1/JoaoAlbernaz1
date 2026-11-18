@@ -36,6 +36,10 @@ Para avaliar um modelo externo, escolha `--adapter openai-compatible` e forneça
 
 ## Comparar experimentos e identificar regressões
 
+Veja também a [comparação já publicada (word vs. char)](../published/ai-eval/comparison.md): além das métricas, mostra os IDs das perguntas cuja recuperação melhorou, sem copiar as perguntas ou respostas.
+
+
+
 O utilitário [compare_reports.py](./compare_reports.py) compara **dois relatórios JSON já produzidos pelo avaliador**, com os mesmos casos, assistente, dataset e top-k. É útil para entender se uma mudança de recuperação melhora Hit@k mas mantém a taxa de acerto das respostas — sem repetir chamadas de API e sem expor os textos das perguntas na comparação.
 
 A partir da raiz do repositório, usando os relatórios públicos de exemplo:
