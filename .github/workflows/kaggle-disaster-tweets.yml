@@ -1,10 +1,6 @@
 name: Compete in Kaggle Disaster Tweets NLP
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - ".github/workflows/kaggle-disaster-tweets.yml"
   workflow_dispatch:
 
 permissions:

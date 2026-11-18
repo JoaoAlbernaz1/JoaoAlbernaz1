@@ -25,10 +25,10 @@ python ml-lab/kaggle-disaster-tweets/train.py --train /caminho/train.csv --test 
 python -m pytest -q ml-lab/kaggle-disaster-tweets/tests
 ~~~
 
-Os dados oficiais são disponibilizados pelo Kaggle na página da competição. São baixados no GitHub Actions, sem republicação das cópias locais.
+Os dados oficiais são disponibilizados pelo Kaggle na página da competição. São baixados no GitHub Actions, sem republicação das cópias locais. **Status: a primeira tentativa de acesso ao dataset retornou HTTP 403 porque a competição ainda precisa de autorização de acesso/aceite das regras. Não há submissão confirmada neste experimento.**
 
 ## Evidência
 
-[Execução e submissão](../../.github/workflows/kaggle-disaster-tweets.yml) · [resultados medidos](../published/kaggle-disaster-tweets/) quando o pipeline for concluído.
+[Pipeline de execução](../../.github/workflows/kaggle-disaster-tweets.yml) · [resultados medidos](../published/kaggle-disaster-tweets/) quando o pipeline for concluído.
 
 Este é um trabalho de aprendizado e pesquisa aplicada em classificação de linguagem, não um resultado premiado.
