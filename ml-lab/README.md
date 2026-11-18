@@ -49,6 +49,10 @@ A execução automática de treinamento foi concluída e gerou um [modelo scikit
 
 ## Kit aberto para avaliar assistentes de IA
 
+**Exemplo publicado:** [comparativo pareado com deltas e IDs de casos alterados](./published/ai-eval/comparison.md), gerado a partir de relatórios medidos pelo CI, não de resultados fictícios.
+
+
+
 O [AI Evaluation Lab](./ai-evaluation-lab/) permite executar um benchmark offline sem credenciais e comparar duas execuções por métricas e IDs de casos. Um exemplo mínimo de inspeção de regressões:
 
 ```bash
