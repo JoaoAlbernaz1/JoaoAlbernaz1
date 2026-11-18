@@ -33,3 +33,9 @@ O script gera `submission_advanced.csv`, `metrics.json` e um relatório `README.
 A escolha do modelo e os diagnósticos OOF compartilham os mesmos folds, de modo que a avaliação do vencedor pode ser otimista. Parentes e grupos com informações relacionadas também podem aparecer em folds diferentes. Um experimento futuro deve reservar uma partição independente para estimar qualidade pós-seleção.
 
 A **submissão oficial já confirmada** no Titanic continua sendo a da baseline anterior: [registro #58521092](https://github.com/JoaoAlbernaz1/JoaoAlbernaz1/actions/runs/44368002721). Não declarar nota oficial ou medalha inexistente. Para publicar este notebook no Kaggle, a conta deve estar autorizada na competição.
+
+## Saída da versão Kaggle e CSV para submissão
+
+**Ambos os notebooks** agora escrevem explicitamente `/kaggle/working/submission.csv`, com `PassengerId` e `Survived`. Na plataforma Kaggle, selecione **Save Version → Save & Run All**, aguarde concluir e selecione a versão que contenha o arquivo em **Output**. O modo **Quick Save** não executa todas as células e pode gerar o erro de versão sem arquivo de saída.
+
+Caso a publicação do notebook ainda seja bloqueada pelo erro 403, o [GitHub Actions de pesquisa](../../.github/workflows/kaggle-titanic-research.yml) executa o notebook completo com os dados oficiais e disponibiliza `submission.csv` no artefato **titanic-notebook-output**, para download e envio manual na aba **Submit Predictions**. Este fluxo não gasta submissões nem simula nota no leaderboard.
