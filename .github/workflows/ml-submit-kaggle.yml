@@ -1,10 +1,6 @@
 name: Submit Titanic baseline to Kaggle
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - ".github/workflows/ml-submit-kaggle.yml"
   workflow_dispatch:
 
 permissions:
