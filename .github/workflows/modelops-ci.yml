@@ -39,12 +39,16 @@ jobs:
         run: |
           mkdir -p ml-lab/published/model-ops
           python ml-lab/model-ops/monitor.py --output ml-lab/published/model-ops/metrics.json
+      - name: Measure real-data text robustness and metamorphic invariances
+        run: |
+          python ml-lab/model-ops/robustness.py --output ml-lab/published/model-ops/robustness.json
       - name: Commit measured statistics (no customer messages)
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add ml-lab/published/model-ops/README.md ml-lab/published/model-ops/metrics.json
+          git add ml-lab/published/model-ops/ROBUSTNESS.md ml-lab/published/model-ops/robustness.json
           if git diff --cached --quiet; then
             echo "Results unchanged"
             exit 0
