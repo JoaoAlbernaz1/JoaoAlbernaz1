@@ -1,0 +1,38 @@
+name: Publish free static NLP research Space
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/hf-space-static.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    env:
+      HF_TOKEN: ${{ secrets.HF_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install client
+        run: python -m pip install "huggingface-hub>=1.0,<2"
+      - name: Verify static artifact
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          root=Path("ml-lab/hf-space-static/space")
+          html=(root/"index.html").read_text(encoding="utf-8")
+          card=(root/"README.md").read_text(encoding="utf-8")
+          assert "<!DOCTYPE html>" in html
+          assert "BANKING77-PTBR" in html
+          assert "sdk: static" in card and "app_file: index.html" in card
+          assert "0,8964" in html and "0,8910" in html
+          PY
+      - name: Publish static Space
+        run: python ml-lab/hf-space-static/publish.py
