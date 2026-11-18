@@ -1,37 +1,26 @@
-# Publicação verificada — Hugging Face e Kaggle
+# Publicações e resultados · ML & Research Lab
 
-O [ML & Research Lab](./README.md) contém código público, baselines e experimentos em dados sintéticos. **O modelo NLP foi publicado no Hugging Face após teste bem-sucedido do GitHub Actions.** A submissão ao Kaggle continua pendente.
+Projetos com código reproduzível, documentação técnica, métricas e links verificáveis.
 
-## O que já é público no GitHub
+## Hugging Face
 
-Os workflows [Publish reproducible ML artifacts](../../.github/workflows/ml-publish-artifacts.yml) são acionados quando o código relevante muda. Após execução bem-sucedida, o GitHub disponibiliza:
-- [Modelo treinado `model.skops`](./published/intent-v1/model.skops), [métricas do classificador](./published/intent-v1/metrics.json) e [cartão técnico](./published/intent-v1/README.md);
-- [métricas medidas do retrieval benchmark](./published/retrieval-v1/metrics.json).
+**[JOAOOALBERNAZ/intent-classifier-pt](https://huggingface.co/JOAOOALBERNAZ/intent-classifier-pt)**
 
-**IMPORTANTE:** métricas desses dois projetos vêm de amostras sintéticas, pequenas e autorais.
+Modelo supervisionado de classificação de intenção em português com TF-IDF e regressão logística. A execução automatizada validou o modelo e publicou os pesos e o cartão técnico. [Execução de referência](https://github.com/JoaoAlbernaz1/JoaoAlbernaz1/actions/runs/44366606320).
 
-## Publicação confirmada no Hugging Face
+- Macro-F1 de holdout em 60 exemplos sintéticos: **0,4933**.
+- Os dados são sintéticos e o desempenho não deve ser extrapolado para ambientes reais.
+- [Código-fonte](./nlp-intent-classifier/) · [Métricas](./published/intent-v1/metrics.json).
 
-- **Modelo publicado:** [JOAOOALBERNAZ/intent-classifier-pt](https://huggingface.co/JOAOOALBERNAZ/intent-classifier-pt)
-- **Execução concluída com sucesso:** [GitHub Actions #44366606320](https://github.com/JoaoAlbernaz1/JoaoAlbernaz1/actions/runs/44366606320)
-- **Dados de avaliação:** sintéticos, pequenos e autorais; não são uma medição de qualidade em produção.
+## Retrieval / RAG Benchmark
 
-## Republicar no Hugging Face
+[Benchmark reproduzível](./retrieval-benchmark/) de BM25 e TF-IDF com Recall@k e MRR@k. [Resultados medidos](./published/retrieval-v1/metrics.json). Corpus sintético, usado para demonstrar avaliação.
 
-1. Crie ou entre na sua conta em https://huggingface.co/ .
-2. Gere token com permissão de escrita em https://huggingface.co/settings/tokens .
-3. No GitHub, acesse **Settings → Secrets and variables → Actions → New repository secret**. Nome: `HF_TOKEN`; valor: o token. **Nunca cole o token no chat nem faça commit dele.**
-4. Abra **Actions → Publish model to Hugging Face → Run workflow**.
+## Kaggle Titanic
 
-O script identifica o usuário autenticado por meio do token e cria `<seu-usuario>/intent-classifier-pt` com `model.skops`, `metrics.json` e o cartão de modelo. O README destaca explicitamente as limitações dos dados sintéticos.
+[Notebook e pipeline](./kaggle-titanic/) com validação cruzada, preprocessing seguro e baseline tabular. Classificação e score competitivo só serão reportados após comprovação de submissão pública.
 
-## Submeter ao Kaggle
+## Pesquisa técnica
 
-1. Entre no https://www.kaggle.com/competitions/titanic e clique para participar; aceite as regras.
-2. Gere seu token na área de API em https://www.kaggle.com/settings/api .
-3. Cadastre-o no GitHub **Settings → Secrets and variables → Actions** com o nome `KAGGLE_API_TOKEN`.
-4. Execute **Actions → Submit Titanic baseline to Kaggle → Run workflow**.
+[Artigo sobre avaliação reprodutível](./docs/avaliacao-reprodutivel-de-ml.md).
 
-O workflow baixa os dados oficiais, treina o modelo com validação estratificada, valida o CSV e faz uma submissão **somente após sua execução e autenticação**. Confira a pontuação real em https://www.kaggle.com/competitions/titanic/submissions .
-
-Não publique credenciais, CSVs não autorizados nem afirme colocação sem comprovação.

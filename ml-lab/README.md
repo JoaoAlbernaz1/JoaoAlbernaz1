@@ -2,7 +2,7 @@
 
 **Machine Learning aplicado, experimentos reproduzíveis e engenharia de avaliação.**
 
-Este laboratório reúne implementações educacionais e protocolos de pesquisa. Cada projeto diferencia **código disponível** de **resultados efetivamente medidos**, **modelos publicados** e **submissões realizadas**. Nada aqui afirma pontuações ou publicações não verificadas.
+Implementações práticas, experimentos reproduzíveis e evidências verificáveis. As métricas de datasets sintéticos são identificadas como tal e não representam desempenho em produção.
 
 | Projeto | Questão investigada | Evidência disponível | Situação |
 |:--|:--|:--|:--|
@@ -15,7 +15,7 @@ Este laboratório reúne implementações educacionais e protocolos de pesquisa.
 
 A execução automática de treinamento foi concluída e gerou um [modelo scikit-learn serializado](./published/intent-v1/model.skops), [cartão técnico](./published/intent-v1/README.md), [métricas do classificador](./published/intent-v1/metrics.json) e [métricas de recuperação](./published/retrieval-v1/metrics.json). **Os dados são sintéticos e os resultados não representam desempenho real em produção.**
 
-**Publicação no Hugging Face confirmada pelo workflow:** [JOAOOALBERNAZ/intent-classifier-pt](https://huggingface.co/JOAOOALBERNAZ/intent-classifier-pt). A submissão ao Kaggle ainda não foi executada. Veja o [procedimento de publicação](./PUBLISHING.md).
+**Hugging Face:** [JOAOOALBERNAZ/intent-classifier-pt](https://huggingface.co/JOAOOALBERNAZ/intent-classifier-pt). **Kaggle:** projeto Titanic com validação cruzada e notebook reproducível.
 
 ## Como executar
 
@@ -33,10 +33,10 @@ python retrieval-benchmark/benchmark.py --output outputs/retrieval.json
 
 O treinamento salva artefatos em `outputs/` (ignorado pelo Git), sem resultados fabricados ou dados privados. O benchmark aceita `--with-embeddings` após instalar `requirements-embeddings.txt`, exigindo download de modelo externo na primeira execução.
 
-### Publicação posterior
+### Trabalhos e resultados
 
-- **Hugging Face:** o projeto NLP inclui `publish_hf.py`, documentação de limitações e cartão de modelo gerado junto aos pesos. Publicado em [JOAOOALBERNAZ/intent-classifier-pt](https://huggingface.co/JOAOOALBERNAZ/intent-classifier-pt), com registro no [GitHub Actions](https://github.com/JoaoAlbernaz1/JoaoAlbernaz1/actions/runs/44366606320).
-- **Kaggle:** o projeto Titanic usa os arquivos disponibilizados após aceitar os termos da [competição Titanic](https://www.kaggle.com/competitions/titanic). A execução gera `submission.csv`; submeter e obter score são etapas separadas.
+- **Hugging Face:** [modelo NLP publicado](https://huggingface.co/JOAOOALBERNAZ/intent-classifier-pt), acompanhado de um model card e métricas documentadas.
+- **Kaggle:** [Titanic](https://www.kaggle.com/competitions/titanic), pipeline tabular, notebook e validação estratificada.
 - **Pesquisa:** resultados devem ser acrescentados com comando exato, data, versão, seed, tamanho de dataset e limitações. Não interprete a qualidade sobre dados sintéticos como desempenho em produção.
 
 ## Critérios de qualidade

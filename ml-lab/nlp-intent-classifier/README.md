@@ -19,16 +19,9 @@ Artefatos: `model.skops` e `metrics.json` em `outputs/intent/`. A exportação c
 
 O arquivo `data/tickets.csv` contém **60 exemplos sintéticos escritos especificamente para demonstrar o pipeline**. Eles não representam interações reais nem um dataset de benchmark independente. Métricas obtidas nele **não permitem inferir generalização em produção**. Antes de qualquer deployment: obter dataset público com licença adequada, aumentar diversidade, tratar desbalanceamento, separar temporalmente e realizar avaliação humana.
 
-### Publicar no Hugging Face
+### Modelo publicado
 
-Depois do treino, configure um token com permissão de escrita e rode:
-
-```bash
-export HF_TOKEN="..."  # use o gerenciador de segredos; não faça commit
-python nlp-intent-classifier/publish_hf.py --artifact-dir outputs/intent --repo-id SEU_USUARIO/intent-classifier-pt
-```
-
-O script cria o repositório de modelo e envia os arquivos, com **model card** informando natureza sintética dos dados e limitações. A publicação não ocorre automaticamente nem está sendo alegada neste README.
+[Ver no Hugging Face](https://huggingface.co/JOAOOALBERNAZ/intent-classifier-pt) · [Métricas da execução](../published/intent-v1/metrics.json). Os dados são sintéticos e limitados; o projeto documenta a metodologia de treino, avaliação e exportação do modelo.
 
 ### Extensões de pesquisa
 

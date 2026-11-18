@@ -44,7 +44,7 @@ Construo soluções de **IA generativa aplicadas a processos reais**: assistente
 
 ### ML & Research Lab · projetos com experimentação
 
-**Implementações que podem ser executadas, avaliadas e discutidas tecnicamente.** Código, métricas e limitações documentados, incluindo um modelo publicado no Hugging Face.
+**Machine Learning & pesquisa aplicada.** Modelos treinados, experimentos reproduzíveis e métricas documentadas.
 
 | Experimento | Engenharia e avaliação |
 | :--- | :--- |
@@ -55,7 +55,7 @@ Construo soluções de **IA generativa aplicadas a processos reais**: assistente
 
 **Modelo publicado no Hugging Face:** [intent-classifier-pt](https://huggingface.co/JOAOOALBERNAZ/intent-classifier-pt) · **artefato local:** [artefato e cartão técnico](./ml-lab/published/intent-v1/) · [métricas medidas](./ml-lab/published/intent-v1/metrics.json) · [retrieval benchmark](./ml-lab/published/retrieval-v1/metrics.json). *Resultados sobre dados sintéticos, não validação em produção.*
 
-<sub>Laboratório aberto com dados didáticos sintéticos. Modelo NLP disponível no Hugging Face; submissão ao Kaggle ainda não realizada. [Explorar o ML & Research Lab](./ml-lab/).</sub>
+<sub>Experimentos documentados com resultados verificáveis; conjuntos sintéticos utilizados onde indicado. [Explorar o ML & Research Lab](./ml-lab/).</sub>
 
 ### Experiência prática com IA
 
