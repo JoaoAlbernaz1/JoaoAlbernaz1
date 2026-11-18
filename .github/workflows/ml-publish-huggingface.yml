@@ -1,6 +1,10 @@
 name: Publish model to Hugging Face
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/ml-publish-huggingface.yml"
   workflow_dispatch:
 
 permissions:
