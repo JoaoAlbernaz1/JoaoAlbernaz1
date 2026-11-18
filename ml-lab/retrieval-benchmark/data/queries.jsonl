@@ -1,0 +1,12 @@
+{"id":"Q01","text":"Como recuperar a senha?","relevant_ids":["D02","D13"]}
+{"id":"Q02","text":"Qual o prazo para pedir reembolso?","relevant_ids":["D01"]}
+{"id":"Q03","text":"Onde vejo o rastreamento?","relevant_ids":["D04"]}
+{"id":"Q04","text":"Como posso cancelar a assinatura?","relevant_ids":["D05"]}
+{"id":"Q05","text":"Como pagar minha fatura?","relevant_ids":["D03","D10"]}
+{"id":"Q06","text":"Onde encontro relatórios em PDF?","relevant_ids":["D17"]}
+{"id":"Q07","text":"Como resolver falha na API?","relevant_ids":["D14","D06"]}
+{"id":"Q08","text":"Posso alterar endereço antes da entrega?","relevant_ids":["D08"]}
+{"id":"Q09","text":"Como funciona o código de duas etapas?","relevant_ids":["D07"]}
+{"id":"Q10","text":"Quando recebo o estorno?","relevant_ids":["D09","D18"]}
+{"id":"Q11","text":"Como exportar o relatório em CSV?","relevant_ids":["D11"]}
+{"id":"Q12","text":"Como ver o histórico dos meus acessos?","relevant_ids":["D12"]}

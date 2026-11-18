@@ -1,0 +1,18 @@
+{"id":"D01","text":"Política de reembolso permite solicitação em até sete dias após recebimento.","category":"reembolso"}
+{"id":"D02","text":"Para alterar senha use a opção esqueci minha senha na tela de acesso.","category":"acesso"}
+{"id":"D03","text":"A fatura pode ser paga com cartão ou transferência instantânea.","category":"pagamento"}
+{"id":"D04","text":"O rastreio do pacote está disponível na página meus pedidos.","category":"entrega"}
+{"id":"D05","text":"A assinatura pode ser cancelada na aba configurações da conta.","category":"cancelamento"}
+{"id":"D06","text":"O suporte técnico responde incidentes de integração via chamado.","category":"tecnico"}
+{"id":"D07","text":"A autenticação em duas etapas usa código temporário por aplicativo.","category":"seguranca"}
+{"id":"D08","text":"O endereço de entrega pode ser alterado antes da postagem.","category":"entrega"}
+{"id":"D09","text":"O prazo de estorno depende do meio de pagamento original.","category":"reembolso"}
+{"id":"D10","text":"Os planos anuais têm cobrança recorrente no cartão cadastrado.","category":"pagamento"}
+{"id":"D11","text":"Para exportar relatórios abra a área de análises e escolha CSV.","category":"relatorios"}
+{"id":"D12","text":"O histórico de login pode ser consultado nas configurações de segurança.","category":"seguranca"}
+{"id":"D13","text":"Uma nova senha deve conter no mínimo doze caracteres.","category":"acesso"}
+{"id":"D14","text":"Quando uma API falha verifique credenciais e logs de erro.","category":"tecnico"}
+{"id":"D15","text":"O comprovante de entrega é enviado ao concluir a logística.","category":"entrega"}
+{"id":"D16","text":"O cancelamento não apaga faturas já emitidas.","category":"cancelamento"}
+{"id":"D17","text":"Relatórios em PDF ficam disponíveis na seção exportações.","category":"relatorios"}
+{"id":"D18","text":"O reembolso é processado para o mesmo método usado na compra.","category":"reembolso"}

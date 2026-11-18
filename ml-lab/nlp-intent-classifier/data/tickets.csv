@@ -1,0 +1,61 @@
+text,label
+Meu pagamento foi recusado,pagamento
+Nao consigo pagar com cartao,pagamento
+Preciso da segunda via do boleto,pagamento
+A cobranca veio duplicada,pagamento
+O pix ainda nao foi confirmado,pagamento
+Como atualizar os dados de pagamento,pagamento
+Quero parcelar o valor,pagamento
+Meu boleto venceu ontem,pagamento
+A fatura esta com valor errado,pagamento
+O desconto nao apareceu na fatura,pagamento
+Paguei mas consta pendente,pagamento
+Como alterar o cartao cadastrado,pagamento
+Esqueci a senha da minha conta,acesso
+Nao consigo entrar no aplicativo,acesso
+O codigo de verificacao nao chegou,acesso
+Minha conta foi bloqueada,acesso
+Como recuperar meu login,acesso
+O link de redefinicao expirou,acesso
+Meu usuario nao e reconhecido,acesso
+Preciso trocar o email de acesso,acesso
+Nao recebo o codigo para entrar,acesso
+Estou preso na tela de login,acesso
+O sistema diz senha invalida,acesso
+Quero ativar o acesso novamente,acesso
+Quero cancelar minha assinatura,cancelamento
+Como encerrar o meu plano,cancelamento
+Gostaria de solicitar cancelamento,cancelamento
+Nao quero renovar o contrato,cancelamento
+Preciso desativar a renovacao automatica,cancelamento
+Quando meu plano pode ser cancelado,cancelamento
+Quero parar de usar o servico,cancelamento
+Posso cancelar sem multa,cancelamento
+Preciso excluir a assinatura ativa,cancelamento
+Quero rescindir o contrato,cancelamento
+Como pedir cancelamento definitivo,cancelamento
+Desejo encerrar a assinatura hoje,cancelamento
+Meu pedido ainda nao chegou,entrega
+Qual a previsao de entrega,entrega
+Preciso rastrear o envio,entrega
+O pacote esta atrasado,entrega
+O rastreamento nao atualiza,entrega
+Recebi um pacote incompleto,entrega
+Meu endereco de entrega esta errado,entrega
+A transportadora nao encontrou meu endereco,entrega
+Quando a encomenda sera enviada,entrega
+A entrega consta feita mas nao recebi,entrega
+Meu produto veio danificado na entrega,entrega
+Quero consultar o codigo de rastreio,entrega
+O aplicativo fecha sozinho,suporte_tecnico
+O site fica carregando sem parar,suporte_tecnico
+A tela aparece em branco,suporte_tecnico
+O sistema apresenta erro ao salvar,suporte_tecnico
+Nao consigo anexar um arquivo,suporte_tecnico
+O botao de enviar nao funciona,suporte_tecnico
+A pagina esta muito lenta,suporte_tecnico
+A API retorna erro inesperado,suporte_tecnico
+O aplicativo trava ao abrir,suporte_tecnico
+O painel nao carrega os dados,suporte_tecnico
+Recebo mensagem de erro no cadastro,suporte_tecnico
+A integracao parou de funcionar,suporte_tecnico
