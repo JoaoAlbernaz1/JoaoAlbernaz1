@@ -1,0 +1,108 @@
+name: Titanic engineered baseline research
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "ml-lab/kaggle-titanic/advanced.py"
+      - "ml-lab/kaggle-titanic/tests/**"
+      - "ml-lab/kaggle-titanic/titanic_feature_engineering.ipynb"
+      - ".github/workflows/kaggle-titanic-research.yml"
+  push:
+    branches: [main]
+    paths:
+      - "ml-lab/kaggle-titanic/advanced.py"
+      - ".github/workflows/kaggle-titanic-research.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: titanic-engineered-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: ml-lab/requirements.txt
+      - name: Install ML dependencies
+        run: python -m pip install -r ml-lab/requirements.txt
+      - name: Validate code and standalone notebook
+        run: |
+          python -m pytest -q ml-lab/kaggle-titanic/tests
+          python - <<'PY'
+          import ast
+          import json
+          from pathlib import Path
+          path = Path("ml-lab/kaggle-titanic/titanic_feature_engineering.ipynb")
+          notebook = json.loads(path.read_text(encoding="utf-8"))
+          assert notebook["nbformat"] == 4 and len(notebook["cells"]) >= 8
+          for cell in notebook["cells"]:
+              if cell["cell_type"] == "code":
+                  ast.parse("".join(cell["source"]))
+          print("Notebook format and syntax validated")
+          PY
+
+  measure:
+    if: github.event_name != 'pull_request'
+    needs: test
+    runs-on: ubuntu-latest
+    env:
+      KAGGLE_API_TOKEN: ${{ secrets.KAGGLE_API_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: ml-lab/requirements.txt
+      - name: Install dependencies
+        run: |
+          python -m pip install -r ml-lab/requirements.txt
+          python -m pip install kaggle
+      - name: Download official Kaggle data if authorized
+        id: source
+        shell: bash
+        run: |
+          if [ -z "$KAGGLE_API_TOKEN" ]; then
+            echo "No Kaggle token; official experiment skipped."
+            echo "available=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          mkdir -p /tmp/titanic
+          kaggle competitions download titanic -p /tmp/titanic --unzip
+          test -s /tmp/titanic/train.csv
+          test -s /tmp/titanic/test.csv
+          echo "available=true" >> "$GITHUB_OUTPUT"
+      - name: Compare models on official competition training data
+        if: steps.source.outputs.available == 'true'
+        run: |
+          python ml-lab/kaggle-titanic/advanced.py \
+            --train /tmp/titanic/train.csv \
+            --test /tmp/titanic/test.csv \
+            --output-dir outputs/titanic-advanced
+      - name: Publish measured local CV without another submission
+        if: steps.source.outputs.available == 'true'
+        run: |
+          mkdir -p ml-lab/published/kaggle-titanic-advanced
+          cp outputs/titanic-advanced/metrics.json ml-lab/published/kaggle-titanic-advanced/metrics.json
+          cp outputs/titanic-advanced/README.md ml-lab/published/kaggle-titanic-advanced/README.md
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add ml-lab/published/kaggle-titanic-advanced/
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git commit -m "research(kaggle): publish observed Titanic feature-engineering results [skip ci]"
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main
