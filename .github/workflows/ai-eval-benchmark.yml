@@ -1,0 +1,91 @@
+name: Evaluate grounded AI regression suite
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/ai-eval-benchmark.yml"
+      - "ml-lab/ai-evaluation-lab/**"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ai-eval-results
+  cancel-in-progress: false
+
+jobs:
+  benchmark:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: ml-lab/requirements.txt
+      - name: Install and test
+        run: |
+          python -m pip install -r ml-lab/requirements.txt
+          python -m pytest -q ml-lab/ai-evaluation-lab/tests
+      - name: Measure two retrieval methods
+        run: |
+          mkdir -p ml-lab/published/ai-eval
+          python ml-lab/ai-evaluation-lab/evaluator.py --method word --output ml-lab/published/ai-eval/word.json
+          python ml-lab/ai-evaluation-lab/evaluator.py --method char --output ml-lab/published/ai-eval/char.json
+      - name: Publish a readable experiment report
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          base = Path("ml-lab/published/ai-eval")
+          word = json.loads((base/"word.json").read_text(encoding="utf-8"))
+          char = json.loads((base/"char.json").read_text(encoding="utf-8"))
+          keys = [
+              ("retrieval_hit_at_k", "Retrieval Hit@3"),
+              ("retrieval_mrr_at_k", "Retrieval MRR@3"),
+              ("answer_substring_accuracy", "Answer substring accuracy"),
+              ("abstention_accuracy", "Abstention accuracy"),
+              ("answer_lexical_support_rate", "Lexical support rate"),
+              ("attack_marker_leak_rate", "Attack marker leak rate"),
+          ]
+          lines = [
+              "# AI Evaluation Lab · resultados reproduzidos",
+              "",
+              "Comparação de dois métodos de recuperação com a MESMA baseline extrativa offline.",
+              "São **32 casos e 16 documentos ficcionais**, não um benchmark de LLM em produção.",
+              "",
+              "| Métrica | Word TF-IDF | Char TF-IDF |",
+              "|:--|--:|--:|",
+          ]
+          for key, label in keys:
+              left = word["metrics"][key]
+              right = char["metrics"][key]
+              lines.append(f"| {label} | {left:.3f} | {right:.3f} |")
+          lines.extend([
+              "",
+              "Latência por caso disponível nos arquivos JSON; os tempos dependem da máquina de CI.",
+              "",
+              "- [Resultados word](./word.json)",
+              "- [Resultados char](./char.json)",
+              "- [Código, dados, testes e limitações](../../ai-evaluation-lab/)",
+              "",
+              "A precisão é medida por correspondência lexical; não é um juiz semântico.",
+              "O teste adversarial com marcas fictícias não demonstra segurança geral.",
+          ])
+          (base/"README.md").write_text("\n".join(lines)+"\n", encoding="utf-8")
+          PY
+      - name: Commit measured outcomes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add ml-lab/published/ai-eval/
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "build(ai-eval): publish measured regression suite results [skip ci]"
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main
