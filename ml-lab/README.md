@@ -6,7 +6,7 @@ Este laboratório reúne implementações educacionais e protocolos de pesquisa.
 
 | Projeto | Questão investigada | Evidência disponível | Situação |
 |:--|:--|:--|:--|
-| [NLP · classificação de intenção](./nlp-intent-classifier/) | Um classificador TF-IDF + regressão logística reconhece intenções de mensagens em português? | Código, dados sintéticos declarados, testes, validação estratificada, exportação segura | Implementação disponível · executar treino |
+| [NLP · classificação de intenção](./nlp-intent-classifier/) | Um classificador TF-IDF + regressão logística reconhece intenções de mensagens em português? | Código, dados sintéticos declarados, testes, validação estratificada, exportação segura | **Treinado e publicado no Hugging Face** · avaliação sintética |
 | [Retrieval / RAG benchmark](./retrieval-benchmark/) | BM25 ou TF-IDF recupera melhor o contexto relevante? | Corpus sintético, relevância anotada, Recall@k e MRR@k, testes | Implementação disponível · executar benchmark |
 | [Kaggle Titanic](./kaggle-titanic/) | Como criar uma baseline tabular sem vazamento de dados? | Pipeline, cross-validation, notebook e geração de submission.csv | Preparado para submissão · não é participação comprovada |
 | [Artigo técnico](./docs/avaliacao-reprodutivel-de-ml.md) | O que constitui um experimento confiável de ML? | Texto metodológico publicado neste repositório | Disponível |
@@ -15,7 +15,7 @@ Este laboratório reúne implementações educacionais e protocolos de pesquisa.
 
 A execução automática de treinamento foi concluída e gerou um [modelo scikit-learn serializado](./published/intent-v1/model.skops), [cartão técnico](./published/intent-v1/README.md), [métricas do classificador](./published/intent-v1/metrics.json) e [métricas de recuperação](./published/retrieval-v1/metrics.json). **Os dados são sintéticos e os resultados não representam desempenho real em produção.**
 
-Publicações no Hugging Face e submissões ao Kaggle **ainda exigem autenticação nessas plataformas**. Veja o [procedimento de publicação](./PUBLISHING.md).
+**Publicação no Hugging Face confirmada pelo workflow:** [JOAOOALBERNAZ/intent-classifier-pt](https://huggingface.co/JOAOOALBERNAZ/intent-classifier-pt). A submissão ao Kaggle ainda não foi executada. Veja o [procedimento de publicação](./PUBLISHING.md).
 
 ## Como executar
 
@@ -35,7 +35,7 @@ O treinamento salva artefatos em `outputs/` (ignorado pelo Git), sem resultados 
 
 ### Publicação posterior
 
-- **Hugging Face:** o projeto NLP inclui `publish_hf.py`, documentação de limitações e cartão de modelo gerado junto aos pesos. A publicação depende de uma conta e de `HF_TOKEN`. Não foi realizada por este repositório.
+- **Hugging Face:** o projeto NLP inclui `publish_hf.py`, documentação de limitações e cartão de modelo gerado junto aos pesos. Publicado em [JOAOOALBERNAZ/intent-classifier-pt](https://huggingface.co/JOAOOALBERNAZ/intent-classifier-pt), com registro no [GitHub Actions](https://github.com/JoaoAlbernaz1/JoaoAlbernaz1/actions/runs/44366606320).
 - **Kaggle:** o projeto Titanic usa os arquivos disponibilizados após aceitar os termos da [competição Titanic](https://www.kaggle.com/competitions/titanic). A execução gera `submission.csv`; submeter e obter score são etapas separadas.
 - **Pesquisa:** resultados devem ser acrescentados com comando exato, data, versão, seed, tamanho de dataset e limitações. Não interprete a qualidade sobre dados sintéticos como desempenho em produção.
 

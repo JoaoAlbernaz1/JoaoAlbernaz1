@@ -10,18 +10,18 @@ Construo soluções de **IA generativa aplicadas a processos reais**: assistente
 
 ### ML & Research Lab · projetos com experimentação
 
-**Implementações que podem ser executadas, avaliadas e discutidas tecnicamente.** Código, métricas e limitações ficam separados de publicações externas ainda não realizadas.
+**Implementações que podem ser executadas, avaliadas e discutidas tecnicamente.** Código, métricas e limitações documentados, incluindo um modelo publicado no Hugging Face.
 
 | Experimento | Engenharia e avaliação |
 | :--- | :--- |
-| **[NLP · classificador de intenções](./ml-lab/nlp-intent-classifier/)** | Python, TF-IDF, Logistic Regression, macro-F1, validação cruzada; exportação de modelo e roteiro de publicação no Hugging Face. |
+| **[NLP · classificador de intenções](./ml-lab/nlp-intent-classifier/)** | Python, TF-IDF, Logistic Regression, macro-F1, validação cruzada; [modelo publicado no Hugging Face](https://huggingface.co/JOAOOALBERNAZ/intent-classifier-pt). |
 | **[Retrieval / RAG Benchmark](./ml-lab/retrieval-benchmark/)** | Comparação BM25 × TF-IDF, Recall@k e MRR@k, embeddings multilíngues opcionais; testes reproduzíveis. |
 | **[Kaggle Titanic · baseline](./ml-lab/kaggle-titanic/)** | Pipeline tabular, validação estratificada, notebook e gerador de CSV para submissão. |
 | **[Artigo técnico · avaliação de ML](./ml-lab/docs/avaliacao-reprodutivel-de-ml.md)** | Discussão sobre leakage, métricas, experimentos e limites de avaliação. |
 
-**Modelo realmente treinado:** [artefato e cartão técnico](./ml-lab/published/intent-v1/) · [métricas medidas](./ml-lab/published/intent-v1/metrics.json) · [retrieval benchmark](./ml-lab/published/retrieval-v1/metrics.json). *Resultados sobre dados sintéticos, não validação em produção.*
+**Modelo publicado no Hugging Face:** [intent-classifier-pt](https://huggingface.co/JOAOOALBERNAZ/intent-classifier-pt) · **artefato local:** [artefato e cartão técnico](./ml-lab/published/intent-v1/) · [métricas medidas](./ml-lab/published/intent-v1/metrics.json) · [retrieval benchmark](./ml-lab/published/retrieval-v1/metrics.json). *Resultados sobre dados sintéticos, não validação em produção.*
 
-<sub>Laboratório aberto com dados didáticos sintéticos. Modelos no Hugging Face e submissões ao Kaggle serão vinculados apenas após publicação efetiva. [Explorar o ML & Research Lab](./ml-lab/).</sub>
+<sub>Laboratório aberto com dados didáticos sintéticos. Modelo NLP disponível no Hugging Face; submissão ao Kaggle ainda não realizada. [Explorar o ML & Research Lab](./ml-lab/).</sub>
 
 ### Experiência prática com IA
 

@@ -1,6 +1,6 @@
 # Publicação verificada — Hugging Face e Kaggle
 
-O [ML & Research Lab](./README.md) contém código público, baselines e experimentos em dados sintéticos. **Ter scripts de publicação não significa que a publicação nas plataformas externas aconteceu.**
+O [ML & Research Lab](./README.md) contém código público, baselines e experimentos em dados sintéticos. **O modelo NLP foi publicado no Hugging Face após teste bem-sucedido do GitHub Actions.** A submissão ao Kaggle continua pendente.
 
 ## O que já é público no GitHub
 
@@ -10,7 +10,13 @@ Os workflows [Publish reproducible ML artifacts](../../.github/workflows/ml-publ
 
 **IMPORTANTE:** métricas desses dois projetos vêm de amostras sintéticas, pequenas e autorais.
 
-## Publicar no Hugging Face
+## Publicação confirmada no Hugging Face
+
+- **Modelo publicado:** [JOAOOALBERNAZ/intent-classifier-pt](https://huggingface.co/JOAOOALBERNAZ/intent-classifier-pt)
+- **Execução concluída com sucesso:** [GitHub Actions #44366606320](https://github.com/JoaoAlbernaz1/JoaoAlbernaz1/actions/runs/44366606320)
+- **Dados de avaliação:** sintéticos, pequenos e autorais; não são uma medição de qualidade em produção.
+
+## Republicar no Hugging Face
 
 1. Crie ou entre na sua conta em https://huggingface.co/ .
 2. Gere token com permissão de escrita em https://huggingface.co/settings/tokens .
