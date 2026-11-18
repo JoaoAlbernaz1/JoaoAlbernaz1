@@ -1,0 +1,41 @@
+name: Train and publish BANKING77-PTBR
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/banking77-ptbr.yml"
+      - "ml-lab/banking77-ptbr/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  train:
+    runs-on: ubuntu-latest
+    env:
+      HF_TOKEN: ${{ secrets.HF_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: ml-lab/requirements.txt
+      - name: Install dependencies
+        run: python -m pip install -r ml-lab/requirements.txt
+      - name: Offline unit tests
+        run: python -m pytest -q ml-lab/banking77-ptbr/tests
+      - name: Experiment using official research train and test
+        run: python ml-lab/banking77-ptbr/train.py --output-dir outputs/banking77-ptbr
+      - uses: actions/upload-artifact@v4
+        with:
+          name: banking77-ptbr-measured-results
+          path: |
+            outputs/banking77-ptbr/metrics.json
+            outputs/banking77-ptbr/README.md
+          retention-days: 30
+      - name: Publish validated model
+        if: env.HF_TOKEN != ''
+        run: python ml-lab/banking77-ptbr/publish_hf.py --artifact-dir outputs/banking77-ptbr
