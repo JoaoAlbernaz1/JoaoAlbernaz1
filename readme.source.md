@@ -49,7 +49,7 @@ Construo soluções de **IA generativa aplicadas a processos reais**: assistente
 | Experimento | Engenharia e avaliação |
 | :--- | :--- |
 | **[BANKING77-PTBR · NLP em dados de pesquisa](./ml-lab/banking77-ptbr/)** | **77 intenções**, 3 modelos comparados em validação, teste oficial com macro-F1 de **0,8964**. [Modelo publicado](https://huggingface.co/JOAOOALBERNAZ/banking77-ptbr-intent-v1) · [dashboard interativo de pesquisa](https://huggingface.co/spaces/JOAOOALBERNAZ/banking77-ptbr-research) · auditoria de sobreposição entre splits. |
-| **[ModelOps · Serving & Monitoring](./ml-lab/model-ops/)** | **FastAPI + Docker** servindo o modelo NLP publicado, contrato de inferência testado, diagnóstico de drift por PSI e Jensen-Shannon; [arquitetura e decisões técnicas](./ml-lab/docs/modelops-architecture-decisions.md). |
+| **[ModelOps · Serving & Monitoring](./ml-lab/model-ops/)** | **FastAPI + Docker**, testes de inferência e drift. **Robustez medida:** macro-F1 0,8964 → 0,8502 com erros de digitação simulados. [Relatório](./ml-lab/published/model-ops/ROBUSTNESS.md) · [arquitetura](./ml-lab/docs/modelops-architecture-decisions.md). |
 | **[AI Evaluation Lab · agentes e RAG](./ml-lab/ai-evaluation-lab/)** | **32 casos de regressão**, grounding, abstinência, recuperação e ataques simulados. [Resultados medidos](./ml-lab/published/ai-eval/). |
 | **[NLP · classificador de intenções](./ml-lab/nlp-intent-classifier/)** | Python, TF-IDF, Logistic Regression, macro-F1, validação cruzada; [modelo publicado no Hugging Face](https://huggingface.co/JOAOOALBERNAZ/intent-classifier-pt). |
 | **[Retrieval / RAG Benchmark](./ml-lab/retrieval-benchmark/)** | Comparação BM25 × TF-IDF, Recall@k e MRR@k, embeddings multilíngues opcionais; testes reproduzíveis. |

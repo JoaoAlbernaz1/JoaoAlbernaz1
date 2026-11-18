@@ -49,6 +49,12 @@ A execução automatizada reproduz a análise com as divisões públicas oficiai
 
 [ADR e proposta de operação, confiabilidade, segurança e rollback](../docs/modelops-architecture-decisions.md). O documento distingue funcionalidades implementadas de controles ainda necessários para produção.
 
+## Avaliações efetivamente executadas
+
+O pipeline [ModelOps GitHub Actions](../../.github/workflows/modelops-ci.yml) validou os testes da API, construiu a imagem Docker e mediu a mudança de distribuição com dados públicos reais: **PSI de comprimento 0,0177** e **divergência Jensen-Shannon das intenções previstas 0,0129 bits**. [Métricas e histogramas](../published/model-ops/).
+
+A [avaliação de robustez](../published/model-ops/ROBUSTNESS.md) submeteu **3.080 frases do teste oficial** a alterações artificiais. Remover acentos ou variar caixa/espaçamento não alterou as previsões, enquanto transpor duas letras reduziu macro-F1 de **0,8964 para 0,8502** e mudou **9,35% das previsões**. Essa perturbação pode alterar o significado e não é um benchmark de ataques reais.
+
 ## Engenharia de qualidade
 
 Os testes cobrem contrato da API, ordenação de previsões, formato de scores, falhas de modelo, validação das entradas, métricas de drift e relatórios. Existe CI independente do laboratório e uma verificação offline comum em `ml-lab`.

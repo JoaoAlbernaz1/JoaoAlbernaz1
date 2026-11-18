@@ -1,0 +1,59 @@
+name: Publish measured ML reliability reports to Hugging Face
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/publish-model-evaluation.yml"
+      - "ml-lab/published/model-ops/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  publish-evidence:
+    runs-on: ubuntu-latest
+    env:
+      HF_TOKEN: ${{ secrets.HF_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install Hub client
+        run: python -m pip install "huggingface-hub>=0.30,<2"
+      - name: Verify reports and publish to the existing model repository
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+          from huggingface_hub import HfApi
+
+          root = Path("ml-lab/published/model-ops")
+          files = ["README.md", "metrics.json", "ROBUSTNESS.md", "robustness.json"]
+          for name in files:
+              if not (root / name).is_file():
+                  raise FileNotFoundError(root / name)
+          monitor = json.loads((root / "metrics.json").read_text(encoding="utf-8"))
+          robustness = json.loads((root / "robustness.json").read_text(encoding="utf-8"))
+          assert monitor["context"]["reference_rows"] > 0
+          assert monitor["context"]["comparison_rows"] > 0
+          assert robustness["samples"] > 0
+          assert "NOT" not in str(robustness["samples"])
+          api = HfApi(token=os.environ["HF_TOKEN"])
+          repo = "JOAOOALBERNAZ/banking77-ptbr-intent-v1"
+          if api.whoami()["name"].lower() != "joaooalbernaz":
+              raise PermissionError("Unexpected publisher for research model")
+          api.upload_folder(
+              folder_path=str(root),
+              repo_id=repo,
+              repo_type="model",
+              path_in_repo="evaluation/modelops",
+              allow_patterns=files,
+              commit_message="Publish reproducible drift and text-robustness reports",
+          )
+          print("PUBLIC_EVALUATION_URL=https://huggingface.co/" + repo + "/tree/main/evaluation/modelops")
+          PY

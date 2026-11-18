@@ -84,6 +84,14 @@ Dados de pesquisa são utilizados para simular uma comparação de distribuiçõ
 | Alerta de drift sem rótulos reais | Não alegar queda de accuracy | Nota de interpretação no relatório |
 | Model update errado | Recuperar versão anterior de modelo e imagem | Processo de rollback **proposto**, não implementado |
 
+## Resultados de verificação
+
+O fluxo CI executou os testes da API e o build Docker. Sobre o corpus BANKING77-PTBR público, foram observados **PSI de comprimento 0,0177** e **Jensen-Shannon das classes previstas 0,0129 bits** ao comparar treino oficial e teste oficial. Esses indicadores não medem erros ou incidentes de produção.
+
+Em um teste de robustez realizado nas 3.080 frases do teste oficial, a invariância à remoção de acentos e variações de caixa/espaçamento foi observada (**0% de mudanças de previsão**), enquanto uma transposição artificial de letras provocou **9,35% de mudanças de previsão** e redução de macro-F1 de **0,8964 para 0,8502**. Trocar caracteres pode alterar o significado; por isso o experimento não valida robustez semântica geral.
+
+[Relatório de monitoramento](../published/model-ops/) · [Estudo de robustez](../published/model-ops/ROBUSTNESS.md).
+
 ## Evidências reproduzíveis
 
 - [Código da API](../model-ops/serving.py), [testes de contrato](../model-ops/tests/test_serving.py) e [Dockerfile](../model-ops/Dockerfile).
