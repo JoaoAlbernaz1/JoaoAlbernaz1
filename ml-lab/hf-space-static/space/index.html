@@ -70,13 +70,13 @@
   <nav class="nav" aria-label="Links de pesquisa">
     <div class="brand">INTENT / LAB<span style="color:#666">_</span></div>
     <div class="nav-right">
-      <a href="#metrics">Métricas</a><a href="#audit">Auditoria</a><a href="#method">Metodologia</a><a href="https://github.com/JoaoAlbernaz1/JoaoAlbernaz1/tree/main/ml-lab/banking77-ptbr" target="_blank" rel="noopener noreferrer">Código no GitHub ↗</a>
+      <a href="#metrics">Métricas</a><a href="#audit">Auditoria</a><a href="#confidence">Confiança</a><a href="#method">Metodologia</a><a href="https://github.com/JoaoAlbernaz1/JoaoAlbernaz1/tree/main/ml-lab/banking77-ptbr" target="_blank" rel="noopener noreferrer">Código no GitHub ↗</a>
     </div>
   </nav>
   <header class="hero">
     <div class="eyebrow">NLP ENGINEERING &nbsp;/&nbsp; EXPERIMENT 001</div>
     <h1>Do modelo<br>à evidência.</h1>
-    <div class="intro">Um classificador de 77 intenções, três pipelines comparados e uma auditoria sobre o que o teste realmente mede.</div>
+    <div class="intro">Um classificador de 77 intenções, três pipelines comparados, auditoria de dados e um segundo experimento sobre confiança e abstenção.</div>
     <div class="pillrow">
       <span class="pill">BANKING77-PTBR</span><span class="pill">TF-IDF + LinearSVC</span><span class="pill">77 classes</span><span class="pill">Resultados reproduzíveis</span>
     </div>
@@ -103,14 +103,32 @@
     </div>
     <div class="notice"><strong>O que mudou?</strong> Encontramos 166 textos distintos em comum entre treino e teste, representando 193 linhas do teste. A remoção apenas dessas linhas reduziu o macro-F1 observado em ~0,0054. A auditoria é pós-hoc; não exclui paráfrases ou outros tipos de contaminação.</div>
   </section>
+  <section id="confidence" aria-label="Confiança e abstenção de modelo">
+    <div class="sectionhead">
+      <h2>04 / Calibração &amp; risco</h2>
+      <div class="section-desc">Segundo experimento: outro estimador treinado em apenas 80% do treino oficial, com 20% reservados para calibrar. Não é o mesmo modelo dos resultados acima.</div>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="small">ECE / softmax sem calibração</span><strong>0,7844</strong><span class="note">Teste independente · 10 faixas</span></div>
+      <div class="stat"><span class="small">ECE / temperatura ajustada</span><strong>0,0134</strong><span class="note">Temperatura 0,1945</span></div>
+      <div class="stat"><span class="small">Acurácia entre casos aceitos</span><strong>91,92%</strong><span class="note">2.908 previsões aceitas</span></div>
+      <div class="stat"><span class="small">Cobertura da política</span><strong>94,42%</strong><span class="note">Limiar escolhido sem usar o teste</span></div>
+    </div>
+    <div class="notice"><strong>Por que importa?</strong> Pontuações altas não são garantias de acerto. Ao selecionar uma política de abstenção usando apenas dados de calibração, avaliamos cobertura e erro nas previsões aceitas. A temperatura e o limiar foram ajustados nos mesmos 2.001 exemplos: isso pode gerar otimismo e não constitui validação para produção.</div>
+    <div class="links">
+      <a href="https://huggingface.co/JOAOOALBERNAZ/banking77-ptbr-confidence-v1" target="_blank" rel="noopener noreferrer">Segundo modelo publicado ↗</a>
+      <a href="https://github.com/JoaoAlbernaz1/JoaoAlbernaz1/blob/main/ml-lab/docs/confidence-and-selective-prediction.md" target="_blank" rel="noopener noreferrer">Análise crítica da calibração ↗</a>
+      <a href="https://github.com/JoaoAlbernaz1/JoaoAlbernaz1/tree/main/ml-lab/published/confidence-evaluation" target="_blank" rel="noopener noreferrer">NLL, ECE, Brier e risco-cobertura ↗</a>
+    </div>
+  </section>
   <section id="method">
-    <div class="sectionhead"><h2>04 / Engenharia de avaliação</h2><div class="section-desc">Evidência do funcionamento interno da solução: dados, modelo, métricas e limitações.</div></div>
+    <div class="sectionhead"><h2>05 / Engenharia de avaliação</h2><div class="section-desc">Evidência do funcionamento interno da solução: dados, modelo, métricas e limitações.</div></div>
     <div class="method">
       <section><div class="eyebrow">01 / DATA</div><strong>Separação de dados</strong><p>Os candidatos foram comparados dentro de 20% do treino oficial. O teste foi reservado até o fim da seleção.</p></section>
       <section><div class="eyebrow">02 / MODEL</div><strong>Pipeline reproduzível</strong><p>Pré-processamento TF-IDF + estimador linear, persistência segura em skops e testes em GitHub Actions.</p></section>
       <section><div class="eyebrow">03 / AUDIT</div><strong>Interpretação crítica</strong><p>Macro-F1, erros por categoria e exame de textos repetidos para não confundir benchmark com desempenho em produção.</p></section>
     </div>
-    <div class="sectionhead"><h2>05 / Evidências públicas</h2></div>
+    <div class="sectionhead"><h2>06 / Evidências públicas</h2></div>
     <div class="links">
       <a href="https://huggingface.co/JOAOOALBERNAZ/banking77-ptbr-intent-v1" target="_blank" rel="noopener noreferrer">Modelo no Hugging Face ↗</a>
       <a href="https://github.com/JoaoAlbernaz1/JoaoAlbernaz1/blob/main/ml-lab/docs/banking77-ptbr-results.md" target="_blank" rel="noopener noreferrer">Relatório auditado ↗</a>
