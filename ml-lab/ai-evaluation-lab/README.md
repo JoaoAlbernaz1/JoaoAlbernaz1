@@ -34,6 +34,23 @@ python -m pytest -q ml-lab/ai-evaluation-lab/tests
 
 Para avaliar um modelo externo, escolha `--adapter openai-compatible` e forneça variáveis de ambiente `LLM_API_KEY`, `LLM_MODEL` e `LLM_ENDPOINT` via ambiente privado. Esse caminho realiza chamadas reais e pode ter custo; não é executado automaticamente. A baseline offline exige **zero** credenciais.
 
+## Comparar experimentos e identificar regressões
+
+O utilitário [compare_reports.py](./compare_reports.py) compara **dois relatórios JSON já produzidos pelo avaliador**, com os mesmos casos, assistente, dataset e top-k. É útil para entender se uma mudança de recuperação melhora Hit@k mas mantém a taxa de acerto das respostas — sem repetir chamadas de API e sem expor os textos das perguntas na comparação.
+
+A partir da raiz do repositório, usando os relatórios públicos de exemplo:
+
+```bash
+python ml-lab/ai-evaluation-lab/compare_reports.py \
+  --before ml-lab/published/ai-eval/word.json \
+  --after ml-lab/published/ai-eval/char.json \
+  --output outputs/ai-eval/comparison.md
+```
+
+O Markdown gerado inclui diferenças de métricas e **IDs de casos** que mudaram de estado (melhoras e regressões). Entradas incompatíveis ou inválidas são rejeitadas; o arquivo gerado não copia perguntas nem respostas, embora os JSON de entrada possam contê-las.
+
+**Importante:** a ferramenta faz uma comparação descritiva pareada, não uma análise estatística ou certificação de qualidade de LLM. Métricas de tempo, sujeitas à variação da máquina, não são usadas para declarar melhoria/regressão. Não publique relatórios de entrada que contenham dados sensíveis.
+
 ## Estrutura e integridade
 
 - `evaluator.py` contém loader validado, pipeline de recuperação, adapter extrativo, adapter LLM opcional e relatórios por caso.
