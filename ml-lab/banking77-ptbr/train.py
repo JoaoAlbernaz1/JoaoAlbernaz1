@@ -77,6 +77,20 @@ def experiment(train, test):
     final.fit(train["frase"], train["rotulo"])
     predicted = final.predict(test["frase"])
     errors = Counter((a, b) for a, b in zip(test["rotulo"], predicted) if a != b)
+    seen_train = set(train["frase"].str.casefold())
+    seen_flags = test["frase"].str.casefold().isin(seen_train).to_numpy()
+    no_overlap_true = test.loc[~seen_flags, "rotulo"]
+    no_overlap_predictions = predicted[~seen_flags]
+    if not len(no_overlap_true):
+        raise ValueError("All test records overlap training data")
+    sensitivity = {
+        "rows": int(len(no_overlap_true)),
+        "excluded_overlapping_test_rows": int(seen_flags.sum()),
+        "accuracy": float(accuracy_score(no_overlap_true, no_overlap_predictions)),
+        "macro_f1": float(f1_score(no_overlap_true, no_overlap_predictions, average="macro", zero_division=0)),
+        "weighted_f1": float(f1_score(no_overlap_true, no_overlap_predictions, average="weighted", zero_division=0)),
+        "method": "Post-hoc sensitivity audit of existing predictions excluding exact train duplicates (casefold); no test-based model selection.",
+    }
     metrics = {
         "source": DATASET, "revision": REVISION, "license": "CC BY 4.0",
         "nature": "researcher-reviewed translations of banking messages, NOT native Portuguese production logs",
@@ -86,6 +100,7 @@ def experiment(train, test):
         "overlap_train_test_text": len(set(train["frase"].str.casefold()) & set(test["frase"].str.casefold())),
         "protocol": "compare models on stratified 20 percent of OFFICIAL train; refit winner on full train; evaluate official test once",
         "seed": SEED, "validation": comparisons, "selected": winner,
+        "test_no_exact_overlap": sensitivity,
         "test": {
             "accuracy": float(accuracy_score(test["rotulo"], predicted)),
             "macro_f1": float(f1_score(test["rotulo"], predicted, average="macro", zero_division=0)),
@@ -131,6 +146,7 @@ Treinado no BANKING77-PTBR, corpus de pesquisa **traduzido e revisado** do ingl�
 - **Treino / teste oficiais:** %d / %d exemplos
 - **Classes:** %d
 - **Interseção textual entre treino e teste:** %d
+- **Teste sem textos coincidentes com treino:** %d linhas; macro-F1 %.4f; accuracy %.4f
 
 ## Validação (somente dentro do treino oficial)
 
@@ -138,7 +154,7 @@ Treinado no BANKING77-PTBR, corpus de pesquisa **traduzido e revisado** do ingl�
 |:--|--:|--:|
 %s
 
-O modelo foi selecionado exclusivamente pelo macro-F1 de validação (split 80/20 estratificado, seed 42), reajustado no treino integral e avaliado no teste oficial uma única vez.
+O modelo foi selecionado exclusivamente pelo macro-F1 de validação (split 80/20 estratificado, seed 42), reajustado no treino integral e avaliado no teste oficial uma única vez. A análise sem sobreposição é uma auditoria pós-hoc dessas mesmas previsões, não uma segunda validação independente.
 
 ## Reprodução
 
@@ -151,7 +167,9 @@ Artefatos: model.skops, metrics.json e este cartão. A modelagem e as métricas 
 BANKING77-PTBR: https://huggingface.co/datasets/c2d-usp/banking77-pt-br (CC BY 4.0). Dimant et al. (2025), Centro de Ciência de Dados Poli/USP. Corpus original: Casanueva et al. (2020), Efficient Intent Detection with Dual Sentence Encoders.
 """ % (
         m["test"]["macro_f1"], m["test"]["accuracy"], m["test"]["weighted_f1"],
-        m["selected"], m["n_train"], m["n_test"], m["classes"], m["overlap_train_test_text"], table
+        m["selected"], m["n_train"], m["n_test"], m["classes"], m["overlap_train_test_text"],
+        m["test_no_exact_overlap"]["rows"], m["test_no_exact_overlap"]["macro_f1"],
+        m["test_no_exact_overlap"]["accuracy"], table
     )
 
 
