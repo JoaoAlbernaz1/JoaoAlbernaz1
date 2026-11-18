@@ -14,7 +14,7 @@ O limiar de abstenção é calculado na divisão de calibração usando limite i
     python -m pytest -q ml-lab/confidence-evaluation/tests
     python ml-lab/confidence-evaluation/confidence.py --output-dir outputs/confidence-evaluation
 
-O experimento não exige GPU ou serviços de inferência pagos. Saídas: model.skops, calibration.json, metrics.json e README.md gerado com números medidos. O workflow de CI publica os artefatos em um novo repositório de modelo Hugging Face. Nenhuma métrica é declarada antes da execução.
+O experimento não exige GPU ou serviços de inferência pagos. Saídas: model.skops, calibration.json, metrics.json e README.md gerado com números medidos. O workflow de CI publica os artefatos em um novo repositório de modelo Hugging Face. Execução concluída: [resultados medidos](../published/confidence-evaluation/) e [modelo publicado no Hugging Face](https://huggingface.co/JOAOOALBERNAZ/banking77-ptbr-confidence-v1). A temperatura ajustada foi **0,1945**; no teste oficial, ECE caiu de **0,7844 para 0,0134**, enquanto a política de abstenção cobriu **94,42%** das perguntas e acertou **91,92%** das previsões aceitas. [Análise técnica](../docs/confidence-and-selective-prediction.md).
 
 **Limitações:** o softmax de margens de SVM não é, por si só, uma probabilidade confiável; a escala por temperatura exige validação externa. O conjunto de calibração é reutilizado para escolher o limiar, o que pode produzir otimismo. A amostra é traduzida, de domínio financeiro, e não demonstra desempenho em produção. O modelo com 80% dos dados não deve ser apresentado como melhoria direta de accuracy em relação ao modelo v1 treinado em todo o treino.
 

@@ -7,12 +7,17 @@ Implementações práticas, experimentos reproduzíveis e evidências verificáv
 | Projeto | Questão investigada | Evidência disponível | Situação |
 |:--|:--|:--|:--|
 | [BANKING77-PTBR · dados públicos revisados](./banking77-ptbr/) | Qual baseline de NLP funciona melhor para 77 intenções financeiras em português? | 3 baselines, seleção por macro-F1 em treino, teste oficial, auditoria de duplicatas | **Modelo publicado no Hugging Face** · macro-F1 0,8964 no teste |
+| [Confidence Evaluation · calibração e abstenção](./confidence-evaluation/) | A confiança de um classificador de 77 classes é útil para selecionar quais previsões aceitar? | Temperatura ajustada em holdout do treino, NLL, ECE, Brier e risco-cobertura | **Modelo publicado no Hugging Face** · [ECE 0,0134 e cobertura 94,42%](./published/confidence-evaluation/) no teste |
 | [ModelOps · serving e drift](./model-ops/) | Como servir e monitorar tecnicamente um classificador publicado? | API FastAPI, contêiner, testes de contrato e [arquitetura](./docs/modelops-architecture-decisions.md) | **CI concluído** · [mudança de distribuição em corpus público](./published/model-ops/) e [robustez textual medida](./published/model-ops/ROBUSTNESS.md) |
 | [AI Evaluation Lab](./ai-evaluation-lab/) | Recuperação correta implica resposta correta? | 32 testes, dois retrievers e [métricas reproduzidas](./published/ai-eval/) | **Benchmark e CI concluídos** · 100% Hit@3 com char TF-IDF, mas só 36% acerto lexical na resposta |
 | [NLP · classificação de intenção](./nlp-intent-classifier/) | Um classificador TF-IDF + regressão logística reconhece intenções de mensagens em português? | Código, dados sintéticos declarados, testes, validação estratificada, exportação segura | **Treinado e publicado no Hugging Face** · avaliação sintética |
 | [Retrieval / RAG benchmark](./retrieval-benchmark/) | BM25 ou TF-IDF recupera melhor o contexto relevante? | Corpus sintético, relevância anotada, Recall@k e MRR@k, testes | Implementação disponível · executar benchmark |
 | [Kaggle Titanic](./kaggle-titanic/) | Como criar uma baseline tabular sem vazamento de dados? | Pipeline, cross-validation, notebook e geração de submission.csv | **Submissão enviada** (ref. 58521092) · resultado oficial não verificado |
 | [Artigo técnico](./docs/avaliacao-reprodutivel-de-ml.md) | O que constitui um experimento confiável de ML? | Texto metodológico publicado neste repositório | Disponível |
+
+## Calibração e avaliação de risco
+
+- [Confidence Evaluation](./confidence-evaluation/) — [modelo treinado e publicado](https://huggingface.co/JOAOOALBERNAZ/banking77-ptbr-confidence-v1) com treinamento, calibração e teste separados. Redução do ECE de **0,7844 para 0,0134** e precisão de **91,92% nas previsões aceitas**, cobrindo **94,42%** do teste. Essa política não é garantia fora da amostra; [análise crítica](./docs/confidence-and-selective-prediction.md).
 
 ## Engenharia de inferência e observabilidade
 
