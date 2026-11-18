@@ -40,7 +40,7 @@
 
 <p align="center"><a href="https://www.linkedin.com/in/joaooalbernaz/">LinkedIn</a> &nbsp;·&nbsp; <a href="https://huggingface.co/JOAOOALBERNAZ">Hugging Face</a> &nbsp;·&nbsp; <a href="mailto:joaovictoralbernaz@gmail.com">E-mail</a></p>
 
-Desenvolvo soluções de **Machine Learning e IA aplicada**, do treinamento e avaliação de modelos à construção de APIs, automações e sistemas. Meu foco é transformar experimentos em software reproduzível, testável e útil.
+Desenvolvo **Machine Learning e IA aplicada**, do treinamento de modelos a produtos com APIs, automações e testes. Gosto de transformar experimentos em software reproduzível, mensurável e útil.
 
 ### Projetos selecionados
 
@@ -62,33 +62,40 @@ API em **FastAPI**, Docker, testes automatizados e análise de mudança de distr
 
 ### Produtos e sistemas
 
-```aura width=860 height=250
-(function() {
- const projects = [
-  {id:'01 / SAAS',name:'SeuConvite IA',detail:'Plataforma de convites e sites de eventos por subdomínio.',stack:'NEXT.JS / TYPESCRIPT',status:'EM DESENVOLVIMENTO'},
-  {id:'02 / APLICATIVO',name:'UniMove',detail:'Caronas universitárias com aplicativo, API e testes.',stack:'EXPO / NESTJS',status:'PROJETO PÚBLICO'},
-  {id:'03 / ASSISTENTE',name:'Selena',detail:'Atendimento legislativo com IA e integrações.',stack:'LLMS / N8N / APIS',status:'PROJETO PRIVADO'}
+```aura width=860 height=377
+(function(){
+ const projects=[
+  {num:'01',kind:'SAAS / WEB',name:'SeuConvite IA',description:'Plataforma de convites com arquitetura multi-tenant e subdomínios.',tech:'NEXT.JS   /   TYPESCRIPT',status:'EM DESENVOLVIMENTO'},
+  {num:'02',kind:'MOBILE / API',name:'UniMove',description:'Aplicativo de caronas universitárias com API, acesso e testes.',tech:'REACT NATIVE   /   NESTJS',status:'CÓDIGO PÚBLICO'},
+  {num:'03',kind:'LLM / AUTOMAÇÃO',name:'Selena',description:'Assistente de atendimento legislativo integrado ao WhatsApp.',tech:'LLMS   /   N8N   /   APIS',status:'PROJETO PRIVADO'},
+  {num:'04',kind:'IA / DADOS',name:'Finanças Bot',description:'Transforma mensagens financeiras em registros estruturados e validados.',tech:'CLAUDE   /   POSTGRESQL',status:'PROJETO PRIVADO'}
  ];
  return (
-  <div style={{display:'flex',position:'relative',width:'100%',height:'100%',flexDirection:'column',fontFamily:'Inter',background:'#0b0b0b',border:'1px solid rgba(255,255,255,.14)',borderRadius:17,overflow:'hidden'}}>
-   <style>{'@keyframes product-flow{0%,100%{transform:translateX(-65px);opacity:.13}50%{transform:translateX(55px);opacity:.4}} #products-halo{animation:product-flow 12s ease-in-out infinite}'}</style>
-   <svg width="860" height="250" style={{position:'absolute',left:0,top:0}}>
-    <defs><radialGradient id="products-gradient"><stop offset="0%" stopColor="#dadada" stopOpacity=".3"/><stop offset="100%" stopColor="#dadada" stopOpacity="0"/></radialGradient></defs>
-    <ellipse id="products-halo" cx="520" cy="132" rx="325" ry="195" fill="url(#products-gradient)"/>
-    <path d="M35 52H825" stroke="#ffffff" strokeOpacity=".09" strokeWidth="1"/>
+  <div style={{position:'relative',display:'flex',flexDirection:'column',width:'100%',height:'100%',overflow:'hidden',borderRadius:17,background:'#0b0b0b',border:'1px solid rgba(255,255,255,.15)',fontFamily:'Inter'}}>
+   <style>{'@keyframes board-glow {0%,100%{transform:translateX(-70px);opacity:.17}50%{transform:translateX(70px);opacity:.46}} #board-light{animation:board-glow 13s ease-in-out infinite} @keyframes board-line {0%,100%{opacity:.12}50%{opacity:.40}} #board-divider{animation:board-line 7s ease-in-out infinite}'}</style>
+   <svg width="860" height="377" style={{position:'absolute',left:0,top:0}}>
+    <defs><radialGradient id="project-board-halo"><stop offset="0%" stopColor="#dedede" stopOpacity=".28"/><stop offset="100%" stopColor="#dedede" stopOpacity="0"/></radialGradient></defs>
+    <ellipse id="board-light" cx="720" cy="150" rx="310" ry="240" fill="url(#project-board-halo)"/>
+    <path id="board-divider" d="M24 50H836" stroke="#eeeeee" strokeOpacity=".17" strokeWidth="1"/>
    </svg>
-   <div style={{display:'flex',position:'relative',justifyContent:'space-between',alignItems:'center',padding:'17px 25px 12px 25px'}}>
-    <span style={{display:'flex',fontSize:10,fontWeight:700,letterSpacing:'2px',color:'#f2f2f2'}}>SELECTED BUILDS</span>
-    <span style={{display:'flex',fontSize:10,letterSpacing:'1.3px',color:'#8f8f8f'}}>PRODUTOS / SISTEMAS</span>
+   <div style={{position:'relative',display:'flex',alignItems:'center',justifyContent:'space-between',padding:'16px 24px 12px 24px'}}>
+    <span style={{display:'flex',color:'#efefef',fontSize:10,fontWeight:700,letterSpacing:'2.1px'}}>SELECTED BUILDS</span>
+    <span style={{display:'flex',color:'#989898',fontSize:10,letterSpacing:'1px'}}>04 PROJETOS   /   02 PÚBLICOS</span>
    </div>
-   <div style={{display:'flex',position:'relative',gap:12,padding:'14px 24px 22px 24px',width:'100%'}}>
-    {projects.map(function(p){return (
-     <div key={p.id} style={{display:'flex',flexDirection:'column',width:258,minHeight:153,padding:'15px 16px',border:'1px solid rgba(255,255,255,.13)',borderRadius:10,background:'rgba(15,15,15,.68)'}}>
-      <span style={{display:'flex',fontSize:9,letterSpacing:'1.5px',fontWeight:700,color:'#bdbdbd'}}>{p.id}</span>
-      <span style={{display:'flex',fontSize:23,fontWeight:750,letterSpacing:'-.5px',lineHeight:1.2,color:'#ffffff',marginTop:10}}>{p.name}</span>
-      <span style={{display:'flex',fontSize:11,color:'#c3c3c3',lineHeight:1.45,marginTop:8,minHeight:43}}>{p.detail}</span>
-      <span style={{display:'flex',fontSize:9,letterSpacing:'.4px',color:'#a9a9a9',marginTop:6}}>{p.stack}</span>
-      <span style={{display:'flex',fontSize:9,color:'#777777',marginTop:4}}>{p.status}</span>
+   <div style={{position:'relative',display:'flex',flexDirection:'column',gap:11,padding:'14px 24px 21px 24px'}}>
+    {[projects.slice(0,2),projects.slice(2,4)].map(function(row,i){return (
+     <div key={i} style={{display:'flex',gap:12,width:'100%'}}>
+      {row.map(function(p){return (
+       <div key={p.num} style={{display:'flex',flexDirection:'column',width:400,height:142,padding:'13px 17px 12px 17px',boxSizing:'border-box',borderRadius:11,background:'rgba(14,14,14,.82)',border:'1px solid rgba(255,255,255,.14)'}}>
+        <div style={{display:'flex',justifyContent:'space-between',alignItems:'center'}}>
+         <span style={{display:'flex',color:'#d3d3d3',fontSize:9,fontWeight:700,letterSpacing:'1px'}}>{p.num}  /  {p.kind}</span>
+         <span style={{display:'flex',color:'#858585',fontSize:9,letterSpacing:'.5px'}}>{p.status}</span>
+        </div>
+        <span style={{display:'flex',marginTop:8,fontSize:23,fontWeight:750,letterSpacing:'-.65px',lineHeight:1.15,color:'#f8f8f8'}}>{p.name}</span>
+        <span style={{display:'flex',fontSize:11,lineHeight:1.45,color:'#c9c9c9',marginTop:7,minHeight:31}}>{p.description}</span>
+        <span style={{display:'flex',fontSize:9,letterSpacing:'.65px',color:'#9e9e9e',marginTop:6}}>{p.tech}</span>
+       </div>
+      );})}
      </div>
     );})}
    </div>
@@ -97,9 +104,7 @@ API em **FastAPI**, Docker, testes automatizados e análise de mudança de distr
 })()
 ```
 
-[**SeuConvite IA**](https://github.com/JoaoAlbernaz1/seuconviteia) · SaaS multi-tenant de sites de convite, com roteamento por subdomínio. **Em desenvolvimento**.  
-[**UniMove**](https://github.com/JoaoAlbernaz1/UniMove) · aplicativo e API para caronas universitárias, com autenticação e testes.  
-**Selena** · assistente legislativa com integrações de IA e n8n. Projeto privado; código e dados não são públicos.
+[**SeuConvite IA · código**](https://github.com/JoaoAlbernaz1/seuconviteia) · [**UniMove · código**](https://github.com/JoaoAlbernaz1/UniMove) · **Selena** e **Finanças Bot** (projetos privados).
 
 ### Publicações e pesquisa
 
