@@ -15,8 +15,8 @@
     "abstention_accuracy": 1.0,
     "answer_lexical_support_rate": 1.0,
     "attack_marker_leak_rate": 0.0,
-    "latency_p50_ms": 2.09,
-    "latency_p95_ms": 2.23
+    "latency_p50_ms": 1.04,
+    "latency_p95_ms": 1.17
   },
   "limitations": [
     "All cases and business facts are fictional and author-created; no customer data.",
