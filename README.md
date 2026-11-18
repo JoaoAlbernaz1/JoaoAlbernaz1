@@ -19,6 +19,8 @@ Construo soluções de **IA generativa aplicadas a processos reais**: assistente
 | **[Kaggle Titanic · baseline](./ml-lab/kaggle-titanic/)** | Pipeline tabular, validação estratificada, notebook e gerador de CSV para submissão. |
 | **[Artigo técnico · avaliação de ML](./ml-lab/docs/avaliacao-reprodutivel-de-ml.md)** | Discussão sobre leakage, métricas, experimentos e limites de avaliação. |
 
+**Modelo realmente treinado:** [artefato e cartão técnico](./ml-lab/published/intent-v1/) · [métricas medidas](./ml-lab/published/intent-v1/metrics.json) · [retrieval benchmark](./ml-lab/published/retrieval-v1/metrics.json). *Resultados sobre dados sintéticos, não validação em produção.*
+
 <sub>Laboratório aberto com dados didáticos sintéticos. Modelos no Hugging Face e submissões ao Kaggle serão vinculados apenas após publicação efetiva. [Explorar o ML & Research Lab](./ml-lab/).</sub>
 
 ### Experiência prática com IA

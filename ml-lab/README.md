@@ -11,6 +11,12 @@ Este laboratório reúne implementações educacionais e protocolos de pesquisa.
 | [Kaggle Titanic](./kaggle-titanic/) | Como criar uma baseline tabular sem vazamento de dados? | Pipeline, cross-validation, notebook e geração de submission.csv | Preparado para submissão · não é participação comprovada |
 | [Artigo técnico](./docs/avaliacao-reprodutivel-de-ml.md) | O que constitui um experimento confiável de ML? | Texto metodológico publicado neste repositório | Disponível |
 
+## Artefatos treinados e métricas publicadas no GitHub
+
+A execução automática de treinamento foi concluída e gerou um [modelo scikit-learn serializado](./published/intent-v1/model.skops), [cartão técnico](./published/intent-v1/README.md), [métricas do classificador](./published/intent-v1/metrics.json) e [métricas de recuperação](./published/retrieval-v1/metrics.json). **Os dados são sintéticos e os resultados não representam desempenho real em produção.**
+
+Publicações no Hugging Face e submissões ao Kaggle **ainda exigem autenticação nessas plataformas**. Veja o [procedimento de publicação](./PUBLISHING.md).
+
 ## Como executar
 
 Requisitos: Python 3.11+ (preferencialmente ambiente virtual).
