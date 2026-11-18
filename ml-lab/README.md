@@ -47,6 +47,19 @@ A execução automática de treinamento foi concluída e gerou um [modelo scikit
 
 **Hugging Face:** [JOAOOALBERNAZ/intent-classifier-pt](https://huggingface.co/JOAOOALBERNAZ/intent-classifier-pt). **Kaggle:** [submissão Titanic confirmada](https://github.com/JoaoAlbernaz1/JoaoAlbernaz1/actions/runs/44368002721) (ref. 58521092), com acurácia local em 5 folds de **84,06% ± 1,59 p.p.**. Esse valor não corresponde ao score da competição.
 
+## Kit aberto para avaliar assistentes de IA
+
+O [AI Evaluation Lab](./ai-evaluation-lab/) permite executar um benchmark offline sem credenciais e comparar duas execuções por métricas e IDs de casos. Um exemplo mínimo de inspeção de regressões:
+
+```bash
+python ml-lab/ai-evaluation-lab/compare_reports.py \
+  --before ml-lab/published/ai-eval/word.json \
+  --after ml-lab/published/ai-eval/char.json \
+  --output outputs/ai-eval/comparison.md
+```
+
+A ferramenta não envia dados para serviços externos nem escreve perguntas ou respostas no relatório comparativo. O benchmark usa documentos fictícios; o objetivo é mostrar como investigar falhas, **não** apresentar um produto validado em produção. Para colaboração técnica, consulte [CONTRIBUTING.md](../CONTRIBUTING.md).
+
 ## Como executar
 
 Requisitos: Python 3.11+ (preferencialmente ambiente virtual).
