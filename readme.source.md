@@ -60,19 +60,54 @@ API em **FastAPI**, Docker, testes automatizados e análise de mudança de distr
 **32 casos de regressão** sobre recuperação de contexto, respostas sem evidência, abstenção e ataques simulados. Baseline extrativa com corpus fictício; os testes não representam desempenho de um LLM real.  
 [Código e casos](./ml-lab/ai-evaluation-lab/) · [Resultados medidos](./ml-lab/published/ai-eval/)
 
-### Publicações e participações
+### Produtos e sistemas
 
-**Hugging Face** · [Modelos publicados](https://huggingface.co/JOAOOALBERNAZ) · [Dashboard interativo de pesquisa](https://huggingface.co/spaces/JOAOOALBERNAZ/banking77-ptbr-research)
+```aura width=860 height=250
+(function() {
+ const projects = [
+  {id:'01 / SAAS',name:'SeuConvite IA',detail:'Plataforma de convites e sites de eventos por subdomínio.',stack:'NEXT.JS / TYPESCRIPT',status:'EM DESENVOLVIMENTO'},
+  {id:'02 / APLICATIVO',name:'UniMove',detail:'Caronas universitárias com aplicativo, API e testes.',stack:'EXPO / NESTJS',status:'PROJETO PÚBLICO'},
+  {id:'03 / ASSISTENTE',name:'Selena',detail:'Atendimento legislativo com IA e integrações.',stack:'LLMS / N8N / APIS',status:'PROJETO PRIVADO'}
+ ];
+ return (
+  <div style={{display:'flex',position:'relative',width:'100%',height:'100%',flexDirection:'column',fontFamily:'Inter',background:'#0b0b0b',border:'1px solid rgba(255,255,255,.14)',borderRadius:17,overflow:'hidden'}}>
+   <style>{'@keyframes product-flow{0%,100%{transform:translateX(-65px);opacity:.13}50%{transform:translateX(55px);opacity:.4}} #products-halo{animation:product-flow 12s ease-in-out infinite}'}</style>
+   <svg width="860" height="250" style={{position:'absolute',left:0,top:0}}>
+    <defs><radialGradient id="products-gradient"><stop offset="0%" stopColor="#dadada" stopOpacity=".3"/><stop offset="100%" stopColor="#dadada" stopOpacity="0"/></radialGradient></defs>
+    <ellipse id="products-halo" cx="520" cy="132" rx="325" ry="195" fill="url(#products-gradient)"/>
+    <path d="M35 52H825" stroke="#ffffff" strokeOpacity=".09" strokeWidth="1"/>
+   </svg>
+   <div style={{display:'flex',position:'relative',justifyContent:'space-between',alignItems:'center',padding:'17px 25px 12px 25px'}}>
+    <span style={{display:'flex',fontSize:10,fontWeight:700,letterSpacing:'2px',color:'#f2f2f2'}}>SELECTED BUILDS</span>
+    <span style={{display:'flex',fontSize:10,letterSpacing:'1.3px',color:'#8f8f8f'}}>PRODUTOS / SISTEMAS</span>
+   </div>
+   <div style={{display:'flex',position:'relative',gap:12,padding:'14px 24px 22px 24px',width:'100%'}}>
+    {projects.map(function(p){return (
+     <div key={p.id} style={{display:'flex',flexDirection:'column',width:258,minHeight:153,padding:'15px 16px',border:'1px solid rgba(255,255,255,.13)',borderRadius:10,background:'rgba(15,15,15,.68)'}}>
+      <span style={{display:'flex',fontSize:9,letterSpacing:'1.5px',fontWeight:700,color:'#bdbdbd'}}>{p.id}</span>
+      <span style={{display:'flex',fontSize:23,fontWeight:750,letterSpacing:'-.5px',lineHeight:1.2,color:'#ffffff',marginTop:10}}>{p.name}</span>
+      <span style={{display:'flex',fontSize:11,color:'#c3c3c3',lineHeight:1.45,marginTop:8,minHeight:43}}>{p.detail}</span>
+      <span style={{display:'flex',fontSize:9,letterSpacing:'.4px',color:'#a9a9a9',marginTop:6}}>{p.stack}</span>
+      <span style={{display:'flex',fontSize:9,color:'#777777',marginTop:4}}>{p.status}</span>
+     </div>
+    );})}
+   </div>
+  </div>
+ );
+})()
+```
 
-**Kaggle** · [Titanic — Machine Learning from Disaster](https://www.kaggle.com/competitions/titanic) · [Submissão #58521092 confirmada](https://github.com/JoaoAlbernaz1/JoaoAlbernaz1/actions/runs/44368002721) · [Notebook e código](./ml-lab/kaggle-titanic/). **84,06% de accuracy na validação local** — não é a nota oficial do Kaggle.
+[**SeuConvite IA**](https://github.com/JoaoAlbernaz1/seuconviteia) · SaaS multi-tenant de sites de convite, com roteamento por subdomínio. **Em desenvolvimento**.  
+[**UniMove**](https://github.com/JoaoAlbernaz1/UniMove) · aplicativo e API para caronas universitárias, com autenticação e testes.  
+**Selena** · assistente legislativa com integrações de IA e n8n. Projeto privado; código e dados não são públicos.
 
-**Pesquisa** · [Calibração e risco](./ml-lab/docs/confidence-and-selective-prediction.md) · [RAG: recuperar não é responder](./ml-lab/docs/experimental-note-nlp-rag-2026.md)
+### Publicações e pesquisa
 
-### Engenharia aplicada
+**Hugging Face** · [Modelos publicados](https://huggingface.co/JOAOOALBERNAZ) · [Dashboard de pesquisa](https://huggingface.co/spaces/JOAOOALBERNAZ/banking77-ptbr-research)  
+**Kaggle** · [Titanic, submissão confirmada #58521092](https://github.com/JoaoAlbernaz1/JoaoAlbernaz1/actions/runs/44368002721) · [Notebook](./ml-lab/kaggle-titanic/) *(84,06% de acurácia na validação local, não no leaderboard)*  
+**Artigos** · [Calibração e risco](./ml-lab/docs/confidence-and-selective-prediction.md) · [Avaliação de RAG](./ml-lab/docs/experimental-note-nlp-rag-2026.md)
 
-- **Selena · assistente legislativa (projeto privado)** — fluxos de atendimento via WhatsApp com LLMs, n8n, APIs e acompanhamento de qualidade. Código e dados internos não são públicos.
-- **[UniMove · plataforma de caronas universitárias](https://github.com/JoaoAlbernaz1/UniMove)** — aplicação e API com autenticação, controles administrativos, auditoria e testes.
+**Stack:** Python · scikit-learn · FastAPI · Docker · TypeScript · Next.js · React Native · PostgreSQL · n8n · APIs de LLM.
 
-**Tecnologias:** Python · scikit-learn · FastAPI · Docker · GitHub Actions · PostgreSQL · TypeScript · React · n8n · APIs de LLM.
+<sub>[Todos os experimentos e métricas](./ml-lab/) · [Contato](mailto:joaovictoralbernaz@gmail.com)</sub>
 
-<sub>Resultados apresentados com seus respectivos protocolos e limitações. [Explorar o ML & Research Lab](./ml-lab/) · [Contato](mailto:joaovictoralbernaz@gmail.com)</sub>
