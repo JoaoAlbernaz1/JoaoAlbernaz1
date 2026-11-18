@@ -1,0 +1,90 @@
+name: Compete in Kaggle Disaster Tweets NLP
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/kaggle-disaster-tweets.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: kaggle-disaster-tweets-first-submission
+  cancel-in-progress: false
+
+jobs:
+  run-and-submit:
+    runs-on: ubuntu-latest
+    env:
+      KAGGLE_API_TOKEN: ${{ secrets.KAGGLE_API_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: ml-lab/requirements.txt
+      - name: Verify authenticated account
+        run: |
+          if [ -z "$KAGGLE_API_TOKEN" ]; then
+            echo "::error::Kaggle token missing; cannot submit."
+            exit 1
+          fi
+      - name: Install dependencies
+        run: |
+          python -m pip install -r ml-lab/requirements.txt
+          python -m pip install kaggle six
+      - name: Test experiment
+        run: python -m pytest -q ml-lab/kaggle-disaster-tweets/tests
+      - name: Fetch official public competition data
+        shell: bash
+        run: |
+          mkdir -p /tmp/disaster-tweets
+          kaggle competitions download nlp-getting-started -p /tmp/disaster-tweets --unzip
+          test -s /tmp/disaster-tweets/train.csv
+          test -s /tmp/disaster-tweets/test.csv
+      - name: Train and evaluate on training data
+        run: |
+          python ml-lab/kaggle-disaster-tweets/train.py \
+            --train /tmp/disaster-tweets/train.csv \
+            --test /tmp/disaster-tweets/test.csv \
+            --output-dir outputs/disaster-tweets
+      - name: Submit one baseline
+        run: |
+          kaggle competitions submit nlp-getting-started \
+            -f outputs/disaster-tweets/submission.csv \
+            -m "Reproducible stratified F1 NLP experiment by JoaoAlbernaz1" \
+            | tee outputs/disaster-tweets/submission-log.txt
+      - name: Publish comparison, citation and proof
+        shell: bash
+        run: |
+          mkdir -p ml-lab/published/kaggle-disaster-tweets
+          cp outputs/disaster-tweets/metrics.json ml-lab/published/kaggle-disaster-tweets/metrics.json
+          cp outputs/disaster-tweets/README.md ml-lab/published/kaggle-disaster-tweets/README.md
+          cp outputs/disaster-tweets/submission-log.txt ml-lab/published/kaggle-disaster-tweets/submission-log.txt
+          python - <<'PY'
+          from pathlib import Path
+          import os
+          root = Path("ml-lab/published/kaggle-disaster-tweets")
+          readme = root / "README.md"
+          source = readme.read_text(encoding="utf-8")
+          source += "\n## Submissão realmente enviada\n\n"
+          source += "[Execução pública do GitHub Actions](https://github.com/" + os.environ["GITHUB_REPOSITORY"] + "/actions/runs/" + os.environ["GITHUB_RUN_ID"] + "). "
+          source += "Confira a referência oficial gerada no [log da submissão](./submission-log.txt). O score oficial do Kaggle não está incluído nas métricas de validação.\n"
+          readme.write_text(source, encoding="utf-8")
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add ml-lab/published/kaggle-disaster-tweets/
+          if git diff --cached --quiet; then
+            echo "Experiment already published."
+            exit 0
+          fi
+          git commit -m "research(kaggle): publish NLP CV metrics and proof of one competition submission [skip ci]"
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main
