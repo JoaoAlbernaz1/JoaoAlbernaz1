@@ -1,0 +1,44 @@
+{
+  "dataset": "c2d-usp/banking77-pt-br",
+  "revision": "85f51c4",
+  "model": "JOAOOALBERNAZ/banking77-ptbr-intent-v1",
+  "split": "official test (nonempty texts and labels)",
+  "samples": 3080,
+  "baseline": {
+    "accuracy": 0.8964285714285715,
+    "macro_f1": 0.8964207199537766
+  },
+  "perturbations": {
+    "accent_removed": {
+      "accuracy": 0.8964285714285715,
+      "macro_f1": 0.8964207199537766,
+      "macro_f1_change": 0.0,
+      "prediction_flip_rate": 0.0,
+      "text_change_rate": 0.8448051948051948,
+      "number_of_records": 3080
+    },
+    "upper_whitespace": {
+      "accuracy": 0.8964285714285715,
+      "macro_f1": 0.8964207199537766,
+      "macro_f1_change": 0.0,
+      "prediction_flip_rate": 0.0,
+      "text_change_rate": 1.0,
+      "number_of_records": 3080
+    },
+    "adjacent_typo": {
+      "accuracy": 0.8503246753246754,
+      "macro_f1": 0.8502464451471552,
+      "macro_f1_change": -0.046174274806621396,
+      "prediction_flip_rate": 0.09350649350649351,
+      "text_change_rate": 0.999025974025974,
+      "number_of_records": 3080
+    }
+  },
+  "interpretation": [
+    "Accent and uppercase/spacing are metamorphic robustness probes, not extra independent test sets.",
+    "Adjacent transposition is deterministic, but may change the meaning of some inputs.",
+    "Scores compare the same trained model on altered test inputs; NO retraining or tuning.",
+    "Perturbed test results are a robustness diagnostic, not a Kaggle leaderboard or evidence of production quality.",
+    "No raw inputs or individual predictions are published."
+  ]
+}
