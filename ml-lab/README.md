@@ -13,6 +13,7 @@ Implementações práticas, experimentos reproduzíveis e evidências verificáv
 | [NLP · classificação de intenção](./nlp-intent-classifier/) | Um classificador TF-IDF + regressão logística reconhece intenções de mensagens em português? | Código, dados sintéticos declarados, testes, validação estratificada, exportação segura | **Treinado e publicado no Hugging Face** · avaliação sintética |
 | [Retrieval / RAG benchmark](./retrieval-benchmark/) | BM25 ou TF-IDF recupera melhor o contexto relevante? | Corpus sintético, relevância anotada, Recall@k e MRR@k, testes | Implementação disponível · executar benchmark |
 | [Kaggle Titanic](./kaggle-titanic/) | Como criar uma baseline tabular sem vazamento de dados? | Pipeline, cross-validation, notebook e geração de submission.csv | **Submissão enviada** (ref. 58521092) · resultado oficial não verificado |
+| [Kaggle Titanic · Feature Engineering](./kaggle-titanic/ADVANCED.md) | Título, deck e tamanho de família melhoram a classificação? | Dois modelos, validação estratificada, 5 testes offline e [notebook independente](./kaggle-titanic/titanic_feature_engineering.ipynb) | **Resultado medido:** Random Forest CV 84,17%; [métricas públicas](./published/kaggle-titanic-advanced/) · notebook ainda não publicado no Kaggle |
 | [Artigo técnico](./docs/avaliacao-reprodutivel-de-ml.md) | O que constitui um experimento confiável de ML? | Texto metodológico publicado neste repositório | Disponível |
 
 ## Publicações externas verificadas
@@ -22,7 +23,7 @@ Implementações práticas, experimentos reproduzíveis e evidências verificáv
 | [Modelos publicados de NLP](https://huggingface.co/JOAOOALBERNAZ) e [Space de pesquisa](https://huggingface.co/spaces/JOAOOALBERNAZ/banking77-ptbr-research) | [Titanic](https://www.kaggle.com/competitions/titanic) com [submissão #58521092 comprovada](https://github.com/JoaoAlbernaz1/JoaoAlbernaz1/actions/runs/44368002721) |
 | Experimentos com avaliações, limites e model cards | 84,06% de acurácia na validação local; nota oficial não verificada |
 
-O notebook de [Disaster Tweets](./kaggle-disaster-tweets/) está implementado, mas a competição ainda exige autorização/aceite de regras e **não possui submissão confirmada**. O link público do perfil pessoal Kaggle não foi validado.
+O [perfil Kaggle autenticado](https://www.kaggle.com/joaoalbernaz) foi identificado como **joaoalbernaz** pelo CLI. A tentativa de publicar o [notebook avançado do Titanic](./kaggle-titanic/titanic_feature_engineering.ipynb) retornou **HTTP 403 em SaveKernel**, indicando restrição de acesso/permissão; **não houve publicação**. O notebook [Disaster Tweets](./kaggle-disaster-tweets/) ainda depende de autorização da competição para executar/submeter.
 
 ## Calibração e avaliação de risco
 

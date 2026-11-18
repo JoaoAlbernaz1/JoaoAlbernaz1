@@ -8,6 +8,12 @@ O workflow [`Publish Kaggle Titanic notebook`](../../.github/workflows/publish-t
 
 **A publicação só estará confirmada quando a execução do workflow informar sucesso e um link para o notebook Kaggle.** Um commit no GitHub, isoladamente, não significa que o Kaggle aceitou a publicação.
 
+## Estado real da publicação — 18/11/2026
+
+A execução [GitHub Actions #44406328823](https://github.com/JoaoAlbernaz1/JoaoAlbernaz1/actions/runs/44406328823) confirmou a conta **joaoalbernaz** ao executar `kaggle kernels init`, mas o envio `kaggle kernels push` falhou com **HTTP 403 Forbidden** em `SaveKernel`. **O notebook ainda não foi criado no Kaggle.** Isso pode decorrer das permissões do token/conta ou de restrições de acesso; os logs não confirmam a causa específica.
+
+O workflow foi deixado para **execução manual**, sem tentativas automáticas repetidas. Após conferir as permissões de publicação de notebooks nas configurações do Kaggle, é possível executá-lo novamente em GitHub Actions. Como alternativa, abra o notebook `titanic_feature_engineering.ipynb` na interface do Kaggle, vincule a competição Titanic e salve uma versão pública. Não compartilhe os tokens.
+
 ## Evidência esperada
 
 - Script e notebook são versionados publicamente e validados no CI.
