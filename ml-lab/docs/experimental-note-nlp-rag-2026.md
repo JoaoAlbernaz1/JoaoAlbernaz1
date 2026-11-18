@@ -22,7 +22,7 @@ Esta nota compara dois experimentos reproduzíveis: (1) classificação de inten
 
 **Resultado inicial no teste oficial:** acurácia **0,8964** e macro-F1 **0,8964** com char TF-IDF + LinearSVC. [Run concluído](https://github.com/JoaoAlbernaz1/JoaoAlbernaz1/actions/runs/44371491356) · [modelo publicado](https://huggingface.co/JOAOOALBERNAZ/banking77-ptbr-intent-v1).
 
-**Ameaça importante à validade:** o cruzamento de texto case-insensitive encontrou **166 textos distintos presentes no treino e no teste**. Essa sobreposição pode elevar artificialmente a estimativa do desempenho. Uma análise de sensibilidade, sobre previsões geradas pelo mesmo modelo e excluindo os casos coincidentes, está implementada no código para ajudar a quantificar o efeito. Não houve seleção de modelo usando o teste. Ainda assim, mesmo o subconjunto sem coincidência literal não é uma amostra de produção independente.
+**Ameaça importante à validade:** o cruzamento de texto case-insensitive encontrou **166 textos distintos presentes no treino e no teste**. Essa sobreposição pode elevar artificialmente a estimativa do desempenho. Uma análise de sensibilidade, sobre as mesmas previsões mas excluindo 193 registros coincidentes, resultou em **macro-F1 0,8910 em 2.887 exemplos**, contra **0,8964** no teste completo. A auditoria está detalhada no [relatório BANKING77-PTBR](./banking77-ptbr-results.md). Não houve seleção de modelo usando o teste. Ainda assim, mesmo o subconjunto sem coincidência literal não é uma amostra de produção independente.
 
 ## Experimento 2 — RAG e avaliações de agente
 

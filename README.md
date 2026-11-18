@@ -21,7 +21,7 @@ Construo soluções de **IA generativa aplicadas a processos reais**: assistente
 | **[Kaggle Titanic · baseline](./ml-lab/kaggle-titanic/)** | Pipeline tabular e Random Forest; **submissão realizada** na competição Titanic. Validação cruzada local: 84,06% de acurácia (não é score do leaderboard). |
 | **[Artigo técnico · avaliação de ML](./ml-lab/docs/avaliacao-reprodutivel-de-ml.md)** | Discussão sobre leakage, métricas, experimentos e limites de avaliação. |
 
-**Nota técnica:** [Por que recuperação correta não garante uma resposta correta](./ml-lab/docs/experimental-note-nlp-rag-2026.md) · [registro de treino com dados públicos](https://github.com/JoaoAlbernaz1/JoaoAlbernaz1/actions/runs/44371491356).
+**Pesquisas técnicas:** [BANKING77-PTBR · resultado e auditoria](./ml-lab/docs/banking77-ptbr-results.md) · [Por que recuperação correta não garante uma resposta correta](./ml-lab/docs/experimental-note-nlp-rag-2026.md) · [registro de treino com dados públicos](https://github.com/JoaoAlbernaz1/JoaoAlbernaz1/actions/runs/44371491356).
 
 **Kaggle:** [submissão Titanic validada no GitHub Actions](https://github.com/JoaoAlbernaz1/JoaoAlbernaz1/actions/runs/44368002721) (ref. `58521092`) · **Hugging Face:** [intent-classifier-pt](https://huggingface.co/JOAOOALBERNAZ/intent-classifier-pt) · **artefato local:** [artefato e cartão técnico](./ml-lab/published/intent-v1/) · [métricas medidas](./ml-lab/published/intent-v1/metrics.json) · [retrieval benchmark](./ml-lab/published/retrieval-v1/metrics.json). *Resultados sobre dados sintéticos, não validação em produção.*
 

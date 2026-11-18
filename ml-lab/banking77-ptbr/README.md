@@ -22,6 +22,10 @@ O download é feito diretamente do dataset público, fixado na revisão 85f51c4.
 
 A execução [GitHub Actions #44371491356](https://github.com/JoaoAlbernaz1/JoaoAlbernaz1/actions/runs/44371491356) terminou com sucesso e publicou o [modelo no Hugging Face](https://huggingface.co/JOAOOALBERNAZ/banking77-ptbr-intent-v1). No teste oficial: **accuracy 0,8964, macro-F1 0,8964, weighted-F1 0,8964**. Melhor baseline: **char TF-IDF + LinearSVC**; três alternativas foram comparadas somente no treino. A auditoria inicial identificou **166 textos distintos compartilhados entre treino e teste**, limitação relevante para interpretação do score. A execução posterior incluiu uma métrica de sensibilidade excluindo essas correspondências, sem selecionar novamente o modelo.
 
+## Auditoria de resultados
+
+[Resultado detalhado, comparações e auditoria de sobreposição entre treino e teste](../docs/banking77-ptbr-results.md). O teste oficial apresentou macro-F1 de **0,8964**; excluindo os **193 registros de teste com texto idêntico a algum texto do treino** (casefold), o macro-F1 foi **0,8910** em 2.887 exemplos. Essa comparação é pós-hoc e não foi utilizada para escolher modelos.
+
 ## Limitações
 
 Este corpus é **tradução para português, revisada por pesquisadores**, não conversas de clientes brasileiros originalmente escritas em português. O benchmark não garante qualidade em produção, generalização para outras empresas ou robustez contra ataques.
