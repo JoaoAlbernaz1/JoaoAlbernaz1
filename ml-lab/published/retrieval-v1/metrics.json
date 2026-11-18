@@ -1,0 +1,314 @@
+{
+  "dataset": "synthetic_pt_retrieval_v1",
+  "documents": 18,
+  "queries": 12,
+  "limitations": "Small author-created corpus and manual relevance annotations; not a public benchmark.",
+  "methods": {
+    "bm25": {
+      "mean_metrics": {
+        "recall@1": 0.5833333333333334,
+        "recall@3": 0.8333333333333334,
+        "mrr@3": 0.8194444444444443
+      },
+      "per_query": [
+        {
+          "query_id": "Q01",
+          "top3": [
+            "D02",
+            "D13",
+            "D03"
+          ],
+          "recall@1": 0.5,
+          "mrr@1": 1.0,
+          "recall@3": 1.0,
+          "mrr@3": 1.0
+        },
+        {
+          "query_id": "Q02",
+          "top3": [
+            "D18",
+            "D09",
+            "D01"
+          ],
+          "recall@1": 0.0,
+          "mrr@1": 0.0,
+          "recall@3": 1.0,
+          "mrr@3": 0.3333333333333333
+        },
+        {
+          "query_id": "Q03",
+          "top3": [
+            "D18",
+            "D16",
+            "D06"
+          ],
+          "recall@1": 0.0,
+          "mrr@1": 0.0,
+          "recall@3": 0.0,
+          "mrr@3": 0.0
+        },
+        {
+          "query_id": "Q04",
+          "top3": [
+            "D05",
+            "D03",
+            "D07"
+          ],
+          "recall@1": 1.0,
+          "mrr@1": 1.0,
+          "recall@3": 1.0,
+          "mrr@3": 1.0
+        },
+        {
+          "query_id": "Q05",
+          "top3": [
+            "D03",
+            "D02",
+            "D01"
+          ],
+          "recall@1": 0.5,
+          "mrr@1": 1.0,
+          "recall@3": 0.5,
+          "mrr@3": 1.0
+        },
+        {
+          "query_id": "Q06",
+          "top3": [
+            "D17",
+            "D11",
+            "D07"
+          ],
+          "recall@1": 1.0,
+          "mrr@1": 1.0,
+          "recall@3": 1.0,
+          "mrr@3": 1.0
+        },
+        {
+          "query_id": "Q07",
+          "top3": [
+            "D14",
+            "D17",
+            "D04"
+          ],
+          "recall@1": 0.5,
+          "mrr@1": 1.0,
+          "recall@3": 0.5,
+          "mrr@3": 1.0
+        },
+        {
+          "query_id": "Q08",
+          "top3": [
+            "D08",
+            "D02",
+            "D05"
+          ],
+          "recall@1": 1.0,
+          "mrr@1": 1.0,
+          "recall@3": 1.0,
+          "mrr@3": 1.0
+        },
+        {
+          "query_id": "Q09",
+          "top3": [
+            "D07",
+            "D09",
+            "D12"
+          ],
+          "recall@1": 1.0,
+          "mrr@1": 1.0,
+          "recall@3": 1.0,
+          "mrr@3": 1.0
+        },
+        {
+          "query_id": "Q10",
+          "top3": [
+            "D09",
+            "D14",
+            "D18"
+          ],
+          "recall@1": 0.5,
+          "mrr@1": 1.0,
+          "recall@3": 1.0,
+          "mrr@3": 1.0
+        },
+        {
+          "query_id": "Q11",
+          "top3": [
+            "D11",
+            "D17",
+            "D07"
+          ],
+          "recall@1": 1.0,
+          "mrr@1": 1.0,
+          "recall@3": 1.0,
+          "mrr@3": 1.0
+        },
+        {
+          "query_id": "Q12",
+          "top3": [
+            "D04",
+            "D12",
+            "D18"
+          ],
+          "recall@1": 0.0,
+          "mrr@1": 0.0,
+          "recall@3": 1.0,
+          "mrr@3": 0.5
+        }
+      ]
+    },
+    "tfidf": {
+      "mean_metrics": {
+        "recall@1": 0.5833333333333334,
+        "recall@3": 0.7916666666666666,
+        "mrr@3": 0.8194444444444443
+      },
+      "per_query": [
+        {
+          "query_id": "Q01",
+          "top3": [
+            "D02",
+            "D13",
+            "D01"
+          ],
+          "recall@1": 0.5,
+          "mrr@1": 1.0,
+          "recall@3": 1.0,
+          "mrr@3": 1.0
+        },
+        {
+          "query_id": "Q02",
+          "top3": [
+            "D18",
+            "D09",
+            "D01"
+          ],
+          "recall@1": 0.0,
+          "mrr@1": 0.0,
+          "recall@3": 1.0,
+          "mrr@3": 0.3333333333333333
+        },
+        {
+          "query_id": "Q03",
+          "top3": [
+            "D01",
+            "D02",
+            "D03"
+          ],
+          "recall@1": 0.0,
+          "mrr@1": 0.0,
+          "recall@3": 0.0,
+          "mrr@3": 0.0
+        },
+        {
+          "query_id": "Q04",
+          "top3": [
+            "D05",
+            "D01",
+            "D02"
+          ],
+          "recall@1": 1.0,
+          "mrr@1": 1.0,
+          "recall@3": 1.0,
+          "mrr@3": 1.0
+        },
+        {
+          "query_id": "Q05",
+          "top3": [
+            "D03",
+            "D02",
+            "D01"
+          ],
+          "recall@1": 0.5,
+          "mrr@1": 1.0,
+          "recall@3": 0.5,
+          "mrr@3": 1.0
+        },
+        {
+          "query_id": "Q06",
+          "top3": [
+            "D17",
+            "D11",
+            "D07"
+          ],
+          "recall@1": 1.0,
+          "mrr@1": 1.0,
+          "recall@3": 1.0,
+          "mrr@3": 1.0
+        },
+        {
+          "query_id": "Q07",
+          "top3": [
+            "D14",
+            "D17",
+            "D18"
+          ],
+          "recall@1": 0.5,
+          "mrr@1": 1.0,
+          "recall@3": 0.5,
+          "mrr@3": 1.0
+        },
+        {
+          "query_id": "Q08",
+          "top3": [
+            "D08",
+            "D15",
+            "D02"
+          ],
+          "recall@1": 1.0,
+          "mrr@1": 1.0,
+          "recall@3": 1.0,
+          "mrr@3": 1.0
+        },
+        {
+          "query_id": "Q09",
+          "top3": [
+            "D07",
+            "D09",
+            "D12"
+          ],
+          "recall@1": 1.0,
+          "mrr@1": 1.0,
+          "recall@3": 1.0,
+          "mrr@3": 1.0
+        },
+        {
+          "query_id": "Q10",
+          "top3": [
+            "D09",
+            "D14",
+            "D01"
+          ],
+          "recall@1": 0.5,
+          "mrr@1": 1.0,
+          "recall@3": 0.5,
+          "mrr@3": 1.0
+        },
+        {
+          "query_id": "Q11",
+          "top3": [
+            "D11",
+            "D17",
+            "D07"
+          ],
+          "recall@1": 1.0,
+          "mrr@1": 1.0,
+          "recall@3": 1.0,
+          "mrr@3": 1.0
+        },
+        {
+          "query_id": "Q12",
+          "top3": [
+            "D04",
+            "D12",
+            "D01"
+          ],
+          "recall@1": 0.0,
+          "mrr@1": 0.0,
+          "recall@3": 1.0,
+          "mrr@3": 0.5
+        }
+      ]
+    }
+  }
+}

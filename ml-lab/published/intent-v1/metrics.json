@@ -1,0 +1,107 @@
+{
+  "dataset": "synthetic_support_tickets_pt_v1",
+  "dataset_size": 60,
+  "train_size": 45,
+  "test_size": 15,
+  "random_seed": 42,
+  "cross_validation": {
+    "folds": 3,
+    "metric": "f1_macro",
+    "mean": 0.4177777777777778,
+    "std": 0.10708911056410417
+  },
+  "holdout": {
+    "accuracy": 0.5333333333333333,
+    "macro_f1": 0.49333333333333335,
+    "labels": [
+      "acesso",
+      "cancelamento",
+      "entrega",
+      "pagamento",
+      "suporte_tecnico"
+    ],
+    "confusion_matrix": [
+      [
+        2,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        3,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        2,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        2
+      ]
+    ],
+    "classification_report": {
+      "acesso": {
+        "precision": 0.6666666666666666,
+        "recall": 0.6666666666666666,
+        "f1-score": 0.6666666666666666,
+        "support": 3.0
+      },
+      "cancelamento": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1-score": 0.6666666666666666,
+        "support": 3.0
+      },
+      "entrega": {
+        "precision": 0.3333333333333333,
+        "recall": 0.3333333333333333,
+        "f1-score": 0.3333333333333333,
+        "support": 3.0
+      },
+      "pagamento": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 3.0
+      },
+      "suporte_tecnico": {
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "f1-score": 0.8,
+        "support": 3.0
+      },
+      "accuracy": 0.5333333333333333,
+      "macro avg": {
+        "precision": 0.5,
+        "recall": 0.5333333333333333,
+        "f1-score": 0.49333333333333335,
+        "support": 15.0
+      },
+      "weighted avg": {
+        "precision": 0.5,
+        "recall": 0.5333333333333333,
+        "f1-score": 0.49333333333333335,
+        "support": 15.0
+      }
+    }
+  },
+  "limitations": "Synthetic, small, author-created dataset; metrics are not evidence of real-world performance."
+}
