@@ -7,7 +7,7 @@ Implementações práticas, experimentos reproduzíveis e evidências verificáv
 | Projeto | Questão investigada | Evidência disponível | Situação |
 |:--|:--|:--|:--|
 | [BANKING77-PTBR · dados públicos revisados](./banking77-ptbr/) | Qual baseline de NLP funciona melhor para 77 intenções financeiras em português? | 3 baselines, seleção por macro-F1 em treino, teste oficial, auditoria de duplicatas | **Modelo publicado no Hugging Face** · macro-F1 0,8964 no teste |
-| [ModelOps · serving e drift](./model-ops/) | Como servir e monitorar tecnicamente um classificador publicado? | API FastAPI, contêiner, testes de contrato e [arquitetura](./docs/modelops-architecture-decisions.md) | **CI concluído** · [drift real](./published/model-ops/) e [robustez textual medida](./published/model-ops/ROBUSTNESS.md) |
+| [ModelOps · serving e drift](./model-ops/) | Como servir e monitorar tecnicamente um classificador publicado? | API FastAPI, contêiner, testes de contrato e [arquitetura](./docs/modelops-architecture-decisions.md) | **CI concluído** · [mudança de distribuição em corpus público](./published/model-ops/) e [robustez textual medida](./published/model-ops/ROBUSTNESS.md) |
 | [AI Evaluation Lab](./ai-evaluation-lab/) | Recuperação correta implica resposta correta? | 32 testes, dois retrievers e [métricas reproduzidas](./published/ai-eval/) | **Benchmark e CI concluídos** · 100% Hit@3 com char TF-IDF, mas só 36% acerto lexical na resposta |
 | [NLP · classificação de intenção](./nlp-intent-classifier/) | Um classificador TF-IDF + regressão logística reconhece intenções de mensagens em português? | Código, dados sintéticos declarados, testes, validação estratificada, exportação segura | **Treinado e publicado no Hugging Face** · avaliação sintética |
 | [Retrieval / RAG benchmark](./retrieval-benchmark/) | BM25 ou TF-IDF recupera melhor o contexto relevante? | Corpus sintético, relevância anotada, Recall@k e MRR@k, testes | Implementação disponível · executar benchmark |
@@ -17,6 +17,7 @@ Implementações práticas, experimentos reproduzíveis e evidências verificáv
 ## Engenharia de inferência e observabilidade
 
 - [ModelOps: FastAPI, Docker e monitoramento de drift](./model-ops/) — implementação de serving do classificador de 77 classes, contêiner validado e [diagnóstico de distribuição publicado](./published/model-ops/). A [avaliação de robustez com erros de digitação artificiais](./published/model-ops/ROBUSTNESS.md) mediu uma queda de macro-F1 de **0,8964 para 0,8502** no teste oficial. [Decisões arquiteturais](./docs/modelops-architecture-decisions.md). Não é um serviço de produção.
+- [Hugging Face · relatório de confiabilidade do modelo](https://huggingface.co/JOAOOALBERNAZ/banking77-ptbr-intent-v1/tree/main/evaluation/modelops) — métricas e relatórios completos de drift e robustez publicados junto ao modelo treinado.
 
 ## Pesquisa e experimentos com resultados medidos
 
