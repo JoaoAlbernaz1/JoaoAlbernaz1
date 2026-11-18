@@ -6,10 +6,18 @@ Implementações práticas, experimentos reproduzíveis e evidências verificáv
 
 | Projeto | Questão investigada | Evidência disponível | Situação |
 |:--|:--|:--|:--|
+| [BANKING77-PTBR · dados públicos revisados](./banking77-ptbr/) | Qual baseline de NLP funciona melhor para 77 intenções financeiras em português? | 3 baselines, seleção por macro-F1 em treino, teste oficial, auditoria de duplicatas | **Modelo publicado no Hugging Face** · macro-F1 0,8964 no teste |
+| [AI Evaluation Lab](./ai-evaluation-lab/) | Recuperação correta implica resposta correta? | 32 testes, dois retrievers e [métricas reproduzidas](./published/ai-eval/) | **Benchmark e CI concluídos** · 100% Hit@3 com char TF-IDF, mas só 36% acerto lexical na resposta |
 | [NLP · classificação de intenção](./nlp-intent-classifier/) | Um classificador TF-IDF + regressão logística reconhece intenções de mensagens em português? | Código, dados sintéticos declarados, testes, validação estratificada, exportação segura | **Treinado e publicado no Hugging Face** · avaliação sintética |
 | [Retrieval / RAG benchmark](./retrieval-benchmark/) | BM25 ou TF-IDF recupera melhor o contexto relevante? | Corpus sintético, relevância anotada, Recall@k e MRR@k, testes | Implementação disponível · executar benchmark |
 | [Kaggle Titanic](./kaggle-titanic/) | Como criar uma baseline tabular sem vazamento de dados? | Pipeline, cross-validation, notebook e geração de submission.csv | **Submissão enviada** (ref. 58521092) · resultado oficial não verificado |
 | [Artigo técnico](./docs/avaliacao-reprodutivel-de-ml.md) | O que constitui um experimento confiável de ML? | Texto metodológico publicado neste repositório | Disponível |
+
+## Pesquisa e experimentos com resultados medidos
+
+- [Classificação de intenções com dados públicos: modelo BANKING77-PTBR no Hugging Face](https://huggingface.co/JOAOOALBERNAZ/banking77-ptbr-intent-v1) — avaliação oficial, 77 classes e macro-F1 **0,8964**. O dataset contém traduções revisadas; foram identificados **166 textos distintos repetidos entre treino e teste**, possível fonte de otimismo das métricas.
+- [AI Evaluation Lab](./ai-evaluation-lab/) — [relatório comparativo real](./published/ai-eval/): o retriever por caracteres obteve Hit@3 **1,0** em 25 perguntas respondíveis, enquanto o extrator apresentou acerto lexical de apenas **0,36**. É uma regressão em dados fictícios, não teste de LLM.
+- [Nota técnica: avaliação de NLP e sistemas com recuperação](./docs/experimental-note-nlp-rag-2026.md).
 
 ## Artefatos treinados e métricas publicadas no GitHub
 

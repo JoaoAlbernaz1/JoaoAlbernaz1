@@ -10,14 +10,18 @@ Construo soluções de **IA generativa aplicadas a processos reais**: assistente
 
 ### ML & Research Lab · projetos com experimentação
 
-**Machine Learning & pesquisa aplicada.** Modelos treinados, experimentos reproduzíveis e métricas documentadas.
+**Machine Learning & engenharia de IA.** Treinamento de modelos, avaliação de sistemas RAG, baselines reproduzíveis e análise de falhas.
 
 | Experimento | Engenharia e avaliação |
 | :--- | :--- |
+| **[BANKING77-PTBR · NLP em dados de pesquisa](./ml-lab/banking77-ptbr/)** | **77 intenções**, 3 modelos comparados em validação, teste oficial com macro-F1 de **0,8964**. [Modelo no Hugging Face](https://huggingface.co/JOAOOALBERNAZ/banking77-ptbr-intent-v1) · auditoria de sobreposição entre splits. |
+| **[AI Evaluation Lab · agentes e RAG](./ml-lab/ai-evaluation-lab/)** | **32 casos de regressão**, grounding, abstinência, recuperação e ataques simulados. [Resultados medidos](./ml-lab/published/ai-eval/). |
 | **[NLP · classificador de intenções](./ml-lab/nlp-intent-classifier/)** | Python, TF-IDF, Logistic Regression, macro-F1, validação cruzada; [modelo publicado no Hugging Face](https://huggingface.co/JOAOOALBERNAZ/intent-classifier-pt). |
 | **[Retrieval / RAG Benchmark](./ml-lab/retrieval-benchmark/)** | Comparação BM25 × TF-IDF, Recall@k e MRR@k, embeddings multilíngues opcionais; testes reproduzíveis. |
 | **[Kaggle Titanic · baseline](./ml-lab/kaggle-titanic/)** | Pipeline tabular e Random Forest; **submissão realizada** na competição Titanic. Validação cruzada local: 84,06% de acurácia (não é score do leaderboard). |
 | **[Artigo técnico · avaliação de ML](./ml-lab/docs/avaliacao-reprodutivel-de-ml.md)** | Discussão sobre leakage, métricas, experimentos e limites de avaliação. |
+
+**Nota técnica:** [Por que recuperação correta não garante uma resposta correta](./ml-lab/docs/experimental-note-nlp-rag-2026.md) · [registro de treino com dados públicos](https://github.com/JoaoAlbernaz1/JoaoAlbernaz1/actions/runs/44371491356).
 
 **Kaggle:** [submissão Titanic validada no GitHub Actions](https://github.com/JoaoAlbernaz1/JoaoAlbernaz1/actions/runs/44368002721) (ref. `58521092`) · **Hugging Face:** [intent-classifier-pt](https://huggingface.co/JOAOOALBERNAZ/intent-classifier-pt) · **artefato local:** [artefato e cartão técnico](./ml-lab/published/intent-v1/) · [métricas medidas](./ml-lab/published/intent-v1/metrics.json) · [retrieval benchmark](./ml-lab/published/retrieval-v1/metrics.json). *Resultados sobre dados sintéticos, não validação em produção.*
 

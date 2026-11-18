@@ -4,6 +4,10 @@
 
 Laboratório de avaliação **offline**, que compara retrievers TF-IDF por palavras e n-gramas de caracteres e mede o comportamento ponta a ponta de dois tipos de assistente: uma baseline extrativa determinística e, opcionalmente, um endpoint LLM compatível com Chat Completions.
 
+## Resultados executados
+
+O [relatório comparativo publicado](../published/ai-eval/) mediu **Hit@3 de 0,84 (word) versus 1,00 (char)**, MRR@3 de 0,76 versus 0,9733 e acerto lexical de 0,36 em ambos os pipelines. Esse resultado evidencia um gargalo na extração/geração, apesar da melhoria no retriever. Todas as políticas e consultas são fictícias.
+
 ## O que realmente avalia
 
 | Dimensão | Métrica | Interpretação |

@@ -18,6 +18,10 @@ python -m pytest -q ml-lab/banking77-ptbr/tests
 
 O download é feito diretamente do dataset público, fixado na revisão 85f51c4. Registros com texto ou rótulo ausente são excluídos do treino/teste, com contagens no relatório. Nenhum serviço de IA pago é necessário para o treino.
 
+## Resultado inicial auditável
+
+A execução [GitHub Actions #44371491356](https://github.com/JoaoAlbernaz1/JoaoAlbernaz1/actions/runs/44371491356) terminou com sucesso e publicou o [modelo no Hugging Face](https://huggingface.co/JOAOOALBERNAZ/banking77-ptbr-intent-v1). No teste oficial: **accuracy 0,8964, macro-F1 0,8964, weighted-F1 0,8964**. Melhor baseline: **char TF-IDF + LinearSVC**; três alternativas foram comparadas somente no treino. A auditoria inicial identificou **166 textos distintos compartilhados entre treino e teste**, limitação relevante para interpretação do score. A execução posterior incluiu uma métrica de sensibilidade excluindo essas correspondências, sem selecionar novamente o modelo.
+
 ## Limitações
 
 Este corpus é **tradução para português, revisada por pesquisadores**, não conversas de clientes brasileiros originalmente escritas em português. O benchmark não garante qualidade em produção, generalização para outras empresas ou robustez contra ataques.
