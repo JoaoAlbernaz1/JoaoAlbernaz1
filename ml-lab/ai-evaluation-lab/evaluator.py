@@ -72,6 +72,8 @@ def load_corpus(doc_path: Path, case_path: Path) -> tuple[list[Document], list[C
             raise ValueError(f"Missing relevant documents for {case.id}")
         if case.answerable != bool(case.expected_answer and case.relevant_docs):
             raise ValueError(f"Invalid ground truth for {case.id}")
+        if case.answerable and not clean(case.expected_answer):
+            raise ValueError(f"Expected answer lacks lexical content for {case.id}")
     return documents, cases
 
 
