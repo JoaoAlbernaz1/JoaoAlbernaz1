@@ -1,0 +1,48 @@
+name: Publish interactive Hugging Face NLP Space
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/hf-space-demo.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-and-publish:
+    runs-on: ubuntu-latest
+    env:
+      HF_TOKEN: ${{ secrets.HF_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: ml-lab/requirements.txt
+      - name: Install model dependencies
+        run: |
+          python -m pip install -r ml-lab/requirements.txt
+          python -m pip install -r ml-lab/hf-space-demo/space/requirements.txt
+          python -m pip install 'gradio>=5,<7'
+      - name: Validate source syntax
+        run: python -m compileall -q ml-lab/hf-space-demo/
+      - name: Check model is loadable without trusting arbitrary types
+        run: |
+          python - <<'PY'
+          from huggingface_hub import hf_hub_download
+          import skops.io as sio
+          file = hf_hub_download(
+              repo_id="JOAOOALBERNAZ/banking77-ptbr-intent-v1",
+              filename="model.skops",
+          )
+          print("Untrusted types:", sio.get_untrusted_types(file=file))
+          model = sio.load(file, trusted=[])
+          assert len(model.named_steps["clf"].classes_) == 77
+          prediction = model.predict(["Não consigo localizar a minha transferência"])
+          print("Predicted intent:", prediction[0])
+          PY
+      - name: Publish interactive demo on Hugging Face Spaces
+        run: python ml-lab/hf-space-demo/publish_space.py
