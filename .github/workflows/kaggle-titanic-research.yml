@@ -68,7 +68,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install -r ml-lab/requirements.txt
-          python -m pip install kaggle
+          python -m pip install kaggle six
       - name: Download official Kaggle data if authorized
         id: source
         shell: bash
