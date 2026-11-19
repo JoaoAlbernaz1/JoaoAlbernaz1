@@ -38,100 +38,99 @@
 
 <p align="center"><strong>Engenharia de Software · UCB · Brasília, DF</strong></p>
 
-```aura width=132 height=54 link="https://github.com/JoaoAlbernaz1" inline align=center
-(function(){
- return (
-  <div style={{display:'flex',position:'relative',width:'100%',height:'100%',fontFamily:'Inter',alignItems:'center',justifyContent:'center',overflow:'hidden'}}>
-   <style>{'@keyframes profile-github-edge {0%{stroke-dashoffset:0;opacity:.53}50%{opacity:1}100%{stroke-dashoffset:-560;opacity:.53}} @keyframes profile-github-light {0%,100%{transform:translateX(-15px);opacity:.12}50%{transform:translateX(35px);opacity:.35}} #profile-github-edge{animation:profile-github-edge 6.8s linear infinite} #profile-github-light{animation:profile-github-light 6.8s ease-in-out infinite}'}</style>
-   <svg width="132" height="54" style={{position:'absolute',top:0,left:0}}>
-    <defs><radialGradient id="profile-github-halo"><stop offset="0%" stopColor="#ffffff" stopOpacity=".27"/><stop offset="100%" stopColor="#ffffff" stopOpacity="0"/></radialGradient></defs>
-    <rect x="5" y="5" width="122" height="44" rx="12" fill="#101010" stroke="#444444" strokeWidth="1"/>
-    <ellipse id="profile-github-light" cx="45" cy="27" rx="78" ry="34" fill="url(#profile-github-halo)"/>
-    <rect id="profile-github-edge" x="5.5" y="5.5" width="121" height="43" rx="11.5" fill="none" stroke="#f1f1f1" strokeWidth="1.6" strokeDasharray="62 498"/>
-   </svg>
-   <div style={{display:'flex',position:'relative',alignItems:'center',justifyContent:'center',gap:9,width:'100%',height:'100%',padding:'0 11px'}}>
-    <svg width="20" height="20" viewBox="0 0 24 24"><path fill="#f4f4f4" d="M12 2C6.48 2 2 6.58 2 12.23c0 4.51 2.87 8.33 6.84 9.68.5.1.68-.22.68-.48v-1.7c-2.78.62-3.37-1.2-3.37-1.2-.45-1.17-1.11-1.48-1.11-1.48-.91-.64.07-.63.07-.63 1.01.07 1.54 1.06 1.54 1.06.9 1.57 2.36 1.12 2.94.85.09-.66.35-1.12.64-1.38-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.25-.45-1.3.1-2.72 0 0 .84-.28 2.75 1.05A9.4 9.4 0 0 1 12 6.23c.85 0 1.7.12 2.5.34 1.91-1.33 2.75-1.05 2.75-1.05.55 1.42.2 2.47.1 2.72.64.72 1.03 1.63 1.03 2.75 0 3.93-2.35 4.8-4.58 5.06.36.32.68.94.68 1.9v2.82c0 .27.18.59.69.48A10.25 10.25 0 0 0 22 12.23C22 6.58 17.52 2 12 2Z"/></svg>
-    <span style={{display:'flex',fontSize:13,fontWeight:700,color:'#f7f7f7',letterSpacing:'.1px',whiteSpace:'nowrap'}}>GitHub</span>
-   </div>
-  </div>
- );
-})()
+```aura width=123 height=44 link="https://github.com/JoaoAlbernaz1" inline align=center
+<SocialMediaButton
+  icon="https://raw.githubusercontent.com/JoaoAlbernaz1/JoaoAlbernaz1/main/icons/github-mark.svg"
+  text="GitHub"
+  backgroundColor="#000000"
+  textColor="#f5f5f5"
+  width={123}
+  height={44}
+  iconSize={18}
+  gradientStops={[
+    { offset: '0%', color: '#cbd5e1' },
+    { offset: '30%', color: '#000000' },
+    { offset: '60%', color: '#94a3b8' },
+    { offset: '80%', color: '#000000' },
+    { offset: '100%', color: '#e2e8f0' },
+  ]}
+/>
 ```
-```aura width=150 height=54 link="https://www.linkedin.com/in/joaooalbernaz/" inline align=center
-(function(){
- return (
-  <div style={{display:'flex',position:'relative',width:'100%',height:'100%',fontFamily:'Inter',alignItems:'center',justifyContent:'center',overflow:'hidden'}}>
-   <style>{'@keyframes profile-linkedin-edge {0%{stroke-dashoffset:0;opacity:.53}50%{opacity:1}100%{stroke-dashoffset:-560;opacity:.53}} @keyframes profile-linkedin-light {0%,100%{transform:translateX(-15px);opacity:.12}50%{transform:translateX(35px);opacity:.35}} #profile-linkedin-edge{animation:profile-linkedin-edge 6.8s linear infinite} #profile-linkedin-light{animation:profile-linkedin-light 6.8s ease-in-out infinite}'}</style>
-   <svg width="150" height="54" style={{position:'absolute',top:0,left:0}}>
-    <defs><radialGradient id="profile-linkedin-halo"><stop offset="0%" stopColor="#ffffff" stopOpacity=".27"/><stop offset="100%" stopColor="#ffffff" stopOpacity="0"/></radialGradient></defs>
-    <rect x="5" y="5" width="140" height="44" rx="12" fill="#101010" stroke="#444444" strokeWidth="1"/>
-    <ellipse id="profile-linkedin-light" cx="45" cy="27" rx="78" ry="34" fill="url(#profile-linkedin-halo)"/>
-    <rect id="profile-linkedin-edge" x="5.5" y="5.5" width="139" height="43" rx="11.5" fill="none" stroke="#f1f1f1" strokeWidth="1.6" strokeDasharray="62 498"/>
-   </svg>
-   <div style={{display:'flex',position:'relative',alignItems:'center',justifyContent:'center',gap:9,width:'100%',height:'100%',padding:'0 11px'}}>
-    <svg width="20" height="20" viewBox="0 0 24 24"><path fill="#f4f4f4" d="M5.1 3a2.1 2.1 0 1 0 0 4.2 2.1 2.1 0 0 0 0-4.2ZM3.3 9h3.6v12H3.3V9Zm5.9 0h3.45v1.64h.05c.48-.91 1.66-1.86 3.4-1.86 3.64 0 4.32 2.39 4.32 5.49V21h-3.59v-5.95c0-1.42-.03-3.25-1.98-3.25-1.98 0-2.29 1.55-2.29 3.15V21H9.2V9Z"/></svg>
-    <span style={{display:'flex',fontSize:13,fontWeight:700,color:'#f7f7f7',letterSpacing:'.1px',whiteSpace:'nowrap'}}>LinkedIn</span>
-   </div>
-  </div>
- );
-})()
+
+```aura width=138 height=44 link="https://www.linkedin.com/in/joaooalbernaz/" inline align=center
+<SocialMediaButton
+  icon="https://raw.githubusercontent.com/JoaoAlbernaz1/JoaoAlbernaz1/main/icons/linkedin.svg"
+  text="LinkedIn"
+  backgroundColor="#000000"
+  textColor="#f5f5f5"
+  width={138}
+  height={44}
+  iconSize={18}
+  gradientStops={[
+    { offset: '0%', color: '#b57af9' },
+    { offset: '30%', color: '#000000' },
+    { offset: '60%', color: '#9d6bf0' },
+    { offset: '80%', color: '#000000' },
+    { offset: '100%', color: '#c89dfb' },
+  ]}
+/>
 ```
-```aura width=180 height=54 link="https://huggingface.co/JOAOOALBERNAZ" inline align=center
-(function(){
- return (
-  <div style={{display:'flex',position:'relative',width:'100%',height:'100%',fontFamily:'Inter',alignItems:'center',justifyContent:'center',overflow:'hidden'}}>
-   <style>{'@keyframes profile-huggingface-edge {0%{stroke-dashoffset:0;opacity:.53}50%{opacity:1}100%{stroke-dashoffset:-560;opacity:.53}} @keyframes profile-huggingface-light {0%,100%{transform:translateX(-15px);opacity:.12}50%{transform:translateX(35px);opacity:.35}} #profile-huggingface-edge{animation:profile-huggingface-edge 6.8s linear infinite} #profile-huggingface-light{animation:profile-huggingface-light 6.8s ease-in-out infinite}'}</style>
-   <svg width="180" height="54" style={{position:'absolute',top:0,left:0}}>
-    <defs><radialGradient id="profile-huggingface-halo"><stop offset="0%" stopColor="#ffffff" stopOpacity=".27"/><stop offset="100%" stopColor="#ffffff" stopOpacity="0"/></radialGradient></defs>
-    <rect x="5" y="5" width="170" height="44" rx="12" fill="#101010" stroke="#444444" strokeWidth="1"/>
-    <ellipse id="profile-huggingface-light" cx="45" cy="27" rx="78" ry="34" fill="url(#profile-huggingface-halo)"/>
-    <rect id="profile-huggingface-edge" x="5.5" y="5.5" width="169" height="43" rx="11.5" fill="none" stroke="#f1f1f1" strokeWidth="1.6" strokeDasharray="62 498"/>
-   </svg>
-   <div style={{display:'flex',position:'relative',alignItems:'center',justifyContent:'center',gap:9,width:'100%',height:'100%',padding:'0 11px'}}>
-    <svg width="20" height="20" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5" fill="none" stroke="#f4f4f4" strokeWidth="1.7"/><ellipse cx="8.7" cy="10.2" rx="1.1" ry="1.5" fill="#f4f4f4"/><ellipse cx="15.3" cy="10.2" rx="1.1" ry="1.5" fill="#f4f4f4"/><path d="M8.1 14.3C9.1 17.3 14.9 17.3 15.9 14.3" fill="none" stroke="#f4f4f4" strokeWidth="1.7" strokeLinecap="round"/><path d="M3.5 13.2C1.9 12.8 1.2 14 1.7 15.5M20.5 13.2c1.6-.4 2.3.8 1.8 2.3" fill="none" stroke="#f4f4f4" strokeWidth="1.6" strokeLinecap="round"/></svg>
-    <span style={{display:'flex',fontSize:13,fontWeight:700,color:'#f7f7f7',letterSpacing:'.1px',whiteSpace:'nowrap'}}>Hugging Face</span>
-   </div>
-  </div>
- );
-})()
+
+```aura width=169 height=44 link="https://huggingface.co/JOAOOALBERNAZ" inline align=center
+<SocialMediaButton
+  icon="https://raw.githubusercontent.com/JoaoAlbernaz1/JoaoAlbernaz1/main/icons/hugging-face.svg"
+  text="Hugging Face"
+  backgroundColor="#000000"
+  textColor="#f5f5f5"
+  width={169}
+  height={44}
+  iconSize={18}
+  gradientStops={[
+    { offset: '0%', color: '#ffe08a' },
+    { offset: '30%', color: '#000000' },
+    { offset: '60%', color: '#ffd166' },
+    { offset: '80%', color: '#000000' },
+    { offset: '100%', color: '#f8e7af' },
+  ]}
+/>
 ```
-```aura width=133 height=54 link="https://www.kaggle.com/joaoalbernaz" inline align=center
-(function(){
- return (
-  <div style={{display:'flex',position:'relative',width:'100%',height:'100%',fontFamily:'Inter',alignItems:'center',justifyContent:'center',overflow:'hidden'}}>
-   <style>{'@keyframes profile-kaggle-edge {0%{stroke-dashoffset:0;opacity:.53}50%{opacity:1}100%{stroke-dashoffset:-560;opacity:.53}} @keyframes profile-kaggle-light {0%,100%{transform:translateX(-15px);opacity:.12}50%{transform:translateX(35px);opacity:.35}} #profile-kaggle-edge{animation:profile-kaggle-edge 6.8s linear infinite} #profile-kaggle-light{animation:profile-kaggle-light 6.8s ease-in-out infinite}'}</style>
-   <svg width="133" height="54" style={{position:'absolute',top:0,left:0}}>
-    <defs><radialGradient id="profile-kaggle-halo"><stop offset="0%" stopColor="#ffffff" stopOpacity=".27"/><stop offset="100%" stopColor="#ffffff" stopOpacity="0"/></radialGradient></defs>
-    <rect x="5" y="5" width="123" height="44" rx="12" fill="#101010" stroke="#444444" strokeWidth="1"/>
-    <ellipse id="profile-kaggle-light" cx="45" cy="27" rx="78" ry="34" fill="url(#profile-kaggle-halo)"/>
-    <rect id="profile-kaggle-edge" x="5.5" y="5.5" width="122" height="43" rx="11.5" fill="none" stroke="#f1f1f1" strokeWidth="1.6" strokeDasharray="62 498"/>
-   </svg>
-   <div style={{display:'flex',position:'relative',alignItems:'center',justifyContent:'center',gap:9,width:'100%',height:'100%',padding:'0 11px'}}>
-    <svg width="20" height="20" viewBox="0 0 24 24"><path fill="none" stroke="#f4f4f4" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" d="M6.5 2.5v19M17 4 9.2 12 17.5 20.4M12.4 9l5.6-5.3M12.4 15.1l5.6 5.3"/></svg>
-    <span style={{display:'flex',fontSize:13,fontWeight:700,color:'#f7f7f7',letterSpacing:'.1px',whiteSpace:'nowrap'}}>Kaggle</span>
-   </div>
-  </div>
- );
-})()
+
+```aura width=125 height=44 link="https://www.kaggle.com/joaoalbernaz" inline align=center
+<SocialMediaButton
+  icon="https://raw.githubusercontent.com/JoaoAlbernaz1/JoaoAlbernaz1/main/icons/kaggle.svg"
+  text="Kaggle"
+  backgroundColor="#000000"
+  textColor="#f5f5f5"
+  width={125}
+  height={44}
+  iconSize={18}
+  gradientStops={[
+    { offset: '0%', color: '#5dc8f9' },
+    { offset: '30%', color: '#000000' },
+    { offset: '60%', color: '#7dd3fc' },
+    { offset: '80%', color: '#000000' },
+    { offset: '100%', color: '#4ec3f8' },
+  ]}
+/>
 ```
-```aura width=130 height=54 link="mailto:joaovictoralbernaz@gmail.com" inline align=center
-(function(){
- return (
-  <div style={{display:'flex',position:'relative',width:'100%',height:'100%',fontFamily:'Inter',alignItems:'center',justifyContent:'center',overflow:'hidden'}}>
-   <style>{'@keyframes profile-mail-edge {0%{stroke-dashoffset:0;opacity:.53}50%{opacity:1}100%{stroke-dashoffset:-560;opacity:.53}} @keyframes profile-mail-light {0%,100%{transform:translateX(-15px);opacity:.12}50%{transform:translateX(35px);opacity:.35}} #profile-mail-edge{animation:profile-mail-edge 6.8s linear infinite} #profile-mail-light{animation:profile-mail-light 6.8s ease-in-out infinite}'}</style>
-   <svg width="130" height="54" style={{position:'absolute',top:0,left:0}}>
-    <defs><radialGradient id="profile-mail-halo"><stop offset="0%" stopColor="#ffffff" stopOpacity=".27"/><stop offset="100%" stopColor="#ffffff" stopOpacity="0"/></radialGradient></defs>
-    <rect x="5" y="5" width="120" height="44" rx="12" fill="#101010" stroke="#444444" strokeWidth="1"/>
-    <ellipse id="profile-mail-light" cx="45" cy="27" rx="78" ry="34" fill="url(#profile-mail-halo)"/>
-    <rect id="profile-mail-edge" x="5.5" y="5.5" width="119" height="43" rx="11.5" fill="none" stroke="#f1f1f1" strokeWidth="1.6" strokeDasharray="62 498"/>
-   </svg>
-   <div style={{display:'flex',position:'relative',alignItems:'center',justifyContent:'center',gap:9,width:'100%',height:'100%',padding:'0 11px'}}>
-    <svg width="20" height="20" viewBox="0 0 24 24"><rect x="2.2" y="4.8" width="19.6" height="14.4" rx="2.5" fill="none" stroke="#f4f4f4" strokeWidth="1.8"/><path d="m3.6 6.5 8.4 6.7 8.4-6.7" fill="none" stroke="#f4f4f4" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>
-    <span style={{display:'flex',fontSize:13,fontWeight:700,color:'#f7f7f7',letterSpacing:'.1px',whiteSpace:'nowrap'}}>E-mail</span>
-   </div>
-  </div>
- );
-})()
+
+```aura width=117 height=44 link="mailto:joaovictoralbernaz@gmail.com" inline align=center
+<SocialMediaButton
+  icon="https://raw.githubusercontent.com/JoaoAlbernaz1/JoaoAlbernaz1/main/icons/email.svg"
+  text="E-mail"
+  backgroundColor="#000000"
+  textColor="#f5f5f5"
+  width={117}
+  height={44}
+  iconSize={18}
+  gradientStops={[
+    { offset: '0%', color: '#d855f7' },
+    { offset: '30%', color: '#000000' },
+    { offset: '60%', color: '#b557e8' },
+    { offset: '80%', color: '#000000' },
+    { offset: '100%', color: '#cc6ef9' },
+  ]}
+/>
 ```
 
 Desenvolvo **Machine Learning e IA aplicada**, do treinamento de modelos a produtos com APIs, automações e testes. Gosto de transformar experimentos em software reproduzível, mensurável e útil.
@@ -198,43 +197,42 @@ API em **FastAPI**, Docker, testes automatizados e análise de mudança de distr
 })()
 ```
 
-```aura width=190 height=54 link="https://github.com/JoaoAlbernaz1/seuconviteia" inline align=center
-(function(){
- return (
-  <div style={{display:'flex',position:'relative',width:'100%',height:'100%',fontFamily:'Inter',alignItems:'center',justifyContent:'center',overflow:'hidden'}}>
-   <style>{'@keyframes profile-invite-edge {0%{stroke-dashoffset:0;opacity:.53}50%{opacity:1}100%{stroke-dashoffset:-560;opacity:.53}} @keyframes profile-invite-light {0%,100%{transform:translateX(-15px);opacity:.12}50%{transform:translateX(35px);opacity:.35}} #profile-invite-edge{animation:profile-invite-edge 6.8s linear infinite} #profile-invite-light{animation:profile-invite-light 6.8s ease-in-out infinite}'}</style>
-   <svg width="190" height="54" style={{position:'absolute',top:0,left:0}}>
-    <defs><radialGradient id="profile-invite-halo"><stop offset="0%" stopColor="#ffffff" stopOpacity=".27"/><stop offset="100%" stopColor="#ffffff" stopOpacity="0"/></radialGradient></defs>
-    <rect x="5" y="5" width="180" height="44" rx="12" fill="#101010" stroke="#444444" strokeWidth="1"/>
-    <ellipse id="profile-invite-light" cx="45" cy="27" rx="78" ry="34" fill="url(#profile-invite-halo)"/>
-    <rect id="profile-invite-edge" x="5.5" y="5.5" width="179" height="43" rx="11.5" fill="none" stroke="#f1f1f1" strokeWidth="1.6" strokeDasharray="62 498"/>
-   </svg>
-   <div style={{display:'flex',position:'relative',alignItems:'center',justifyContent:'center',gap:9,width:'100%',height:'100%',padding:'0 11px'}}>
-    <svg width="20" height="20" viewBox="0 0 24 24"><rect x="3.1" y="5.6" width="17.8" height="13.2" rx="2" fill="none" stroke="#f4f4f4" strokeWidth="1.8"/><path d="m4.5 7.2 7.5 6.1 7.5-6.1" fill="none" stroke="#f4f4f4" strokeWidth="1.5"/><path d="m12 2 .6 2.1 2.1.6-2.1.6L12 7.4l-.6-2.1-2.1-.6 2.1-.6L12 2" fill="#f4f4f4"/></svg>
-    <span style={{display:'flex',fontSize:13,fontWeight:700,color:'#f7f7f7',letterSpacing:'.1px',whiteSpace:'nowrap'}}>SeuConvite IA</span>
-   </div>
-  </div>
- );
-})()
+```aura width=177 height=44 link="https://github.com/JoaoAlbernaz1/seuconviteia" inline align=center
+<SocialMediaButton
+  icon="https://raw.githubusercontent.com/JoaoAlbernaz1/JoaoAlbernaz1/main/icons/seuconvite.svg"
+  text="SeuConvite IA"
+  backgroundColor="#000000"
+  textColor="#f5f5f5"
+  width={177}
+  height={44}
+  iconSize={18}
+  gradientStops={[
+    { offset: '0%', color: '#b57af9' },
+    { offset: '30%', color: '#000000' },
+    { offset: '60%', color: '#9d6bf0' },
+    { offset: '80%', color: '#000000' },
+    { offset: '100%', color: '#c89dfb' },
+  ]}
+/>
 ```
-```aura width=160 height=54 link="https://github.com/JoaoAlbernaz1/UniMove" inline align=center
-(function(){
- return (
-  <div style={{display:'flex',position:'relative',width:'100%',height:'100%',fontFamily:'Inter',alignItems:'center',justifyContent:'center',overflow:'hidden'}}>
-   <style>{'@keyframes profile-car-edge {0%{stroke-dashoffset:0;opacity:.53}50%{opacity:1}100%{stroke-dashoffset:-560;opacity:.53}} @keyframes profile-car-light {0%,100%{transform:translateX(-15px);opacity:.12}50%{transform:translateX(35px);opacity:.35}} #profile-car-edge{animation:profile-car-edge 6.8s linear infinite} #profile-car-light{animation:profile-car-light 6.8s ease-in-out infinite}'}</style>
-   <svg width="160" height="54" style={{position:'absolute',top:0,left:0}}>
-    <defs><radialGradient id="profile-car-halo"><stop offset="0%" stopColor="#ffffff" stopOpacity=".27"/><stop offset="100%" stopColor="#ffffff" stopOpacity="0"/></radialGradient></defs>
-    <rect x="5" y="5" width="150" height="44" rx="12" fill="#101010" stroke="#444444" strokeWidth="1"/>
-    <ellipse id="profile-car-light" cx="45" cy="27" rx="78" ry="34" fill="url(#profile-car-halo)"/>
-    <rect id="profile-car-edge" x="5.5" y="5.5" width="149" height="43" rx="11.5" fill="none" stroke="#f1f1f1" strokeWidth="1.6" strokeDasharray="62 498"/>
-   </svg>
-   <div style={{display:'flex',position:'relative',alignItems:'center',justifyContent:'center',gap:9,width:'100%',height:'100%',padding:'0 11px'}}>
-    <svg width="20" height="20" viewBox="0 0 24 24"><path d="M3 16.5V12l2-5.3c.25-.66.8-1.1 1.6-1.1h10.8c.8 0 1.35.44 1.6 1.1L21 12v4.5M5 16.5v2M19 16.5v2M3 12h18M5.7 8.1h12.6M6.5 15h1M16.5 15h1" fill="none" stroke="#f4f4f4" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"/></svg>
-    <span style={{display:'flex',fontSize:13,fontWeight:700,color:'#f7f7f7',letterSpacing:'.1px',whiteSpace:'nowrap'}}>UniMove</span>
-   </div>
-  </div>
- );
-})()
+
+```aura width=144 height=44 link="https://github.com/JoaoAlbernaz1/UniMove" inline align=center
+<SocialMediaButton
+  icon="https://raw.githubusercontent.com/JoaoAlbernaz1/JoaoAlbernaz1/main/icons/unimove.svg"
+  text="UniMove"
+  backgroundColor="#000000"
+  textColor="#f5f5f5"
+  width={144}
+  height={44}
+  iconSize={18}
+  gradientStops={[
+    { offset: '0%', color: '#5dc8f9' },
+    { offset: '30%', color: '#000000' },
+    { offset: '60%', color: '#7dd3fc' },
+    { offset: '80%', color: '#000000' },
+    { offset: '100%', color: '#4ec3f8' },
+  ]}
+/>
 ```
 
 **Selena** e **Finanças Bot** — projetos privados.
