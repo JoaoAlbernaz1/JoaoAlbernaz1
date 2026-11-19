@@ -128,12 +128,13 @@
 </div>
 ```
 
-```aura width=860 height=168
+```aura width=860 height=226
 (function() {
- var topLangs = github.languages.slice(0, 6).map(function(l) { return l.name; });
  var categories = [
-   { title: 'Languages', color: '#a78bfa', items: topLangs },
-   { title: 'Tools & frameworks', color: '#60a5fa', items: ['FastAPI', 'React Native', 'Next.js', 'Docker'] },
+   { title: 'Languages', color: '#a78bfa', items: ['TypeScript', 'Python', 'JavaScript'] },
+   { title: 'GenAI & Agents', color: '#c084fc', items: ['Claude', 'OpenAI', 'LLMs', 'n8n', 'Make'] },
+   { title: 'ML & Evaluation', color: '#60a5fa', items: ['scikit-learn', 'Hugging Face', 'Pytest'] },
+   { title: 'Backend & DevOps', color: '#67e8f9', items: ['NestJS', 'FastAPI', 'PostgreSQL', 'Docker', 'GitHub Actions'] },
  ];
 
  return (
@@ -141,7 +142,7 @@
      width: '100%', height: '100%',
      background: '#08080c',
      display: 'flex', flexDirection: 'column',
-     fontFamily: 'Inter', padding: '18px 32px', gap: 14,
+     fontFamily: 'Inter', padding: '18px 30px', gap: 12,
      borderRadius: 16, border: '1px solid rgba(110,80,220,0.18)',
      position: 'relative', overflow: 'hidden',
    }}>
@@ -182,7 +183,7 @@
        `}
      </style>
 
-     <svg width="860" height="168" style={{ position: 'absolute', top: 0, left: 0 }}>
+     <svg width="860" height="226" style={{ position: 'absolute', top: 0, left: 0 }}>
        <defs>
          <radialGradient id="g1" cx="50%" cy="50%" r="50%">
            <stop offset="0%" stopColor="rgba(115,20,215,0.68)" />
@@ -221,22 +222,22 @@
      </svg>
 
      <div style={{ display:'flex', fontSize:10, fontWeight:700, color:'rgba(155,140,210,0.5)', letterSpacing:'3px' }}>
-       TECH STACK
+       TECH STACK   /   AI ENGINEERING
      </div>
-     <div style={{ display:'flex', flexDirection:'column', gap:14 }}>
+     <div style={{ display:'flex', flexDirection:'column', gap:10 }}>
        {categories.map(function(cat) {
          return (
-           <div key={cat.title} style={{ display:'flex', alignItems:'center', gap:11 }}>
-             <div style={{ display:'flex', fontSize:10, fontWeight:700, color:cat.color, letterSpacing:'1px', width:125 }}>
+           <div key={cat.title} style={{ display:'flex', alignItems:'center', gap:10 }}>
+             <div style={{ display:'flex', fontSize:10, fontWeight:700, color:cat.color, letterSpacing:'1px', width:138 }}>
                {cat.title.toUpperCase()}
              </div>
-             <div style={{ display:'flex', flexWrap:'wrap', gap:7 }}>
+             <div style={{ display:'flex', flexWrap:'wrap', gap:6 }}>
                {cat.items.map(function(item) {
                  return (
                    <div key={item} style={{
-                     display:'flex', padding:'4px 13px', borderRadius:6,
+                     display:'flex', padding:'4px 11px', borderRadius:6,
                      background:cat.color + '15', border:'1px solid ' + cat.color + '35',
-                     color:'rgba(225,220,255,0.85)', fontSize:12, fontWeight:600,
+                     color:'rgba(225,220,255,0.85)', fontSize:11, fontWeight:600,
                    }}>{item}</div>
                  );
                })}
