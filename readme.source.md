@@ -370,9 +370,21 @@ API em **FastAPI**, Docker, testes automatizados e análise de mudança de distr
 
 ### Produtos e sistemas
 
-<sub>Aplicações, SaaS e soluções desenvolvidas com foco em engenharia, experiência e IA.</sub>
+<sub>Projetos de software com foco em IA aplicada, engenharia de produtos, APIs e automações. Repositórios privados permanecem identificados como privados.</sub>
 
-**Projetos com código público**
+**Em destaque · IA aplicada e automações**
+
+**01 — Selena · Assistente legislativo** — Assistente privado de IA conversacional integrado a fluxos de automação e atendimento legislativo com LLMs, n8n e APIs.
+
+**02 — Finanças Bot · IA financeira** — Sistema privado em TypeScript que usa modelos de linguagem para estruturar lançamentos financeiros em português, classificar registros no PostgreSQL e processar mensagens via webhook do WhatsApp.
+
+**Engenharia de IA · código e avaliação reproduzível**
+
+[**ModelOps · API de inferência, Docker e robustez**](./ml-lab/model-ops/) — Serviço com FastAPI, testes automatizados e avaliação de mudança de distribuição em entradas de texto.
+
+[**AI Evaluation Lab · testes de agentes e assistentes**](./ml-lab/ai-evaluation-lab/) — 32 casos de regressão sobre recuperação de contexto, abstenção e resistência a instruções adversariais. *Baseline experimental com corpus fictício, não avaliação de um LLM real.*
+
+**Produtos com código público**
 
 ```aura width=177 height=44 link="https://github.com/JoaoAlbernaz1/seuconviteia" inline align=center
 <SocialMediaButton
@@ -450,25 +462,21 @@ API em **FastAPI**, Docker, testes automatizados e análise de mudança de distr
 />
 ```
 
-**01 — SeuConvite IA** · SaaS para convites e sites de eventos, com arquitetura multi-tenant, painéis e integrações. *Em desenvolvimento.*
+**03 — SeuConvite IA** · SaaS de convites e sites para eventos, com Next.js, TypeScript, estrutura multi-tenant, autenticação e integrações. *Em desenvolvimento.*
 
-**02 — UniMove** · Plataforma de caronas universitárias com aplicativo mobile, API, autenticação e painel administrativo.
+**04 — UniMove** · App mobile e painel web com React Native, NestJS, PostgreSQL, API REST, autenticação e testes.
 
-**03 — PartWatch** · Aplicativo de acompanhamento de preços e histórico de peças para PC, com wishlist e montagem de builds. *Em desenvolvimento; comparador multi-loja ainda não integrado.*
+**05 — PartWatch** · Aplicativo de histórico de preços de peças de PC, wishlist, registro de alertas e builds. *Em desenvolvimento; comparador multi-loja ainda não integrado.*
 
-**04 — Dashboard Ônibus DF** · Aplicativo React Native com navegação, indicadores e visualização de linhas de transporte. *Protótipo acadêmico com dados fictícios.*
+**06 — Dashboard Ônibus DF** · Aplicativo React Native com painéis de indicadores e navegação. *Protótipo acadêmico com dados fictícios.*
 
-**Outros sistemas e soluções**
+**Outros sistemas**
 
-**05 — Selena · Assistente legislativo** — Solução privada de IA conversacional e automações para atendimento e consultas legislativas.
+**07 — Curva S · Gestão de projetos** — Painel privado em TypeScript para análise de cronogramas do MS Project, curvas de avanço físico e validação de dados.
 
-**06 — Finanças Bot · IA financeira** — Sistema privado que interpreta lançamentos em linguagem natural, classifica despesas e registra dados no PostgreSQL, com integração de WhatsApp.
+**08 — UniMove Admin · Gestão e segurança** — Módulo administrativo do UniMove com autenticação independente, controle de usuários e fluxos de revisão.
 
-**07 — Curva S · Gestão de projetos** — Painel privado de acompanhamento físico de projetos, com cronogramas do MS Project, evolução planejada e realizada e análises de consistência.
-
-**08 — UniMove Admin · Gestão e segurança** — Módulo administrativo do UniMove, com autenticação independente, controle de usuários e fluxos de revisão.
-
-<sub>Projetos privados não têm links para repositórios restritos. Status e escopos indicados refletem o código disponível e os estágios de desenvolvimento, não funcionalidades certificadas em produção.</sub>
+<sub>Os oito produtos e sistemas foram mantidos. Os casos de engenharia de IA acima são trabalhos técnicos adicionais. Projetos privados não possuem links públicos; protótipos e sistemas em desenvolvimento não são apresentados como serviços prontos para produção.</sub>
 
 ### Publicações e pesquisa
 
