@@ -1,5 +1,4 @@
-<!-- README de portfólio: estrutura em 3 painéis Aurora inspirada no perfil Collectioneur; gerado por readme-aura. Edite readme.source.md. -->
-
+<!-- Perfil de João Victor Albernaz. Fonte para readme-aura: edite este arquivo, não o README.md gerado. -->
 ```aura width=860 height=200
  <div style={{
  width: '100%', height: '100%', background: '#08080c',
@@ -128,6 +127,157 @@
 </div>
 ```
 
+<p align="center"><strong>Engenharia de Software · UCB · Brasília, DF</strong></p>
+
+```aura width=123 height=44 link="https://github.com/JoaoAlbernaz1" inline align=center
+<SocialMediaButton
+  icon="https://raw.githubusercontent.com/JoaoAlbernaz1/JoaoAlbernaz1/main/icons/github-mark.svg"
+  text="GitHub"
+  backgroundColor="#000000"
+  textColor="#f5f5f5"
+  width={123}
+  height={44}
+  iconSize={18}
+  gradientStops={[
+    { offset: '0%', color: '#cbd5e1' },
+    { offset: '30%', color: '#000000' },
+    { offset: '60%', color: '#94a3b8' },
+    { offset: '80%', color: '#000000' },
+    { offset: '100%', color: '#e2e8f0' },
+  ]}
+/>
+```
+
+```aura width=138 height=44 link="https://www.linkedin.com/in/joaooalbernaz/" inline align=center
+<SocialMediaButton
+  icon="https://raw.githubusercontent.com/JoaoAlbernaz1/JoaoAlbernaz1/main/icons/linkedin.svg"
+  text="LinkedIn"
+  backgroundColor="#000000"
+  textColor="#f5f5f5"
+  width={138}
+  height={44}
+  iconSize={18}
+  gradientStops={[
+    { offset: '0%', color: '#b57af9' },
+    { offset: '30%', color: '#000000' },
+    { offset: '60%', color: '#9d6bf0' },
+    { offset: '80%', color: '#000000' },
+    { offset: '100%', color: '#c89dfb' },
+  ]}
+/>
+```
+
+```aura width=169 height=44 link="https://huggingface.co/JOAOOALBERNAZ" inline align=center
+<SocialMediaButton
+  icon="https://raw.githubusercontent.com/JoaoAlbernaz1/JoaoAlbernaz1/main/icons/hugging-face.svg"
+  text="Hugging Face"
+  backgroundColor="#000000"
+  textColor="#f5f5f5"
+  width={169}
+  height={44}
+  iconSize={18}
+  gradientStops={[
+    { offset: '0%', color: '#ffe08a' },
+    { offset: '30%', color: '#000000' },
+    { offset: '60%', color: '#ffd166' },
+    { offset: '80%', color: '#000000' },
+    { offset: '100%', color: '#f8e7af' },
+  ]}
+/>
+```
+
+```aura width=125 height=44 link="https://www.kaggle.com/joaoalbernaz" inline align=center
+<SocialMediaButton
+  icon="https://raw.githubusercontent.com/JoaoAlbernaz1/JoaoAlbernaz1/main/icons/kaggle.svg"
+  text="Kaggle"
+  backgroundColor="#000000"
+  textColor="#f5f5f5"
+  width={125}
+  height={44}
+  iconSize={18}
+  gradientStops={[
+    { offset: '0%', color: '#5dc8f9' },
+    { offset: '30%', color: '#000000' },
+    { offset: '60%', color: '#7dd3fc' },
+    { offset: '80%', color: '#000000' },
+    { offset: '100%', color: '#4ec3f8' },
+  ]}
+/>
+```
+
+```aura width=117 height=44 link="mailto:joaovictoralbernaz@gmail.com" inline align=center
+<SocialMediaButton
+  icon="https://raw.githubusercontent.com/JoaoAlbernaz1/JoaoAlbernaz1/main/icons/email.svg"
+  text="E-mail"
+  backgroundColor="#000000"
+  textColor="#f5f5f5"
+  width={117}
+  height={44}
+  iconSize={18}
+  gradientStops={[
+    { offset: '0%', color: '#d855f7' },
+    { offset: '30%', color: '#000000' },
+    { offset: '60%', color: '#b557e8' },
+    { offset: '80%', color: '#000000' },
+    { offset: '100%', color: '#cc6ef9' },
+  ]}
+/>
+```
+
+Desenvolvo **produtos de software com IA aplicada**, conectando **LLMs, automações, APIs, bancos de dados e testes**. Trabalho do protótipo à arquitetura e busco evidências reproduzíveis para avaliar cada entrega.
+
+### Em destaque · GenAI e engenharia de software
+
+<sub>Três estudos de caso de produtos e um projeto de engenharia de ML. O código e os estágios de desenvolvimento estão identificados sem apresentar protótipos como produtos finalizados.</sub>
+
+#### 01 — UniMove · Aplicativo, API e painel administrativo
+
+```aura width=144 height=44 link="https://github.com/JoaoAlbernaz1/UniMove" inline align=center
+<SocialMediaButton
+  icon="https://raw.githubusercontent.com/JoaoAlbernaz1/JoaoAlbernaz1/main/icons/unimove.svg"
+  text="UniMove"
+  backgroundColor="#000000"
+  textColor="#f5f5f5"
+  width={144}
+  height={44}
+  iconSize={18}
+  gradientStops={[
+    { offset: '0%', color: '#5dc8f9' },
+    { offset: '30%', color: '#000000' },
+    { offset: '60%', color: '#7dd3fc' },
+    { offset: '80%', color: '#000000' },
+    { offset: '100%', color: '#4ec3f8' },
+  ]}
+/>
+```
+
+**Problema:** facilitar a oferta e a busca de caronas para a comunidade universitária, com fluxos distintos de estudantes e administradores.  
+**Implementação:** app em **React Native/Expo**, API **NestJS**, **PostgreSQL/Prisma**, autenticação, reservas, mensagens e painel web.  
+**Evidência:** aplicativo, API e painel no mesmo repositório, com workflows de qualidade e autenticação administrativa independente com 2FA.  
+**Explorar:** [Código e arquitetura](https://github.com/JoaoAlbernaz1/UniMove) · [Backend](https://github.com/JoaoAlbernaz1/UniMove/tree/main/UniMove-back) · [Protótipo de interface](https://shaky-awake-15985175.figma.site)
+
+#### 02 — Finanças Bot · IA para linguagem natural e WhatsApp
+
+**Problema:** registrar despesas sem exigir formulários, interpretando mensagens como “gastei 50 no mercado”.  
+**Implementação:** extração estruturada por **LLM**, validação dos dados, regras de categorização em **TypeScript**, persistência em **PostgreSQL** e webhook da API oficial do **WhatsApp**.  
+**Evidência:** testes no código para assinatura de mensagens, idempotência e falhas; suíte de 11 casos de aceitação com modelo real documentada, cuja execução depende de credenciais.  
+**Acesso:** repositório privado; funcionalidades futuras como áudio e resumos agendados ainda não estão implementadas.
+
+#### 03 — Selena · Assistente legislativo com IA
+
+**Problema:** apoiar consultas e rotinas de atendimento legislativo por meio de interação conversacional.  
+**Implementação:** fluxos de **n8n**, uso de **LLMs** e integração de APIs para automação e respostas orientadas ao contexto.  
+**Evidência:** projeto privado de automação e IA aplicada. Código, métricas de uso e demonstração pública não estão disponíveis nesta página.
+
+#### 04 — [ModelOps · Inferência, testes e robustez](./ml-lab/model-ops/)
+
+**Problema:** transformar um modelo treinado em um serviço testável e acompanhar possíveis mudanças nos dados.  
+**Implementação:** **FastAPI**, Docker, endpoints de inferência e health check, testes automatizados e métricas de drift.  
+**Resultado medido:** no experimento com erros de digitação simulados, o macro-F1 do classificador caiu de **0,8964 para 0,8502**, demonstrando uma limitação verificável.  
+**Explorar:** [API e testes](./ml-lab/model-ops/) · [Relatório de robustez](./ml-lab/published/model-ops/ROBUSTNESS.md) · [Decisões de arquitetura](./ml-lab/docs/modelops-architecture-decisions.md)
+
+### Tecnologias
+
 ```aura width=860 height=226
 (function() {
  var categories = [
@@ -251,140 +401,9 @@
 })()
 ```
 
-<p align="center"><strong>Engenharia de Software · UCB · Brasília, DF</strong></p>
+### Mais produtos e sistemas
 
-```aura width=123 height=44 link="https://github.com/JoaoAlbernaz1" inline align=center
-<SocialMediaButton
-  icon="https://raw.githubusercontent.com/JoaoAlbernaz1/JoaoAlbernaz1/main/icons/github-mark.svg"
-  text="GitHub"
-  backgroundColor="#000000"
-  textColor="#f5f5f5"
-  width={123}
-  height={44}
-  iconSize={18}
-  gradientStops={[
-    { offset: '0%', color: '#cbd5e1' },
-    { offset: '30%', color: '#000000' },
-    { offset: '60%', color: '#94a3b8' },
-    { offset: '80%', color: '#000000' },
-    { offset: '100%', color: '#e2e8f0' },
-  ]}
-/>
-```
-
-```aura width=138 height=44 link="https://www.linkedin.com/in/joaooalbernaz/" inline align=center
-<SocialMediaButton
-  icon="https://raw.githubusercontent.com/JoaoAlbernaz1/JoaoAlbernaz1/main/icons/linkedin.svg"
-  text="LinkedIn"
-  backgroundColor="#000000"
-  textColor="#f5f5f5"
-  width={138}
-  height={44}
-  iconSize={18}
-  gradientStops={[
-    { offset: '0%', color: '#b57af9' },
-    { offset: '30%', color: '#000000' },
-    { offset: '60%', color: '#9d6bf0' },
-    { offset: '80%', color: '#000000' },
-    { offset: '100%', color: '#c89dfb' },
-  ]}
-/>
-```
-
-```aura width=169 height=44 link="https://huggingface.co/JOAOOALBERNAZ" inline align=center
-<SocialMediaButton
-  icon="https://raw.githubusercontent.com/JoaoAlbernaz1/JoaoAlbernaz1/main/icons/hugging-face.svg"
-  text="Hugging Face"
-  backgroundColor="#000000"
-  textColor="#f5f5f5"
-  width={169}
-  height={44}
-  iconSize={18}
-  gradientStops={[
-    { offset: '0%', color: '#ffe08a' },
-    { offset: '30%', color: '#000000' },
-    { offset: '60%', color: '#ffd166' },
-    { offset: '80%', color: '#000000' },
-    { offset: '100%', color: '#f8e7af' },
-  ]}
-/>
-```
-
-```aura width=125 height=44 link="https://www.kaggle.com/joaoalbernaz" inline align=center
-<SocialMediaButton
-  icon="https://raw.githubusercontent.com/JoaoAlbernaz1/JoaoAlbernaz1/main/icons/kaggle.svg"
-  text="Kaggle"
-  backgroundColor="#000000"
-  textColor="#f5f5f5"
-  width={125}
-  height={44}
-  iconSize={18}
-  gradientStops={[
-    { offset: '0%', color: '#5dc8f9' },
-    { offset: '30%', color: '#000000' },
-    { offset: '60%', color: '#7dd3fc' },
-    { offset: '80%', color: '#000000' },
-    { offset: '100%', color: '#4ec3f8' },
-  ]}
-/>
-```
-
-```aura width=117 height=44 link="mailto:joaovictoralbernaz@gmail.com" inline align=center
-<SocialMediaButton
-  icon="https://raw.githubusercontent.com/JoaoAlbernaz1/JoaoAlbernaz1/main/icons/email.svg"
-  text="E-mail"
-  backgroundColor="#000000"
-  textColor="#f5f5f5"
-  width={117}
-  height={44}
-  iconSize={18}
-  gradientStops={[
-    { offset: '0%', color: '#d855f7' },
-    { offset: '30%', color: '#000000' },
-    { offset: '60%', color: '#b557e8' },
-    { offset: '80%', color: '#000000' },
-    { offset: '100%', color: '#cc6ef9' },
-  ]}
-/>
-```
-
-Desenvolvo **Machine Learning e IA aplicada**, do treinamento de modelos a produtos com APIs, automações e testes. Gosto de transformar experimentos em software reproduzível, mensurável e útil.
-
-### Projetos selecionados
-
-**01 — [BANKING77-PTBR · treinamento e avaliação](./ml-lab/banking77-ptbr/)**  
-Classificador de **77 intenções em português**, com comparação de três modelos e avaliação em dados públicos. **Macro-F1 0,8964** no teste oficial; **0,8910** após excluir textos idênticos ao treino.  
-[Código](./ml-lab/banking77-ptbr/) · [Modelo no Hugging Face](https://huggingface.co/JOAOOALBERNAZ/banking77-ptbr-intent-v1) · [Resultados e limitações](./ml-lab/docs/banking77-ptbr-results.md)
-
-**02 — [Confidence Evaluation · calibração e abstenção](./ml-lab/confidence-evaluation/)**  
-Novo modelo treinado com separação entre treino, calibração e teste. **ECE 0,7844 → 0,0134**; **91,92% de acertos** nas previsões aceitas, com **94,42% de cobertura** no teste. Política experimental, não validada para produção.  
-[Código](./ml-lab/confidence-evaluation/) · [Modelo publicado](https://huggingface.co/JOAOOALBERNAZ/banking77-ptbr-confidence-v1) · [Artigo técnico](./ml-lab/docs/confidence-and-selective-prediction.md)
-
-**03 — [ModelOps · inferência e monitoramento](./ml-lab/model-ops/)**  
-API em **FastAPI**, Docker, testes automatizados e análise de mudança de distribuição. Um teste de erros de digitação simulados reduziu o macro-F1 de **0,8964 para 0,8502**, revelando uma limitação do classificador.  
-[Código e testes](./ml-lab/model-ops/) · [Relatório de robustez](./ml-lab/published/model-ops/ROBUSTNESS.md) · [Arquitetura](./ml-lab/docs/modelops-architecture-decisions.md)
-
-**04 — [AI Evaluation Lab · avaliação de assistentes](./ml-lab/ai-evaluation-lab/)**  
-**32 casos de regressão** sobre recuperação de contexto, respostas sem evidência, abstenção e ataques simulados. Baseline extrativa com corpus fictício; os testes não representam desempenho de um LLM real.  
-[Código e casos](./ml-lab/ai-evaluation-lab/) · [Resultados medidos](./ml-lab/published/ai-eval/)
-
-### Produtos e sistemas
-
-<sub>Projetos de software com foco em IA aplicada, engenharia de produtos, APIs e automações. Repositórios privados permanecem identificados como privados.</sub>
-
-**Em destaque · IA aplicada e automações**
-
-**01 — Selena · Assistente legislativo** — Assistente privado de IA conversacional integrado a fluxos de automação e atendimento legislativo com LLMs, n8n e APIs.
-
-**02 — Finanças Bot · IA financeira** — Sistema privado em TypeScript que usa modelos de linguagem para estruturar lançamentos financeiros em português, classificar registros no PostgreSQL e processar mensagens via webhook do WhatsApp.
-
-**Engenharia de IA · código e avaliação reproduzível**
-
-[**ModelOps · API de inferência, Docker e robustez**](./ml-lab/model-ops/) — Serviço com FastAPI, testes automatizados e avaliação de mudança de distribuição em entradas de texto.
-
-[**AI Evaluation Lab · testes de agentes e assistentes**](./ml-lab/ai-evaluation-lab/) — 32 casos de regressão sobre recuperação de contexto, abstenção e resistência a instruções adversariais. *Baseline experimental com corpus fictício, não avaliação de um LLM real.*
-
-**Produtos com código público**
+<sub>Os projetos abaixo continuam no portfólio. Os botões Aura levam ao código público disponível.</sub>
 
 ```aura width=177 height=44 link="https://github.com/JoaoAlbernaz1/seuconviteia" inline align=center
 <SocialMediaButton
@@ -401,25 +420,6 @@ API em **FastAPI**, Docker, testes automatizados e análise de mudança de distr
     { offset: '60%', color: '#9d6bf0' },
     { offset: '80%', color: '#000000' },
     { offset: '100%', color: '#c89dfb' },
-  ]}
-/>
-```
-
-```aura width=144 height=44 link="https://github.com/JoaoAlbernaz1/UniMove" inline align=center
-<SocialMediaButton
-  icon="https://raw.githubusercontent.com/JoaoAlbernaz1/JoaoAlbernaz1/main/icons/unimove.svg"
-  text="UniMove"
-  backgroundColor="#000000"
-  textColor="#f5f5f5"
-  width={144}
-  height={44}
-  iconSize={18}
-  gradientStops={[
-    { offset: '0%', color: '#5dc8f9' },
-    { offset: '30%', color: '#000000' },
-    { offset: '60%', color: '#7dd3fc' },
-    { offset: '80%', color: '#000000' },
-    { offset: '100%', color: '#4ec3f8' },
   ]}
 />
 ```
@@ -462,21 +462,23 @@ API em **FastAPI**, Docker, testes automatizados e análise de mudança de distr
 />
 ```
 
-**03 — SeuConvite IA** · SaaS de convites e sites para eventos, com Next.js, TypeScript, estrutura multi-tenant, autenticação e integrações. *Em desenvolvimento.*
+**05 — [SeuConvite IA](https://github.com/JoaoAlbernaz1/seuconviteia)** · SaaS para convites digitais, sites de eventos e gestão multi-tenant. **Next.js, TypeScript, Prisma/PostgreSQL, autenticação e testes**. *Em desenvolvimento.* [Prévia hospedada](https://seuconviteia.vercel.app)
 
-**04 — UniMove** · App mobile e painel web com React Native, NestJS, PostgreSQL, API REST, autenticação e testes.
+**06 — [PartWatch](https://github.com/JoaoAlbernaz1/ddr5-radar)** · Aplicativo para acompanhar peças de PC, preços registrados, wishlist e builds, com **Flutter/Dart** e **Supabase**. *Em desenvolvimento; comparação automática entre lojas ainda não está integrada.*
 
-**05 — PartWatch** · Aplicativo de histórico de preços de peças de PC, wishlist, registro de alertas e builds. *Em desenvolvimento; comparador multi-loja ainda não integrado.*
+**07 — [Dashboard Ônibus DF](https://github.com/JoaoAlbernaz1/dashboard-onibus-df)** · App **React Native/Expo e TypeScript**, com navegação entre telas e indicadores. *Projeto acadêmico com dados fictícios.*
 
-**06 — Dashboard Ônibus DF** · Aplicativo React Native com painéis de indicadores e navegação. *Protótipo acadêmico com dados fictícios.*
+**08 — Curva S · Gestão de projetos** · Painel privado em **TypeScript** para leitura de cronogramas do MS Project, evolução planejada × realizada e análise de consistência.
 
-**Outros sistemas**
+**Sistema complementar — UniMove Admin** · Módulo de gestão integrado ao UniMove, com autenticação administrativa independente, gestão de usuários e revisão acadêmica. [Código público no repositório UniMove](https://github.com/JoaoAlbernaz1/UniMove/tree/main/UniMove-admin).
 
-**07 — Curva S · Gestão de projetos** — Painel privado em TypeScript para análise de cronogramas do MS Project, curvas de avanço físico e validação de dados.
+### Pesquisa e avaliação de Machine Learning
 
-**08 — UniMove Admin · Gestão e segurança** — Módulo administrativo do UniMove com autenticação independente, controle de usuários e fluxos de revisão.
+**[BANKING77-PTBR · classificação de intenções](./ml-lab/banking77-ptbr/)** — Experimento com **77 intenções em português** e comparação de modelos; **macro-F1 de 0,8964** no teste oficial e **0,8910** após excluir textos idênticos ao treino. [Modelo publicado](https://huggingface.co/JOAOOALBERNAZ/banking77-ptbr-intent-v1).
 
-<sub>Os oito produtos e sistemas foram mantidos. Os casos de engenharia de IA acima são trabalhos técnicos adicionais. Projetos privados não possuem links públicos; protótipos e sistemas em desenvolvimento não são apresentados como serviços prontos para produção.</sub>
+**[Confidence Evaluation · calibração e abstenção](./ml-lab/confidence-evaluation/)** — Separação entre treino, calibração e teste; **ECE de 0,7844 para 0,0134**, com **91,92% de acerto** nas previsões aceitas e **94,42% de cobertura** no teste. *Política experimental, não validada para produção.* [Artigo técnico](./ml-lab/docs/confidence-and-selective-prediction.md).
+
+**[AI Evaluation Lab · avaliação de assistentes](./ml-lab/ai-evaluation-lab/)** — **32 casos de regressão** sobre recuperação de contexto, abstenção, ausência de evidência e ataques simulados. *Baseline extrativa com corpus fictício; os resultados não avaliam o desempenho de um LLM real.* [Resultados](./ml-lab/published/ai-eval/).
 
 ### Publicações e pesquisa
 
