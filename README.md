@@ -32,11 +32,33 @@ API em **FastAPI**, Docker, testes automatizados e análise de mudança de distr
 
 ### Produtos e sistemas
 
+<sub>Aplicações, SaaS e soluções desenvolvidas com foco em engenharia, experiência e IA.</sub>
+
+**Projetos com código público**
+
 <p align="center">
-<a href="https://github.com/JoaoAlbernaz1/seuconviteia"><img src="./.github/assets/readme-aura-component-7-153810dd.svg" width="177" height="44" /></a><a href="https://github.com/JoaoAlbernaz1/UniMove"><img src="./.github/assets/readme-aura-component-8-6c749423.svg" width="144" height="44" /></a>
+<a href="https://github.com/JoaoAlbernaz1/seuconviteia"><img src="./.github/assets/readme-aura-component-7-153810dd.svg" width="177" height="44" /></a><a href="https://github.com/JoaoAlbernaz1/UniMove"><img src="./.github/assets/readme-aura-component-8-6c749423.svg" width="144" height="44" /></a><a href="https://github.com/JoaoAlbernaz1/ddr5-radar"><img src="./.github/assets/readme-aura-component-9-d9ff8ca6.svg" width="154" height="44" /></a><a href="https://github.com/JoaoAlbernaz1/dashboard-onibus-df"><img src="./.github/assets/readme-aura-component-10-c4699bf9.svg" width="151" height="44" /></a>
 </p>
 
-**Selena** e **Finanças Bot** — projetos privados.
+**01 — SeuConvite IA** · SaaS para convites e sites de eventos, com arquitetura multi-tenant, painéis e integrações. *Em desenvolvimento.*
+
+**02 — UniMove** · Plataforma de caronas universitárias com aplicativo mobile, API, autenticação e painel administrativo.
+
+**03 — PartWatch** · Aplicativo de acompanhamento de preços e histórico de peças para PC, com wishlist e montagem de builds. *Em desenvolvimento; comparador multi-loja ainda não integrado.*
+
+**04 — Dashboard Ônibus DF** · Aplicativo React Native com navegação, indicadores e visualização de linhas de transporte. *Protótipo acadêmico com dados fictícios.*
+
+**Outros sistemas e soluções**
+
+**05 — Selena · Assistente legislativo** — Solução privada de IA conversacional e automações para atendimento e consultas legislativas.
+
+**06 — Finanças Bot · IA financeira** — Sistema privado que interpreta lançamentos em linguagem natural, classifica despesas e registra dados no PostgreSQL, com integração de WhatsApp.
+
+**07 — Curva S · Gestão de projetos** — Painel privado de acompanhamento físico de projetos, com cronogramas do MS Project, evolução planejada e realizada e análises de consistência.
+
+**08 — UniMove Admin · Gestão e segurança** — Módulo administrativo do UniMove, com autenticação independente, controle de usuários e fluxos de revisão.
+
+<sub>Projetos privados não têm links para repositórios restritos. Status e escopos indicados refletem o código disponível e os estágios de desenvolvimento, não funcionalidades certificadas em produção.</sub>
 
 ### Publicações e pesquisa
 
